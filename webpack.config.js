@@ -11,7 +11,7 @@ const generateHtmlPlugin = title => {
         title,
         favicon: "./src/assets/icons/favico.png",
         filename: `${title.toLowerCase()}.html`,
-        template: `./src/pages/${title.toLowerCase()}/${title.toLowerCase()}.html`,
+        template: `./src/${title.toLowerCase()}.html`,
         chunks: [`${title.toLowerCase()}`]
     })
 }
@@ -30,12 +30,12 @@ console.log(__dirname)
 
 module.exports = {
     entry: {
-        index: path.resolve(__dirname, './src/pages/index/index.js'),
-        // donate: path.resolve(__dirname, './src/pages/donate/index.js'),
+        index: path.resolve(__dirname, './src/index.ts'),
+       
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'pages/[name]/[name]bundle.js',
+        filename: '[name]bundle.js',
         assetModuleFilename: 'assets/images/[name][ext]'
     },
     devServer: {
@@ -50,7 +50,7 @@ module.exports = {
     plugins: [
         ...pages,
         new MiniCssExtractPlugin({
-            filename: 'pages/[name]/styles/[name].css'
+            filename: 'styles/[name].css'
         }),
         // new HtmlWebpackPlugin()
     ],
@@ -109,7 +109,12 @@ module.exports = {
                 generator: {
                     filename: 'assets/fonts/[name].[ext]'
                 }
-            }
+            },
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+              }
 
         ]
     }
