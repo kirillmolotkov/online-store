@@ -1,21 +1,18 @@
 @font-face {
-  font-family: "type_body_custom";
+  font-family: "type_basic";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
   src:
-    url("../assets/fonts/GothamSSm-Book.woff2")
+    url("/src/assets/fonts/GothamSSm-Book.woff2")
     format("woff");
 }
 
 @font-face {
   font-family: "type_logo";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
   src:
-    url("../assets/fonts/Righteous-Regular.ttf")
-    format("ttf");
+    url('/src/assets/fonts/Righteous-Regular.ttf')
+    format("truetype");
 }
 
 @font-face {

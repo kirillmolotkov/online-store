@@ -1,0 +1,30 @@
+@mixin basic-font {
+  color:$color-dark;
+  font-family: type_basic;
+  font-size: 1.2em;
+}
+@mixin filter-section-heading-font {
+  color:$color-dark;
+  font-family: type_basic;
+  font-size: 1.2em;
+}
+
+@mixin filter-heading-font {
+  color:$color-dark;
+  font-family: type_basic;
+  font-size: 150%;
+}
+
+@mixin filter-item-font {
+  color:$color-dark;
+  font-family: type_basic;
+  font-size: 1em;
+}
+
+
+@mixin flex($direction:row, $justify:space-between, $align:center) {
+ display: flex;
+ flex-direction: $direction;
+ justify-content: $justify;
+ align-items: $align;
+}
