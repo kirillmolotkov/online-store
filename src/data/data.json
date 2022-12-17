@@ -1146,6 +1146,150 @@
         "./src/assets/images/headphones/14/4.jpg",
         "./src/assets/images/headphones/14/5.jpg"
       ]
+    },
+    {
+      "id": "64",
+      "title": "Notebook Huawei MateBook D 14 8/512GB Mystic Silver",
+      "description": "Enjoy every look of HUAWEI MateBook D 14 thanks to the IPS anti-glare 14 HUAWEI FullView Display1 and 16:9 aspect ratio. With Full-HD 1920 x 1080 resolution, every image bursts with detail and clarity. For a better viewing experience every time you open up",
+      "price": 1123,
+      "discountPercentage": 3,
+      "rating": 4.1,
+      "stock": 15,
+      "brand": "Huawei",
+      "category": "laptops",
+      "thumbnail": "./src/assets/images/laptops/1/1.jpg",
+      "images": [
+        "./src/assets/images/laptops/1/1.jpg",
+        "./src/assets/images/laptops/1/2.jpg",
+        "./src/assets/images/laptops/1/3.jpg",
+        "./src/assets/images/laptops/1/4.jpg",
+        "./src/assets/images/laptops/1/5.jpg"
+      ]
+    },
+    {
+      "id": "65",
+      "title": "Notebook Huawei MateBook D15 8/512GB Mystical Silver",
+      "description": "Huawei MateBook D 15 comes with a Fingerprint sensor and Hall sensor HUAWEI Share, PC Manager Performance mode (press Fn+P in hotkey mode) Display Manager (eye protection) Factory restore HUAWEI MateBook D15 laptop computer with FullView screen 15.6-inch size with 11th Gen Intel Core processors combined with a metal body design. which is only 16.9 mm thin",
+      "price": 1223,
+      "discountPercentage": 3,
+      "rating": 4.2,
+      "stock": 11,
+      "brand": "Huawei",
+      "category": "laptops",
+      "thumbnail": "./src/assets/images/laptops/2/1.jpg",
+      "images": [
+        "./src/assets/images/laptops/2/1.jpg",
+        "./src/assets/images/laptops/2/2.jpg",
+        "./src/assets/images/laptops/2/3.jpg",
+        "./src/assets/images/laptops/2/4.jpg",
+        "./src/assets/images/laptops/2/5.jpg"
+      ]
+    },
+    {
+      "id": "66",
+      "title": "Notebook Huawei MateBook D15 8/512GB Mystical Silver",
+      "description": "Huawei MateBook D 15 comes with a Fingerprint sensor and Hall sensor HUAWEI Share, PC Manager Performance mode (press Fn+P in hotkey mode) Display Manager (eye protection) Factory restore HUAWEI MateBook D15 laptop computer with FullView screen 15.6-inch size with 11th Gen Intel Core processors combined with a metal body design. which is only 16.9 mm thin",
+      "price": 1409,
+      "discountPercentage": 3,
+      "rating": 4.3,
+      "stock": 10,
+      "brand": "Huawei",
+      "category": "laptops",
+      "thumbnail": "./src/assets/images/laptops/3/1.jpg",
+      "images": [
+        "./src/assets/images/laptops/3/1.jpg",
+        "./src/assets/images/laptops/3/2.jpg",
+        "./src/assets/images/laptops/3/3.jpg",
+        "./src/assets/images/laptops/3/4.jpg",
+        "./src/assets/images/laptops/3/5.jpg"
+      ]
+    },
+    {
+      "id": "67",
+      "title": "Notebook ASUS TUF Gaming F15 8/512GB",
+      "description": "Geared for serious gaming and real-world durability, the TUF Gaming F15 is a fully-loaded Windows 10 Pro gaming laptop that can carry you to victory. Powered by the latest 10th Gen Intel® Core™ i7 CPU and GeForce® GTX 1660 Ti GPU, action-packed gameplay is fast, fluid, and fully saturates speedy IPS-level displays up to 144Hz. Even while boasting a smaller and more portable chassis than its predecessors, this gaming laptop also features a larger 90Wh battery for superior battery life. Efficient self-cleaning cooling combines with TUF's signature military-grade durability to make this battle-tested road warrior a powerful ally for any gamer.",
+      "price": 1099,
+      "discountPercentage": 3,
+      "rating": 4.8,
+      "stock": 10,
+      "brand": "ASUS",
+      "category": "laptops",
+      "thumbnail": "./src/assets/images/laptops/4/1.jpg",
+      "images": [
+        "./src/assets/images/laptops/4/1.jpg",
+        "./src/assets/images/laptops/4/2.jpg",
+        "./src/assets/images/laptops/4/3.jpg",
+        "./src/assets/images/laptops/4/4.jpg",
+        "./src/assets/images/laptops/4/5.jpg"
+      ]
+    },
+    {
+      "id": "68",
+      "title": "Notebook ASUS A416M 8/256GB",
+      "description": "Whether for work or play, ASUS Laptop A416 is the entry-level laptop that delivers powerful performance and immersive visuals. Its NanoEdge display boasts wide 178° viewing angles and a matte anti-glare coating for a truly engaging experience. Inside, it’s powered by up to an Intel® Core™ i5 processor with 4 GB 2400MHz RAM. A dual-storage design with up to 512GB SSD gives you the perfect combination of large storage capacity and fast data read / write speeds.",
+      "price": 799,
+      "discountPercentage": 3,
+      "rating": 4.1,
+      "stock": 9,
+      "brand": "ASUS",
+      "category": "laptops",
+      "thumbnail": "./src/assets/images/laptops/5/1.jpg",
+      "images": ["./src/assets/images/laptops/5/1.jpg"]
+    },
+    {
+      "id": "69",
+      "title": "Notebook ASUS X515M 8/256GB",
+      "description": "Whether for work or play, ASUS X515 is the entry-level laptop that delivers powerful performance and immersive visuals. Its NanoEdge display boasts wide 178° viewing angles and a matte anti-glare coating for a truly engaging experience. Inside, it’s powered by up to an Intel® Core™ i7 processor with 16 GB 2400 MHz RAM, and features NVIDIA® GeForce® MX330. A dual-storage design with up to a 1 TB PCIe® SSD and a 1 TB HDD gives you the perfect combination of large storage capacity and fast data read / write speeds. There’s also Intel® Optane™ memory support1 to help speed things up even more.",
+      "price": 499,
+      "discountPercentage": 3,
+      "rating": 4.1,
+      "stock": 7,
+      "brand": "ASUS",
+      "category": "laptops",
+      "thumbnail": "./src/assets/images/laptops/6/1.jpg",
+      "images": [
+        "./src/assets/images/laptops/6/1.jpg",
+        "./src/assets/images/laptops/6/2.jpg",
+        "./src/assets/images/laptops/6/3.jpg"
+      ]
+    },
+    {
+      "id": "70",
+      "title": "Notebook HP Laptop 15-dy2093dx Silver",
+      "description": "HP 15-dy2093dx LaptopOPERATING SYSTEM – Windows 10 Home in S modePROCESSOR FAMILY – 11th Generation Intel CoreTM i5 processorPROCESSOR – Intel CoreTM i5-1135G7 (up to 4.2 GHz with Intel Turbo Boost Technology, 8 MB L3 cache, 4 cores)CHIPSET Intel Integrated SoCMEMORY – 8 GB DDR4-2666 MHz RAM (2 x 4 GB) Transfer rates up to 2666 MT/s. 2 x 4 GBHARD DRIVE – 256 GB ",
+      "price": 1250,
+      "discountPercentage": 3,
+      "rating": 3.9,
+      "stock": 7,
+      "brand": "HP",
+      "category": "laptops",
+      "thumbnail": "./src/assets/images/laptops/7/1.jpg",
+      "images": [
+        "./src/assets/images/laptops/7/1.jpg",
+        "./src/assets/images/laptops/7/2.jpg",
+        "./src/assets/images/laptops/7/3.jpg",
+        "./src/assets/images/laptops/7/4.jpg",
+        "./src/assets/images/laptops/7/5.jpg"
+      ]
+    },
+    {
+      "id": "71",
+      "title": "Notebook HP 250 15.6 G9",
+      "description": "The HP 250 Laptop keeps up with mobile workstyles with a thin and light design. The optional 300-nit Full HD display with its narrow border design and big screen-to-body- ratio provides ample space for work or streaming content.",
+      "price": 1350,
+      "discountPercentage": 3,
+      "rating": 4.6,
+      "stock": 7,
+      "brand": "HP",
+      "category": "laptops",
+      "thumbnail": "./src/assets/images/laptops/8/1.jpg",
+      "images": [
+        "./src/assets/images/laptops/8/1.jpg",
+        "./src/assets/images/laptops/8/2.jpg",
+        "./src/assets/images/laptops/8/3.jpg",
+        "./src/assets/images/laptops/8/4.jpg",
+        "./src/assets/images/laptops/8/5.jpg"
+      ]
     }
   ]
 }
