@@ -891,6 +891,261 @@
         "./src/assets/images/tablets/8/4.jpg",
         "./src/assets/images/tablets/8/5.jpg"
       ]
+    },
+    {
+      "id": "50",
+      "title": "AirPods Pro 2 White",
+      "description": "Description. AirPods Pro earbuds feature up to 2x more Active Noise Cancellation, plus Adaptive Transparency, and Personalized Spatial Audio with dynamic head tracking for immersive sound. Now with multiple ear tips (XS, S, M, L) and up to 6 hours of listening time.",
+      "price": 249,
+      "discountPercentage": 3,
+      "rating": 4.2,
+      "stock": 48,
+      "brand": "Apple",
+      "category": "headphones",
+      "thumbnail": "./src/assets/images/headphones/1/1.jpg",
+      "images": [
+        "./src/assets/images/headphones/1/1.jpg",
+        "./src/assets/images/headphones/1/2.jpg",
+        "./src/assets/images/headphones/1/3.jpg",
+        "./src/assets/images/headphones/1/4.jpg"
+      ]
+    },
+    {
+      "id": "51",
+      "title": "HONOR CHOICE Earbuds X3 White",
+      "description": "It adopts a snow-white body and is suitable for wearing in various scenes. It is convenient to carry, comfortable to in ear, and cost-effective. Support touch operation to play/ pause music, or answer/ end phone calls, etc.",
+      "price": 75,
+      "discountPercentage": 3,
+      "rating": 4.2,
+      "stock": 38,
+      "brand": "HONOR",
+      "category": "headphones",
+      "thumbnail": "./src/assets/images/headphones/2/1.jpg",
+      "images": [
+        "./src/assets/images/headphones/2/1.jpg",
+        "./src/assets/images/headphones/2/2.jpg",
+        "./src/assets/images/headphones/2/3.jpg",
+        "./src/assets/images/headphones/2/4.jpg"
+      ]
+    },
+    {
+      "id": "52",
+      "title": "Huawei FreeBuds Lipstick Red",
+      "description": "Marking a new trend in ultra-chic design and innovatively equipped for a superior, smarter audio experience, HUAWEI FreeBuds Lipstick offers a stunning makeover in beauty and sound.",
+      "price": 285,
+      "discountPercentage": 3,
+      "rating": 4.2,
+      "stock": 28,
+      "brand": "Huawei",
+      "category": "headphones",
+      "thumbnail": "./src/assets/images/headphones/3/1.jpg",
+      "images": [
+        "./src/assets/images/headphones/3/1.jpg",
+        "./src/assets/images/headphones/3/2.jpg",
+        "./src/assets/images/headphones/3/3.jpg",
+        "./src/assets/images/headphones/3/4.jpg",
+        "./src/assets/images/headphones/3/5.jpg"
+      ]
+    },
+    {
+      "id": "53",
+      "title": "Huawei FreeBuds Pro Ceramic White",
+      "description": "Cancel out the noise, dive into the beats. Voice hear-through, always stay connected. Feel the music with HUAWEI FreeBuds Pro. Immersive sound, inspiring style.",
+      "price": 230,
+      "discountPercentage": 3,
+      "rating": 4.8,
+      "stock": 78,
+      "brand": "Huawei",
+      "category": "headphones",
+      "thumbnail": "./src/assets/images/headphones/4/1.jpg",
+      "images": [
+        "./src/assets/images/headphones/4/1.jpg",
+        "./src/assets/images/headphones/4/2.jpg",
+        "./src/assets/images/headphones/4/3.jpg",
+        "./src/assets/images/headphones/4/4.jpg",
+        "./src/assets/images/headphones/4/5.jpg"
+      ]
+    },
+    {
+      "id": "54",
+      "title": "Huawei FreeBuds 4 Silver",
+      "description": "Featuring a 14.3mm LCP dynamic driver, FreeBuds 4 ensures outstanding sound quality. The frequency range reaches up to 40 kHz to let enjoy a pure sound and clear vocals. Enjoy enhanced bass with FreeBuds 4 as every earbud is equipped with a powerful engine that delivers awesome diaphragm vibration.",
+      "price": 134,
+      "discountPercentage": 3,
+      "rating": 4.7,
+      "stock": 71,
+      "brand": "Huawei",
+      "category": "headphones",
+      "thumbnail": "./src/assets/images/headphones/5/1.jpg",
+      "images": [
+        "./src/assets/images/headphones/5/1.jpg",
+        "./src/assets/images/headphones/5/2.jpg",
+        "./src/assets/images/headphones/5/3.jpg",
+        "./src/assets/images/headphones/5/4.jpg",
+        "./src/assets/images/headphones/5/5.jpg"
+      ]
+    },
+    {
+      "id": "55",
+      "title": "Huawei FreeBuds 4i Carbon Black",
+      "description": "HUAWEI FreeBuds 4i is ergonomically designed for a stable and snug fit. The super-light earbuds radically reduce the pressure you feel even after long hours of listening. Wear them all day in total comfort. The sensors in HUAWEI FreeBuds 4i actively detect and reduce ambient noise.",
+      "price": 96,
+      "discountPercentage": 3,
+      "rating": 4.5,
+      "stock": 51,
+      "brand": "Huawei",
+      "category": "headphones",
+      "thumbnail": "./src/assets/images/headphones/6/1.jpg",
+      "images": [
+        "./src/assets/images/headphones/6/1.jpg",
+        "./src/assets/images/headphones/6/2.jpg",
+        "./src/assets/images/headphones/6/3.jpg",
+        "./src/assets/images/headphones/6/4.jpg",
+        "./src/assets/images/headphones/6/5.jpg"
+      ]
+    },
+    {
+      "id": "56",
+      "title": "Samsung Galaxy Buds Live White",
+      "description": "Galaxy Buds Live combines a comfortable, ergonomic design with premium sound from AKG to create a soundscape that harmoniously amplifies sound while cancelling unwanted background noise. Now trade-in your old headphones to save more.",
+      "price": 99,
+      "discountPercentage": 3,
+      "rating": 4.9,
+      "stock": 31,
+      "brand": "Samsung",
+      "category": "headphones",
+      "thumbnail": "./src/assets/images/headphones/7/1.jpg",
+      "images": [
+        "./src/assets/images/headphones/7/1.jpg",
+        "./src/assets/images/headphones/7/2.jpg",
+        "./src/assets/images/headphones/7/3.jpg",
+        "./src/assets/images/headphones/7/4.jpg",
+        "./src/assets/images/headphones/7/5.jpg"
+      ]
+    },
+    {
+      "id": "57",
+      "title": "Samsung Galaxy Buds Live Bronze",
+      "description": "Galaxy Buds Live combines a comfortable, ergonomic design with premium sound from AKG to create a soundscape that harmoniously amplifies sound while cancelling unwanted background noise. Now trade-in your old headphones to save more.",
+      "price": 99,
+      "discountPercentage": 3,
+      "rating": 4.9,
+      "stock": 32,
+      "brand": "Samsung",
+      "category": "headphones",
+      "thumbnail": "./src/assets/images/headphones/8/1.jpg",
+      "images": [
+        "./src/assets/images/headphones/8/1.jpg",
+        "./src/assets/images/headphones/8/2.jpg",
+        "./src/assets/images/headphones/8/3.jpg",
+        "./src/assets/images/headphones/8/4.jpg",
+        "./src/assets/images/headphones/8/5.jpg"
+      ]
+    },
+    {
+      "id": "58",
+      "title": "Samsung Galaxy Buds Live Black",
+      "description": "Galaxy Buds Live combines a comfortable, ergonomic design with premium sound from AKG to create a soundscape that harmoniously amplifies sound while cancelling unwanted background noise. Now trade-in your old headphones to save more.",
+      "price": 99,
+      "discountPercentage": 3,
+      "rating": 4.9,
+      "stock": 22,
+      "brand": "Samsung",
+      "category": "headphones",
+      "thumbnail": "./src/assets/images/headphones/9/1.jpg",
+      "images": [
+        "./src/assets/images/headphones/9/1.jpg",
+        "./src/assets/images/headphones/9/2.jpg",
+        "./src/assets/images/headphones/9/3.jpg",
+        "./src/assets/images/headphones/9/4.jpg",
+        "./src/assets/images/headphones/9/5.jpg"
+      ]
+    },
+    {
+      "id": "59",
+      "title": "Xiaomi Buds 3 Carbon Black",
+      "description": "Ergonomic designLightweight, stable, close-fittingYou feel comfortable after wearing for long hours 4.6 g lightweight body, multi-point refined design. The optimised structure with overlapping gravity centres precisely forms a stable triangle around the tragus, antitragus and auricular concha.",
+      "price": 109,
+      "discountPercentage": 3,
+      "rating": 4.7,
+      "stock": 29,
+      "brand": "Xiaomi",
+      "category": "headphones",
+      "thumbnail": "./src/assets/images/headphones/10/1.jpg",
+      "images": ["./src/assets/images/headphones/10/1.jpg", "./src/assets/images/headphones/10/2.jpg"]
+    },
+    {
+      "id": "60",
+      "title": "Xiaomi Redmi Buds 4 Blue",
+      "description": "Whether you're outdoors, on the bus or metro, one-touch for up to 35dB* noise cancellation. Redmi Buds 4 blocks out the hustle and bustle. Redmi Buds 4 intelligently switches between 3 ANC levels under adaptive mode supported by AI algorithm and offers a more comfortable noise-cancellation experience.",
+      "price": 75,
+      "discountPercentage": 3,
+      "rating": 4.3,
+      "stock": 34,
+      "brand": "Xiaomi",
+      "category": "headphones",
+      "thumbnail": "./src/assets/images/headphones/11/1.jpg",
+      "images": [
+        "./src/assets/images/headphones/11/1.jpg",
+        "./src/assets/images/headphones/11/2.jpg",
+        "./src/assets/images/headphones/11/3.jpg",
+        "./src/assets/images/headphones/11/4.jpg"
+      ]
+    },
+    {
+      "id": "61",
+      "title": "Xiaomi Redmi Buds 4 Pro Black",
+      "description": "Xiaomi Redmi Buds 4 Pro Wireless Earbuds, Hi Resolution Audio, Dual Driver Speaker, Immersive Sound, Up to 43dB ANC, Dual Device Connectivity, 36h Long Battery, Fast Charging, App, IP54, White. Brief content visible, double tap to read full content.",
+      "price": 99,
+      "discountPercentage": 3,
+      "rating": 4.8,
+      "stock": 39,
+      "brand": "Xiaomi",
+      "category": "headphones",
+      "thumbnail": "./src/assets/images/headphones/12/1.jpg",
+      "images": [
+        "./src/assets/images/headphones/12/1.jpg",
+        "./src/assets/images/headphones/12/2.jpg",
+        "./src/assets/images/headphones/12/3.jpg"
+      ]
+    },
+    {
+      "id": "62",
+      "title": "JBL Tune 225TWS White",
+      "description": "The JBL Tune 225TWS True Wireless are basic truly wireless headphones. They're decently well-made, exceptionally easy to carry around, and have a stable fit. Unfortunately, they have a short continuous battery life, block out almost no ambient noise, and have a fairly limited control scheme.",
+      "price": 50,
+      "discountPercentage": 3,
+      "rating": 4.6,
+      "stock": 49,
+      "brand": "JBL",
+      "category": "headphones",
+      "thumbnail": "./src/assets/images/headphones/13/1.jpg",
+      "images": [
+        "./src/assets/images/headphones/13/1.jpg",
+        "./src/assets/images/headphones/13/2.jpg",
+        "./src/assets/images/headphones/13/3.jpg",
+        "./src/assets/images/headphones/13/4.jpg",
+        "./src/assets/images/headphones/13/5.jpg"
+      ]
+    },
+    {
+      "id": "63",
+      "title": "JBL Tune 225TWS Black",
+      "description": "The JBL Tune 225TWS True Wireless are basic truly wireless headphones. They're decently well-made, exceptionally easy to carry around, and have a stable fit. Unfortunately, they have a short continuous battery life, block out almost no ambient noise, and have a fairly limited control scheme.",
+      "price": 50,
+      "discountPercentage": 3,
+      "rating": 4.6,
+      "stock": 39,
+      "brand": "JBL",
+      "category": "headphones",
+      "thumbnail": "./src/assets/images/headphones/14/1.jpg",
+      "images": [
+        "./src/assets/images/headphones/14/1.jpg",
+        "./src/assets/images/headphones/14/2.jpg",
+        "./src/assets/images/headphones/14/3.jpg",
+        "./src/assets/images/headphones/14/4.jpg",
+        "./src/assets/images/headphones/14/5.jpg"
+      ]
     }
   ]
 }
