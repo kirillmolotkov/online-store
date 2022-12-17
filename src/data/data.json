@@ -748,6 +748,149 @@
         "./src/assets/images/smartwatch/15/4.jpg",
         "./src/assets/images/smartwatch/15/5.jpg"
       ]
+    },
+    {
+      "id": "42",
+      "title": "Apple iPad 10.2 WiFi 64GB",
+      "description": "Powerful. Easy to use. Versatile. The new iPad has a beautiful 10.2-inch Retina display1, the powerful A13 Bionic chip, an Ultra Wide front camera with Centre Stage, and support for Apple Pencil and the Smart Keyboard.2 iPad lets you do more, more easily. All for an incredible price.",
+      "price": 329,
+      "discountPercentage": 3,
+      "rating": 4.9,
+      "stock": 23,
+      "brand": "Apple",
+      "category": "tablets",
+      "thumbnail": "./src/assets/images/tablets/1/1.jpg",
+      "images": [
+        "./src/assets/images/tablets/1/1.jpg",
+        "./src/assets/images/tablets/1/2.jpg",
+        "./src/assets/images/tablets/1/3.jpg",
+        "./src/assets/images/tablets/1/4.jpg",
+        "./src/assets/images/tablets/1/5.jpg"
+      ]
+    },
+    {
+      "id": "43",
+      "title": "HONOR Pad 8 6/128GB Blue Hour",
+      "description": "Featuring a premium design with a lightweight aluminum alloy body, the HONOR Pad 8 weighs just 520g and boasts a thickness of 6.9mm, allowing users to hold the tablet with one hand comfortably. With curved edges and an exquisite, frosted finish, HONOR tablet delivers a smooth touch and a premium look and feel",
+      "price": 229,
+      "discountPercentage": 3,
+      "rating": 4.6,
+      "stock": 13,
+      "brand": "HONOR",
+      "category": "tablets",
+      "thumbnail": "./src/assets/images/tablets/2/1.jpg",
+      "images": ["./src/assets/images/tablets/2/1.jpg", "./src/assets/images/tablets/2/2.jpg"]
+    },
+    {
+      "id": "44",
+      "title": "Huawei MatePad 11 WiFi 128GB Grey",
+      "description": "Enjoy the convenience of HUAWEI MatePad 11 with an organised new desktop. See and use all your apps using the touchscreen or mouse with greater efficiency. View frequently and recently used apps displayed at the bottom of the screen, and hover over app icons to preview each app window without having to open them.",
+      "price": 488,
+      "discountPercentage": 3,
+      "rating": 4.7,
+      "stock": 39,
+      "brand": "Huawei",
+      "category": "tablets",
+      "thumbnail": "./src/assets/images/tablets/3/1.jpg",
+      "images": [
+        "./src/assets/images/tablets/3/1.jpg",
+        "./src/assets/images/tablets/3/2.jpg",
+        "./src/assets/images/tablets/3/3.jpg",
+        "./src/assets/images/tablets/3/4.jpg"
+      ]
+    },
+    {
+      "id": "45",
+      "title": "Huawei MatePad 64GB LTE Grey",
+      "description": "HUAWEI MatePad Tablet is a 10.4-inch FullView display with HUAWEI Kirin 810 Adopts a 7nm processor and HUAWEI's self-developed architecture NPU,Quad-speaker and Quad-channel sound system brings the impressive sound to you,New eBook Mode, With a 7250 mAh (typical capacity) large-capacity battery.",
+      "price": 388,
+      "discountPercentage": 3,
+      "rating": 4.5,
+      "stock": 39,
+      "brand": "Huawei",
+      "category": "tablets",
+      "thumbnail": "./src/assets/images/tablets/3/1.jpg",
+      "images": [
+        "./src/assets/images/tablets/4/1.jpg",
+        "./src/assets/images/tablets/4/2.jpg",
+        "./src/assets/images/tablets/4/3.jpg",
+        "./src/assets/images/tablets/4/4.jpg"
+      ]
+    },
+    {
+      "id": "46",
+      "title": "Lenovo Tab M10 FHD Plus 64GB",
+      "description": "With a large 10.3 FHD screen, the 10.3 Tab M10 FHD Plus 64GB Tablet from Lenovo can be used for a variety of applications. Remote learning, games, reading books and magazines, streaming video, and much more can be enjoyed by the whole family. The dual built-in speakers tuned by Dolby Atmos help to make music and entertainment apps sound their best. Tablets are popular with adults and kids alike, which is why the Tab M10 also features a dedicated Kid's Mode 4.0 to provide child-friendly content for your young ones.",
+      "price": 196,
+      "discountPercentage": 3,
+      "rating": 4.5,
+      "stock": 22,
+      "brand": "Lenovo",
+      "category": "tablets",
+      "thumbnail": "./src/assets/images/tablets/5/1.jpg",
+      "images": [
+        "./src/assets/images/tablets/5/1.jpg",
+        "./src/assets/images/tablets/5/2.jpg",
+        "./src/assets/images/tablets/5/3.jpg",
+        "./src/assets/images/tablets/5/4.jpg",
+        "./src/assets/images/tablets/5/5.jpg"
+      ]
+    },
+    {
+      "id": "47",
+      "title": "Xiaomi Redmi Pad WiFi 6/128GB Mint Green",
+      "description": "Redmi Pad All in one, pad for fun 90Hz buttery smooth display High-performance MediaTek Helio G99 Long-lasting 8000mAh (typ) battery Flagship-level unibody design",
+      "price": 245,
+      "discountPercentage": 3,
+      "rating": 4.6,
+      "stock": 32,
+      "brand": "Xiaomi",
+      "category": "tablets",
+      "thumbnail": "./src/assets/images/tablets/6/1.jpg",
+      "images": [
+        "./src/assets/images/tablets/6/1.jpg",
+        "./src/assets/images/tablets/6/2.jpg",
+        "./src/assets/images/tablets/6/3.jpg",
+        "./src/assets/images/tablets/6/4.jpg",
+        "./src/assets/images/tablets/6/5.jpg"
+      ]
+    },
+    {
+      "id": "48",
+      "title": "Xiaomi Pad 5 WiFi 128GB Cosmic Gray",
+      "description": "The large 11 screen, stylish design and top-of-the-line configuration is guaranteed to meet your needs across a wide range of scenarios. The Qualcomm® Snapdragon™ 860 and 120Hz high refresh rate provides you with a super smooth experience. The extra-large 8720mAh(typ) battery provides you with the power that you want.",
+      "price": 449,
+      "discountPercentage": 3,
+      "rating": 4.6,
+      "stock": 52,
+      "brand": "Xiaomi",
+      "category": "tablets",
+      "thumbnail": "./src/assets/images/tablets/7/1.jpg",
+      "images": [
+        "./src/assets/images/tablets/7/1.jpg",
+        "./src/assets/images/tablets/7/2.jpg",
+        "./src/assets/images/tablets/7/3.jpg",
+        "./src/assets/images/tablets/7/4.jpg"
+      ]
+    },
+    {
+      "id": "49",
+      "title": "Xiaomi Redmi Pad WiFi 6/128GB Moonlight Silver",
+      "description": "Redmi Pad All in one, pad for fun 90Hz buttery smooth display High-performance MediaTek Helio G99 Long-lasting 8000mAh (typ) battery Flagship-level unibody design",
+      "price": 245,
+      "discountPercentage": 3,
+      "rating": 4.6,
+      "stock": 12,
+      "brand": "Xiaomi",
+      "category": "tablets",
+      "thumbnail": "./src/assets/images/tablets/8/1.jpg",
+      "images": [
+        "./src/assets/images/tablets/8/1.jpg",
+        "./src/assets/images/tablets/8/2.jpg",
+        "./src/assets/images/tablets/8/3.jpg",
+        "./src/assets/images/tablets/8/4.jpg",
+        "./src/assets/images/tablets/8/5.jpg"
+      ]
     }
   ]
 }
