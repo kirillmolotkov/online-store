@@ -1,0 +1,498 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "iPhone 12 64GB Purple",
+      "description": "Apple iPhone 12 was officially released on October 13, 2020. The phone is powered by the new Apple A14 Bionic processor. The smartphone comes with a 6.1 inches Super Retina XDR OLED capacitive touchscreen, 1170 x 2532 pixels resolution and HDR10 display, Wide color gamut, Dolby Vision, and True-tone.",
+      "price": 599,
+      "discountPercentage": 3,
+      "rating": 4.6,
+      "stock": 35,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/1/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/1/1.jpg",
+        "./src/assets/images/smartphone/1/2.jpg",
+        "./src/assets/images/smartphone/1/3.jpg",
+        "./src/assets/images/smartphone/1/4.jpg",
+        "./src/assets/images/smartphone/1/5.jpg"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "iPhone 12 mini",
+      "description": "The iPhone 12 mini display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 5.42 inches diagonally (actual viewable area is less)",
+      "price": 599,
+      "discountPercentage": 3,
+      "rating": 4.8,
+      "stock": 57,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/2/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/2/1.jpg",
+        "./src/assets/images/smartphone/2/2.jpg",
+        "./src/assets/images/smartphone/2/3.jpg",
+        "./src/assets/images/smartphone/2/4.jpg",
+        "./src/assets/images/smartphone/2/5.jpg"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "iPhone 13 Pro",
+      "description": "iPhone 13 Pro was made for low light. The Wide camera adds a wider aperture and our largest sensor yet — and it leverages the LiDAR Scanner for Night mode portraits. Ultra Wide gets a wider aperture, a faster sensor, and all-new autofocus. And Telephoto now has Night mode.",
+      "price": 892,
+      "discountPercentage": 3,
+      "rating": 4.7,
+      "stock": 97,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/3/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/3/1.jpg",
+        "./src/assets/images/smartphone/3/2.jpg",
+        "./src/assets/images/smartphone/3/3.jpg",
+        "./src/assets/images/smartphone/3/4.jpg",
+        "./src/assets/images/smartphone/3/5.jpg"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "iPhone SE",
+      "description": "The iPhone SE is Apple's entry-level iPhone, starting at $429. The device offers an affordable entry point to the iPhone lineup, with many important features such as a powerful A-series chip, a high-quality camera with 4K video recording, Haptic Touch, wireless charging, water and dust resistance, and more",
+      "price": 429,
+      "discountPercentage": 3,
+      "rating": 4.7,
+      "stock": 17,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/4/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/4/1.jpg",
+        "./src/assets/images/smartphone/4/2.jpg",
+        "./src/assets/images/smartphone/4/3.jpg",
+        "./src/assets/images/smartphone/4/4.jpg",
+        "./src/assets/images/smartphone/4/5.jpg"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Xiaomi Redmi Note 11S",
+      "description": "The Xiaomi Redmi Note 11 is one of the phones that sounds like a candidate for the king of quality-price in 2022. Its design is striking, its specifications may be sufficient, but if this phone can be attractive for something, it is its more affordable price . At Xataka, we have been using one of the most important phones for the mid-range this year for a week, and in this analysis we are going to tell you about our experience with it.",
+      "price": 217,
+      "discountPercentage": 3,
+      "rating": 4.7,
+      "stock": 34,
+      "brand": "Xiaomi",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/5/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/5/1.jpg",
+        "./src/assets/images/smartphone/5/2.jpg",
+        "./src/assets/images/smartphone/5/3.jpg",
+        "./src/assets/images/smartphone/5/4.jpg",
+        "./src/assets/images/smartphone/5/5.jpg"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Xiaomi Redmi 10",
+      "description": "Redmi 10 mobile was launched on 17th March 2022. The phone comes with a 60 Hz refresh rate 6.70-inch touchscreen display offering a resolution of 720x1648 pixels (HD+). The display sports Gorilla Glass for protection. Redmi 10 is powered by an octa-core Qualcomm Snapdragon 680 processor. It comes with 4GB, 6GB of RAM. The Redmi 10 runs Android 11 and is powered by a 6000mAh battery. The Redmi 10 supports proprietary fast charging.",
+      "price": 170,
+      "discountPercentage": 3,
+      "rating": 4.7,
+      "stock": 84,
+      "brand": "Xiaomi",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/6/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/6/1.jpg",
+        "./src/assets/images/smartphone/6/2.jpg",
+        "./src/assets/images/smartphone/6/3.jpg",
+        "./src/assets/images/smartphone/6/4.jpg",
+        "./src/assets/images/smartphone/6/5.jpg"
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Xiaomi 11T",
+      "description": "The Xiaomi 11T comes with 6.67-inch AMOLED display with 120Hz refresh rate and MediaTek Dimensity 1200 processor under the hood. Specifications also include 5000mAh battery with 67W charging speed, triple setup camera on the back with 108MP main sensor and it is 5G ready.",
+      "price": 312,
+      "discountPercentage": 3,
+      "rating": 4.9,
+      "stock": 61,
+      "brand": "Xiaomi",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/7/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/7/1.jpg",
+        "./src/assets/images/smartphone/7/2.jpg",
+        "./src/assets/images/smartphone/7/3.jpg",
+        "./src/assets/images/smartphone/7/4.jpg",
+        "./src/assets/images/smartphone/7/5.jpg"
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Xiaomi 12X",
+      "description": "The Xiaomi 12X is a more compact version of the Xiaomi 12, make no mistake about it. In fact, it is its main selling point. Hence, it sports a similar design that is as appealing as the base model.",
+      "price": 625,
+      "discountPercentage": 3,
+      "rating": 4.9,
+      "stock": 90,
+      "brand": "Xiaomi",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/8/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/8/1.jpg",
+        "./src/assets/images/smartphone/8/2.jpg",
+        "./src/assets/images/smartphone/8/3.jpg",
+        "./src/assets/images/smartphone/8/4.jpg",
+        "./src/assets/images/smartphone/8/5.jpg"
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Xiaomi 11 Lite 5G",
+      "description": "The smartphone features a triple rear camera setup with a 64MP main camera and 8MP + 5MP secondary cameras. For taking selfies, you have a single 20MP front camera. The phone is fueled by a 4250mAh battery and supports 33W Fast charging, Quick Charge 4+, and Power Delivery 3.0. Fitted with a side-mounted fingerprint sensor, the phone comes with IP53 dust and splash protection and three-color variants viz: Truffle Black, Mint Green, Citrus Yellow.",
+      "price": 339,
+      "discountPercentage": 3,
+      "rating": 4.4,
+      "stock": 120,
+      "brand": "Xiaomi",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/9/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/9/1.jpg",
+        "./src/assets/images/smartphone/9/2.jpg",
+        "./src/assets/images/smartphone/9/3.jpg",
+        "./src/assets/images/smartphone/9/4.jpg",
+        "./src/assets/images/smartphone/9/5.jpg"
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Samsung Galaxy A52",
+      "description": "The dimension of the smartphone is 159.9 x 75.1 x 8.4 mm and it weighs 189 grams. The smartphone is pack with 6 GB and 8 GB RAM with a 128 GB and 256 GB internal storage option. The device runs on the Android 11, One UI 3.1 operating system.",
+      "price": 599,
+      "discountPercentage": 3,
+      "rating": 4.5,
+      "stock": 50,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/10/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/10/1.jpg",
+        "./src/assets/images/smartphone/10/2.jpg",
+        "./src/assets/images/smartphone/10/3.jpg",
+        "./src/assets/images/smartphone/10/4.jpg",
+        "./src/assets/images/smartphone/10/5.jpg"
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Samsung Galaxy A32",
+      "description": "Feast your eyes on vibrant details with the FHD+ Super AMOLED display, reaching 800 nits¹ for clarity even in bright daylight. Eye Comfort Shield² lowers blue light, and Real Smooth keeps the view smooth, whether you're gaming or scrolling. All on the expansive 6.4-inch Infinity-U Display.",
+      "price": 199,
+      "discountPercentage": 3,
+      "rating": 4.6,
+      "stock": 88,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/11/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/11/1.jpg",
+        "./src/assets/images/smartphone/11/2.jpg",
+        "./src/assets/images/smartphone/11/3.jpg",
+        "./src/assets/images/smartphone/11/4.jpg",
+        "./src/assets/images/smartphone/11/5.jpg"
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Samsung Galaxy A23",
+      "description": "The Galaxy A23's Ambient Edge design connects the camera with the body seamlessly with simple but refined curves. The slim and symmetric Galaxy A23 comes in Awesome Black, Awesome White, Awesome Blue, and Awesome Peach colors.",
+      "price": 299,
+      "discountPercentage": 3,
+      "rating": 4.6,
+      "stock": 78,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/12/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/12/1.jpg",
+        "./src/assets/images/smartphone/12/2.jpg",
+        "./src/assets/images/smartphone/12/3.jpg",
+        "./src/assets/images/smartphone/12/4.jpg",
+        "./src/assets/images/smartphone/12/5.jpg"
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Samsung Galaxy A53",
+      "description": "Fast. To the point of innovation. In 5G, your world becomes a Galaxy. Hyperfast connection means seamless streaming and sharing with your friends and family.",
+      "price": 324,
+      "discountPercentage": 3,
+      "rating": 4.1,
+      "stock": 34,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/13/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/13/1.jpg",
+        "./src/assets/images/smartphone/13/2.jpg",
+        "./src/assets/images/smartphone/13/3.jpg",
+        "./src/assets/images/smartphone/13/4.jpg",
+        "./src/assets/images/smartphone/13/5.jpg"
+      ]
+    },
+    {
+      "id": "14",
+      "title": "Samsung Galaxy A33",
+      "description": "Samsung Galaxy A33 5G mobile was launched on 17th March 2022. The phone comes with a 90 Hz refresh rate 6.40-inch touchscreen display offering a resolution of 1080x2400 pixels (FHD+) and an aspect ratio of 20:9. The display sports Gorilla Glass for protection. Samsung Galaxy A33 5G is powered by an octa-core processor. It comes with 6GB, 8GB of RAM. The Samsung Galaxy A33 5G runs Android 12 and is powered by a 5000mAh battery. The Samsung Galaxy A33 5G supports proprietary fast charging.",
+      "price": 294,
+      "discountPercentage": 3,
+      "rating": 4.4,
+      "stock": 15,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/14/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/14/1.jpg",
+        "./src/assets/images/smartphone/14/2.jpg",
+        "./src/assets/images/smartphone/14/3.jpg",
+        "./src/assets/images/smartphone/14/4.jpg",
+        "./src/assets/images/smartphone/14/5.jpg"
+      ]
+    },
+    {
+      "id": "15",
+      "title": "Samsung Galaxy S22 Ultra",
+      "description": "The Samsung Galaxy S22 Ultra is the headliner of the S22 series. It's the first S series phone to include Samsung's S Pen. Specifications are top-notch including 6.8-inch Dynamic AMOLED display with 120Hz refresh rate, Snapdragon 8 Gen 1 processor, 5000mAh battery, up to 12gigs of RAM, and 1TB of storage.",
+      "price": 730,
+      "discountPercentage": 3,
+      "rating": 4.9,
+      "stock": 65,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/15/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/15/1.jpg",
+        "./src/assets/images/smartphone/15/2.jpg",
+        "./src/assets/images/smartphone/15/3.jpg",
+        "./src/assets/images/smartphone/15/4.jpg",
+        "./src/assets/images/smartphone/15/5.jpg"
+      ]
+    },
+    {
+      "id": "16",
+      "title": "Samsung Galaxy A73",
+      "description": "Samsung Galaxy A73 5G mobile was launched on 17th March 2022. The phone comes with a 120 Hz refresh rate 6.70-inch touchscreen display offering a resolution of 1080x2400 pixels (FHD+). The display sports Gorilla Glass for protection. It comes with 8GB of RAM. The Samsung Galaxy A73 5G runs Android 12 and is powered by a 5000mAh battery. The Samsung Galaxy A73 5G supports proprietary fast charging.",
+      "price": 596,
+      "discountPercentage": 3,
+      "rating": 4.8,
+      "stock": 12,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/16/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/16/1.jpg",
+        "./src/assets/images/smartphone/16/2.jpg",
+        "./src/assets/images/smartphone/16/3.jpg",
+        "./src/assets/images/smartphone/16/4.jpg",
+        "./src/assets/images/smartphone/16/5.jpg"
+      ]
+    },
+    {
+      "id": "17",
+      "title": "Samsung Galaxy Z Fold4",
+      "description": "The Samsung Galaxy Z Fold 4 is is the successor of the Galaxy Z Fold 3 and it comes with 6.2-inch outer display and big 7.6-inch Dynamic AMOLED display when unfolded. Specs also include Qualcomm Snapdragon 8+ Gen 1 processor, 4400mAh battery and Triple camera setup on the back with 50MP main sensor.",
+      "price": 1650,
+      "discountPercentage": 3,
+      "rating": 4.0,
+      "stock": 5,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/17/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/17/1.jpg",
+        "./src/assets/images/smartphone/17/2.jpg",
+        "./src/assets/images/smartphone/17/3.jpg",
+        "./src/assets/images/smartphone/17/4.jpg",
+        "./src/assets/images/smartphone/17/5.jpg"
+      ]
+    },
+    {
+      "id": "18",
+      "title": "Huawei nova Y70",
+      "description": "HUAWEI nova Y70 comes with a triple AI camera setup that's as adaptable as it is awe-inspiring. A touch of the shutter is all it takes to capture a distant landscape, priceless portrait, or timeless interaction.",
+      "price": 200,
+      "discountPercentage": 3,
+      "rating": 4.0,
+      "stock": 83,
+      "brand": "Huawei",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/18/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/18/1.jpg",
+        "./src/assets/images/smartphone/18/2.jpg",
+        "./src/assets/images/smartphone/18/3.jpg",
+        "./src/assets/images/smartphone/18/4.jpg",
+        "./src/assets/images/smartphone/18/5.jpg"
+      ]
+    },
+    {
+      "id": "19",
+      "title": "Huawei nova 9 SE",
+      "description": "The size of the screen is 6.78 inches and 1080 x 2388 pixels is the resolution with 120Hz. The screen type is IPS LCD capacitive touchscreen. The device is powered by Qualcomm SDM665 Snapdragon 665 Octa-core processor and Adreno 610 GPU.",
+      "price": 279,
+      "discountPercentage": 3,
+      "rating": 4.6,
+      "stock": 43,
+      "brand": "Huawei",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/19/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/19/1.jpg",
+        "./src/assets/images/smartphone/19/2.jpg",
+        "./src/assets/images/smartphone/19/3.jpg",
+        "./src/assets/images/smartphone/19/4.jpg",
+        "./src/assets/images/smartphone/19/5.jpg"
+      ]
+    },
+    {
+      "id": "20",
+      "title": "Huawei P50",
+      "description": "The dimension of the device is 156.5 x 73.8 x 7.9 mm and it weighs 181 grams. The smartphone is packed with 8 GB RAM with internal storage is 128 GB and 256 GB. The smartphone is fueled with a 4100 non-removable battery + Fast charging 66W.",
+      "price": 737,
+      "discountPercentage": 3,
+      "rating": 4.1,
+      "stock": 82,
+      "brand": "Huawei",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/20/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/20/1.jpg",
+        "./src/assets/images/smartphone/20/2.jpg",
+        "./src/assets/images/smartphone/20/3.jpg",
+        "./src/assets/images/smartphone/20/4.jpg",
+        "./src/assets/images/smartphone/20/5.jpg"
+      ]
+    },
+    {
+      "id": "21",
+      "title": "Huawei nova 10 Pro",
+      "description": "The phone runs on HarmonyOS 2.0 operating system. Huawei nova 10 Pro comes in different colors like Black, Silver, Green, and Violet. The sensors include optical under display fingerprint, accelerometer, gyro, proximity, and compass + Virtual proximity sensing.",
+      "price": 540,
+      "discountPercentage": 3,
+      "rating": 4.6,
+      "stock": 32,
+      "brand": "Huawei",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/21/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/21/1.jpg",
+        "./src/assets/images/smartphone/21/2.jpg",
+        "./src/assets/images/smartphone/21/3.jpg",
+        "./src/assets/images/smartphone/21/4.jpg",
+        "./src/assets/images/smartphone/21/5.jpg"
+      ]
+    },
+    {
+      "id": "22",
+      "title": "Huawei nova 10 SE",
+      "description": "The size of the screen is 6.67 inches and it provides a resolution of 1080 x 2400 pixels with 90Hz and 1B colors. The screen type is OLED capacitive touchscreen. The device is powered by Qualcomm Snapdragon 680G 4G Octa-core processor and Adreno 610 GPU.",
+      "price": 250,
+      "discountPercentage": 3,
+      "rating": 4.9,
+      "stock": 37,
+      "brand": "Huawei",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/22/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/22/1.jpg",
+        "./src/assets/images/smartphone/22/2.jpg",
+        "./src/assets/images/smartphone/22/3.jpg",
+        "./src/assets/images/smartphone/22/4.jpg",
+        "./src/assets/images/smartphone/22/5.jpg"
+      ]
+    },
+    {
+      "id": "23",
+      "title": "HONOR X7",
+      "description": "The Honor X7 is an Android smartphone with a 6.74-inch HD+ screen with a 90Hz refresh rate. Inside, we find a Snapdragon 680 processor accompanied by 4GB of RAM and 128GB of internal storage. A 48MP + 5MP + 2MP + 2MP quad camera sits on the back, while an 8MP camera is on the front. Completing the features of the Honor X7 we find a 5000 mAh fast charging battery, side fingerprint reader, and runs Magic UI 4.2 based on Android 11.",
+      "price": 190,
+      "discountPercentage": 3,
+      "rating": 4.9,
+      "stock": 39,
+      "brand": "HONOR",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/23/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/23/1.jpg",
+        "./src/assets/images/smartphone/23/2.jpg",
+        "./src/assets/images/smartphone/23/3.jpg",
+        "./src/assets/images/smartphone/23/4.jpg",
+        "./src/assets/images/smartphone/23/5.jpg"
+      ]
+    },
+    {
+      "id": "24",
+      "title": "HONOR X8",
+      "description": "The HONOR X8 is characterized by having a slim 7.45mm body with flat edges and rounded corners, also by having a 64MP2 quad camera, Snapdragon 680 processor, 6.7 screen, and 22.5W fast charging.",
+      "price": 242,
+      "discountPercentage": 3,
+      "rating": 4.9,
+      "stock": 19,
+      "brand": "HONOR",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/24/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/24/1.jpg",
+        "./src/assets/images/smartphone/24/2.jpg",
+        "./src/assets/images/smartphone/24/3.jpg",
+        "./src/assets/images/smartphone/24/4.jpg",
+        "./src/assets/images/smartphone/24/5.jpg"
+      ]
+    },
+    {
+      "id": "25",
+      "title": "HONOR 70",
+      "description": "The display of 6.67 inches has an OLED screen type and provides a resolution of 1080 x 2400 pixels while the pixel density is 395 PPI (pixels per inch). The smartphone is powered by Qualcomm SM7325-AE Snapdragon 778G+ 5G Octa-core processor and Adreno 642L GPU.",
+      "price": 380,
+      "discountPercentage": 3,
+      "rating": 4.8,
+      "stock": 51,
+      "brand": "HONOR",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/25/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/25/1.jpg",
+        "./src/assets/images/smartphone/25/2.jpg",
+        "./src/assets/images/smartphone/25/3.jpg",
+        "./src/assets/images/smartphone/25/4.jpg",
+        "./src/assets/images/smartphone/25/5.jpg"
+      ]
+    },
+    {
+      "id": "26",
+      "title": "HONOR X9",
+      "description": "The Honor X9 features a 6.81-inch FHD+ display and is powered by a Snapdragon 680 processor along with 8GB of RAM and 128GB of internal storage. a quad camera with a 64MP main lens is located on the back, and the selfie camera is 16MP. Power is provided by a 4800 mAh fast-charging battery, it has a fingerprint reader on its side and runs Android 11.",
+      "price": 270,
+      "discountPercentage": 3,
+      "rating": 4.2,
+      "stock": 11,
+      "brand": "HONOR",
+      "category": "smartphones",
+      "thumbnail": "./src/assets/images/smartphone/26/1.jpg",
+      "images": [
+        "./src/assets/images/smartphone/26/1.jpg",
+        "./src/assets/images/smartphone/26/2.jpg",
+        "./src/assets/images/smartphone/26/3.jpg",
+        "./src/assets/images/smartphone/26/4.jpg",
+        "./src/assets/images/smartphone/26/5.jpg"
+      ]
+    }
+  ]
+}
