@@ -493,6 +493,261 @@
         "./src/assets/images/smartphone/26/4.jpg",
         "./src/assets/images/smartphone/26/5.jpg"
       ]
+    },
+    {
+      "id": "27",
+      "title": "Apple Watch Series 3 42 mm Grey",
+      "description": "Originally released September 2017 S3 dual-core processor and W2 Apple wireless chip Built-in GPS and GLONASS Barometric altimeter Water resistant to 50 meters1 2x brighter second-generation OLED Retina display with Force Touch (1000 nits) Wi-Fi (802.11b/g/n 2.4GHz) Bluetooth 4.2 Siri speaks Capacity 8GB Composite back",
+      "price": 199,
+      "discountPercentage": 3,
+      "rating": 4.6,
+      "stock": 62,
+      "brand": "Apple",
+      "category": "smartwatch",
+      "thumbnail": "./src/assets/images/smartwatch/1/1.jpg",
+      "images": ["./src/assets/images/smartwatch/1/1.jpg", "./src/assets/images/smartwatch/1/2.jpg"]
+    },
+    {
+      "id": "28",
+      "title": "Samsung Galaxy Watch3 41 mm Silver",
+      "description": "Outlined in a subtle rotating bezel, it's easier to see and focus on what matters with an even bigger screen. Galaxy Watch3 is thinner and smaller, yet about 15% lighter with a sophisticated look that's ideal for your wrist with its slimmed down frame.",
+      "price": 332,
+      "discountPercentage": 3,
+      "rating": 4.7,
+      "stock": 41,
+      "brand": "Samsung",
+      "category": "smartwatch",
+      "thumbnail": "./src/assets/images/smartwatch/2/1.jpg",
+      "images": [
+        "./src/assets/images/smartwatch/2/1.jpg",
+        "./src/assets/images/smartwatch/2/2.jpg",
+        "./src/assets/images/smartwatch/2/3.jpg",
+        "./src/assets/images/smartwatch/2/4.jpg",
+        "./src/assets/images/smartwatch/2/5.jpg"
+      ]
+    },
+    {
+      "id": "29",
+      "title": "Samsung Galaxy Watch4 44 mm Black",
+      "description": "Galaxy Watch4 features a simple design with a streamlined Armor Aluminum metal frame. It offers high-end looks and functionality for your workouts and day-to-day tasks. Choose from a selection of bands, including the Hybrid Leather Band and the Sport Band, to fashion your own band style.",
+      "price": 299,
+      "discountPercentage": 3,
+      "rating": 4.8,
+      "stock": 49,
+      "brand": "Samsung",
+      "category": "smartwatch",
+      "thumbnail": "./src/assets/images/smartwatch/3/1.jpg",
+      "images": ["./src/assets/images/smartwatch/3/1.jpg"]
+    },
+    {
+      "id": "30",
+      "title": "Samsung Galaxy Watch4 40 mm Black",
+      "description": "Galaxy Watch4 features a simple design with a streamlined Armor Aluminum metal frame. It offers high-end looks and functionality for your workouts and day-to-day tasks. Choose from a selection of bands, including the Hybrid Leather Band and the Sport Band, to fashion your own band style.",
+      "price": 259,
+      "discountPercentage": 3,
+      "rating": 4.8,
+      "stock": 39,
+      "brand": "Samsung",
+      "category": "smartwatch",
+      "thumbnail": "./src/assets/images/smartwatch/4/1.jpg",
+      "images": ["./src/assets/images/smartwatch/4/1.jpg"]
+    },
+    {
+      "id": "31",
+      "title": "Samsung Galaxy Watch4 Classic 46 mm Silver",
+      "description": "Galaxy Watch4 features a simple design with a streamlined Armor Aluminum metal frame. It offers high-end looks and functionality for your workouts and day-to-day tasks. Choose from a selection of bands, including the Hybrid Leather Band and the Sport Band, to fashion your own band style.",
+      "price": 309,
+      "discountPercentage": 3,
+      "rating": 4.6,
+      "stock": 29,
+      "brand": "Samsung",
+      "category": "smartwatch",
+      "thumbnail": "./src/assets/images/smartwatch/5/1.jpg",
+      "images": ["./src/assets/images/smartwatch/5/1.jpg"]
+    },
+    {
+      "id": "32",
+      "title": "Huawei Watch GT 3 42 mm Elegant White",
+      "description": "The Huawei Watch GT 3 42mm is a smart watch with a 7-day battery life and 50m water resistance. It integrates workout monitoring, voice exercise broadcasts, a voice assistant, music playback, intelligent linkage, Huawei TruSleep, heart rate monitoring, Bluetooth calling, a message assistant, GPS, and wireless charging.",
+      "price": 189,
+      "discountPercentage": 3,
+      "rating": 5.0,
+      "stock": 65,
+      "brand": "Huawei",
+      "category": "smartwatch",
+      "thumbnail": "./src/assets/images/smartwatch/6/1.jpg",
+      "images": [
+        "./src/assets/images/smartwatch/6/1.jpg",
+        "./src/assets/images/smartwatch/6/2.jpg",
+        "./src/assets/images/smartwatch/6/3.jpg",
+        "./src/assets/images/smartwatch/6/4.jpg",
+        "./src/assets/images/smartwatch/6/5.jpg"
+      ]
+    },
+    {
+      "id": "33",
+      "title": "Huawei Watch GT 3 Pro Ceramic 43 mm with ceramic strap",
+      "description": "When modern technology meets classic ceramic craftsmanship, the stylish creation unveils a timeless aesthetic, making it a refreshing fashion statement on your wrist.",
+      "price": 289,
+      "discountPercentage": 3,
+      "rating": 4.8,
+      "stock": 29,
+      "brand": "Huawei",
+      "category": "smartwatch",
+      "thumbnail": "./src/assets/images/smartwatch/7/1.jpg",
+      "images": [
+        "./src/assets/images/smartwatch/7/1.jpg",
+        "./src/assets/images/smartwatch/7/2.jpg",
+        "./src/assets/images/smartwatch/7/3.jpg",
+        "./src/assets/images/smartwatch/7/4.jpg",
+        "./src/assets/images/smartwatch/7/5.jpg"
+      ]
+    },
+    {
+      "id": "34",
+      "title": "Watch Huawei Watch 3 Classic Brawn",
+      "description": "The Huawei Watch 3 Classic is a discreet watch, but it has a lot of features to support you in your daily life. With sports sessions (heart rate sensor, sports coach), GPS tracking, Bluetooth and Wi-Fi, notifications and call answering, the possibilities are endless.",
+      "price": 273,
+      "discountPercentage": 3,
+      "rating": 4.8,
+      "stock": 33,
+      "brand": "Huawei",
+      "category": "smartwatch",
+      "thumbnail": "./src/assets/images/smartwatch/8/1.jpg",
+      "images": [
+        "./src/assets/images/smartwatch/8/1.jpg",
+        "./src/assets/images/smartwatch/8/2.jpg",
+        "./src/assets/images/smartwatch/8/3.jpg"
+      ]
+    },
+    {
+      "id": "35",
+      "title": "Watch Huawei Watch 3 Pro Brown",
+      "description": "The main advantage of ceramics is the high hardness and color stability. It's harder than stainless steel, and therefore has a very high resistance to scratching. It is hypoallergic and therefore suitable for all with increased skin sensitivity. Its main drawback is its fragility - can break during strong impact.",
+      "price": 300,
+      "discountPercentage": 3,
+      "rating": 4.7,
+      "stock": 43,
+      "brand": "Huawei",
+      "category": "smartwatch",
+      "thumbnail": "./src/assets/images/smartwatch/9/1.jpg",
+      "images": [
+        "./src/assets/images/smartwatch/9/1.jpg",
+        "./src/assets/images/smartwatch/9/2.jpg",
+        "./src/assets/images/smartwatch/9/3.jpg"
+      ]
+    },
+    {
+      "id": "36",
+      "title": "Huawei Watch Fit 2 Active Isle Blue",
+      "description": "The Huawei Watch Fit 2 is the perfect companion for your fitness journey. With its 1.74-inch FullView Display, you can see your workout stats clearly while you stay connected with Bluetooth calling.",
+      "price": 159,
+      "discountPercentage": 3,
+      "rating": 4.1,
+      "stock": 83,
+      "brand": "Huawei",
+      "category": "smartwatch",
+      "thumbnail": "./src/assets/images/smartwatch/10/1.jpg",
+      "images": [
+        "./src/assets/images/smartwatch/10/1.jpg",
+        "./src/assets/images/smartwatch/10/2.jpg",
+        "./src/assets/images/smartwatch/10/3.jpg"
+      ]
+    },
+    {
+      "id": "37",
+      "title": "Watch Amazfit Bip 3 Black",
+      "description": "Amazfit Bip 3–the 2022 upgraded smartwatch that guides you toward a healthier, more active, more connected life. The watch packs a 1.69 super-sized color screen into its super slim and light body for a clear, exquisite viewing experience. Powerful battery to deliver up to 14 days of battery life.",
+      "price": 59,
+      "discountPercentage": 3,
+      "rating": 4.3,
+      "stock": 53,
+      "brand": "Amazfit",
+      "category": "smartwatch",
+      "thumbnail": "./src/assets/images/smartwatch/11/1.jpg",
+      "images": [
+        "./src/assets/images/smartwatch/11/1.jpg",
+        "./src/assets/images/smartwatch/11/2.jpg",
+        "./src/assets/images/smartwatch/11/3.jpg",
+        "./src/assets/images/smartwatch/11/4.jpg",
+        "./src/assets/images/smartwatch/11/5.jpg"
+      ]
+    },
+    {
+      "id": "38",
+      "title": "Watch Amazfit GTS 4 mini Pink",
+      "description": "Amazfit GTS 4 Mini - a smaller version of the premium smartwatch. 1.65 AMOLED display with 336 x 384 resolution, 120+ sports modes and automatic recognition of 7 sports. Record physical activity, health, blood oxygenation, heart rate measurement, sleep and stress monitoring, etc.",
+      "price": 119,
+      "discountPercentage": 3,
+      "rating": 4.5,
+      "stock": 23,
+      "brand": "Amazfit",
+      "category": "smartwatch",
+      "thumbnail": "./src/assets/images/smartwatch/12/1.jpg",
+      "images": [
+        "./src/assets/images/smartwatch/12/1.jpg",
+        "./src/assets/images/smartwatch/12/2.jpg",
+        "./src/assets/images/smartwatch/12/3.jpg",
+        "./src/assets/images/smartwatch/12/4.jpg",
+        "./src/assets/images/smartwatch/12/5.jpg"
+      ]
+    },
+    {
+      "id": "39",
+      "title": "Watch Amazfit GTS 4 mini Black",
+      "description": "Amazfit GTS 4 Mini - a smaller version of the premium smartwatch. 1.65 AMOLED display with 336 x 384 resolution, 120+ sports modes and automatic recognition of 7 sports. Record physical activity, health, blood oxygenation, heart rate measurement, sleep and stress monitoring, etc.",
+      "price": 119,
+      "discountPercentage": 3,
+      "rating": 4.5,
+      "stock": 27,
+      "brand": "Amazfit",
+      "category": "smartwatch",
+      "thumbnail": "./src/assets/images/smartwatch/13/1.jpg",
+      "images": [
+        "./src/assets/images/smartwatch/13/1.jpg",
+        "./src/assets/images/smartwatch/13/2.jpg",
+        "./src/assets/images/smartwatch/13/3.jpg",
+        "./src/assets/images/smartwatch/13/4.jpg",
+        "./src/assets/images/smartwatch/13/5.jpg"
+      ]
+    },
+    {
+      "id": "40",
+      "title": "Watch HONOR MagicWatch 2",
+      "description": "Honor MagicWatch 2 comes with a 1.39 inches OLED capacitive touchscreen and 454 x 454 pixels resolution. The is no camera. The smartwatch’s sensors include Accelerometer, gyro, heart rate, barometer, and compass. The smartwatch is fueled by a Non-removable Li-Po 455 mAh battery.",
+      "price": 239,
+      "discountPercentage": 3,
+      "rating": 4.2,
+      "stock": 23,
+      "brand": "HONOR",
+      "category": "smartwatch",
+      "thumbnail": "./src/assets/images/smartwatch/14/1.jpg",
+      "images": [
+        "./src/assets/images/smartwatch/14/1.jpg",
+        "./src/assets/images/smartwatch/14/2.jpg",
+        "./src/assets/images/smartwatch/14/3.jpg",
+        "./src/assets/images/smartwatch/14/4.jpg",
+        "./src/assets/images/smartwatch/14/5.jpg"
+      ]
+    },
+    {
+      "id": "41",
+      "title": "HONOR Watch GS 3 Classic Gold",
+      "description": "HONOR Smart Watch GS 3 comes with a 1.43-inch AMOLED screen and a 326 PPI resolution. The novel 3D ultra-curved slim design resembles a crystal-clear streamline. Over 97% Heart Rate Accurac The newest HONOR Watch GS 3, with 8-Channel Heart Rate AI Engine, support 24-hour heart rate monitoring.",
+      "price": 235,
+      "discountPercentage": 3,
+      "rating": 3.9,
+      "stock": 43,
+      "brand": "HONOR",
+      "category": "smartwatch",
+      "thumbnail": "./src/assets/images/smartwatch/15/1.jpg",
+      "images": [
+        "./src/assets/images/smartwatch/15/1.jpg",
+        "./src/assets/images/smartwatch/15/2.jpg",
+        "./src/assets/images/smartwatch/15/3.jpg",
+        "./src/assets/images/smartwatch/15/4.jpg",
+        "./src/assets/images/smartwatch/15/5.jpg"
+      ]
     }
   ]
 }
