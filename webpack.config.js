@@ -71,7 +71,6 @@ module.exports = {
               sourceMap: true,
             },
           },
-          // 'resolve-url-loader',
           {
             loader: 'sass-loader',
             options: {
@@ -100,7 +99,6 @@ module.exports = {
         test: /\.html$/,
         use: 'html-loader',
       },
-
       {
         test: /\.(ttf|woff2?|eot)$/i,
         type: 'asset/resource',
@@ -108,6 +106,7 @@ module.exports = {
             filename: 'assets/fonts/[name].[ext]'
         }
     },
+
 
       {
         test: /\.tsx?$/,
