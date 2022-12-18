@@ -11,18 +11,18 @@
       <div class="header__container">
         <div class="logo"><a class="logo__text" href="http://">Dream Team Store</a></div>
         <div class="header__total">You have to pay: 200$</div>
-        <div class="header__basket"> <a class="basket__link"" href="#"
-          ><img class="basket__icon" src="assets/icons/bascket.png" alt="Checkout"
-          />
-         </a>
+        <div class="header__basket">
+          <button class="basket__link">
+            <img class="basket__icon" src="assets/icons/bascket.png" alt="Checkout" />
+          </button>
         </div>
       </div>
       <ul class="header__nav-container">
-        <li class="header__nav-item">Samrtphones</li>
-        <li class="header__nav-item">Smartwatch</li>
-        <li class="header__nav-item">Tablets</li>
-        <li class="header__nav-item">Headphones</li>
-        <li class="header__nav-item">Laptops</li>
+        <li class="header__nav-item"><button class="header__button">Samrtphones</button></li>
+        <li class="header__nav-item"><button class="header__button">Smartwatch</button></li>
+        <li class="header__nav-item"><button class="header__button">Tablets</button></li>
+        <li class="header__nav-item"><button class="header__button">Headphones</button></li>
+        <li class="header__nav-item"><button class="header__button">Laptops</button></li>
       </ul>
     </header>
     <main class="main wrapper">
@@ -50,23 +50,25 @@
           <ul class="block__container">
             <li class="block__item">
               <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name">Aluminium
+              <label for="" class="item__name"
+                >Aluminium
                 <span class="item__count">(2)</span>
               </label>
             </li>
             <li class="block__item">
               <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name">Aluminium
+              <label for="" class="item__name"
+                >Aluminium
                 <span class="item__count">(2)</span>
               </label>
             </li>
             <li class="block__item">
               <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name">Aluminium
+              <label for="" class="item__name"
+                >Aluminium
                 <span class="item__count">(2)</span>
               </label>
             </li>
-    
           </ul>
         </div>
         <div class="filters__container">
@@ -87,15 +89,37 @@
           </ul>
         </div>
       </aside>
-      <section class="goods"></section>
+      <section class="goods">
+        <div class="sku__container">
+          <div class="sku__photo-slider"><img src="" alt="iphone"></div>
+          <div class="sku__price">$28.52</div>
+          <div class="sku__name">Iphone 54</div>
+          <div class="sku__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere iusto veritatis mollitia beatae omnis sequi, soluta, voluptas architecto repellat, neque officia doloremque officiis aliquam. Quam dolorum iusto corporis dolores?</div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
-      <div class="contacts"></div>
-      <div class="categories"></div>
+      <div class="contacts">
+        <div class="contacts__items">Minsk City</div>
+        <div class="contacts__items">Lybaja 8, str</div>
+        <div class="contacts__items">Tel: +375-99-999-99-99</div>
+        <div class="contacts__items">Belarus</div>
+      </div>
+      <div class="categories">
+        <ul class="footer__nav-container">
+          <li class="footer__nav-item"><button class="footer__button">Samrtphones</button></li>
+          <li class="footer__nav-item"><button class="footer__button">Smartwatch</button></li>
+          <li class="footer__nav-item"><button class="footer__button">Tablets</button></li>
+          <li class="footer__nav-item"><button class="footer__button">Headphones</button></li>
+          <li class="footer__nav-item"><button class="footer__button">Laptops</button></li>
+        </ul>
+      </div>
       <div class="rsschool">
-        <div class="rsschool__github"><a href="https://github.com/kirillmolotkov">Kirill github</a></div>
-        <div class="rsschool__github"><a href="https://github.com/Maxxxer">Max github</a></div>
-        <div class="rsschool__link"><a href="https://rs.school/js/"><img src="assets/icons/rs_school_js.svg" alt="rsschool logo"></a></div>
+        <div class="rsschool__github"><a href="https://github.com/kirillmolotkov">@KirillMolotkov github</a></div>
+        <div class="rsschool__github"><a href="https://github.com/Maxxxer">@Maxxxer github</a></div>
+        <div class="rsschool__link">
+          <a href="https://rs.school/js/"><img src="assets/icons/rs_school_js.svg" alt="rsschool logo" /></a>
+        </div>
         <div class="rsschool__year">2022</div>
       </div>
     </footer>

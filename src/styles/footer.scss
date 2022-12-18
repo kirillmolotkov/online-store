@@ -1,0 +1,42 @@
+.footer {
+  @include flex($justify: space-around, $align: flex-start);
+
+  padding-top: 20px;
+  background-color: #f6f2ee;
+}
+.contacts {
+}
+.categories {
+}
+.footer__nav-container,
+.rsschool,
+.contacts {
+  @include flex(column, flex-start, flex-start);
+  gap: 10px;
+}
+.footer__nav-item {
+}
+.footer__button {
+  @include basic-font;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms;
+  &:hover {
+    color: gray;
+  }
+  &:active {
+    color: $color-dark;
+  }
+}
+
+.rsschool__github,
+.rsschool__link,
+.rsschool__year,
+.contacts__items {
+  @include basic-font;
+}
+
+.rsschool__link {
+  width: 100%;
+}

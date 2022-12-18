@@ -6,7 +6,6 @@
 }
 .filters__heading {
   @include filter-heading-font();
-
 }
 .filters__container {
   @include filter-section-heading-font();
@@ -16,7 +15,7 @@
   width: 100%;
 }
 .block__container {
-  width: 100%
+  width: 100%;
 }
 .block__item {
   @include flex($justify: flex-start);
@@ -27,6 +26,6 @@
 .item__checkbox {
 }
 
-.item__name{
+.item__name {
   padding-left: 2%;
 }

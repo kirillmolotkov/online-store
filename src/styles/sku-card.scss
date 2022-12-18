@@ -1,0 +1,16 @@
+.sku__container {
+}
+.sku__photo-slider {
+  max-width: 20%;
+  overflow: hidden;
+  height: 250px;
+}
+.sku__price {
+  @include sku-price-font;
+}
+.sku__name {
+  @include basic-font;
+}
+.sku__description {
+  @include sku-description-font;  
+}
