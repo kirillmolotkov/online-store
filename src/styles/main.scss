@@ -1,0 +1,13 @@
+.main {
+@include flex(row, flex-start, flex-start);
+
+}
+
+.goods{
+  padding-top: 3%;
+  padding-left: 5%;
+display: grid;
+gap: 1% 2%;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+// grid-template-rows: repeat(1fr, 4);
+}

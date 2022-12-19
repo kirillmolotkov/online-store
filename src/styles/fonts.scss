@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "type_basic";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("/src/assets/fonts/GothamSSm-Book.woff2")
+    format("woff");
+}
+
+@font-face {
+  font-family: "type_logo";
+  src:
+    url('/src/assets/fonts/Righteous-Regular.ttf')
+    format("truetype");
+}
+
+@font-face {
+font-family: "Bembo Book";
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+src: url("https://fonts.shopifycdn.com/bembo_book/bembobook_n4.8da691c1d96e22b482c66684b2147e382b6f8d3a.woff2?h1=c2hvcGJveGhpbGwuY29t&hmac=ccd7ae3ad4f97a380d6013ed22e685562fbdeb152e77bd05f5ef6fd89ddba7ba") format("woff2"),
+   url("https://fonts.shopifycdn.com/bembo_book/bembobook_n4.570284734f42a26c330fca9503f1e2e831cd33ea.woff?h1=c2hvcGJveGhpbGwuY29t&hmac=7dacc18003164f0f9d7bf11b8996bfde0e30a04b66ed81b405444fc37f2fd91d") format("woff");
+}
+
+@font-face {
+font-family: "Bembo Book";
+font-weight: 400;
+font-style: italic;
+font-display: swap;
+src: url("https://fonts.shopifycdn.com/bembo_book/bembobook_i4.24d4c7650bd439ccc896fb5cbfe4ab07805ae59f.woff2?h1=c2hvcGJveGhpbGwuY29t&hmac=99b0e7aafb0975ecf884e1811961d4082d684237078da6580168efbcd4438acc") format("woff2"),
+   url("https://fonts.shopifycdn.com/bembo_book/bembobook_i4.c3c45c9403a9e76b986a3e830ed7ab3023702202.woff?h1=c2hvcGJveGhpbGwuY29t&hmac=6039195a2e4de719458deeb3a2414e9b9c6847a29f7e0ba927237686465a7e34") format("woff");
+}
+
+@font-face {
+font-family: "Bembo Book";
+font-weight: 700;
+font-style: normal;
+font-display: swap;
+src: url("https://fonts.shopifycdn.com/bembo_book/bembobook_n7.79daebe15a2f8d7cd25dea54f0965d8a5442e391.woff2?h1=c2hvcGJveGhpbGwuY29t&hmac=d9fc8caba64892ae2e26f4df887d9f9e710b9ffa90023498524240ad2fa6082f") format("woff2"),
+   url("https://fonts.shopifycdn.com/bembo_book/bembobook_n7.eaf9e4a5f885e3908026c12882675e828a540277.woff?h1=c2hvcGJveGhpbGwuY29t&hmac=a559b838d191c3e52cb45e8b6e3aece832c639784994a44e1b1fcbc7cde0b1f6") format("woff");
+}
+
+@font-face {
+font-family: "Bembo Book";
+font-weight: 700;
+font-style: italic;
+font-display: swap;
+src: url("https://fonts.shopifycdn.com/bembo_book/bembobook_i7.17b241462a3806f07058ecdb604f9fddf10a7154.woff2?h1=c2hvcGJveGhpbGwuY29t&hmac=b598ece220ae128cc3602cfd8341ef145610f0ef82995187f512ff88c8b7a2a6") format("woff2"),
+   url("https://fonts.shopifycdn.com/bembo_book/bembobook_i7.295706236e50beb4a5ff676554dc4f7190a45522.woff?h1=c2hvcGJveGhpbGwuY29t&hmac=6356e880cb125c204d46d283e617d9d7cf33f8dfea845f6d5d0f50b6e7c1e774") format("woff");
+}
+
+
+@font-face {
+  font-family: "type_section_custom";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("//cdn.shopify.com/s/files/1/0020/9417/0221/files/Bembo-Roman.woff?v=16701064749460081521")
+    format("woff");
+}
+
+
+
+
+@font-face {
+  font-family: "type_button_custom";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("//cdn.shopify.com/s/files/1/0020/9417/0221/files/GothamSSm-Book_Web.woff?v=10643107736262599059")
+    format("woff");
+}
+
+
+
+
+@font-face {
+  font-family: "type_product_price_custom";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("//cdn.shopify.com/s/files/1/0020/9417/0221/files/GothamSSm-Book_Web.woff?v=10643107736262599059")
+    format("woff");
+}
+
+
+
+
+@font-face {
+  font-family: "type_product_card_title_custom";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("//cdn.shopify.com/s/files/1/0020/9417/0221/files/GothamSSm-Book_Web.woff?v=10643107736262599059")
+    format("woff");
+}
+
+
+
+
+@font-face {
+  font-family: "type_product_vendor_custom";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("//cdn.shopify.com/s/files/1/0020/9417/0221/files/GothamSSm-Book_Web.woff?v=10643107736262599059")
+    format("woff");
+}
+
+
+
+
+@font-face {
+  font-family: "type_footer_heading_custom";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("//cdn.shopify.com/s/files/1/0020/9417/0221/files/GothamSSm-Book_Web.woff?v=10643107736262599059")
+    format("woff");
+}
+
+
+
+
+@font-face {
+  font-family: "type_highlights_bar_custom";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("//cdn.shopify.com/s/files/1/0020/9417/0221/files/GothamSSm-Book_Web.woff?v=10643107736262599059")
+    format("woff");
+}
+
+
+
+
+@font-face {
+  font-family: "type_signpost_custom";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("//cdn.shopify.com/s/files/1/0020/9417/0221/files/GothamSSm-Book_Web.woff?v=10643107736262599059")
+    format("woff");
+}

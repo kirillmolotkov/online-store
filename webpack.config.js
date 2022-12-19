@@ -71,7 +71,6 @@ module.exports = {
               sourceMap: true,
             },
           },
-          'resolve-url-loader',
           {
             loader: 'sass-loader',
             options: {
@@ -84,9 +83,7 @@ module.exports = {
         test: /\.css$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          // 'style-loader',
-          // 'css-loader'
-          {
+            {
             loader: 'css-loader',
             options: {
               sourceMap: true,
@@ -104,14 +101,13 @@ module.exports = {
       },
       {
         test: /\.(ttf|woff2?|eot)$/i,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'fonts/',
-          },
-        },
-      },
+        type: 'asset/resource',
+        generator: {
+            filename: 'assets/fonts/[name].[ext]'
+        }
+    },
+
+
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
