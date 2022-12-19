@@ -29,6 +29,9 @@ const pages = populateHtmlPlugins(['index']);
 console.log(__dirname);
 
 module.exports = {
+  resolve: {
+    extensions: ['.ts', '.js'],
+  },
   entry: {
     index: path.resolve(__dirname, './src/index.ts'),
   },
