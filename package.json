@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npx webpack --mode development --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "npx run serve",
+    "serve": "set NODE_ENV=development&&webpack serve",
     "lint": "eslint . --ext .ts",
     "lint:fix": "node node_modules/eslint/bin/eslint.js ./src --fix"
   },
