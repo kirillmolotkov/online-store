@@ -1,18 +1,20 @@
 export interface Data {
-  id: string;
-  title: string;
-  description: string;
-  price: number;
-  discountPercentage: string;
+discountPercentage: string;
   rating: string;
   stock: string;
   brand: string;
   category: string;
   thumbnail: string;
   images: Array<string>;
+    discountPercentage: number;
+  rating: number;
+  stock: number;
+  brand: string;
+  category: string;
+  thumbnail: string;
+  images: [string];
 }
-
-export interface TempalateForCardItem {
+    export interface TempalateForCardItem {
   container: HTMLDivElement;
   title: HTMLHeadElement;
   image: HTMLImageElement;
@@ -28,3 +30,22 @@ export interface TempalateForCardItem {
   buttonDetails: HTMLButtonElement;
   price: HTMLSpanElement;
 }
+
+export interface IbasketItem {
+  id: string;
+  amount: number;
+}
+
+export interface IproductItem {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  
+}
+
+export interface Icatalogue {
+  products: IproductItem[];
+}
+
+export default IbasketItem;
