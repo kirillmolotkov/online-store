@@ -60,6 +60,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: "src/assets/images", to: "assets/images" },
+        { from: "src/data", to: "data" },
       ]
       })
   ],
