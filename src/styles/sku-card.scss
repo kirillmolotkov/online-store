@@ -1,12 +1,12 @@
 .sku__container {
+  max-width: 350px;
   position: relative;
   cursor: pointer;
-  &:hover{
+  &:hover {
     background-color: rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 5;
   }
-
 }
 .sku__photo-slider {
   width: 100%;
@@ -36,13 +36,13 @@
   object-fit: contain;
 }
 
-.sku__button{
+.sku__button {
   display: none;
   @include basic-font;
   cursor: pointer;
   position: absolute;
   width: 60%;
-  top:50%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0.5em;
@@ -50,14 +50,12 @@
   color: $color-light;
   border: none;
   transition: all 250ms;
-  &:hover{
+  &:hover {
     background-color: $color-light;
     color: $color-dark;
-  }  
-  
+  }
 }
 
-.sku__container:hover>.sku__button{
+.sku__container:hover > .sku__button {
   display: block;
 }
-
