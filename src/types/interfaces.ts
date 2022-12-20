@@ -1,10 +1,10 @@
-export interface basketItem{
-  id: number;
+export interface IbasketItem {
+  id: string;
   amount: number;
-  }
+}
 
-export interface productItem{
-  id: number;
+export interface IproductItem {
+  id: string;
   title: string;
   description: string;
   price: number;
@@ -17,4 +17,8 @@ export interface productItem{
   images: [string];
 }
 
-export default basketItem;
+export interface Icatalogue {
+  products: IproductItem[];
+}
+
+export default IbasketItem;

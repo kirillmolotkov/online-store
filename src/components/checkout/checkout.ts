@@ -1,41 +1,41 @@
-import { basketItem, productItem } from '../../types/interfaces';
+import { IbasketItem, IproductItem } from '../../types/interfaces';
 
-const checkout = function () {
-  let basket: [basketItem];
-  return {
-    addToCart: function (item: productItem) {
-      for (let product of basket) {
-        if (product.id === item.id) {
-          product.amount += 1;
-          return;
-        } else {
-          let newItem: basketItem = {
-            id: item.id,
-            amount: 1,
-          };
-          basket.push(newItem);
-        }
-      }
-    },
+class checkout {
+  private basket: [IbasketItem] = [{ id: '-1', amount: -1 }];
 
-    deleteFromCart: function (item: productItem) {
-      for (let product of basket) {
-        if (product.id === item.id) {
-          basket.slice(basket.indexOf(product), 1);
-          return;
-        }
+  addToCart(item: IproductItem) {
+    for (let product of this.basket) {
+      if (product.id === item.id) {
+        product.amount += 1;
+        console.log(this.basket);
+        return;
       }
-    },
+    }
+    let newItem: IbasketItem = {
+      id: item.id,
+      amount: 1,
+    };
+    this.basket.push(newItem);
+    console.log(this.basket);
+  }
 
-    decreaseItemAmount: function (item: productItem) {
-      for (let product of basket) {
-        if (product.id === item.id) {
-          product.amount -= 1;
-          return;
-        }
+  deleteFromCart(item: IproductItem) {
+    for (let product of this.basket) {
+      if (product.id === item.id) {
+        this.basket.slice(this.basket.indexOf(product), 1);
+        return;
       }
-    },
-  };
-};
+    }
+  }
+
+  decreaseItemAmount(item: IproductItem) {
+    for (let product of this.basket) {
+      if (product.id === item.id) {
+        product.amount -= 1;
+        return;
+      }
+    }
+  }
+}
 
 export default checkout;

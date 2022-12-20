@@ -1,26 +1,29 @@
-import './style.scss'
-import './data/data.json'
+import './style.scss';
+// import './data/data.json'
 
-import checkout from './components/checkout/checkout'
+import checkout from './components/checkout/checkout';
+import { IproductItem, Icatalogue } from './types/interfaces';
+let CATALOGUE: Icatalogue;
 async function getJSON() {
-  let response = await fetch('./data/data.json');
-  let CATALOGUE = await response.json();
-  return CATALOGUE
+  let response = await fetch('/src/data/data.json');
+  CATALOGUE = await response.json();
 }
-console.log(getJSON());
 
-const cart = checkout();
+getJSON();
+
+const cart = new checkout();
 
 const goods = document.querySelector('.goods') as HTMLDivElement;
-const addToCart = document.querySelector('.sku__button');
 
 goods.addEventListener('click', (e) => {
-  let id: string| null;
-  const addButton = (e.target as HTMLElement)
+  let id: string;
+  const addButton = e.target as HTMLElement;
   if (addButton.classList.contains('sku__button')) {
-    id = (addButton.parentNode as HTMLDivElement).getAttribute('data-id');
-    // cart.addToCart(data[id]) 
+    id = (addButton.parentNode as HTMLDivElement).getAttribute('data-id') as string;
+    let item: IproductItem = CATALOGUE.products.find((product) => {
+      if (product.id === id) return product;
+    }) as IproductItem;
+    
+    cart.addToCart(item);
   }
-})
-
-
+});
