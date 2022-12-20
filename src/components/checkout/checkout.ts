@@ -1,7 +1,7 @@
 import { IbasketItem, IproductItem } from '../../types/interfaces';
 
 class checkout {
-  basket: [IbasketItem] = [{ id: '-1', amount: -1 }];
+  private basket: [IbasketItem] = [{ id: '-1', amount: -1 }];
 
   addToCart(item: IproductItem) {
     for (let product of this.basket) {
