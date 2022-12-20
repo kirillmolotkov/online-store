@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import './style.scss'
 import './data/data.json'
 
@@ -24,3 +25,8 @@ goods.addEventListener('click', (e) => {
 })
 
 
+=======
+import './style.scss';
+import './types/interfaces.ts';
+import './components/generate-card/generateCardItems.ts';
+>>>>>>> 6cd857b3f39df55a7e346255b35a4e4fcffaed58
