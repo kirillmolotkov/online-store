@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 // const { title } = require('process');
 
 isDev = true;
@@ -56,6 +57,11 @@ module.exports = {
     }),
     new ESLintPlugin(),
     // new HtmlWebpackPlugin()
+    new CopyPlugin({
+      patterns: [
+        { from: "src/assets/images", to: "assets/images" },
+      ]
+      })
   ],
   module: {
     rules: [
@@ -86,7 +92,7 @@ module.exports = {
         test: /\.css$/i,
         use: [
           MiniCssExtractPlugin.loader,
-            {
+          {
             loader: 'css-loader',
             options: {
               sourceMap: true,
@@ -106,14 +112,13 @@ module.exports = {
         test: /\.(ttf|woff2?|eot)$/i,
         type: 'asset/resource',
         generator: {
-            filename: 'assets/fonts/[name].[ext]'
-        }
+          filename: 'assets/fonts/[name].[ext]',
+        },
       },
       {
         test: /\.json$/,
         type: 'asset/source',
-    },
-
+      },
 
       {
         test: /\.tsx?$/,
