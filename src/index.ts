@@ -1,4 +1,6 @@
 import './style.scss';
+import './types/interfaces.ts';
+import './components/generate-card/generateCardItems.ts';
 // import './data/data.json'
 
 import checkout from './components/checkout/checkout';

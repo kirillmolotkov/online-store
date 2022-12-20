@@ -1,1295 +1,1289 @@
-{
-  "products": [
-    {
-      "id": "1",
-      "title": "iPhone 12 64GB Purple",
-      "description": "Apple iPhone 12 was officially released on October 13, 2020. The phone is powered by the new Apple A14 Bionic processor. The smartphone comes with a 6.1 inches Super Retina XDR OLED capacitive touchscreen, 1170 x 2532 pixels resolution and HDR10 display, Wide color gamut, Dolby Vision, and True-tone.",
-      "price": 599,
-      "discountPercentage": 3,
-      "rating": 4.6,
-      "stock": 35,
-      "brand": "Apple",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/1/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/1/1.jpg",
-        "./src/assets/images/smartphone/1/2.jpg",
-        "./src/assets/images/smartphone/1/3.jpg",
-        "./src/assets/images/smartphone/1/4.jpg",
-        "./src/assets/images/smartphone/1/5.jpg"
-      ]
-    },
-    {
-      "id": "2",
-      "title": "iPhone 12 mini",
-      "description": "The iPhone 12 mini display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 5.42 inches diagonally (actual viewable area is less)",
-      "price": 599,
-      "discountPercentage": 3,
-      "rating": 4.8,
-      "stock": 57,
-      "brand": "Apple",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/2/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/2/1.jpg",
-        "./src/assets/images/smartphone/2/2.jpg",
-        "./src/assets/images/smartphone/2/3.jpg",
-        "./src/assets/images/smartphone/2/4.jpg",
-        "./src/assets/images/smartphone/2/5.jpg"
-      ]
-    },
-    {
-      "id": "3",
-      "title": "iPhone 13 Pro",
-      "description": "iPhone 13 Pro was made for low light. The Wide camera adds a wider aperture and our largest sensor yet — and it leverages the LiDAR Scanner for Night mode portraits. Ultra Wide gets a wider aperture, a faster sensor, and all-new autofocus. And Telephoto now has Night mode.",
-      "price": 892,
-      "discountPercentage": 3,
-      "rating": 4.7,
-      "stock": 97,
-      "brand": "Apple",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/3/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/3/1.jpg",
-        "./src/assets/images/smartphone/3/2.jpg",
-        "./src/assets/images/smartphone/3/3.jpg",
-        "./src/assets/images/smartphone/3/4.jpg",
-        "./src/assets/images/smartphone/3/5.jpg"
-      ]
-    },
-    {
-      "id": "4",
-      "title": "iPhone SE",
-      "description": "The iPhone SE is Apple's entry-level iPhone, starting at $429. The device offers an affordable entry point to the iPhone lineup, with many important features such as a powerful A-series chip, a high-quality camera with 4K video recording, Haptic Touch, wireless charging, water and dust resistance, and more",
-      "price": 429,
-      "discountPercentage": 3,
-      "rating": 4.7,
-      "stock": 17,
-      "brand": "Apple",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/4/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/4/1.jpg",
-        "./src/assets/images/smartphone/4/2.jpg",
-        "./src/assets/images/smartphone/4/3.jpg",
-        "./src/assets/images/smartphone/4/4.jpg",
-        "./src/assets/images/smartphone/4/5.jpg"
-      ]
-    },
-    {
-      "id": "5",
-      "title": "Xiaomi Redmi Note 11S",
-      "description": "The Xiaomi Redmi Note 11 is one of the phones that sounds like a candidate for the king of quality-price in 2022. Its design is striking, its specifications may be sufficient, but if this phone can be attractive for something, it is its more affordable price . At Xataka, we have been using one of the most important phones for the mid-range this year for a week, and in this analysis we are going to tell you about our experience with it.",
-      "price": 217,
-      "discountPercentage": 3,
-      "rating": 4.7,
-      "stock": 34,
-      "brand": "Xiaomi",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/5/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/5/1.jpg",
-        "./src/assets/images/smartphone/5/2.jpg",
-        "./src/assets/images/smartphone/5/3.jpg",
-        "./src/assets/images/smartphone/5/4.jpg",
-        "./src/assets/images/smartphone/5/5.jpg"
-      ]
-    },
-    {
-      "id": "6",
-      "title": "Xiaomi Redmi 10",
-      "description": "Redmi 10 mobile was launched on 17th March 2022. The phone comes with a 60 Hz refresh rate 6.70-inch touchscreen display offering a resolution of 720x1648 pixels (HD+). The display sports Gorilla Glass for protection. Redmi 10 is powered by an octa-core Qualcomm Snapdragon 680 processor. It comes with 4GB, 6GB of RAM. The Redmi 10 runs Android 11 and is powered by a 6000mAh battery. The Redmi 10 supports proprietary fast charging.",
-      "price": 170,
-      "discountPercentage": 3,
-      "rating": 4.7,
-      "stock": 84,
-      "brand": "Xiaomi",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/6/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/6/1.jpg",
-        "./src/assets/images/smartphone/6/2.jpg",
-        "./src/assets/images/smartphone/6/3.jpg",
-        "./src/assets/images/smartphone/6/4.jpg",
-        "./src/assets/images/smartphone/6/5.jpg"
-      ]
-    },
-    {
-      "id": "7",
-      "title": "Xiaomi 11T",
-      "description": "The Xiaomi 11T comes with 6.67-inch AMOLED display with 120Hz refresh rate and MediaTek Dimensity 1200 processor under the hood. Specifications also include 5000mAh battery with 67W charging speed, triple setup camera on the back with 108MP main sensor and it is 5G ready.",
-      "price": 312,
-      "discountPercentage": 3,
-      "rating": 4.9,
-      "stock": 61,
-      "brand": "Xiaomi",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/7/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/7/1.jpg",
-        "./src/assets/images/smartphone/7/2.jpg",
-        "./src/assets/images/smartphone/7/3.jpg",
-        "./src/assets/images/smartphone/7/4.jpg",
-        "./src/assets/images/smartphone/7/5.jpg"
-      ]
-    },
-    {
-      "id": "8",
-      "title": "Xiaomi 12X",
-      "description": "The Xiaomi 12X is a more compact version of the Xiaomi 12, make no mistake about it. In fact, it is its main selling point. Hence, it sports a similar design that is as appealing as the base model.",
-      "price": 625,
-      "discountPercentage": 3,
-      "rating": 4.9,
-      "stock": 90,
-      "brand": "Xiaomi",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/8/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/8/1.jpg",
-        "./src/assets/images/smartphone/8/2.jpg",
-        "./src/assets/images/smartphone/8/3.jpg",
-        "./src/assets/images/smartphone/8/4.jpg",
-        "./src/assets/images/smartphone/8/5.jpg"
-      ]
-    },
-    {
-      "id": "9",
-      "title": "Xiaomi 11 Lite 5G",
-      "description": "The smartphone features a triple rear camera setup with a 64MP main camera and 8MP + 5MP secondary cameras. For taking selfies, you have a single 20MP front camera. The phone is fueled by a 4250mAh battery and supports 33W Fast charging, Quick Charge 4+, and Power Delivery 3.0. Fitted with a side-mounted fingerprint sensor, the phone comes with IP53 dust and splash protection and three-color variants viz: Truffle Black, Mint Green, Citrus Yellow.",
-      "price": 339,
-      "discountPercentage": 3,
-      "rating": 4.4,
-      "stock": 120,
-      "brand": "Xiaomi",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/9/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/9/1.jpg",
-        "./src/assets/images/smartphone/9/2.jpg",
-        "./src/assets/images/smartphone/9/3.jpg",
-        "./src/assets/images/smartphone/9/4.jpg",
-        "./src/assets/images/smartphone/9/5.jpg"
-      ]
-    },
-    {
-      "id": "10",
-      "title": "Samsung Galaxy A52",
-      "description": "The dimension of the smartphone is 159.9 x 75.1 x 8.4 mm and it weighs 189 grams. The smartphone is pack with 6 GB and 8 GB RAM with a 128 GB and 256 GB internal storage option. The device runs on the Android 11, One UI 3.1 operating system.",
-      "price": 599,
-      "discountPercentage": 3,
-      "rating": 4.5,
-      "stock": 50,
-      "brand": "Samsung",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/10/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/10/1.jpg",
-        "./src/assets/images/smartphone/10/2.jpg",
-        "./src/assets/images/smartphone/10/3.jpg",
-        "./src/assets/images/smartphone/10/4.jpg",
-        "./src/assets/images/smartphone/10/5.jpg"
-      ]
-    },
-    {
-      "id": "11",
-      "title": "Samsung Galaxy A32",
-      "description": "Feast your eyes on vibrant details with the FHD+ Super AMOLED display, reaching 800 nits¹ for clarity even in bright daylight. Eye Comfort Shield² lowers blue light, and Real Smooth keeps the view smooth, whether you're gaming or scrolling. All on the expansive 6.4-inch Infinity-U Display.",
-      "price": 199,
-      "discountPercentage": 3,
-      "rating": 4.6,
-      "stock": 88,
-      "brand": "Samsung",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/11/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/11/1.jpg",
-        "./src/assets/images/smartphone/11/2.jpg",
-        "./src/assets/images/smartphone/11/3.jpg",
-        "./src/assets/images/smartphone/11/4.jpg",
-        "./src/assets/images/smartphone/11/5.jpg"
-      ]
-    },
-    {
-      "id": "12",
-      "title": "Samsung Galaxy A23",
-      "description": "The Galaxy A23's Ambient Edge design connects the camera with the body seamlessly with simple but refined curves. The slim and symmetric Galaxy A23 comes in Awesome Black, Awesome White, Awesome Blue, and Awesome Peach colors.",
-      "price": 299,
-      "discountPercentage": 3,
-      "rating": 4.6,
-      "stock": 78,
-      "brand": "Samsung",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/12/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/12/1.jpg",
-        "./src/assets/images/smartphone/12/2.jpg",
-        "./src/assets/images/smartphone/12/3.jpg",
-        "./src/assets/images/smartphone/12/4.jpg",
-        "./src/assets/images/smartphone/12/5.jpg"
-      ]
-    },
-    {
-      "id": "13",
-      "title": "Samsung Galaxy A53",
-      "description": "Fast. To the point of innovation. In 5G, your world becomes a Galaxy. Hyperfast connection means seamless streaming and sharing with your friends and family.",
-      "price": 324,
-      "discountPercentage": 3,
-      "rating": 4.1,
-      "stock": 34,
-      "brand": "Samsung",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/13/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/13/1.jpg",
-        "./src/assets/images/smartphone/13/2.jpg",
-        "./src/assets/images/smartphone/13/3.jpg",
-        "./src/assets/images/smartphone/13/4.jpg",
-        "./src/assets/images/smartphone/13/5.jpg"
-      ]
-    },
-    {
-      "id": "14",
-      "title": "Samsung Galaxy A33",
-      "description": "Samsung Galaxy A33 5G mobile was launched on 17th March 2022. The phone comes with a 90 Hz refresh rate 6.40-inch touchscreen display offering a resolution of 1080x2400 pixels (FHD+) and an aspect ratio of 20:9. The display sports Gorilla Glass for protection. Samsung Galaxy A33 5G is powered by an octa-core processor. It comes with 6GB, 8GB of RAM. The Samsung Galaxy A33 5G runs Android 12 and is powered by a 5000mAh battery. The Samsung Galaxy A33 5G supports proprietary fast charging.",
-      "price": 294,
-      "discountPercentage": 3,
-      "rating": 4.4,
-      "stock": 15,
-      "brand": "Samsung",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/14/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/14/1.jpg",
-        "./src/assets/images/smartphone/14/2.jpg",
-        "./src/assets/images/smartphone/14/3.jpg",
-        "./src/assets/images/smartphone/14/4.jpg",
-        "./src/assets/images/smartphone/14/5.jpg"
-      ]
-    },
-    {
-      "id": "15",
-      "title": "Samsung Galaxy S22 Ultra",
-      "description": "The Samsung Galaxy S22 Ultra is the headliner of the S22 series. It's the first S series phone to include Samsung's S Pen. Specifications are top-notch including 6.8-inch Dynamic AMOLED display with 120Hz refresh rate, Snapdragon 8 Gen 1 processor, 5000mAh battery, up to 12gigs of RAM, and 1TB of storage.",
-      "price": 730,
-      "discountPercentage": 3,
-      "rating": 4.9,
-      "stock": 65,
-      "brand": "Samsung",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/15/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/15/1.jpg",
-        "./src/assets/images/smartphone/15/2.jpg",
-        "./src/assets/images/smartphone/15/3.jpg",
-        "./src/assets/images/smartphone/15/4.jpg",
-        "./src/assets/images/smartphone/15/5.jpg"
-      ]
-    },
-    {
-      "id": "16",
-      "title": "Samsung Galaxy A73",
-      "description": "Samsung Galaxy A73 5G mobile was launched on 17th March 2022. The phone comes with a 120 Hz refresh rate 6.70-inch touchscreen display offering a resolution of 1080x2400 pixels (FHD+). The display sports Gorilla Glass for protection. It comes with 8GB of RAM. The Samsung Galaxy A73 5G runs Android 12 and is powered by a 5000mAh battery. The Samsung Galaxy A73 5G supports proprietary fast charging.",
-      "price": 596,
-      "discountPercentage": 3,
-      "rating": 4.8,
-      "stock": 12,
-      "brand": "Samsung",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/16/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/16/1.jpg",
-        "./src/assets/images/smartphone/16/2.jpg",
-        "./src/assets/images/smartphone/16/3.jpg",
-        "./src/assets/images/smartphone/16/4.jpg",
-        "./src/assets/images/smartphone/16/5.jpg"
-      ]
-    },
-    {
-      "id": "17",
-      "title": "Samsung Galaxy Z Fold4",
-      "description": "The Samsung Galaxy Z Fold 4 is is the successor of the Galaxy Z Fold 3 and it comes with 6.2-inch outer display and big 7.6-inch Dynamic AMOLED display when unfolded. Specs also include Qualcomm Snapdragon 8+ Gen 1 processor, 4400mAh battery and Triple camera setup on the back with 50MP main sensor.",
-      "price": 1650,
-      "discountPercentage": 3,
-      "rating": 4.0,
-      "stock": 5,
-      "brand": "Samsung",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/17/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/17/1.jpg",
-        "./src/assets/images/smartphone/17/2.jpg",
-        "./src/assets/images/smartphone/17/3.jpg",
-        "./src/assets/images/smartphone/17/4.jpg",
-        "./src/assets/images/smartphone/17/5.jpg"
-      ]
-    },
-    {
-      "id": "18",
-      "title": "Huawei nova Y70",
-      "description": "HUAWEI nova Y70 comes with a triple AI camera setup that's as adaptable as it is awe-inspiring. A touch of the shutter is all it takes to capture a distant landscape, priceless portrait, or timeless interaction.",
-      "price": 200,
-      "discountPercentage": 3,
-      "rating": 4.0,
-      "stock": 83,
-      "brand": "Huawei",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/18/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/18/1.jpg",
-        "./src/assets/images/smartphone/18/2.jpg",
-        "./src/assets/images/smartphone/18/3.jpg",
-        "./src/assets/images/smartphone/18/4.jpg",
-        "./src/assets/images/smartphone/18/5.jpg"
-      ]
-    },
-    {
-      "id": "19",
-      "title": "Huawei nova 9 SE",
-      "description": "The size of the screen is 6.78 inches and 1080 x 2388 pixels is the resolution with 120Hz. The screen type is IPS LCD capacitive touchscreen. The device is powered by Qualcomm SDM665 Snapdragon 665 Octa-core processor and Adreno 610 GPU.",
-      "price": 279,
-      "discountPercentage": 3,
-      "rating": 4.6,
-      "stock": 43,
-      "brand": "Huawei",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/19/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/19/1.jpg",
-        "./src/assets/images/smartphone/19/2.jpg",
-        "./src/assets/images/smartphone/19/3.jpg",
-        "./src/assets/images/smartphone/19/4.jpg",
-        "./src/assets/images/smartphone/19/5.jpg"
-      ]
-    },
-    {
-      "id": "20",
-      "title": "Huawei P50",
-      "description": "The dimension of the device is 156.5 x 73.8 x 7.9 mm and it weighs 181 grams. The smartphone is packed with 8 GB RAM with internal storage is 128 GB and 256 GB. The smartphone is fueled with a 4100 non-removable battery + Fast charging 66W.",
-      "price": 737,
-      "discountPercentage": 3,
-      "rating": 4.1,
-      "stock": 82,
-      "brand": "Huawei",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/20/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/20/1.jpg",
-        "./src/assets/images/smartphone/20/2.jpg",
-        "./src/assets/images/smartphone/20/3.jpg",
-        "./src/assets/images/smartphone/20/4.jpg",
-        "./src/assets/images/smartphone/20/5.jpg"
-      ]
-    },
-    {
-      "id": "21",
-      "title": "Huawei nova 10 Pro",
-      "description": "The phone runs on HarmonyOS 2.0 operating system. Huawei nova 10 Pro comes in different colors like Black, Silver, Green, and Violet. The sensors include optical under display fingerprint, accelerometer, gyro, proximity, and compass + Virtual proximity sensing.",
-      "price": 540,
-      "discountPercentage": 3,
-      "rating": 4.6,
-      "stock": 32,
-      "brand": "Huawei",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/21/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/21/1.jpg",
-        "./src/assets/images/smartphone/21/2.jpg",
-        "./src/assets/images/smartphone/21/3.jpg",
-        "./src/assets/images/smartphone/21/4.jpg",
-        "./src/assets/images/smartphone/21/5.jpg"
-      ]
-    },
-    {
-      "id": "22",
-      "title": "Huawei nova 10 SE",
-      "description": "The size of the screen is 6.67 inches and it provides a resolution of 1080 x 2400 pixels with 90Hz and 1B colors. The screen type is OLED capacitive touchscreen. The device is powered by Qualcomm Snapdragon 680G 4G Octa-core processor and Adreno 610 GPU.",
-      "price": 250,
-      "discountPercentage": 3,
-      "rating": 4.9,
-      "stock": 37,
-      "brand": "Huawei",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/22/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/22/1.jpg",
-        "./src/assets/images/smartphone/22/2.jpg",
-        "./src/assets/images/smartphone/22/3.jpg",
-        "./src/assets/images/smartphone/22/4.jpg",
-        "./src/assets/images/smartphone/22/5.jpg"
-      ]
-    },
-    {
-      "id": "23",
-      "title": "HONOR X7",
-      "description": "The Honor X7 is an Android smartphone with a 6.74-inch HD+ screen with a 90Hz refresh rate. Inside, we find a Snapdragon 680 processor accompanied by 4GB of RAM and 128GB of internal storage. A 48MP + 5MP + 2MP + 2MP quad camera sits on the back, while an 8MP camera is on the front. Completing the features of the Honor X7 we find a 5000 mAh fast charging battery, side fingerprint reader, and runs Magic UI 4.2 based on Android 11.",
-      "price": 190,
-      "discountPercentage": 3,
-      "rating": 4.9,
-      "stock": 39,
-      "brand": "HONOR",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/23/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/23/1.jpg",
-        "./src/assets/images/smartphone/23/2.jpg",
-        "./src/assets/images/smartphone/23/3.jpg",
-        "./src/assets/images/smartphone/23/4.jpg",
-        "./src/assets/images/smartphone/23/5.jpg"
-      ]
-    },
-    {
-      "id": "24",
-      "title": "HONOR X8",
-      "description": "The HONOR X8 is characterized by having a slim 7.45mm body with flat edges and rounded corners, also by having a 64MP2 quad camera, Snapdragon 680 processor, 6.7 screen, and 22.5W fast charging.",
-      "price": 242,
-      "discountPercentage": 3,
-      "rating": 4.9,
-      "stock": 19,
-      "brand": "HONOR",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/24/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/24/1.jpg",
-        "./src/assets/images/smartphone/24/2.jpg",
-        "./src/assets/images/smartphone/24/3.jpg",
-        "./src/assets/images/smartphone/24/4.jpg",
-        "./src/assets/images/smartphone/24/5.jpg"
-      ]
-    },
-    {
-      "id": "25",
-      "title": "HONOR 70",
-      "description": "The display of 6.67 inches has an OLED screen type and provides a resolution of 1080 x 2400 pixels while the pixel density is 395 PPI (pixels per inch). The smartphone is powered by Qualcomm SM7325-AE Snapdragon 778G+ 5G Octa-core processor and Adreno 642L GPU.",
-      "price": 380,
-      "discountPercentage": 3,
-      "rating": 4.8,
-      "stock": 51,
-      "brand": "HONOR",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/25/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/25/1.jpg",
-        "./src/assets/images/smartphone/25/2.jpg",
-        "./src/assets/images/smartphone/25/3.jpg",
-        "./src/assets/images/smartphone/25/4.jpg",
-        "./src/assets/images/smartphone/25/5.jpg"
-      ]
-    },
-    {
-      "id": "26",
-      "title": "HONOR X9",
-      "description": "The Honor X9 features a 6.81-inch FHD+ display and is powered by a Snapdragon 680 processor along with 8GB of RAM and 128GB of internal storage. a quad camera with a 64MP main lens is located on the back, and the selfie camera is 16MP. Power is provided by a 4800 mAh fast-charging battery, it has a fingerprint reader on its side and runs Android 11.",
-      "price": 270,
-      "discountPercentage": 3,
-      "rating": 4.2,
-      "stock": 11,
-      "brand": "HONOR",
-      "category": "smartphones",
-      "thumbnail": "./src/assets/images/smartphone/26/1.jpg",
-      "images": [
-        "./src/assets/images/smartphone/26/1.jpg",
-        "./src/assets/images/smartphone/26/2.jpg",
-        "./src/assets/images/smartphone/26/3.jpg",
-        "./src/assets/images/smartphone/26/4.jpg",
-        "./src/assets/images/smartphone/26/5.jpg"
-      ]
-    },
-    {
-      "id": "27",
-      "title": "Apple Watch Series 3 42 mm Grey",
-      "description": "Originally released September 2017 S3 dual-core processor and W2 Apple wireless chip Built-in GPS and GLONASS Barometric altimeter Water resistant to 50 meters1 2x brighter second-generation OLED Retina display with Force Touch (1000 nits) Wi-Fi (802.11b/g/n 2.4GHz) Bluetooth 4.2 Siri speaks Capacity 8GB Composite back",
-      "price": 199,
-      "discountPercentage": 3,
-      "rating": 4.6,
-      "stock": 62,
-      "brand": "Apple",
-      "category": "smartwatch",
-      "thumbnail": "./src/assets/images/smartwatch/1/1.jpg",
-      "images": ["./src/assets/images/smartwatch/1/1.jpg", "./src/assets/images/smartwatch/1/2.jpg"]
-    },
-    {
-      "id": "28",
-      "title": "Samsung Galaxy Watch3 41 mm Silver",
-      "description": "Outlined in a subtle rotating bezel, it's easier to see and focus on what matters with an even bigger screen. Galaxy Watch3 is thinner and smaller, yet about 15% lighter with a sophisticated look that's ideal for your wrist with its slimmed down frame.",
-      "price": 332,
-      "discountPercentage": 3,
-      "rating": 4.7,
-      "stock": 41,
-      "brand": "Samsung",
-      "category": "smartwatch",
-      "thumbnail": "./src/assets/images/smartwatch/2/1.jpg",
-      "images": [
-        "./src/assets/images/smartwatch/2/1.jpg",
-        "./src/assets/images/smartwatch/2/2.jpg",
-        "./src/assets/images/smartwatch/2/3.jpg",
-        "./src/assets/images/smartwatch/2/4.jpg",
-        "./src/assets/images/smartwatch/2/5.jpg"
-      ]
-    },
-    {
-      "id": "29",
-      "title": "Samsung Galaxy Watch4 44 mm Black",
-      "description": "Galaxy Watch4 features a simple design with a streamlined Armor Aluminum metal frame. It offers high-end looks and functionality for your workouts and day-to-day tasks. Choose from a selection of bands, including the Hybrid Leather Band and the Sport Band, to fashion your own band style.",
-      "price": 299,
-      "discountPercentage": 3,
-      "rating": 4.8,
-      "stock": 49,
-      "brand": "Samsung",
-      "category": "smartwatch",
-      "thumbnail": "./src/assets/images/smartwatch/3/1.jpg",
-      "images": ["./src/assets/images/smartwatch/3/1.jpg"]
-    },
-    {
-      "id": "30",
-      "title": "Samsung Galaxy Watch4 40 mm Black",
-      "description": "Galaxy Watch4 features a simple design with a streamlined Armor Aluminum metal frame. It offers high-end looks and functionality for your workouts and day-to-day tasks. Choose from a selection of bands, including the Hybrid Leather Band and the Sport Band, to fashion your own band style.",
-      "price": 259,
-      "discountPercentage": 3,
-      "rating": 4.8,
-      "stock": 39,
-      "brand": "Samsung",
-      "category": "smartwatch",
-      "thumbnail": "./src/assets/images/smartwatch/4/1.jpg",
-      "images": ["./src/assets/images/smartwatch/4/1.jpg"]
-    },
-    {
-      "id": "31",
-      "title": "Samsung Galaxy Watch4 Classic 46 mm Silver",
-      "description": "Galaxy Watch4 features a simple design with a streamlined Armor Aluminum metal frame. It offers high-end looks and functionality for your workouts and day-to-day tasks. Choose from a selection of bands, including the Hybrid Leather Band and the Sport Band, to fashion your own band style.",
-      "price": 309,
-      "discountPercentage": 3,
-      "rating": 4.6,
-      "stock": 29,
-      "brand": "Samsung",
-      "category": "smartwatch",
-      "thumbnail": "./src/assets/images/smartwatch/5/1.jpg",
-      "images": ["./src/assets/images/smartwatch/5/1.jpg"]
-    },
-    {
-      "id": "32",
-      "title": "Huawei Watch GT 3 42 mm Elegant White",
-      "description": "The Huawei Watch GT 3 42mm is a smart watch with a 7-day battery life and 50m water resistance. It integrates workout monitoring, voice exercise broadcasts, a voice assistant, music playback, intelligent linkage, Huawei TruSleep, heart rate monitoring, Bluetooth calling, a message assistant, GPS, and wireless charging.",
-      "price": 189,
-      "discountPercentage": 3,
-      "rating": 5.0,
-      "stock": 65,
-      "brand": "Huawei",
-      "category": "smartwatch",
-      "thumbnail": "./src/assets/images/smartwatch/6/1.jpg",
-      "images": [
-        "./src/assets/images/smartwatch/6/1.jpg",
-        "./src/assets/images/smartwatch/6/2.jpg",
-        "./src/assets/images/smartwatch/6/3.jpg",
-        "./src/assets/images/smartwatch/6/4.jpg",
-        "./src/assets/images/smartwatch/6/5.jpg"
-      ]
-    },
-    {
-      "id": "33",
-      "title": "Huawei Watch GT 3 Pro Ceramic 43 mm with ceramic strap",
-      "description": "When modern technology meets classic ceramic craftsmanship, the stylish creation unveils a timeless aesthetic, making it a refreshing fashion statement on your wrist.",
-      "price": 289,
-      "discountPercentage": 3,
-      "rating": 4.8,
-      "stock": 29,
-      "brand": "Huawei",
-      "category": "smartwatch",
-      "thumbnail": "./src/assets/images/smartwatch/7/1.jpg",
-      "images": [
-        "./src/assets/images/smartwatch/7/1.jpg",
-        "./src/assets/images/smartwatch/7/2.jpg",
-        "./src/assets/images/smartwatch/7/3.jpg",
-        "./src/assets/images/smartwatch/7/4.jpg",
-        "./src/assets/images/smartwatch/7/5.jpg"
-      ]
-    },
-    {
-      "id": "34",
-      "title": "Watch Huawei Watch 3 Classic Brawn",
-      "description": "The Huawei Watch 3 Classic is a discreet watch, but it has a lot of features to support you in your daily life. With sports sessions (heart rate sensor, sports coach), GPS tracking, Bluetooth and Wi-Fi, notifications and call answering, the possibilities are endless.",
-      "price": 273,
-      "discountPercentage": 3,
-      "rating": 4.8,
-      "stock": 33,
-      "brand": "Huawei",
-      "category": "smartwatch",
-      "thumbnail": "./src/assets/images/smartwatch/8/1.jpg",
-      "images": [
-        "./src/assets/images/smartwatch/8/1.jpg",
-        "./src/assets/images/smartwatch/8/2.jpg",
-        "./src/assets/images/smartwatch/8/3.jpg"
-      ]
-    },
-    {
-      "id": "35",
-      "title": "Watch Huawei Watch 3 Pro Brown",
-      "description": "The main advantage of ceramics is the high hardness and color stability. It's harder than stainless steel, and therefore has a very high resistance to scratching. It is hypoallergic and therefore suitable for all with increased skin sensitivity. Its main drawback is its fragility - can break during strong impact.",
-      "price": 300,
-      "discountPercentage": 3,
-      "rating": 4.7,
-      "stock": 43,
-      "brand": "Huawei",
-      "category": "smartwatch",
-      "thumbnail": "./src/assets/images/smartwatch/9/1.jpg",
-      "images": [
-        "./src/assets/images/smartwatch/9/1.jpg",
-        "./src/assets/images/smartwatch/9/2.jpg",
-        "./src/assets/images/smartwatch/9/3.jpg"
-      ]
-    },
-    {
-      "id": "36",
-      "title": "Huawei Watch Fit 2 Active Isle Blue",
-      "description": "The Huawei Watch Fit 2 is the perfect companion for your fitness journey. With its 1.74-inch FullView Display, you can see your workout stats clearly while you stay connected with Bluetooth calling.",
-      "price": 159,
-      "discountPercentage": 3,
-      "rating": 4.1,
-      "stock": 83,
-      "brand": "Huawei",
-      "category": "smartwatch",
-      "thumbnail": "./src/assets/images/smartwatch/10/1.jpg",
-      "images": [
-        "./src/assets/images/smartwatch/10/1.jpg",
-        "./src/assets/images/smartwatch/10/2.jpg",
-        "./src/assets/images/smartwatch/10/3.jpg"
-      ]
-    },
-    {
-      "id": "37",
-      "title": "Watch Amazfit Bip 3 Black",
-      "description": "Amazfit Bip 3–the 2022 upgraded smartwatch that guides you toward a healthier, more active, more connected life. The watch packs a 1.69 super-sized color screen into its super slim and light body for a clear, exquisite viewing experience. Powerful battery to deliver up to 14 days of battery life.",
-      "price": 59,
-      "discountPercentage": 3,
-      "rating": 4.3,
-      "stock": 53,
-      "brand": "Amazfit",
-      "category": "smartwatch",
-      "thumbnail": "./src/assets/images/smartwatch/11/1.jpg",
-      "images": [
-        "./src/assets/images/smartwatch/11/1.jpg",
-        "./src/assets/images/smartwatch/11/2.jpg",
-        "./src/assets/images/smartwatch/11/3.jpg",
-        "./src/assets/images/smartwatch/11/4.jpg",
-        "./src/assets/images/smartwatch/11/5.jpg"
-      ]
-    },
-    {
-      "id": "38",
-      "title": "Watch Amazfit GTS 4 mini Pink",
-      "description": "Amazfit GTS 4 Mini - a smaller version of the premium smartwatch. 1.65 AMOLED display with 336 x 384 resolution, 120+ sports modes and automatic recognition of 7 sports. Record physical activity, health, blood oxygenation, heart rate measurement, sleep and stress monitoring, etc.",
-      "price": 119,
-      "discountPercentage": 3,
-      "rating": 4.5,
-      "stock": 23,
-      "brand": "Amazfit",
-      "category": "smartwatch",
-      "thumbnail": "./src/assets/images/smartwatch/12/1.jpg",
-      "images": [
-        "./src/assets/images/smartwatch/12/1.jpg",
-        "./src/assets/images/smartwatch/12/2.jpg",
-        "./src/assets/images/smartwatch/12/3.jpg",
-        "./src/assets/images/smartwatch/12/4.jpg",
-        "./src/assets/images/smartwatch/12/5.jpg"
-      ]
-    },
-    {
-      "id": "39",
-      "title": "Watch Amazfit GTS 4 mini Black",
-      "description": "Amazfit GTS 4 Mini - a smaller version of the premium smartwatch. 1.65 AMOLED display with 336 x 384 resolution, 120+ sports modes and automatic recognition of 7 sports. Record physical activity, health, blood oxygenation, heart rate measurement, sleep and stress monitoring, etc.",
-      "price": 119,
-      "discountPercentage": 3,
-      "rating": 4.5,
-      "stock": 27,
-      "brand": "Amazfit",
-      "category": "smartwatch",
-      "thumbnail": "./src/assets/images/smartwatch/13/1.jpg",
-      "images": [
-        "./src/assets/images/smartwatch/13/1.jpg",
-        "./src/assets/images/smartwatch/13/2.jpg",
-        "./src/assets/images/smartwatch/13/3.jpg",
-        "./src/assets/images/smartwatch/13/4.jpg",
-        "./src/assets/images/smartwatch/13/5.jpg"
-      ]
-    },
-    {
-      "id": "40",
-      "title": "Watch HONOR MagicWatch 2",
-      "description": "Honor MagicWatch 2 comes with a 1.39 inches OLED capacitive touchscreen and 454 x 454 pixels resolution. The is no camera. The smartwatch’s sensors include Accelerometer, gyro, heart rate, barometer, and compass. The smartwatch is fueled by a Non-removable Li-Po 455 mAh battery.",
-      "price": 239,
-      "discountPercentage": 3,
-      "rating": 4.2,
-      "stock": 23,
-      "brand": "HONOR",
-      "category": "smartwatch",
-      "thumbnail": "./src/assets/images/smartwatch/14/1.jpg",
-      "images": [
-        "./src/assets/images/smartwatch/14/1.jpg",
-        "./src/assets/images/smartwatch/14/2.jpg",
-        "./src/assets/images/smartwatch/14/3.jpg",
-        "./src/assets/images/smartwatch/14/4.jpg",
-        "./src/assets/images/smartwatch/14/5.jpg"
-      ]
-    },
-    {
-      "id": "41",
-      "title": "HONOR Watch GS 3 Classic Gold",
-      "description": "HONOR Smart Watch GS 3 comes with a 1.43-inch AMOLED screen and a 326 PPI resolution. The novel 3D ultra-curved slim design resembles a crystal-clear streamline. Over 97% Heart Rate Accurac The newest HONOR Watch GS 3, with 8-Channel Heart Rate AI Engine, support 24-hour heart rate monitoring.",
-      "price": 235,
-      "discountPercentage": 3,
-      "rating": 3.9,
-      "stock": 43,
-      "brand": "HONOR",
-      "category": "smartwatch",
-      "thumbnail": "./src/assets/images/smartwatch/15/1.jpg",
-      "images": [
-        "./src/assets/images/smartwatch/15/1.jpg",
-        "./src/assets/images/smartwatch/15/2.jpg",
-        "./src/assets/images/smartwatch/15/3.jpg",
-        "./src/assets/images/smartwatch/15/4.jpg",
-        "./src/assets/images/smartwatch/15/5.jpg"
-      ]
-    },
-    {
-      "id": "42",
-      "title": "Apple iPad 10.2 WiFi 64GB",
-      "description": "Powerful. Easy to use. Versatile. The new iPad has a beautiful 10.2-inch Retina display1, the powerful A13 Bionic chip, an Ultra Wide front camera with Centre Stage, and support for Apple Pencil and the Smart Keyboard.2 iPad lets you do more, more easily. All for an incredible price.",
-      "price": 329,
-      "discountPercentage": 3,
-      "rating": 4.9,
-      "stock": 23,
-      "brand": "Apple",
-      "category": "tablets",
-      "thumbnail": "./src/assets/images/tablets/1/1.jpg",
-      "images": [
-        "./src/assets/images/tablets/1/1.jpg",
-        "./src/assets/images/tablets/1/2.jpg",
-        "./src/assets/images/tablets/1/3.jpg",
-        "./src/assets/images/tablets/1/4.jpg",
-        "./src/assets/images/tablets/1/5.jpg"
-      ]
-    },
-    {
-      "id": "43",
-      "title": "HONOR Pad 8 6/128GB Blue Hour",
-      "description": "Featuring a premium design with a lightweight aluminum alloy body, the HONOR Pad 8 weighs just 520g and boasts a thickness of 6.9mm, allowing users to hold the tablet with one hand comfortably. With curved edges and an exquisite, frosted finish, HONOR tablet delivers a smooth touch and a premium look and feel",
-      "price": 229,
-      "discountPercentage": 3,
-      "rating": 4.6,
-      "stock": 13,
-      "brand": "HONOR",
-      "category": "tablets",
-      "thumbnail": "./src/assets/images/tablets/2/1.jpg",
-      "images": ["./src/assets/images/tablets/2/1.jpg", "./src/assets/images/tablets/2/2.jpg"]
-    },
-    {
-      "id": "44",
-      "title": "Huawei MatePad 11 WiFi 128GB Grey",
-      "description": "Enjoy the convenience of HUAWEI MatePad 11 with an organised new desktop. See and use all your apps using the touchscreen or mouse with greater efficiency. View frequently and recently used apps displayed at the bottom of the screen, and hover over app icons to preview each app window without having to open them.",
-      "price": 488,
-      "discountPercentage": 3,
-      "rating": 4.7,
-      "stock": 39,
-      "brand": "Huawei",
-      "category": "tablets",
-      "thumbnail": "./src/assets/images/tablets/3/1.jpg",
-      "images": [
-        "./src/assets/images/tablets/3/1.jpg",
-        "./src/assets/images/tablets/3/2.jpg",
-        "./src/assets/images/tablets/3/3.jpg",
-        "./src/assets/images/tablets/3/4.jpg"
-      ]
-    },
-    {
-      "id": "45",
-      "title": "Huawei MatePad 64GB LTE Grey",
-      "description": "HUAWEI MatePad Tablet is a 10.4-inch FullView display with HUAWEI Kirin 810 Adopts a 7nm processor and HUAWEI's self-developed architecture NPU,Quad-speaker and Quad-channel sound system brings the impressive sound to you,New eBook Mode, With a 7250 mAh (typical capacity) large-capacity battery.",
-      "price": 388,
-      "discountPercentage": 3,
-      "rating": 4.5,
-      "stock": 39,
-      "brand": "Huawei",
-      "category": "tablets",
-      "thumbnail": "./src/assets/images/tablets/3/1.jpg",
-      "images": [
-        "./src/assets/images/tablets/4/1.jpg",
-        "./src/assets/images/tablets/4/2.jpg",
-        "./src/assets/images/tablets/4/3.jpg",
-        "./src/assets/images/tablets/4/4.jpg"
-      ]
-    },
-    {
-      "id": "46",
-      "title": "Lenovo Tab M10 FHD Plus 64GB",
-      "description": "With a large 10.3 FHD screen, the 10.3 Tab M10 FHD Plus 64GB Tablet from Lenovo can be used for a variety of applications. Remote learning, games, reading books and magazines, streaming video, and much more can be enjoyed by the whole family. The dual built-in speakers tuned by Dolby Atmos help to make music and entertainment apps sound their best. Tablets are popular with adults and kids alike, which is why the Tab M10 also features a dedicated Kid's Mode 4.0 to provide child-friendly content for your young ones.",
-      "price": 196,
-      "discountPercentage": 3,
-      "rating": 4.5,
-      "stock": 22,
-      "brand": "Lenovo",
-      "category": "tablets",
-      "thumbnail": "./src/assets/images/tablets/5/1.jpg",
-      "images": [
-        "./src/assets/images/tablets/5/1.jpg",
-        "./src/assets/images/tablets/5/2.jpg",
-        "./src/assets/images/tablets/5/3.jpg",
-        "./src/assets/images/tablets/5/4.jpg",
-        "./src/assets/images/tablets/5/5.jpg"
-      ]
-    },
-    {
-      "id": "47",
-      "title": "Xiaomi Redmi Pad WiFi 6/128GB Mint Green",
-      "description": "Redmi Pad All in one, pad for fun 90Hz buttery smooth display High-performance MediaTek Helio G99 Long-lasting 8000mAh (typ) battery Flagship-level unibody design",
-      "price": 245,
-      "discountPercentage": 3,
-      "rating": 4.6,
-      "stock": 32,
-      "brand": "Xiaomi",
-      "category": "tablets",
-      "thumbnail": "./src/assets/images/tablets/6/1.jpg",
-      "images": [
-        "./src/assets/images/tablets/6/1.jpg",
-        "./src/assets/images/tablets/6/2.jpg",
-        "./src/assets/images/tablets/6/3.jpg",
-        "./src/assets/images/tablets/6/4.jpg",
-        "./src/assets/images/tablets/6/5.jpg"
-      ]
-    },
-    {
-      "id": "48",
-      "title": "Xiaomi Pad 5 WiFi 128GB Cosmic Gray",
-      "description": "The large 11 screen, stylish design and top-of-the-line configuration is guaranteed to meet your needs across a wide range of scenarios. The Qualcomm® Snapdragon™ 860 and 120Hz high refresh rate provides you with a super smooth experience. The extra-large 8720mAh(typ) battery provides you with the power that you want.",
-      "price": 449,
-      "discountPercentage": 3,
-      "rating": 4.6,
-      "stock": 52,
-      "brand": "Xiaomi",
-      "category": "tablets",
-      "thumbnail": "./src/assets/images/tablets/7/1.jpg",
-      "images": [
-        "./src/assets/images/tablets/7/1.jpg",
-        "./src/assets/images/tablets/7/2.jpg",
-        "./src/assets/images/tablets/7/3.jpg",
-        "./src/assets/images/tablets/7/4.jpg"
-      ]
-    },
-    {
-      "id": "49",
-      "title": "Xiaomi Redmi Pad WiFi 6/128GB Moonlight Silver",
-      "description": "Redmi Pad All in one, pad for fun 90Hz buttery smooth display High-performance MediaTek Helio G99 Long-lasting 8000mAh (typ) battery Flagship-level unibody design",
-      "price": 245,
-      "discountPercentage": 3,
-      "rating": 4.6,
-      "stock": 12,
-      "brand": "Xiaomi",
-      "category": "tablets",
-      "thumbnail": "./src/assets/images/tablets/8/1.jpg",
-      "images": [
-        "./src/assets/images/tablets/8/1.jpg",
-        "./src/assets/images/tablets/8/2.jpg",
-        "./src/assets/images/tablets/8/3.jpg",
-        "./src/assets/images/tablets/8/4.jpg",
-        "./src/assets/images/tablets/8/5.jpg"
-      ]
-    },
-    {
-      "id": "50",
-      "title": "AirPods Pro 2 White",
-      "description": "Description. AirPods Pro earbuds feature up to 2x more Active Noise Cancellation, plus Adaptive Transparency, and Personalized Spatial Audio with dynamic head tracking for immersive sound. Now with multiple ear tips (XS, S, M, L) and up to 6 hours of listening time.",
-      "price": 249,
-      "discountPercentage": 3,
-      "rating": 4.2,
-      "stock": 48,
-      "brand": "Apple",
-      "category": "headphones",
-      "thumbnail": "./src/assets/images/headphones/1/1.jpg",
-      "images": [
-        "./src/assets/images/headphones/1/1.jpg",
-        "./src/assets/images/headphones/1/2.jpg",
-        "./src/assets/images/headphones/1/3.jpg",
-        "./src/assets/images/headphones/1/4.jpg"
-      ]
-    },
-    {
-      "id": "51",
-      "title": "HONOR CHOICE Earbuds X3 White",
-      "description": "It adopts a snow-white body and is suitable for wearing in various scenes. It is convenient to carry, comfortable to in ear, and cost-effective. Support touch operation to play/ pause music, or answer/ end phone calls, etc.",
-      "price": 75,
-      "discountPercentage": 3,
-      "rating": 4.2,
-      "stock": 38,
-      "brand": "HONOR",
-      "category": "headphones",
-      "thumbnail": "./src/assets/images/headphones/2/1.jpg",
-      "images": [
-        "./src/assets/images/headphones/2/1.jpg",
-        "./src/assets/images/headphones/2/2.jpg",
-        "./src/assets/images/headphones/2/3.jpg",
-        "./src/assets/images/headphones/2/4.jpg"
-      ]
-    },
-    {
-      "id": "52",
-      "title": "Huawei FreeBuds Lipstick Red",
-      "description": "Marking a new trend in ultra-chic design and innovatively equipped for a superior, smarter audio experience, HUAWEI FreeBuds Lipstick offers a stunning makeover in beauty and sound.",
-      "price": 285,
-      "discountPercentage": 3,
-      "rating": 4.2,
-      "stock": 28,
-      "brand": "Huawei",
-      "category": "headphones",
-      "thumbnail": "./src/assets/images/headphones/3/1.jpg",
-      "images": [
-        "./src/assets/images/headphones/3/1.jpg",
-        "./src/assets/images/headphones/3/2.jpg",
-        "./src/assets/images/headphones/3/3.jpg",
-        "./src/assets/images/headphones/3/4.jpg",
-        "./src/assets/images/headphones/3/5.jpg"
-      ]
-    },
-    {
-      "id": "53",
-      "title": "Huawei FreeBuds Pro Ceramic White",
-      "description": "Cancel out the noise, dive into the beats. Voice hear-through, always stay connected. Feel the music with HUAWEI FreeBuds Pro. Immersive sound, inspiring style.",
-      "price": 230,
-      "discountPercentage": 3,
-      "rating": 4.8,
-      "stock": 78,
-      "brand": "Huawei",
-      "category": "headphones",
-      "thumbnail": "./src/assets/images/headphones/4/1.jpg",
-      "images": [
-        "./src/assets/images/headphones/4/1.jpg",
-        "./src/assets/images/headphones/4/2.jpg",
-        "./src/assets/images/headphones/4/3.jpg",
-        "./src/assets/images/headphones/4/4.jpg",
-        "./src/assets/images/headphones/4/5.jpg"
-      ]
-    },
-    {
-      "id": "54",
-      "title": "Huawei FreeBuds 4 Silver",
-      "description": "Featuring a 14.3mm LCP dynamic driver, FreeBuds 4 ensures outstanding sound quality. The frequency range reaches up to 40 kHz to let enjoy a pure sound and clear vocals. Enjoy enhanced bass with FreeBuds 4 as every earbud is equipped with a powerful engine that delivers awesome diaphragm vibration.",
-      "price": 134,
-      "discountPercentage": 3,
-      "rating": 4.7,
-      "stock": 71,
-      "brand": "Huawei",
-      "category": "headphones",
-      "thumbnail": "./src/assets/images/headphones/5/1.jpg",
-      "images": [
-        "./src/assets/images/headphones/5/1.jpg",
-        "./src/assets/images/headphones/5/2.jpg",
-        "./src/assets/images/headphones/5/3.jpg",
-        "./src/assets/images/headphones/5/4.jpg",
-        "./src/assets/images/headphones/5/5.jpg"
-      ]
-    },
-    {
-      "id": "55",
-      "title": "Huawei FreeBuds 4i Carbon Black",
-      "description": "HUAWEI FreeBuds 4i is ergonomically designed for a stable and snug fit. The super-light earbuds radically reduce the pressure you feel even after long hours of listening. Wear them all day in total comfort. The sensors in HUAWEI FreeBuds 4i actively detect and reduce ambient noise.",
-      "price": 96,
-      "discountPercentage": 3,
-      "rating": 4.5,
-      "stock": 51,
-      "brand": "Huawei",
-      "category": "headphones",
-      "thumbnail": "./src/assets/images/headphones/6/1.jpg",
-      "images": [
-        "./src/assets/images/headphones/6/1.jpg",
-        "./src/assets/images/headphones/6/2.jpg",
-        "./src/assets/images/headphones/6/3.jpg",
-        "./src/assets/images/headphones/6/4.jpg",
-        "./src/assets/images/headphones/6/5.jpg"
-      ]
-    },
-    {
-      "id": "56",
-      "title": "Samsung Galaxy Buds Live White",
-      "description": "Galaxy Buds Live combines a comfortable, ergonomic design with premium sound from AKG to create a soundscape that harmoniously amplifies sound while cancelling unwanted background noise. Now trade-in your old headphones to save more.",
-      "price": 99,
-      "discountPercentage": 3,
-      "rating": 4.9,
-      "stock": 31,
-      "brand": "Samsung",
-      "category": "headphones",
-      "thumbnail": "./src/assets/images/headphones/7/1.jpg",
-      "images": [
-        "./src/assets/images/headphones/7/1.jpg",
-        "./src/assets/images/headphones/7/2.jpg",
-        "./src/assets/images/headphones/7/3.jpg",
-        "./src/assets/images/headphones/7/4.jpg",
-        "./src/assets/images/headphones/7/5.jpg"
-      ]
-    },
-    {
-      "id": "57",
-      "title": "Samsung Galaxy Buds Live Bronze",
-      "description": "Galaxy Buds Live combines a comfortable, ergonomic design with premium sound from AKG to create a soundscape that harmoniously amplifies sound while cancelling unwanted background noise. Now trade-in your old headphones to save more.",
-      "price": 99,
-      "discountPercentage": 3,
-      "rating": 4.9,
-      "stock": 32,
-      "brand": "Samsung",
-      "category": "headphones",
-      "thumbnail": "./src/assets/images/headphones/8/1.jpg",
-      "images": [
-        "./src/assets/images/headphones/8/1.jpg",
-        "./src/assets/images/headphones/8/2.jpg",
-        "./src/assets/images/headphones/8/3.jpg",
-        "./src/assets/images/headphones/8/4.jpg",
-        "./src/assets/images/headphones/8/5.jpg"
-      ]
-    },
-    {
-      "id": "58",
-      "title": "Samsung Galaxy Buds Live Black",
-      "description": "Galaxy Buds Live combines a comfortable, ergonomic design with premium sound from AKG to create a soundscape that harmoniously amplifies sound while cancelling unwanted background noise. Now trade-in your old headphones to save more.",
-      "price": 99,
-      "discountPercentage": 3,
-      "rating": 4.9,
-      "stock": 22,
-      "brand": "Samsung",
-      "category": "headphones",
-      "thumbnail": "./src/assets/images/headphones/9/1.jpg",
-      "images": [
-        "./src/assets/images/headphones/9/1.jpg",
-        "./src/assets/images/headphones/9/2.jpg",
-        "./src/assets/images/headphones/9/3.jpg",
-        "./src/assets/images/headphones/9/4.jpg",
-        "./src/assets/images/headphones/9/5.jpg"
-      ]
-    },
-    {
-      "id": "59",
-      "title": "Xiaomi Buds 3 Carbon Black",
-      "description": "Ergonomic designLightweight, stable, close-fittingYou feel comfortable after wearing for long hours 4.6 g lightweight body, multi-point refined design. The optimised structure with overlapping gravity centres precisely forms a stable triangle around the tragus, antitragus and auricular concha.",
-      "price": 109,
-      "discountPercentage": 3,
-      "rating": 4.7,
-      "stock": 29,
-      "brand": "Xiaomi",
-      "category": "headphones",
-      "thumbnail": "./src/assets/images/headphones/10/1.jpg",
-      "images": ["./src/assets/images/headphones/10/1.jpg", "./src/assets/images/headphones/10/2.jpg"]
-    },
-    {
-      "id": "60",
-      "title": "Xiaomi Redmi Buds 4 Blue",
-      "description": "Whether you're outdoors, on the bus or metro, one-touch for up to 35dB* noise cancellation. Redmi Buds 4 blocks out the hustle and bustle. Redmi Buds 4 intelligently switches between 3 ANC levels under adaptive mode supported by AI algorithm and offers a more comfortable noise-cancellation experience.",
-      "price": 75,
-      "discountPercentage": 3,
-      "rating": 4.3,
-      "stock": 34,
-      "brand": "Xiaomi",
-      "category": "headphones",
-      "thumbnail": "./src/assets/images/headphones/11/1.jpg",
-      "images": [
-        "./src/assets/images/headphones/11/1.jpg",
-        "./src/assets/images/headphones/11/2.jpg",
-        "./src/assets/images/headphones/11/3.jpg",
-        "./src/assets/images/headphones/11/4.jpg"
-      ]
-    },
-    {
-      "id": "61",
-      "title": "Xiaomi Redmi Buds 4 Pro Black",
-      "description": "Xiaomi Redmi Buds 4 Pro Wireless Earbuds, Hi Resolution Audio, Dual Driver Speaker, Immersive Sound, Up to 43dB ANC, Dual Device Connectivity, 36h Long Battery, Fast Charging, App, IP54, White. Brief content visible, double tap to read full content.",
-      "price": 99,
-      "discountPercentage": 3,
-      "rating": 4.8,
-      "stock": 39,
-      "brand": "Xiaomi",
-      "category": "headphones",
-      "thumbnail": "./src/assets/images/headphones/12/1.jpg",
-      "images": [
-        "./src/assets/images/headphones/12/1.jpg",
-        "./src/assets/images/headphones/12/2.jpg",
-        "./src/assets/images/headphones/12/3.jpg"
-      ]
-    },
-    {
-      "id": "62",
-      "title": "JBL Tune 225TWS White",
-      "description": "The JBL Tune 225TWS True Wireless are basic truly wireless headphones. They're decently well-made, exceptionally easy to carry around, and have a stable fit. Unfortunately, they have a short continuous battery life, block out almost no ambient noise, and have a fairly limited control scheme.",
-      "price": 50,
-      "discountPercentage": 3,
-      "rating": 4.6,
-      "stock": 49,
-      "brand": "JBL",
-      "category": "headphones",
-      "thumbnail": "./src/assets/images/headphones/13/1.jpg",
-      "images": [
-        "./src/assets/images/headphones/13/1.jpg",
-        "./src/assets/images/headphones/13/2.jpg",
-        "./src/assets/images/headphones/13/3.jpg",
-        "./src/assets/images/headphones/13/4.jpg",
-        "./src/assets/images/headphones/13/5.jpg"
-      ]
-    },
-    {
-      "id": "63",
-      "title": "JBL Tune 225TWS Black",
-      "description": "The JBL Tune 225TWS True Wireless are basic truly wireless headphones. They're decently well-made, exceptionally easy to carry around, and have a stable fit. Unfortunately, they have a short continuous battery life, block out almost no ambient noise, and have a fairly limited control scheme.",
-      "price": 50,
-      "discountPercentage": 3,
-      "rating": 4.6,
-      "stock": 39,
-      "brand": "JBL",
-      "category": "headphones",
-      "thumbnail": "./src/assets/images/headphones/14/1.jpg",
-      "images": [
-        "./src/assets/images/headphones/14/1.jpg",
-        "./src/assets/images/headphones/14/2.jpg",
-        "./src/assets/images/headphones/14/3.jpg",
-        "./src/assets/images/headphones/14/4.jpg",
-        "./src/assets/images/headphones/14/5.jpg"
-      ]
-    },
-    {
-      "id": "64",
-      "title": "Notebook Huawei MateBook D 14 8/512GB Mystic Silver",
-      "description": "Enjoy every look of HUAWEI MateBook D 14 thanks to the IPS anti-glare 14 HUAWEI FullView Display1 and 16:9 aspect ratio. With Full-HD 1920 x 1080 resolution, every image bursts with detail and clarity. For a better viewing experience every time you open up",
-      "price": 1123,
-      "discountPercentage": 3,
-      "rating": 4.1,
-      "stock": 15,
-      "brand": "Huawei",
-      "category": "laptops",
-      "thumbnail": "./src/assets/images/laptops/1/1.jpg",
-      "images": [
-        "./src/assets/images/laptops/1/1.jpg",
-        "./src/assets/images/laptops/1/2.jpg",
-        "./src/assets/images/laptops/1/3.jpg",
-        "./src/assets/images/laptops/1/4.jpg",
-        "./src/assets/images/laptops/1/5.jpg"
-      ]
-    },
-    {
-      "id": "65",
-      "title": "Notebook Huawei MateBook D15 8/512GB Mystical Silver",
-      "description": "Huawei MateBook D 15 comes with a Fingerprint sensor and Hall sensor HUAWEI Share, PC Manager Performance mode (press Fn+P in hotkey mode) Display Manager (eye protection) Factory restore HUAWEI MateBook D15 laptop computer with FullView screen 15.6-inch size with 11th Gen Intel Core processors combined with a metal body design. which is only 16.9 mm thin",
-      "price": 1223,
-      "discountPercentage": 3,
-      "rating": 4.2,
-      "stock": 11,
-      "brand": "Huawei",
-      "category": "laptops",
-      "thumbnail": "./src/assets/images/laptops/2/1.jpg",
-      "images": [
-        "./src/assets/images/laptops/2/1.jpg",
-        "./src/assets/images/laptops/2/2.jpg",
-        "./src/assets/images/laptops/2/3.jpg",
-        "./src/assets/images/laptops/2/4.jpg",
-        "./src/assets/images/laptops/2/5.jpg"
-      ]
-    },
-    {
-      "id": "66",
-      "title": "Notebook Huawei MateBook D15 8/512GB Mystical Silver",
-      "description": "Huawei MateBook D 15 comes with a Fingerprint sensor and Hall sensor HUAWEI Share, PC Manager Performance mode (press Fn+P in hotkey mode) Display Manager (eye protection) Factory restore HUAWEI MateBook D15 laptop computer with FullView screen 15.6-inch size with 11th Gen Intel Core processors combined with a metal body design. which is only 16.9 mm thin",
-      "price": 1409,
-      "discountPercentage": 3,
-      "rating": 4.3,
-      "stock": 10,
-      "brand": "Huawei",
-      "category": "laptops",
-      "thumbnail": "./src/assets/images/laptops/3/1.jpg",
-      "images": [
-        "./src/assets/images/laptops/3/1.jpg",
-        "./src/assets/images/laptops/3/2.jpg",
-        "./src/assets/images/laptops/3/3.jpg",
-        "./src/assets/images/laptops/3/4.jpg",
-        "./src/assets/images/laptops/3/5.jpg"
-      ]
-    },
-    {
-      "id": "67",
-      "title": "Notebook ASUS TUF Gaming F15 8/512GB",
-      "description": "Geared for serious gaming and real-world durability, the TUF Gaming F15 is a fully-loaded Windows 10 Pro gaming laptop that can carry you to victory. Powered by the latest 10th Gen Intel® Core™ i7 CPU and GeForce® GTX 1660 Ti GPU, action-packed gameplay is fast, fluid, and fully saturates speedy IPS-level displays up to 144Hz. Even while boasting a smaller and more portable chassis than its predecessors, this gaming laptop also features a larger 90Wh battery for superior battery life. Efficient self-cleaning cooling combines with TUF's signature military-grade durability to make this battle-tested road warrior a powerful ally for any gamer.",
-      "price": 1099,
-      "discountPercentage": 3,
-      "rating": 4.8,
-      "stock": 10,
-      "brand": "ASUS",
-      "category": "laptops",
-      "thumbnail": "./src/assets/images/laptops/4/1.jpg",
-      "images": [
-        "./src/assets/images/laptops/4/1.jpg",
-        "./src/assets/images/laptops/4/2.jpg",
-        "./src/assets/images/laptops/4/3.jpg",
-        "./src/assets/images/laptops/4/4.jpg",
-        "./src/assets/images/laptops/4/5.jpg"
-      ]
-    },
-    {
-      "id": "68",
-      "title": "Notebook ASUS A416M 8/256GB",
-      "description": "Whether for work or play, ASUS Laptop A416 is the entry-level laptop that delivers powerful performance and immersive visuals. Its NanoEdge display boasts wide 178° viewing angles and a matte anti-glare coating for a truly engaging experience. Inside, it’s powered by up to an Intel® Core™ i5 processor with 4 GB 2400MHz RAM. A dual-storage design with up to 512GB SSD gives you the perfect combination of large storage capacity and fast data read / write speeds.",
-      "price": 799,
-      "discountPercentage": 3,
-      "rating": 4.1,
-      "stock": 9,
-      "brand": "ASUS",
-      "category": "laptops",
-      "thumbnail": "./src/assets/images/laptops/5/1.jpg",
-      "images": ["./src/assets/images/laptops/5/1.jpg"]
-    },
-    {
-      "id": "69",
-      "title": "Notebook ASUS X515M 8/256GB",
-      "description": "Whether for work or play, ASUS X515 is the entry-level laptop that delivers powerful performance and immersive visuals. Its NanoEdge display boasts wide 178° viewing angles and a matte anti-glare coating for a truly engaging experience. Inside, it’s powered by up to an Intel® Core™ i7 processor with 16 GB 2400 MHz RAM, and features NVIDIA® GeForce® MX330. A dual-storage design with up to a 1 TB PCIe® SSD and a 1 TB HDD gives you the perfect combination of large storage capacity and fast data read / write speeds. There’s also Intel® Optane™ memory support1 to help speed things up even more.",
-      "price": 499,
-      "discountPercentage": 3,
-      "rating": 4.1,
-      "stock": 7,
-      "brand": "ASUS",
-      "category": "laptops",
-      "thumbnail": "./src/assets/images/laptops/6/1.jpg",
-      "images": [
-        "./src/assets/images/laptops/6/1.jpg",
-        "./src/assets/images/laptops/6/2.jpg",
-        "./src/assets/images/laptops/6/3.jpg"
-      ]
-    },
-    {
-      "id": "70",
-      "title": "Notebook HP Laptop 15-dy2093dx Silver",
-      "description": "HP 15-dy2093dx LaptopOPERATING SYSTEM – Windows 10 Home in S modePROCESSOR FAMILY – 11th Generation Intel CoreTM i5 processorPROCESSOR – Intel CoreTM i5-1135G7 (up to 4.2 GHz with Intel Turbo Boost Technology, 8 MB L3 cache, 4 cores)CHIPSET Intel Integrated SoCMEMORY – 8 GB DDR4-2666 MHz RAM (2 x 4 GB) Transfer rates up to 2666 MT/s. 2 x 4 GBHARD DRIVE – 256 GB ",
-      "price": 1250,
-      "discountPercentage": 3,
-      "rating": 3.9,
-      "stock": 7,
-      "brand": "HP",
-      "category": "laptops",
-      "thumbnail": "./src/assets/images/laptops/7/1.jpg",
-      "images": [
-        "./src/assets/images/laptops/7/1.jpg",
-        "./src/assets/images/laptops/7/2.jpg",
-        "./src/assets/images/laptops/7/3.jpg",
-        "./src/assets/images/laptops/7/4.jpg",
-        "./src/assets/images/laptops/7/5.jpg"
-      ]
-    },
-    {
-      "id": "71",
-      "title": "Notebook HP 250 15.6 G9",
-      "description": "The HP 250 Laptop keeps up with mobile workstyles with a thin and light design. The optional 300-nit Full HD display with its narrow border design and big screen-to-body- ratio provides ample space for work or streaming content.",
-      "price": 1350,
-      "discountPercentage": 3,
-      "rating": 4.6,
-      "stock": 7,
-      "brand": "HP",
-      "category": "laptops",
-      "thumbnail": "./src/assets/images/laptops/8/1.jpg",
-      "images": [
-        "./src/assets/images/laptops/8/1.jpg",
-        "./src/assets/images/laptops/8/2.jpg",
-        "./src/assets/images/laptops/8/3.jpg",
-        "./src/assets/images/laptops/8/4.jpg",
-        "./src/assets/images/laptops/8/5.jpg"
-      ]
-    }
-  ]
-}
+[
+  {
+    "id": "1",
+    "title": "iPhone 12 64GB Purple",
+    "description": "Apple iPhone 12 was officially released on October 13, 2020. The phone is powered by the new Apple A14 Bionic processor. The smartphones comes with a 6.1 inches Super Retina XDR OLED capacitive touchscreen, 1170 x 2532 pixels resolution and HDR10 display, Wide color gamut, Dolby Vision, and True-tone.",
+    "price": 599,
+    "discountPercentage": 3,
+    "rating": 4.6,
+    "stock": 35,
+    "brand": "Apple",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/1/1.jpg",
+    "images": [
+      "./assets/images/smartphones/1/1.jpg",
+      "./assets/images/smartphones/1/2.jpg",
+      "./assets/images/smartphones/1/3.jpg",
+      "./assets/images/smartphones/1/4.jpg",
+      "./assets/images/smartphones/1/5.jpg"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "iPhone 12 mini",
+    "description": "The iPhone 12 mini display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 5.42 inches diagonally (actual viewable area is less)",
+    "price": 599,
+    "discountPercentage": 3,
+    "rating": 4.8,
+    "stock": 57,
+    "brand": "Apple",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/2/1.jpg",
+    "images": [
+      "./assets/images/smartphones/2/1.jpg",
+      "./assets/images/smartphones/2/2.jpg",
+      "./assets/images/smartphones/2/3.jpg",
+      "./assets/images/smartphones/2/4.jpg",
+      "./assets/images/smartphones/2/5.jpg"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "iPhone 13 Pro",
+    "description": "iPhone 13 Pro was made for low light. The Wide camera adds a wider aperture and our largest sensor yet — and it leverages the LiDAR Scanner for Night mode portraits. Ultra Wide gets a wider aperture, a faster sensor, and all-new autofocus. And Telephoto now has Night mode.",
+    "price": 892,
+    "discountPercentage": 3,
+    "rating": 4.7,
+    "stock": 97,
+    "brand": "Apple",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/3/1.jpg",
+    "images": [
+      "./assets/images/smartphones/3/1.jpg",
+      "./assets/images/smartphones/3/2.jpg",
+      "./assets/images/smartphones/3/3.jpg",
+      "./assets/images/smartphones/3/4.jpg",
+      "./assets/images/smartphones/3/5.jpg"
+    ]
+  },
+  {
+    "id": "4",
+    "title": "iPhone SE",
+    "description": "The iPhone SE is Apple's entry-level iPhone, starting at $429. The device offers an affordable entry point to the iPhone lineup, with many important features such as a powerful A-series chip, a high-quality camera with 4K video recording, Haptic Touch, wireless charging, water and dust resistance, and more",
+    "price": 429,
+    "discountPercentage": 3,
+    "rating": 4.7,
+    "stock": 17,
+    "brand": "Apple",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/4/1.jpg",
+    "images": [
+      "./assets/images/smartphones/4/1.jpg",
+      "./assets/images/smartphones/4/2.jpg",
+      "./assets/images/smartphones/4/3.jpg",
+      "./assets/images/smartphones/4/4.jpg",
+      "./assets/images/smartphones/4/5.jpg"
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Xiaomi Redmi Note 11S",
+    "description": "The Xiaomi Redmi Note 11 is one of the phones that sounds like a candidate for the king of quality-price in 2022. Its design is striking, its specifications may be sufficient, but if this phone can be attractive for something, it is its more affordable price . At Xataka, we have been using one of the most important phones for the mid-range this year for a week, and in this analysis we are going to tell you about our experience with it.",
+    "price": 217,
+    "discountPercentage": 3,
+    "rating": 4.7,
+    "stock": 34,
+    "brand": "Xiaomi",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/5/1.jpg",
+    "images": [
+      "./assets/images/smartphones/5/1.jpg",
+      "./assets/images/smartphones/5/2.jpg",
+      "./assets/images/smartphones/5/3.jpg",
+      "./assets/images/smartphones/5/4.jpg",
+      "./assets/images/smartphones/5/5.jpg"
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Xiaomi Redmi 10",
+    "description": "Redmi 10 mobile was launched on 17th March 2022. The phone comes with a 60 Hz refresh rate 6.70-inch touchscreen display offering a resolution of 720x1648 pixels (HD+). The display sports Gorilla Glass for protection. Redmi 10 is powered by an octa-core Qualcomm Snapdragon 680 processor. It comes with 4GB, 6GB of RAM. The Redmi 10 runs Android 11 and is powered by a 6000mAh battery. The Redmi 10 supports proprietary fast charging.",
+    "price": 170,
+    "discountPercentage": 3,
+    "rating": 4.7,
+    "stock": 84,
+    "brand": "Xiaomi",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/6/1.jpg",
+    "images": [
+      "./assets/images/smartphones/6/1.jpg",
+      "./assets/images/smartphones/6/2.jpg",
+      "./assets/images/smartphones/6/3.jpg",
+      "./assets/images/smartphones/6/4.jpg",
+      "./assets/images/smartphones/6/5.jpg"
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Xiaomi 11T",
+    "description": "The Xiaomi 11T comes with 6.67-inch AMOLED display with 120Hz refresh rate and MediaTek Dimensity 1200 processor under the hood. Specifications also include 5000mAh battery with 67W charging speed, triple setup camera on the back with 108MP main sensor and it is 5G ready.",
+    "price": 312,
+    "discountPercentage": 3,
+    "rating": 4.9,
+    "stock": 61,
+    "brand": "Xiaomi",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/7/1.jpg",
+    "images": [
+      "./assets/images/smartphones/7/1.jpg",
+      "./assets/images/smartphones/7/2.jpg",
+      "./assets/images/smartphones/7/3.jpg",
+      "./assets/images/smartphones/7/4.jpg",
+      "./assets/images/smartphones/7/5.jpg"
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Xiaomi 12X",
+    "description": "The Xiaomi 12X is a more compact version of the Xiaomi 12, make no mistake about it. In fact, it is its main selling point. Hence, it sports a similar design that is as appealing as the base model.",
+    "price": 625,
+    "discountPercentage": 3,
+    "rating": 4.9,
+    "stock": 90,
+    "brand": "Xiaomi",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/8/1.jpg",
+    "images": [
+      "./assets/images/smartphones/8/1.jpg",
+      "./assets/images/smartphones/8/2.jpg",
+      "./assets/images/smartphones/8/3.jpg",
+      "./assets/images/smartphones/8/4.jpg",
+      "./assets/images/smartphones/8/5.jpg"
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Xiaomi 11 Lite 5G",
+    "description": "The smartphones features a triple rear camera setup with a 64MP main camera and 8MP + 5MP secondary cameras. For taking selfies, you have a single 20MP front camera. The phone is fueled by a 4250mAh battery and supports 33W Fast charging, Quick Charge 4+, and Power Delivery 3.0. Fitted with a side-mounted fingerprint sensor, the phone comes with IP53 dust and splash protection and three-color variants viz: Truffle Black, Mint Green, Citrus Yellow.",
+    "price": 339,
+    "discountPercentage": 3,
+    "rating": 4.4,
+    "stock": 120,
+    "brand": "Xiaomi",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/9/1.jpg",
+    "images": [
+      "./assets/images/smartphones/9/1.jpg",
+      "./assets/images/smartphones/9/2.jpg",
+      "./assets/images/smartphones/9/3.jpg",
+      "./assets/images/smartphones/9/4.jpg",
+      "./assets/images/smartphones/9/5.jpg"
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Samsung Galaxy A52",
+    "description": "The dimension of the smartphones is 159.9 x 75.1 x 8.4 mm and it weighs 189 grams. The smartphones is pack with 6 GB and 8 GB RAM with a 128 GB and 256 GB internal storage option. The device runs on the Android 11, One UI 3.1 operating system.",
+    "price": 599,
+    "discountPercentage": 3,
+    "rating": 4.5,
+    "stock": 50,
+    "brand": "Samsung",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/10/1.jpg",
+    "images": [
+      "./assets/images/smartphones/10/1.jpg",
+      "./assets/images/smartphones/10/2.jpg",
+      "./assets/images/smartphones/10/3.jpg",
+      "./assets/images/smartphones/10/4.jpg",
+      "./assets/images/smartphones/10/5.jpg"
+    ]
+  },
+  {
+    "id": "11",
+    "title": "Samsung Galaxy A32",
+    "description": "Feast your eyes on vibrant details with the FHD+ Super AMOLED display, reaching 800 nits¹ for clarity even in bright daylight. Eye Comfort Shield² lowers blue light, and Real Smooth keeps the view smooth, whether you're gaming or scrolling. All on the expansive 6.4-inch Infinity-U Display.",
+    "price": 199,
+    "discountPercentage": 3,
+    "rating": 4.6,
+    "stock": 88,
+    "brand": "Samsung",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/11/1.jpg",
+    "images": [
+      "./assets/images/smartphones/11/1.jpg",
+      "./assets/images/smartphones/11/2.jpg",
+      "./assets/images/smartphones/11/3.jpg",
+      "./assets/images/smartphones/11/4.jpg",
+      "./assets/images/smartphones/11/5.jpg"
+    ]
+  },
+  {
+    "id": "12",
+    "title": "Samsung Galaxy A23",
+    "description": "The Galaxy A23's Ambient Edge design connects the camera with the body seamlessly with simple but refined curves. The slim and symmetric Galaxy A23 comes in Awesome Black, Awesome White, Awesome Blue, and Awesome Peach colors.",
+    "price": 299,
+    "discountPercentage": 3,
+    "rating": 4.6,
+    "stock": 78,
+    "brand": "Samsung",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/12/1.jpg",
+    "images": [
+      "./assets/images/smartphones/12/1.jpg",
+      "./assets/images/smartphones/12/2.jpg",
+      "./assets/images/smartphones/12/3.jpg",
+      "./assets/images/smartphones/12/4.jpg",
+      "./assets/images/smartphones/12/5.jpg"
+    ]
+  },
+  {
+    "id": "13",
+    "title": "Samsung Galaxy A53",
+    "description": "Fast. To the point of innovation. In 5G, your world becomes a Galaxy. Hyperfast connection means seamless streaming and sharing with your friends and family.",
+    "price": 324,
+    "discountPercentage": 3,
+    "rating": 4.1,
+    "stock": 34,
+    "brand": "Samsung",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/13/1.jpg",
+    "images": [
+      "./assets/images/smartphones/13/1.jpg",
+      "./assets/images/smartphones/13/2.jpg",
+      "./assets/images/smartphones/13/3.jpg",
+      "./assets/images/smartphones/13/4.jpg",
+      "./assets/images/smartphones/13/5.jpg"
+    ]
+  },
+  {
+    "id": "14",
+    "title": "Samsung Galaxy A33",
+    "description": "Samsung Galaxy A33 5G mobile was launched on 17th March 2022. The phone comes with a 90 Hz refresh rate 6.40-inch touchscreen display offering a resolution of 1080x2400 pixels (FHD+) and an aspect ratio of 20:9. The display sports Gorilla Glass for protection. Samsung Galaxy A33 5G is powered by an octa-core processor. It comes with 6GB, 8GB of RAM. The Samsung Galaxy A33 5G runs Android 12 and is powered by a 5000mAh battery. The Samsung Galaxy A33 5G supports proprietary fast charging.",
+    "price": 294,
+    "discountPercentage": 3,
+    "rating": 4.4,
+    "stock": 15,
+    "brand": "Samsung",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/14/1.jpg",
+    "images": [
+      "./assets/images/smartphones/14/1.jpg",
+      "./assets/images/smartphones/14/2.jpg",
+      "./assets/images/smartphones/14/3.jpg",
+      "./assets/images/smartphones/14/4.jpg",
+      "./assets/images/smartphones/14/5.jpg"
+    ]
+  },
+  {
+    "id": "15",
+    "title": "Samsung Galaxy S22 Ultra",
+    "description": "The Samsung Galaxy S22 Ultra is the headliner of the S22 series. It's the first S series phone to include Samsung's S Pen. Specifications are top-notch including 6.8-inch Dynamic AMOLED display with 120Hz refresh rate, Snapdragon 8 Gen 1 processor, 5000mAh battery, up to 12gigs of RAM, and 1TB of storage.",
+    "price": 730,
+    "discountPercentage": 3,
+    "rating": 4.9,
+    "stock": 65,
+    "brand": "Samsung",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/15/1.jpg",
+    "images": [
+      "./assets/images/smartphones/15/1.jpg",
+      "./assets/images/smartphones/15/2.jpg",
+      "./assets/images/smartphones/15/3.jpg",
+      "./assets/images/smartphones/15/4.jpg",
+      "./assets/images/smartphones/15/5.jpg"
+    ]
+  },
+  {
+    "id": "16",
+    "title": "Samsung Galaxy A73",
+    "description": "Samsung Galaxy A73 5G mobile was launched on 17th March 2022. The phone comes with a 120 Hz refresh rate 6.70-inch touchscreen display offering a resolution of 1080x2400 pixels (FHD+). The display sports Gorilla Glass for protection. It comes with 8GB of RAM. The Samsung Galaxy A73 5G runs Android 12 and is powered by a 5000mAh battery. The Samsung Galaxy A73 5G supports proprietary fast charging.",
+    "price": 596,
+    "discountPercentage": 3,
+    "rating": 4.8,
+    "stock": 12,
+    "brand": "Samsung",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/16/1.jpg",
+    "images": [
+      "./assets/images/smartphones/16/1.jpg",
+      "./assets/images/smartphones/16/2.jpg",
+      "./assets/images/smartphones/16/3.jpg",
+      "./assets/images/smartphones/16/4.jpg",
+      "./assets/images/smartphones/16/5.jpg"
+    ]
+  },
+  {
+    "id": "17",
+    "title": "Samsung Galaxy Z Fold4",
+    "description": "The Samsung Galaxy Z Fold 4 is is the successor of the Galaxy Z Fold 3 and it comes with 6.2-inch outer display and big 7.6-inch Dynamic AMOLED display when unfolded. Specs also include Qualcomm Snapdragon 8+ Gen 1 processor, 4400mAh battery and Triple camera setup on the back with 50MP main sensor.",
+    "price": 1650,
+    "discountPercentage": 3,
+    "rating": 4.0,
+    "stock": 5,
+    "brand": "Samsung",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/17/1.jpg",
+    "images": [
+      "./assets/images/smartphones/17/1.jpg",
+      "./assets/images/smartphones/17/2.jpg",
+      "./assets/images/smartphones/17/3.jpg",
+      "./assets/images/smartphones/17/4.jpg",
+      "./assets/images/smartphones/17/5.jpg"
+    ]
+  },
+  {
+    "id": "18",
+    "title": "Huawei nova Y70",
+    "description": "HUAWEI nova Y70 comes with a triple AI camera setup that's as adaptable as it is awe-inspiring. A touch of the shutter is all it takes to capture a distant landscape, priceless portrait, or timeless interaction.",
+    "price": 200,
+    "discountPercentage": 3,
+    "rating": 4.0,
+    "stock": 83,
+    "brand": "Huawei",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/18/1.jpg",
+    "images": [
+      "./assets/images/smartphones/18/1.jpg",
+      "./assets/images/smartphones/18/2.jpg",
+      "./assets/images/smartphones/18/3.jpg",
+      "./assets/images/smartphones/18/4.jpg",
+      "./assets/images/smartphones/18/5.jpg"
+    ]
+  },
+  {
+    "id": "19",
+    "title": "Huawei nova 9 SE",
+    "description": "The size of the screen is 6.78 inches and 1080 x 2388 pixels is the resolution with 120Hz. The screen type is IPS LCD capacitive touchscreen. The device is powered by Qualcomm SDM665 Snapdragon 665 Octa-core processor and Adreno 610 GPU.",
+    "price": 279,
+    "discountPercentage": 3,
+    "rating": 4.6,
+    "stock": 43,
+    "brand": "Huawei",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/19/1.jpg",
+    "images": [
+      "./assets/images/smartphones/19/1.jpg",
+      "./assets/images/smartphones/19/2.jpg",
+      "./assets/images/smartphones/19/3.jpg",
+      "./assets/images/smartphones/19/4.jpg",
+      "./assets/images/smartphones/19/5.jpg"
+    ]
+  },
+  {
+    "id": "20",
+    "title": "Huawei P50",
+    "description": "The dimension of the device is 156.5 x 73.8 x 7.9 mm and it weighs 181 grams. The smartphones is packed with 8 GB RAM with internal storage is 128 GB and 256 GB. The smartphones is fueled with a 4100 non-removable battery + Fast charging 66W.",
+    "price": 737,
+    "discountPercentage": 3,
+    "rating": 4.1,
+    "stock": 82,
+    "brand": "Huawei",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/20/1.jpg",
+    "images": [
+      "./assets/images/smartphones/20/1.jpg",
+      "./assets/images/smartphones/20/2.jpg",
+      "./assets/images/smartphones/20/3.jpg",
+      "./assets/images/smartphones/20/4.jpg",
+      "./assets/images/smartphones/20/5.jpg"
+    ]
+  },
+  {
+    "id": "21",
+    "title": "Huawei nova 10 Pro",
+    "description": "The phone runs on HarmonyOS 2.0 operating system. Huawei nova 10 Pro comes in different colors like Black, Silver, Green, and Violet. The sensors include optical under display fingerprint, accelerometer, gyro, proximity, and compass + Virtual proximity sensing.",
+    "price": 540,
+    "discountPercentage": 3,
+    "rating": 4.6,
+    "stock": 32,
+    "brand": "Huawei",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/21/1.jpg",
+    "images": [
+      "./assets/images/smartphones/21/1.jpg",
+      "./assets/images/smartphones/21/2.jpg",
+      "./assets/images/smartphones/21/3.jpg",
+      "./assets/images/smartphones/21/4.jpg",
+      "./assets/images/smartphones/21/5.jpg"
+    ]
+  },
+  {
+    "id": "22",
+    "title": "Huawei nova 10 SE",
+    "description": "The size of the screen is 6.67 inches and it provides a resolution of 1080 x 2400 pixels with 90Hz and 1B colors. The screen type is OLED capacitive touchscreen. The device is powered by Qualcomm Snapdragon 680G 4G Octa-core processor and Adreno 610 GPU.",
+    "price": 250,
+    "discountPercentage": 3,
+    "rating": 4.9,
+    "stock": 37,
+    "brand": "Huawei",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/22/1.jpg",
+    "images": [
+      "./assets/images/smartphones/22/1.jpg",
+      "./assets/images/smartphones/22/2.jpg",
+      "./assets/images/smartphones/22/3.jpg",
+      "./assets/images/smartphones/22/4.jpg",
+      "./assets/images/smartphones/22/5.jpg"
+    ]
+  },
+  {
+    "id": "23",
+    "title": "HONOR X7",
+    "description": "The Honor X7 is an Android smartphones with a 6.74-inch HD+ screen with a 90Hz refresh rate. Inside, we find a Snapdragon 680 processor accompanied by 4GB of RAM and 128GB of internal storage. A 48MP + 5MP + 2MP + 2MP quad camera sits on the back, while an 8MP camera is on the front. Completing the features of the Honor X7 we find a 5000 mAh fast charging battery, side fingerprint reader, and runs Magic UI 4.2 based on Android 11.",
+    "price": 190,
+    "discountPercentage": 3,
+    "rating": 4.9,
+    "stock": 39,
+    "brand": "HONOR",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/23/1.jpg",
+    "images": [
+      "./assets/images/smartphones/23/1.jpg",
+      "./assets/images/smartphones/23/2.jpg",
+      "./assets/images/smartphones/23/3.jpg",
+      "./assets/images/smartphones/23/4.jpg",
+      "./assets/images/smartphones/23/5.jpg"
+    ]
+  },
+  {
+    "id": "24",
+    "title": "HONOR X8",
+    "description": "The HONOR X8 is characterized by having a slim 7.45mm body with flat edges and rounded corners, also by having a 64MP2 quad camera, Snapdragon 680 processor, 6.7 screen, and 22.5W fast charging.",
+    "price": 242,
+    "discountPercentage": 3,
+    "rating": 4.9,
+    "stock": 19,
+    "brand": "HONOR",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/24/1.jpg",
+    "images": [
+      "./assets/images/smartphones/24/1.jpg",
+      "./assets/images/smartphones/24/2.jpg",
+      "./assets/images/smartphones/24/3.jpg",
+      "./assets/images/smartphones/24/4.jpg",
+      "./assets/images/smartphones/24/5.jpg"
+    ]
+  },
+  {
+    "id": "25",
+    "title": "HONOR 70",
+    "description": "The display of 6.67 inches has an OLED screen type and provides a resolution of 1080 x 2400 pixels while the pixel density is 395 PPI (pixels per inch). The smartphones is powered by Qualcomm SM7325-AE Snapdragon 778G+ 5G Octa-core processor and Adreno 642L GPU.",
+    "price": 380,
+    "discountPercentage": 3,
+    "rating": 4.8,
+    "stock": 51,
+    "brand": "HONOR",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/25/1.jpg",
+    "images": [
+      "./assets/images/smartphones/25/1.jpg",
+      "./assets/images/smartphones/25/2.jpg",
+      "./assets/images/smartphones/25/3.jpg",
+      "./assets/images/smartphones/25/4.jpg",
+      "./assets/images/smartphones/25/5.jpg"
+    ]
+  },
+  {
+    "id": "26",
+    "title": "HONOR X9",
+    "description": "The Honor X9 features a 6.81-inch FHD+ display and is powered by a Snapdragon 680 processor along with 8GB of RAM and 128GB of internal storage. a quad camera with a 64MP main lens is located on the back, and the selfie camera is 16MP. Power is provided by a 4800 mAh fast-charging battery, it has a fingerprint reader on its side and runs Android 11.",
+    "price": 270,
+    "discountPercentage": 3,
+    "rating": 4.2,
+    "stock": 11,
+    "brand": "HONOR",
+    "category": "smartphones",
+    "thumbnail": "./assets/images/smartphones/26/1.jpg",
+    "images": [
+      "./assets/images/smartphones/26/1.jpg",
+      "./assets/images/smartphones/26/2.jpg",
+      "./assets/images/smartphones/26/3.jpg",
+      "./assets/images/smartphones/26/4.jpg",
+      "./assets/images/smartphones/26/5.jpg"
+    ]
+  },
+  {
+    "id": "27",
+    "title": "Apple Watch Series 3 42 mm Grey",
+    "description": "Originally released September 2017 S3 dual-core processor and W2 Apple wireless chip Built-in GPS and GLONASS Barometric altimeter Water resistant to 50 meters1 2x brighter second-generation OLED Retina display with Force Touch (1000 nits) Wi-Fi (802.11b/g/n 2.4GHz) Bluetooth 4.2 Siri speaks Capacity 8GB Composite back",
+    "price": 199,
+    "discountPercentage": 3,
+    "rating": 4.6,
+    "stock": 62,
+    "brand": "Apple",
+    "category": "smartwatch",
+    "thumbnail": "./assets/images/smartwatch/1/1.jpg",
+    "images": ["./assets/images/smartwatch/1/1.jpg", "./assets/images/smartwatch/1/2.jpg"]
+  },
+  {
+    "id": "28",
+    "title": "Samsung Galaxy Watch3 41 mm Silver",
+    "description": "Outlined in a subtle rotating bezel, it's easier to see and focus on what matters with an even bigger screen. Galaxy Watch3 is thinner and smaller, yet about 15% lighter with a sophisticated look that's ideal for your wrist with its slimmed down frame.",
+    "price": 332,
+    "discountPercentage": 3,
+    "rating": 4.7,
+    "stock": 41,
+    "brand": "Samsung",
+    "category": "smartwatch",
+    "thumbnail": "./assets/images/smartwatch/2/1.jpg",
+    "images": [
+      "./assets/images/smartwatch/2/1.jpg",
+      "./assets/images/smartwatch/2/2.jpg",
+      "./assets/images/smartwatch/2/3.jpg",
+      "./assets/images/smartwatch/2/4.jpg",
+      "./assets/images/smartwatch/2/5.jpg"
+    ]
+  },
+  {
+    "id": "29",
+    "title": "Samsung Galaxy Watch4 44 mm Black",
+    "description": "Galaxy Watch4 features a simple design with a streamlined Armor Aluminum metal frame. It offers high-end looks and functionality for your workouts and day-to-day tasks. Choose from a selection of bands, including the Hybrid Leather Band and the Sport Band, to fashion your own band style.",
+    "price": 299,
+    "discountPercentage": 3,
+    "rating": 4.8,
+    "stock": 49,
+    "brand": "Samsung",
+    "category": "smartwatch",
+    "thumbnail": "./assets/images/smartwatch/3/1.jpg",
+    "images": ["./assets/images/smartwatch/3/1.jpg"]
+  },
+  {
+    "id": "30",
+    "title": "Samsung Galaxy Watch4 40 mm Black",
+    "description": "Galaxy Watch4 features a simple design with a streamlined Armor Aluminum metal frame. It offers high-end looks and functionality for your workouts and day-to-day tasks. Choose from a selection of bands, including the Hybrid Leather Band and the Sport Band, to fashion your own band style.",
+    "price": 259,
+    "discountPercentage": 3,
+    "rating": 4.8,
+    "stock": 39,
+    "brand": "Samsung",
+    "category": "smartwatch",
+    "thumbnail": "./assets/images/smartwatch/4/1.jpg",
+    "images": ["./assets/images/smartwatch/4/1.jpg"]
+  },
+  {
+    "id": "31",
+    "title": "Samsung Galaxy Watch4 Classic 46 mm Silver",
+    "description": "Galaxy Watch4 features a simple design with a streamlined Armor Aluminum metal frame. It offers high-end looks and functionality for your workouts and day-to-day tasks. Choose from a selection of bands, including the Hybrid Leather Band and the Sport Band, to fashion your own band style.",
+    "price": 309,
+    "discountPercentage": 3,
+    "rating": 4.6,
+    "stock": 29,
+    "brand": "Samsung",
+    "category": "smartwatch",
+    "thumbnail": "./assets/images/smartwatch/5/1.jpg",
+    "images": ["./assets/images/smartwatch/5/1.jpg"]
+  },
+  {
+    "id": "32",
+    "title": "Huawei Watch GT 3 42 mm Elegant White",
+    "description": "The Huawei Watch GT 3 42mm is a smart watch with a 7-day battery life and 50m water resistance. It integrates workout monitoring, voice exercise broadcasts, a voice assistant, music playback, intelligent linkage, Huawei TruSleep, heart rate monitoring, Bluetooth calling, a message assistant, GPS, and wireless charging.",
+    "price": 189,
+    "discountPercentage": 3,
+    "rating": 5.0,
+    "stock": 65,
+    "brand": "Huawei",
+    "category": "smartwatch",
+    "thumbnail": "./assets/images/smartwatch/6/1.jpg",
+    "images": [
+      "./assets/images/smartwatch/6/1.jpg",
+      "./assets/images/smartwatch/6/2.jpg",
+      "./assets/images/smartwatch/6/3.jpg",
+      "./assets/images/smartwatch/6/4.jpg",
+      "./assets/images/smartwatch/6/5.jpg"
+    ]
+  },
+  {
+    "id": "33",
+    "title": "Huawei Watch GT 3 Pro Ceramic 43 mm with ceramic strap",
+    "description": "When modern technology meets classic ceramic craftsmanship, the stylish creation unveils a timeless aesthetic, making it a refreshing fashion statement on your wrist.",
+    "price": 289,
+    "discountPercentage": 3,
+    "rating": 4.8,
+    "stock": 29,
+    "brand": "Huawei",
+    "category": "smartwatch",
+    "thumbnail": "./assets/images/smartwatch/7/1.jpg",
+    "images": [
+      "./assets/images/smartwatch/7/1.jpg",
+      "./assets/images/smartwatch/7/2.jpg",
+      "./assets/images/smartwatch/7/3.jpg",
+      "./assets/images/smartwatch/7/4.jpg",
+      "./assets/images/smartwatch/7/5.jpg"
+    ]
+  },
+  {
+    "id": "34",
+    "title": "Watch Huawei Watch 3 Classic Brawn",
+    "description": "The Huawei Watch 3 Classic is a discreet watch, but it has a lot of features to support you in your daily life. With sports sessions (heart rate sensor, sports coach), GPS tracking, Bluetooth and Wi-Fi, notifications and call answering, the possibilities are endless.",
+    "price": 273,
+    "discountPercentage": 3,
+    "rating": 4.8,
+    "stock": 33,
+    "brand": "Huawei",
+    "category": "smartwatch",
+    "thumbnail": "./assets/images/smartwatch/8/1.jpg",
+    "images": [
+      "./assets/images/smartwatch/8/1.jpg",
+      "./assets/images/smartwatch/8/2.jpg",
+      "./assets/images/smartwatch/8/3.jpg"
+    ]
+  },
+  {
+    "id": "35",
+    "title": "Watch Huawei Watch 3 Pro Brown",
+    "description": "The main advantage of ceramics is the high hardness and color stability. It's harder than stainless steel, and therefore has a very high resistance to scratching. It is hypoallergic and therefore suitable for all with increased skin sensitivity. Its main drawback is its fragility - can break during strong impact.",
+    "price": 300,
+    "discountPercentage": 3,
+    "rating": 4.7,
+    "stock": 43,
+    "brand": "Huawei",
+    "category": "smartwatch",
+    "thumbnail": "./assets/images/smartwatch/9/1.jpg",
+    "images": [
+      "./assets/images/smartwatch/9/1.jpg",
+      "./assets/images/smartwatch/9/2.jpg",
+      "./assets/images/smartwatch/9/3.jpg"
+    ]
+  },
+  {
+    "id": "36",
+    "title": "Huawei Watch Fit 2 Active Isle Blue",
+    "description": "The Huawei Watch Fit 2 is the perfect companion for your fitness journey. With its 1.74-inch FullView Display, you can see your workout stats clearly while you stay connected with Bluetooth calling.",
+    "price": 159,
+    "discountPercentage": 3,
+    "rating": 4.1,
+    "stock": 83,
+    "brand": "Huawei",
+    "category": "smartwatch",
+    "thumbnail": "./assets/images/smartwatch/10/1.jpg",
+    "images": [
+      "./assets/images/smartwatch/10/1.jpg",
+      "./assets/images/smartwatch/10/2.jpg",
+      "./assets/images/smartwatch/10/3.jpg"
+    ]
+  },
+  {
+    "id": "37",
+    "title": "Watch Amazfit Bip 3 Black",
+    "description": "Amazfit Bip 3–the 2022 upgraded smartwatch that guides you toward a healthier, more active, more connected life. The watch packs a 1.69 super-sized color screen into its super slim and light body for a clear, exquisite viewing experience. Powerful battery to deliver up to 14 days of battery life.",
+    "price": 59,
+    "discountPercentage": 3,
+    "rating": 4.3,
+    "stock": 53,
+    "brand": "Amazfit",
+    "category": "smartwatch",
+    "thumbnail": "./assets/images/smartwatch/11/1.jpg",
+    "images": [
+      "./assets/images/smartwatch/11/1.jpg",
+      "./assets/images/smartwatch/11/2.jpg",
+      "./assets/images/smartwatch/11/3.jpg",
+      "./assets/images/smartwatch/11/4.jpg",
+      "./assets/images/smartwatch/11/5.jpg"
+    ]
+  },
+  {
+    "id": "38",
+    "title": "Watch Amazfit GTS 4 mini Pink",
+    "description": "Amazfit GTS 4 Mini - a smaller version of the premium smartwatch. 1.65 AMOLED display with 336 x 384 resolution, 120+ sports modes and automatic recognition of 7 sports. Record physical activity, health, blood oxygenation, heart rate measurement, sleep and stress monitoring, etc.",
+    "price": 119,
+    "discountPercentage": 3,
+    "rating": 4.5,
+    "stock": 23,
+    "brand": "Amazfit",
+    "category": "smartwatch",
+    "thumbnail": "./assets/images/smartwatch/12/1.jpg",
+    "images": [
+      "./assets/images/smartwatch/12/1.jpg",
+      "./assets/images/smartwatch/12/2.jpg",
+      "./assets/images/smartwatch/12/3.jpg",
+      "./assets/images/smartwatch/12/4.jpg",
+      "./assets/images/smartwatch/12/5.jpg"
+    ]
+  },
+  {
+    "id": "39",
+    "title": "Watch Amazfit GTS 4 mini Black",
+    "description": "Amazfit GTS 4 Mini - a smaller version of the premium smartwatch. 1.65 AMOLED display with 336 x 384 resolution, 120+ sports modes and automatic recognition of 7 sports. Record physical activity, health, blood oxygenation, heart rate measurement, sleep and stress monitoring, etc.",
+    "price": 119,
+    "discountPercentage": 3,
+    "rating": 4.5,
+    "stock": 27,
+    "brand": "Amazfit",
+    "category": "smartwatch",
+    "thumbnail": "./assets/images/smartwatch/13/1.jpg",
+    "images": [
+      "./assets/images/smartwatch/13/1.jpg",
+      "./assets/images/smartwatch/13/2.jpg",
+      "./assets/images/smartwatch/13/3.jpg",
+      "./assets/images/smartwatch/13/4.jpg",
+      "./assets/images/smartwatch/13/5.jpg"
+    ]
+  },
+  {
+    "id": "40",
+    "title": "Watch HONOR MagicWatch 2",
+    "description": "Honor MagicWatch 2 comes with a 1.39 inches OLED capacitive touchscreen and 454 x 454 pixels resolution. The is no camera. The smartwatch’s sensors include Accelerometer, gyro, heart rate, barometer, and compass. The smartwatch is fueled by a Non-removable Li-Po 455 mAh battery.",
+    "price": 239,
+    "discountPercentage": 3,
+    "rating": 4.2,
+    "stock": 23,
+    "brand": "HONOR",
+    "category": "smartwatch",
+    "thumbnail": "./assets/images/smartwatch/14/1.jpg",
+    "images": [
+      "./assets/images/smartwatch/14/1.jpg",
+      "./assets/images/smartwatch/14/2.jpg",
+      "./assets/images/smartwatch/14/3.jpg",
+      "./assets/images/smartwatch/14/4.jpg",
+      "./assets/images/smartwatch/14/5.jpg"
+    ]
+  },
+  {
+    "id": "41",
+    "title": "HONOR Watch GS 3 Classic Gold",
+    "description": "HONOR Smart Watch GS 3 comes with a 1.43-inch AMOLED screen and a 326 PPI resolution. The novel 3D ultra-curved slim design resembles a crystal-clear streamline. Over 97% Heart Rate Accurac The newest HONOR Watch GS 3, with 8-Channel Heart Rate AI Engine, support 24-hour heart rate monitoring.",
+    "price": 235,
+    "discountPercentage": 3,
+    "rating": 3.9,
+    "stock": 43,
+    "brand": "HONOR",
+    "category": "smartwatch",
+    "thumbnail": "./assets/images/smartwatch/15/1.jpg",
+    "images": [
+      "./assets/images/smartwatch/15/1.jpg",
+      "./assets/images/smartwatch/15/2.jpg",
+      "./assets/images/smartwatch/15/3.jpg",
+      "./assets/images/smartwatch/15/4.jpg",
+      "./assets/images/smartwatch/15/5.jpg"
+    ]
+  },
+  {
+    "id": "42",
+    "title": "Apple iPad 10.2 WiFi 64GB",
+    "description": "Powerful. Easy to use. Versatile. The new iPad has a beautiful 10.2-inch Retina display1, the powerful A13 Bionic chip, an Ultra Wide front camera with Centre Stage, and support for Apple Pencil and the Smart Keyboard.2 iPad lets you do more, more easily. All for an incredible price.",
+    "price": 329,
+    "discountPercentage": 3,
+    "rating": 4.9,
+    "stock": 23,
+    "brand": "Apple",
+    "category": "tablets",
+    "thumbnail": "./assets/images/tablets/1/1.jpg",
+    "images": [
+      "./assets/images/tablets/1/1.jpg",
+      "./assets/images/tablets/1/2.jpg",
+      "./assets/images/tablets/1/3.jpg",
+      "./assets/images/tablets/1/4.jpg",
+      "./assets/images/tablets/1/5.jpg"
+    ]
+  },
+  {
+    "id": "43",
+    "title": "HONOR Pad 8 6/128GB Blue Hour",
+    "description": "Featuring a premium design with a lightweight aluminum alloy body, the HONOR Pad 8 weighs just 520g and boasts a thickness of 6.9mm, allowing users to hold the tablet with one hand comfortably. With curved edges and an exquisite, frosted finish, HONOR tablet delivers a smooth touch and a premium look and feel",
+    "price": 229,
+    "discountPercentage": 3,
+    "rating": 4.6,
+    "stock": 13,
+    "brand": "HONOR",
+    "category": "tablets",
+    "thumbnail": "./assets/images/tablets/2/1.jpg",
+    "images": ["./assets/images/tablets/2/1.jpg", "./assets/images/tablets/2/2.jpg"]
+  },
+  {
+    "id": "44",
+    "title": "Huawei MatePad 11 WiFi 128GB Grey",
+    "description": "Enjoy the convenience of HUAWEI MatePad 11 with an organised new desktop. See and use all your apps using the touchscreen or mouse with greater efficiency. View frequently and recently used apps displayed at the bottom of the screen, and hover over app icons to preview each app window without having to open them.",
+    "price": 488,
+    "discountPercentage": 3,
+    "rating": 4.7,
+    "stock": 39,
+    "brand": "Huawei",
+    "category": "tablets",
+    "thumbnail": "./assets/images/tablets/3/1.jpg",
+    "images": [
+      "./assets/images/tablets/3/1.jpg",
+      "./assets/images/tablets/3/2.jpg",
+      "./assets/images/tablets/3/3.jpg",
+      "./assets/images/tablets/3/4.jpg"
+    ]
+  },
+  {
+    "id": "45",
+    "title": "Huawei MatePad 64GB LTE Grey",
+    "description": "HUAWEI MatePad Tablet is a 10.4-inch FullView display with HUAWEI Kirin 810 Adopts a 7nm processor and HUAWEI's self-developed architecture NPU,Quad-speaker and Quad-channel sound system brings the impressive sound to you,New eBook Mode, With a 7250 mAh (typical capacity) large-capacity battery.",
+    "price": 388,
+    "discountPercentage": 3,
+    "rating": 4.5,
+    "stock": 39,
+    "brand": "Huawei",
+    "category": "tablets",
+    "thumbnail": "./assets/images/tablets/3/1.jpg",
+    "images": [
+      "./assets/images/tablets/4/1.jpg",
+      "./assets/images/tablets/4/2.jpg",
+      "./assets/images/tablets/4/3.jpg",
+      "./assets/images/tablets/4/4.jpg"
+    ]
+  },
+  {
+    "id": "46",
+    "title": "Lenovo Tab M10 FHD Plus 64GB",
+    "description": "With a large 10.3 FHD screen, the 10.3 Tab M10 FHD Plus 64GB Tablet from Lenovo can be used for a variety of applications. Remote learning, games, reading books and magazines, streaming video, and much more can be enjoyed by the whole family. The dual built-in speakers tuned by Dolby Atmos help to make music and entertainment apps sound their best. Tablets are popular with adults and kids alike, which is why the Tab M10 also features a dedicated Kid's Mode 4.0 to provide child-friendly content for your young ones.",
+    "price": 196,
+    "discountPercentage": 3,
+    "rating": 4.5,
+    "stock": 22,
+    "brand": "Lenovo",
+    "category": "tablets",
+    "thumbnail": "./assets/images/tablets/5/1.jpg",
+    "images": [
+      "./assets/images/tablets/5/1.jpg",
+      "./assets/images/tablets/5/2.jpg",
+      "./assets/images/tablets/5/3.jpg",
+      "./assets/images/tablets/5/4.jpg",
+      "./assets/images/tablets/5/5.jpg"
+    ]
+  },
+  {
+    "id": "47",
+    "title": "Xiaomi Redmi Pad WiFi 6/128GB Mint Green",
+    "description": "Redmi Pad All in one, pad for fun 90Hz buttery smooth display High-performance MediaTek Helio G99 Long-lasting 8000mAh (typ) battery Flagship-level unibody design",
+    "price": 245,
+    "discountPercentage": 3,
+    "rating": 4.6,
+    "stock": 32,
+    "brand": "Xiaomi",
+    "category": "tablets",
+    "thumbnail": "./assets/images/tablets/6/1.jpg",
+    "images": [
+      "./assets/images/tablets/6/1.jpg",
+      "./assets/images/tablets/6/2.jpg",
+      "./assets/images/tablets/6/3.jpg",
+      "./assets/images/tablets/6/4.jpg",
+      "./assets/images/tablets/6/5.jpg"
+    ]
+  },
+  {
+    "id": "48",
+    "title": "Xiaomi Pad 5 WiFi 128GB Cosmic Gray",
+    "description": "The large 11 screen, stylish design and top-of-the-line configuration is guaranteed to meet your needs across a wide range of scenarios. The Qualcomm® Snapdragon™ 860 and 120Hz high refresh rate provides you with a super smooth experience. The extra-large 8720mAh(typ) battery provides you with the power that you want.",
+    "price": 449,
+    "discountPercentage": 3,
+    "rating": 4.6,
+    "stock": 52,
+    "brand": "Xiaomi",
+    "category": "tablets",
+    "thumbnail": "./assets/images/tablets/7/1.jpg",
+    "images": [
+      "./assets/images/tablets/7/1.jpg",
+      "./assets/images/tablets/7/2.jpg",
+      "./assets/images/tablets/7/3.jpg",
+      "./assets/images/tablets/7/4.jpg"
+    ]
+  },
+  {
+    "id": "49",
+    "title": "Xiaomi Redmi Pad WiFi 6/128GB Moonlight Silver",
+    "description": "Redmi Pad All in one, pad for fun 90Hz buttery smooth display High-performance MediaTek Helio G99 Long-lasting 8000mAh (typ) battery Flagship-level unibody design",
+    "price": 245,
+    "discountPercentage": 3,
+    "rating": 4.6,
+    "stock": 12,
+    "brand": "Xiaomi",
+    "category": "tablets",
+    "thumbnail": "./assets/images/tablets/8/1.jpg",
+    "images": [
+      "./assets/images/tablets/8/1.jpg",
+      "./assets/images/tablets/8/2.jpg",
+      "./assets/images/tablets/8/3.jpg",
+      "./assets/images/tablets/8/4.jpg",
+      "./assets/images/tablets/8/5.jpg"
+    ]
+  },
+  {
+    "id": "50",
+    "title": "AirPods Pro 2 White",
+    "description": "Description. AirPods Pro earbuds feature up to 2x more Active Noise Cancellation, plus Adaptive Transparency, and Personalized Spatial Audio with dynamic head tracking for immersive sound. Now with multiple ear tips (XS, S, M, L) and up to 6 hours of listening time.",
+    "price": 249,
+    "discountPercentage": 3,
+    "rating": 4.2,
+    "stock": 48,
+    "brand": "Apple",
+    "category": "headphones",
+    "thumbnail": "./assets/images/headphones/1/1.jpg",
+    "images": [
+      "./assets/images/headphones/1/1.jpg",
+      "./assets/images/headphones/1/2.jpg",
+      "./assets/images/headphones/1/3.jpg",
+      "./assets/images/headphones/1/4.jpg"
+    ]
+  },
+  {
+    "id": "51",
+    "title": "HONOR CHOICE Earbuds X3 White",
+    "description": "It adopts a snow-white body and is suitable for wearing in various scenes. It is convenient to carry, comfortable to in ear, and cost-effective. Support touch operation to play/ pause music, or answer/ end phone calls, etc.",
+    "price": 75,
+    "discountPercentage": 3,
+    "rating": 4.2,
+    "stock": 38,
+    "brand": "HONOR",
+    "category": "headphones",
+    "thumbnail": "./assets/images/headphones/2/1.jpg",
+    "images": [
+      "./assets/images/headphones/2/1.jpg",
+      "./assets/images/headphones/2/2.jpg",
+      "./assets/images/headphones/2/3.jpg",
+      "./assets/images/headphones/2/4.jpg"
+    ]
+  },
+  {
+    "id": "52",
+    "title": "Huawei FreeBuds Lipstick Red",
+    "description": "Marking a new trend in ultra-chic design and innovatively equipped for a superior, smarter audio experience, HUAWEI FreeBuds Lipstick offers a stunning makeover in beauty and sound.",
+    "price": 285,
+    "discountPercentage": 3,
+    "rating": 4.2,
+    "stock": 28,
+    "brand": "Huawei",
+    "category": "headphones",
+    "thumbnail": "./assets/images/headphones/3/1.jpg",
+    "images": [
+      "./assets/images/headphones/3/1.jpg",
+      "./assets/images/headphones/3/2.jpg",
+      "./assets/images/headphones/3/3.jpg",
+      "./assets/images/headphones/3/4.jpg",
+      "./assets/images/headphones/3/5.jpg"
+    ]
+  },
+  {
+    "id": "53",
+    "title": "Huawei FreeBuds Pro Ceramic White",
+    "description": "Cancel out the noise, dive into the beats. Voice hear-through, always stay connected. Feel the music with HUAWEI FreeBuds Pro. Immersive sound, inspiring style.",
+    "price": 230,
+    "discountPercentage": 3,
+    "rating": 4.8,
+    "stock": 78,
+    "brand": "Huawei",
+    "category": "headphones",
+    "thumbnail": "./assets/images/headphones/4/1.jpg",
+    "images": [
+      "./assets/images/headphones/4/1.jpg",
+      "./assets/images/headphones/4/2.jpg",
+      "./assets/images/headphones/4/3.jpg",
+      "./assets/images/headphones/4/4.jpg",
+      "./assets/images/headphones/4/5.jpg"
+    ]
+  },
+  {
+    "id": "54",
+    "title": "Huawei FreeBuds 4 Silver",
+    "description": "Featuring a 14.3mm LCP dynamic driver, FreeBuds 4 ensures outstanding sound quality. The frequency range reaches up to 40 kHz to let enjoy a pure sound and clear vocals. Enjoy enhanced bass with FreeBuds 4 as every earbud is equipped with a powerful engine that delivers awesome diaphragm vibration.",
+    "price": 134,
+    "discountPercentage": 3,
+    "rating": 4.7,
+    "stock": 71,
+    "brand": "Huawei",
+    "category": "headphones",
+    "thumbnail": "./assets/images/headphones/5/1.jpg",
+    "images": [
+      "./assets/images/headphones/5/1.jpg",
+      "./assets/images/headphones/5/2.jpg",
+      "./assets/images/headphones/5/3.jpg",
+      "./assets/images/headphones/5/4.jpg",
+      "./assets/images/headphones/5/5.jpg"
+    ]
+  },
+  {
+    "id": "55",
+    "title": "Huawei FreeBuds 4i Carbon Black",
+    "description": "HUAWEI FreeBuds 4i is ergonomically designed for a stable and snug fit. The super-light earbuds radically reduce the pressure you feel even after long hours of listening. Wear them all day in total comfort. The sensors in HUAWEI FreeBuds 4i actively detect and reduce ambient noise.",
+    "price": 96,
+    "discountPercentage": 3,
+    "rating": 4.5,
+    "stock": 51,
+    "brand": "Huawei",
+    "category": "headphones",
+    "thumbnail": "./assets/images/headphones/6/1.jpg",
+    "images": [
+      "./assets/images/headphones/6/1.jpg",
+      "./assets/images/headphones/6/2.jpg",
+      "./assets/images/headphones/6/3.jpg",
+      "./assets/images/headphones/6/4.jpg",
+      "./assets/images/headphones/6/5.jpg"
+    ]
+  },
+  {
+    "id": "56",
+    "title": "Samsung Galaxy Buds Live White",
+    "description": "Galaxy Buds Live combines a comfortable, ergonomic design with premium sound from AKG to create a soundscape that harmoniously amplifies sound while cancelling unwanted background noise. Now trade-in your old headphones to save more.",
+    "price": 99,
+    "discountPercentage": 3,
+    "rating": 4.9,
+    "stock": 31,
+    "brand": "Samsung",
+    "category": "headphones",
+    "thumbnail": "./assets/images/headphones/7/1.jpg",
+    "images": [
+      "./assets/images/headphones/7/1.jpg",
+      "./assets/images/headphones/7/2.jpg",
+      "./assets/images/headphones/7/3.jpg",
+      "./assets/images/headphones/7/4.jpg",
+      "./assets/images/headphones/7/5.jpg"
+    ]
+  },
+  {
+    "id": "57",
+    "title": "Samsung Galaxy Buds Live Bronze",
+    "description": "Galaxy Buds Live combines a comfortable, ergonomic design with premium sound from AKG to create a soundscape that harmoniously amplifies sound while cancelling unwanted background noise. Now trade-in your old headphones to save more.",
+    "price": 99,
+    "discountPercentage": 3,
+    "rating": 4.9,
+    "stock": 32,
+    "brand": "Samsung",
+    "category": "headphones",
+    "thumbnail": "./assets/images/headphones/8/1.jpg",
+    "images": [
+      "./assets/images/headphones/8/1.jpg",
+      "./assets/images/headphones/8/2.jpg",
+      "./assets/images/headphones/8/3.jpg",
+      "./assets/images/headphones/8/4.jpg",
+      "./assets/images/headphones/8/5.jpg"
+    ]
+  },
+  {
+    "id": "58",
+    "title": "Samsung Galaxy Buds Live Black",
+    "description": "Galaxy Buds Live combines a comfortable, ergonomic design with premium sound from AKG to create a soundscape that harmoniously amplifies sound while cancelling unwanted background noise. Now trade-in your old headphones to save more.",
+    "price": 99,
+    "discountPercentage": 3,
+    "rating": 4.9,
+    "stock": 22,
+    "brand": "Samsung",
+    "category": "headphones",
+    "thumbnail": "./assets/images/headphones/9/1.jpg",
+    "images": [
+      "./assets/images/headphones/9/1.jpg",
+      "./assets/images/headphones/9/2.jpg",
+      "./assets/images/headphones/9/3.jpg",
+      "./assets/images/headphones/9/4.jpg",
+      "./assets/images/headphones/9/5.jpg"
+    ]
+  },
+  {
+    "id": "59",
+    "title": "Xiaomi Buds 3 Carbon Black",
+    "description": "Ergonomic designLightweight, stable, close-fittingYou feel comfortable after wearing for long hours 4.6 g lightweight body, multi-point refined design. The optimised structure with overlapping gravity centres precisely forms a stable triangle around the tragus, antitragus and auricular concha.",
+    "price": 109,
+    "discountPercentage": 3,
+    "rating": 4.7,
+    "stock": 29,
+    "brand": "Xiaomi",
+    "category": "headphones",
+    "thumbnail": "./assets/images/headphones/10/1.jpg",
+    "images": ["./assets/images/headphones/10/1.jpg", "./assets/images/headphones/10/2.jpg"]
+  },
+  {
+    "id": "60",
+    "title": "Xiaomi Redmi Buds 4 Blue",
+    "description": "Whether you're outdoors, on the bus or metro, one-touch for up to 35dB* noise cancellation. Redmi Buds 4 blocks out the hustle and bustle. Redmi Buds 4 intelligently switches between 3 ANC levels under adaptive mode supported by AI algorithm and offers a more comfortable noise-cancellation experience.",
+    "price": 75,
+    "discountPercentage": 3,
+    "rating": 4.3,
+    "stock": 34,
+    "brand": "Xiaomi",
+    "category": "headphones",
+    "thumbnail": "./assets/images/headphones/11/1.jpg",
+    "images": [
+      "./assets/images/headphones/11/1.jpg",
+      "./assets/images/headphones/11/2.jpg",
+      "./assets/images/headphones/11/3.jpg",
+      "./assets/images/headphones/11/4.jpg"
+    ]
+  },
+  {
+    "id": "61",
+    "title": "Xiaomi Redmi Buds 4 Pro Black",
+    "description": "Xiaomi Redmi Buds 4 Pro Wireless Earbuds, Hi Resolution Audio, Dual Driver Speaker, Immersive Sound, Up to 43dB ANC, Dual Device Connectivity, 36h Long Battery, Fast Charging, App, IP54, White. Brief content visible, double tap to read full content.",
+    "price": 99,
+    "discountPercentage": 3,
+    "rating": 4.8,
+    "stock": 39,
+    "brand": "Xiaomi",
+    "category": "headphones",
+    "thumbnail": "./assets/images/headphones/12/1.jpg",
+    "images": [
+      "./assets/images/headphones/12/1.jpg",
+      "./assets/images/headphones/12/2.jpg",
+      "./assets/images/headphones/12/3.jpg"
+    ]
+  },
+  {
+    "id": "62",
+    "title": "JBL Tune 225TWS White",
+    "description": "The JBL Tune 225TWS True Wireless are basic truly wireless headphones. They're decently well-made, exceptionally easy to carry around, and have a stable fit. Unfortunately, they have a short continuous battery life, block out almost no ambient noise, and have a fairly limited control scheme.",
+    "price": 50,
+    "discountPercentage": 3,
+    "rating": 4.6,
+    "stock": 49,
+    "brand": "JBL",
+    "category": "headphones",
+    "thumbnail": "./assets/images/headphones/13/1.jpg",
+    "images": [
+      "./assets/images/headphones/13/1.jpg",
+      "./assets/images/headphones/13/2.jpg",
+      "./assets/images/headphones/13/3.jpg",
+      "./assets/images/headphones/13/4.jpg",
+      "./assets/images/headphones/13/5.jpg"
+    ]
+  },
+  {
+    "id": "63",
+    "title": "JBL Tune 225TWS Black",
+    "description": "The JBL Tune 225TWS True Wireless are basic truly wireless headphones. They're decently well-made, exceptionally easy to carry around, and have a stable fit. Unfortunately, they have a short continuous battery life, block out almost no ambient noise, and have a fairly limited control scheme.",
+    "price": 50,
+    "discountPercentage": 3,
+    "rating": 4.6,
+    "stock": 39,
+    "brand": "JBL",
+    "category": "headphones",
+    "thumbnail": "./assets/images/headphones/14/1.jpg",
+    "images": [
+      "./assets/images/headphones/14/1.jpg",
+      "./assets/images/headphones/14/2.jpg",
+      "./assets/images/headphones/14/3.jpg",
+      "./assets/images/headphones/14/4.jpg",
+      "./assets/images/headphones/14/5.jpg"
+    ]
+  },
+  {
+    "id": "64",
+    "title": "Notebook Huawei MateBook D 14 8/512GB Mystic Silver",
+    "description": "Enjoy every look of HUAWEI MateBook D 14 thanks to the IPS anti-glare 14 HUAWEI FullView Display1 and 16:9 aspect ratio. With Full-HD 1920 x 1080 resolution, every image bursts with detail and clarity. For a better viewing experience every time you open up",
+    "price": 1123,
+    "discountPercentage": 3,
+    "rating": 4.1,
+    "stock": 15,
+    "brand": "Huawei",
+    "category": "laptops",
+    "thumbnail": "./assets/images/laptops/1/1.jpg",
+    "images": [
+      "./assets/images/laptops/1/1.jpg",
+      "./assets/images/laptops/1/2.jpg",
+      "./assets/images/laptops/1/3.jpg",
+      "./assets/images/laptops/1/4.jpg",
+      "./assets/images/laptops/1/5.jpg"
+    ]
+  },
+  {
+    "id": "65",
+    "title": "Notebook Huawei MateBook D15 8/512GB Mystical Silver",
+    "description": "Huawei MateBook D 15 comes with a Fingerprint sensor and Hall sensor HUAWEI Share, PC Manager Performance mode (press Fn+P in hotkey mode) Display Manager (eye protection) Factory restore HUAWEI MateBook D15 laptop computer with FullView screen 15.6-inch size with 11th Gen Intel Core processors combined with a metal body design. which is only 16.9 mm thin",
+    "price": 1223,
+    "discountPercentage": 3,
+    "rating": 4.2,
+    "stock": 11,
+    "brand": "Huawei",
+    "category": "laptops",
+    "thumbnail": "./assets/images/laptops/2/1.jpg",
+    "images": [
+      "./assets/images/laptops/2/1.jpg",
+      "./assets/images/laptops/2/2.jpg",
+      "./assets/images/laptops/2/3.jpg",
+      "./assets/images/laptops/2/4.jpg",
+      "./assets/images/laptops/2/5.jpg"
+    ]
+  },
+  {
+    "id": "66",
+    "title": "Notebook Huawei MateBook D15 8/512GB Mystical Silver",
+    "description": "Huawei MateBook D 15 comes with a Fingerprint sensor and Hall sensor HUAWEI Share, PC Manager Performance mode (press Fn+P in hotkey mode) Display Manager (eye protection) Factory restore HUAWEI MateBook D15 laptop computer with FullView screen 15.6-inch size with 11th Gen Intel Core processors combined with a metal body design. which is only 16.9 mm thin",
+    "price": 1409,
+    "discountPercentage": 3,
+    "rating": 4.3,
+    "stock": 10,
+    "brand": "Huawei",
+    "category": "laptops",
+    "thumbnail": "./assets/images/laptops/3/1.jpg",
+    "images": [
+      "./assets/images/laptops/3/1.jpg",
+      "./assets/images/laptops/3/2.jpg",
+      "./assets/images/laptops/3/3.jpg",
+      "./assets/images/laptops/3/4.jpg",
+      "./assets/images/laptops/3/5.jpg"
+    ]
+  },
+  {
+    "id": "67",
+    "title": "Notebook ASUS TUF Gaming F15 8/512GB",
+    "description": "Geared for serious gaming and real-world durability, the TUF Gaming F15 is a fully-loaded Windows 10 Pro gaming laptop that can carry you to victory. Powered by the latest 10th Gen Intel® Core™ i7 CPU and GeForce® GTX 1660 Ti GPU, action-packed gameplay is fast, fluid, and fully saturates speedy IPS-level displays up to 144Hz. Even while boasting a smaller and more portable chassis than its predecessors, this gaming laptop also features a larger 90Wh battery for superior battery life. Efficient self-cleaning cooling combines with TUF's signature military-grade durability to make this battle-tested road warrior a powerful ally for any gamer.",
+    "price": 1099,
+    "discountPercentage": 3,
+    "rating": 4.8,
+    "stock": 10,
+    "brand": "ASUS",
+    "category": "laptops",
+    "thumbnail": "./assets/images/laptops/4/1.jpg",
+    "images": [
+      "./assets/images/laptops/4/1.jpg",
+      "./assets/images/laptops/4/2.jpg",
+      "./assets/images/laptops/4/3.jpg",
+      "./assets/images/laptops/4/4.jpg",
+      "./assets/images/laptops/4/5.jpg"
+    ]
+  },
+  {
+    "id": "68",
+    "title": "Notebook ASUS A416M 8/256GB",
+    "description": "Whether for work or play, ASUS Laptop A416 is the entry-level laptop that delivers powerful performance and immersive visuals. Its NanoEdge display boasts wide 178° viewing angles and a matte anti-glare coating for a truly engaging experience. Inside, it’s powered by up to an Intel® Core™ i5 processor with 4 GB 2400MHz RAM. A dual-storage design with up to 512GB SSD gives you the perfect combination of large storage capacity and fast data read / write speeds.",
+    "price": 799,
+    "discountPercentage": 3,
+    "rating": 4.1,
+    "stock": 9,
+    "brand": "ASUS",
+    "category": "laptops",
+    "thumbnail": "./assets/images/laptops/5/1.jpg",
+    "images": ["./assets/images/laptops/5/1.jpg"]
+  },
+  {
+    "id": "69",
+    "title": "Notebook ASUS X515M 8/256GB",
+    "description": "Whether for work or play, ASUS X515 is the entry-level laptop that delivers powerful performance and immersive visuals. Its NanoEdge display boasts wide 178° viewing angles and a matte anti-glare coating for a truly engaging experience. Inside, it’s powered by up to an Intel® Core™ i7 processor with 16 GB 2400 MHz RAM, and features NVIDIA® GeForce® MX330. A dual-storage design with up to a 1 TB PCIe® SSD and a 1 TB HDD gives you the perfect combination of large storage capacity and fast data read / write speeds. There’s also Intel® Optane™ memory support1 to help speed things up even more.",
+    "price": 499,
+    "discountPercentage": 3,
+    "rating": 4.1,
+    "stock": 7,
+    "brand": "ASUS",
+    "category": "laptops",
+    "thumbnail": "./assets/images/laptops/6/1.jpg",
+    "images": ["./assets/images/laptops/6/1.jpg", "./assets/images/laptops/6/2.jpg", "./assets/images/laptops/6/3.jpg"]
+  },
+  {
+    "id": "70",
+    "title": "Notebook HP Laptop 15-dy2093dx Silver",
+    "description": "HP 15-dy2093dx LaptopOPERATING SYSTEM – Windows 10 Home in S modePROCESSOR FAMILY – 11th Generation Intel CoreTM i5 processorPROCESSOR – Intel CoreTM i5-1135G7 (up to 4.2 GHz with Intel Turbo Boost Technology, 8 MB L3 cache, 4 cores)CHIPSET Intel Integrated SoCMEMORY – 8 GB DDR4-2666 MHz RAM (2 x 4 GB) Transfer rates up to 2666 MT/s. 2 x 4 GBHARD DRIVE – 256 GB ",
+    "price": 1250,
+    "discountPercentage": 3,
+    "rating": 3.9,
+    "stock": 7,
+    "brand": "HP",
+    "category": "laptops",
+    "thumbnail": "./assets/images/laptops/7/1.jpg",
+    "images": [
+      "./assets/images/laptops/7/1.jpg",
+      "./assets/images/laptops/7/2.jpg",
+      "./assets/images/laptops/7/3.jpg",
+      "./assets/images/laptops/7/4.jpg",
+      "./assets/images/laptops/7/5.jpg"
+    ]
+  },
+  {
+    "id": "71",
+    "title": "Notebook HP 250 15.6 G9",
+    "description": "The HP 250 Laptop keeps up with mobile workstyles with a thin and light design. The optional 300-nit Full HD display with its narrow border design and big screen-to-body- ratio provides ample space for work or streaming content.",
+    "price": 1350,
+    "discountPercentage": 3,
+    "rating": 4.6,
+    "stock": 7,
+    "brand": "HP",
+    "category": "laptops",
+    "thumbnail": "./assets/images/laptops/8/1.jpg",
+    "images": [
+      "./assets/images/laptops/8/1.jpg",
+      "./assets/images/laptops/8/2.jpg",
+      "./assets/images/laptops/8/3.jpg",
+      "./assets/images/laptops/8/4.jpg",
+      "./assets/images/laptops/8/5.jpg"
+    ]
+  }
+]
