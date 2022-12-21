@@ -1,0 +1,121 @@
+
+.cart,
+.cart__pagination {
+  @include cart-description-font;
+}
+.cart{
+  width: 100%;
+  max-width: 1000px
+}
+
+.cart__total-items {
+  @include flex();
+  display: inline-flex;
+}
+.cart__header-container{
+  @include flex(row, space-between, center);
+  padding-bottom: 15px;
+  border-bottom: 1px solid $color-dark;
+}
+.cart__pagination {
+  width: 30px;
+  text-align: center
+}
+.cart__page {
+  @include flex($justify: flex-start);
+  display: inline-flex;
+}
+.cart__page-text{
+  padding-right: 10px;
+}
+.cart_page-arrow_left {
+}
+.cart_page-number {
+  padding: 0 10px
+}
+.cart__items-on-page{
+padding-right: 10px;
+}
+.cart_page-arrow_right {
+}
+
+
+.cart-item__container {
+  @include flex(row, space-between, flex-start);
+  height: 140px;
+  width: 100%;
+  max-width: 800px;
+  padding-top: 10px;
+}
+.cart-item__name,
+.cart_heading {
+  padding-bottom: 2%;
+  @include cart-heading-font;
+}
+.cart-item__photo-slider {
+  object-fit: contain;
+  height: 100%;
+}
+.cart-item__info {
+  @include flex(column, space-between, flex-start);
+  flex-grow: 1;
+  height: 100%;
+  padding-left: 2%;
+}
+.cart-item__description_brand {
+}
+.cart-item__description_category {
+}
+.cart-item__description_discount {
+}
+.cart-item__description_rating {
+}
+.cart__page {
+}
+.cart_page-arrow_left {
+}
+.cart_page-number {
+}
+
+.cart-item__input_add-item {
+  width: 50px;
+}
+
+.cart-item__button_delete-item,
+.cart-item__button_add-item,
+.cart_page-arrow_left,
+.cart_page-arrow_right {
+  width: 25px;
+  aspect-ratio: 1;
+  border-radius: 0;
+  border: none;
+  text-align: center;
+  background-color: $color-button;
+}
+
+.cart_page-arrow_left,
+.cart_page-arrow_right {
+  aspect-ratio: 0;
+  font-size: 100%
+}
+.cart__add-del-block {
+  @include flex();
+  gap: 5px;
+  padding: 5px 0;
+}
+
+.cart-item__description_stock {
+}
+.cart-item__button_add-to-card {
+}
+.cart-item__button_details {
+}
+.cart-item__num-block {
+  align-self: center;
+}
+.cart-item__price {
+  text-align: center;
+}
+.cart-item__in-stock {
+  text-align: center;
+}

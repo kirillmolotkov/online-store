@@ -2,6 +2,7 @@ import { IbasketItem, IproductItem } from '../../types/interfaces';
 
 class Checkout {
   private basket: [IbasketItem] = [{ id: '-1', amount: 0 }];
+  // private map = new Map();
 
   addToCart(item: IproductItem) {
     for (let product of this.basket) {
@@ -36,9 +37,19 @@ class Checkout {
       }
     }
   }
-  getItemsCount():number {
-   return this.basket.reduce((sum, item) => sum + item.amount, 0)
- }
+  getItemsCount(): number {
+    return this.basket.reduce((sum, item) => sum + item.amount, 0);
+  }
+
+  getTotalSum(): number {
+    let totalSum: number = 0;
+    for (let item of this.basket) {
+      let prod = CATALOGUE.find(product => product.id === item.id);
+      if (prod)
+      totalSum += item.amount * prod.price
+    }
+    return totalSum;
+  }
 }
 
 let CATALOGUE: IproductItem[];
@@ -63,18 +74,26 @@ goods.addEventListener('click', (e) => {
     }) as IproductItem;
     cart.addToCart(item);
     renderItemCount();
+    renderTotalSum();
   }
 });
 
 function renderItemCount(): void {
-  const cartItems = document.querySelector('.basket__items-in-cart') as HTMLDivElement
+  const cartItems = document.querySelector('.basket__items-in-cart') as HTMLDivElement;
   let counter = cart.getItemsCount();
   if (counter > 0) {
     cartItems.classList.add('active');
   }
-    
-  console.log(counter)
   cartItems.textContent = counter.toString();
+}
+
+function renderTotalSum(): void {
+  const cartItems = document.querySelector('.header__total') as HTMLDivElement;
+  let counter = cart.getTotalSum();
+  if (counter > 0) {
+    cartItems.classList.add('active');
+  }
+  cartItems.textContent = `You have to pay: ${counter.toString()}\$`;
 }
 
 export default Checkout;

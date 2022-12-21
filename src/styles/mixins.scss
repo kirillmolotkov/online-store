@@ -15,6 +15,18 @@
   font-size: 150%;
 }
 
+@mixin cart-heading-font {
+  color: $color-dark;
+  font-family: type_basic;
+  font-size: 150%;
+}
+
+@mixin cart-description-font {
+  color: $color-dark;
+  font-family: type_basic;
+  font-size: 100%;
+}
+
 @mixin filter-item-font {
   color: $color-dark;
   font-family: type_basic;

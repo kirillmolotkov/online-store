@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>DreamTeam online-store</title>
   </head>
   <body>
     <header class="wrapper header" id="id-header">
@@ -90,7 +90,42 @@
           </ul>
         </div>
       </aside>
-      <section class="goods"></section>
+      <section class="goods">
+        <section class="cart">
+          <h2 class="cart_heading">Products in cart</h2>
+          <div class="cart__header-container">
+            <div class="cart__total-items">
+              <div class="cart__items-on-page">Items on page</div>
+              <input class="cart__pagination" type="number" value="3" />
+            </div>
+            <div class="cart__page">
+              <div class="cart__page-text">Page:</div>
+              <div class="cart_page-arrow_left"><</div>
+              <div class="cart_page-number">3</div>
+              <div class="cart_page-arrow_right">></div>
+            </div>
+          </div>
+          <div class="cart-item__container">
+            <img class="cart-item__photo-slider" src="./assets/images/smartphones/1/1.jpg" />
+            <div class="cart-item__info">
+              <h3 class="cart-item__name">iPhone 12 64GB Purple</h3>
+              <span class="cart-item__description_brand">Brand: Apple</span>
+              <span class="cart-item__description_category">Catagory: smartphones</span>
+              <span class="cart-item__description_discount">Discount: 3 %</span>
+              <span class="cart-item__description_rating">Rating: 4.6</span>
+            </div>
+            <div class="cart-item__num-block">
+              <div class="cart-item__in-stock">in stock 10</div>
+              <div class="cart__add-del-block">
+                <button class="cart-item__button_add-item" data-id="1">+</button>
+                <input class="cart-item__input_add-item" type="number" data-id="1" />
+                <button class="cart-item__button_delete-item" data-id="1">-</button>
+              </div>
+              <div class="cart-item__price">$ 599</div>
+            </div>
+          </div>
+        </section>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__container">
