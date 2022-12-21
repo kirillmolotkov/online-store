@@ -1,10 +1,9 @@
-<<<<<<< HEAD
-export interface basketItem{
+export interface basketItem {
   id: number;
   amount: number;
-  }
+}
 
-export interface productItem{
+export interface productItem {
   id: number;
   title: string;
   description: string;
@@ -19,7 +18,6 @@ export interface productItem{
 }
 
 export default basketItem;
-=======
 export interface Data {
   id: string;
   title: string;
@@ -50,4 +48,3 @@ export interface TempalateForCardItem {
   buttonDetails: HTMLButtonElement;
   price: HTMLSpanElement;
 }
->>>>>>> 6cd857b3f39df55a7e346255b35a4e4fcffaed58
