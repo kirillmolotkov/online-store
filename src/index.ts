@@ -2,14 +2,16 @@ import './style.scss';
 import './data/data.json';
 import './types/interfaces.ts';
 import './components/generate-card/generateCardItems.ts';
+import './components/filters/generateFilters.ts';
 import checkout from './components/checkout/checkout';
+import './components/filters/getDataForFilters.ts';
 
 async function getJSON() {
   let response = await fetch('./data/data.json');
   let CATALOGUE = await response.json();
   return CATALOGUE;
 }
-console.log(getJSON());
+// console.log(getJSON());
 
 const cart = checkout();
 

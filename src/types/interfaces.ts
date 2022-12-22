@@ -48,3 +48,11 @@ export interface TempalateForCardItem {
   buttonDetails: HTMLButtonElement;
   price: HTMLSpanElement;
 }
+
+export interface QuantityOfGoodsByCategory {
+  smartphones: number;
+  smartwatch: number;
+  tablets: number;
+  headphones: number;
+  laptops: number;
+}

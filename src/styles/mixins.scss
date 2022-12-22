@@ -38,3 +38,8 @@
   justify-content: $justify;
   align-items: $align;
 }
+@mixin filter-checkbox-font {
+  color: $color-dark;
+  font-family: type_basic;
+  font-size: 100%;
+}
