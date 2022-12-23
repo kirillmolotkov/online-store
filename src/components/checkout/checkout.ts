@@ -1,64 +1,6 @@
 import { IbasketItem, IproductItem } from '../../types/interfaces';
-
-class Checkout {
-  private basket: [IbasketItem] = [{ id: '-1', amount: 0 }];
-  // private map = new Map();
-
-  addToCart(item: IproductItem) {
-    for (let product of this.basket) {
-      if (product.id === item.id) {
-        product.amount += 1;
-        console.log(this.basket);
-        return;
-      }
-    }
-    let newItem: IbasketItem = {
-      id: item.id,
-      amount: 1,
-    };
-    this.basket.push(newItem);
-    console.log(this.basket);
-  }
-
-  deleteFromCart(item: IproductItem) {
-    for (let product of this.basket) {
-      if (product.id === item.id) {
-        this.basket.slice(this.basket.indexOf(product), 1);
-        return;
-      }
-    }
-  }
-
-  decreaseItemAmount(item: IproductItem) {
-    for (let product of this.basket) {
-      if (product.id === item.id) {
-        product.amount -= 1;
-        return;
-      }
-    }
-  }
-  getItemsCount(): number {
-    return this.basket.reduce((sum, item) => sum + item.amount, 0);
-  }
-
-  getTotalSum(): number {
-    let totalSum: number = 0;
-    for (let item of this.basket) {
-      let prod = CATALOGUE.find(product => product.id === item.id);
-      if (prod)
-      totalSum += item.amount * prod.price
-    }
-    return totalSum;
-  }
-}
-
-let CATALOGUE: IproductItem[];
-async function getJSON() {
-  let response = await fetch('/dist/data/data.json');
-  CATALOGUE = await response.json();
-}
-
-getJSON();
+import { Checkout } from './Cart';
+import {} from './Cart';
 
 const cart: Checkout = new Checkout();
 
@@ -69,21 +11,18 @@ goods.addEventListener('click', (e) => {
   const addButton = e.target as HTMLElement;
   if (addButton.classList.contains('sku__button_add-to-card')) {
     id = (addButton as HTMLDivElement).getAttribute('data-id') as string;
-    let item: IproductItem = CATALOGUE.find((product) => {
-      if (product.id === id) return product;
-    }) as IproductItem;
-    cart.addToCart(item);
-    renderItemCount();
+    cart.addToCart(id);
+    renderItemsCount();
     renderTotalSum();
   }
 });
 
-function renderItemCount(): void {
+function renderItemsCount(): void {
   const cartItems = document.querySelector('.basket__items-in-cart') as HTMLDivElement;
   let counter = cart.getItemsCount();
   if (counter > 0) {
     cartItems.classList.add('active');
-  }
+  } else cartItems.classList.remove('active')
   cartItems.textContent = counter.toString();
 }
 
@@ -95,5 +34,38 @@ function renderTotalSum(): void {
   }
   cartItems.textContent = `You have to pay: ${counter.toString()}\$`;
 }
+
+function renderItemAmount(e: Event) {
+  let container = document.querySelector('.cart__container');
+  if (e.target === container) return
+  const item = (e.target as HTMLElement).closest('.cart-item__container') as HTMLDivElement;
+  console.log(e.target)
+  const id = (item as HTMLDivElement).getAttribute('data-id') as string;
+  const input = item.querySelector('.cart-item__input_add-item') as HTMLInputElement;
+  console.log(input)
+  let amount = cart.getItemAmount(id);
+  if (amount) input.value = amount.toString();
+}
+
+const cartContainer = document.querySelector('.cart__container') as HTMLDivElement;
+cartContainer.addEventListener('click', (e) => {
+  let id: string;
+  const addButton = e.target as HTMLElement;
+  const cartItem = ((addButton.parentNode as HTMLDivElement).parentNode as HTMLDivElement).parentNode as HTMLDivElement;
+  if (addButton.classList.contains('cart-item__button_add-item')) {
+    id = (cartItem as HTMLDivElement).getAttribute('data-id') as string;
+    if (id) {
+      cart.addToCart(id);
+    }
+  }
+
+  if (addButton.classList.contains('cart-item__button_delete-item')) {
+    id = (cartItem as HTMLDivElement).getAttribute('data-id') as string;
+    if (id) cart.decreaseItemAmount(id)
+  }
+  renderItemsCount();
+  renderTotalSum();
+  renderItemAmount(e)
+});
 
 export default Checkout;
