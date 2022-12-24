@@ -1,9 +1,7 @@
-import { IbasketItem, IproductItem } from '../../types/interfaces';
-import { Checkout } from './Cart';
-import {} from './Cart';
+import { Checkout, getCatalogue } from './Cart';
 
-const cart: Checkout = new Checkout();
-
+export const cart: Checkout = new Checkout();
+cart.loadBasketFromStorage();
 const goods = document.querySelector('.goods') as HTMLDivElement;
 
 goods.addEventListener('click', (e) => {
@@ -22,7 +20,7 @@ function renderItemsCount(): void {
   let counter = cart.getItemsCount();
   if (counter > 0) {
     cartItems.classList.add('active');
-  } else cartItems.classList.remove('active')
+  } else cartItems.classList.remove('active');
   cartItems.textContent = counter.toString();
 }
 
@@ -37,35 +35,18 @@ function renderTotalSum(): void {
 
 function renderItemAmount(e: Event) {
   let container = document.querySelector('.cart__container');
-  if (e.target === container) return
+  if (e.target === container) return;
   const item = (e.target as HTMLElement).closest('.cart-item__container') as HTMLDivElement;
-  console.log(e.target)
+  console.log(e.target);
   const id = (item as HTMLDivElement).getAttribute('data-id') as string;
   const input = item.querySelector('.cart-item__input_add-item') as HTMLInputElement;
-  console.log(input)
+  console.log(input);
   let amount = cart.getItemAmount(id);
   if (amount) input.value = amount.toString();
 }
 
-const cartContainer = document.querySelector('.cart__container') as HTMLDivElement;
-cartContainer.addEventListener('click', (e) => {
-  let id: string;
-  const addButton = e.target as HTMLElement;
-  const cartItem = ((addButton.parentNode as HTMLDivElement).parentNode as HTMLDivElement).parentNode as HTMLDivElement;
-  if (addButton.classList.contains('cart-item__button_add-item')) {
-    id = (cartItem as HTMLDivElement).getAttribute('data-id') as string;
-    if (id) {
-      cart.addToCart(id);
-    }
-  }
-
-  if (addButton.classList.contains('cart-item__button_delete-item')) {
-    id = (cartItem as HTMLDivElement).getAttribute('data-id') as string;
-    if (id) cart.decreaseItemAmount(id)
-  }
-  renderItemsCount();
-  renderTotalSum();
-  renderItemAmount(e)
+window.addEventListener('load', (): void => {
+  getCatalogue().then(() => { cart.loadBasketFromStorage, renderItemsCount(), renderTotalSum() })
 });
 
 export default Checkout;
