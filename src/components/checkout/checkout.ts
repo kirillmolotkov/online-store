@@ -33,17 +33,17 @@ function renderTotalSum(): void {
   cartItems.textContent = `You have to pay: ${counter.toString()}\$`;
 }
 
-function renderItemAmount(e: Event) {
-  let container = document.querySelector('.cart__container');
-  if (e.target === container) return;
-  const item = (e.target as HTMLElement).closest('.cart-item__container') as HTMLDivElement;
-  console.log(e.target);
-  const id = (item as HTMLDivElement).getAttribute('data-id') as string;
-  const input = item.querySelector('.cart-item__input_add-item') as HTMLInputElement;
-  console.log(input);
-  let amount = cart.getItemAmount(id);
-  if (amount) input.value = amount.toString();
-}
+// function renderItemAmount(e: Event) {
+//   let container = document.querySelector('.cart__container');
+//   if (e.target === container) return;
+//   const item = (e.target as HTMLElement).closest('.cart-item__container') as HTMLDivElement;
+//   console.log(e.target);
+//   const id = (item as HTMLDivElement).getAttribute('data-id') as string;
+//   const input = item.querySelector('.cart-item__input_add-item') as HTMLInputElement;
+//   console.log(input);
+//   let amount = cart.getItemAmount(id);
+//   if (amount) input.value = amount.toString();
+// }
 
 window.addEventListener('load', (): void => {
   getCatalogue().then(() => { cart.loadBasketFromStorage, renderItemsCount(), renderTotalSum() })

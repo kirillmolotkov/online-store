@@ -94,6 +94,13 @@ export class Checkout {
  public getItemAmount(id: string): number | undefined {
     return this.basket.get(id)?.amount;
   }
+  public getItemSum(id: string): number | undefined {
+    let price = CATALOGUE.get(id)?.price
+    let amount = this.getItemAmount(id);
+    if (price && amount)
+      return amount * price;
+}
+
 }
 
 export default Checkout;
