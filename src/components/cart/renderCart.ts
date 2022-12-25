@@ -79,8 +79,8 @@ export function goToCartPage() {
         stock.textContent = `in stock: ${prod.stock.toString()}`;
         const sum = fragment.querySelector('.cart-item__price') as HTMLDivElement;
         sum.textContent = `$ ${(prod.price * item.amount).toString()}`;
-        const amount = fragment.querySelector('.cart-item__input_add-item') as HTMLInputElement;
-        amount.value = `${item.amount.toString()}`;
+        const amount = fragment.querySelector('.cart-item__input_add-item') as HTMLDivElement;
+        amount.textContent = `${item.amount.toString()}`;
       }
       itemList.append(fragment);
     });
@@ -98,46 +98,45 @@ export function goToCartPage() {
     itemList.append(fragment);
   }
 
-  function renderItemsCount(): void {
-    const cartItems = document.querySelector('.basket__items-in-cart') as HTMLDivElement;
-    const summaryAmount = document.querySelector('.cart__number-of-products') as HTMLDivElement;
-    const summarySum = document.querySelector('.cart__total-sum') as HTMLDivElement;
-
-    let counter = cart.getItemsCount();
-    if (counter > 0) {
-      cartItems.classList.add('active');
-    } else cartItems.classList.remove('active');
-    cartItems.textContent = counter.toString();
-    if (summaryAmount) summaryAmount.textContent = `Products: ${counter.toString()}`;
-    if (summarySum) summarySum.textContent = `Total: $${cart.getTotalSum().toString()}`;
-
-  }
-
-  function renderTotalSum(): void {
-    const cartItems = document.querySelector('.header__total') as HTMLDivElement;
-    let counter = cart.getTotalSum();
-    if (counter > 0) {
-      cartItems.classList.add('active');
-    }
-    cartItems.textContent = `You have to pay: ${counter.toString()}\$`;
-  }
-
   function renderItemAmountSum(e: Event) {
     let container = document.querySelector('.cart__container') as HTMLDivElement;
     if (e.target === container) return;
     const item = (e.target as HTMLElement).closest('.cart-item__container') as HTMLDivElement;
     const sum = item.querySelector('.cart-item__price') as HTMLDivElement;
     const id = (item as HTMLDivElement).getAttribute('data-id') as string;
-    const input = item.querySelector('.cart-item__input_add-item') as HTMLInputElement;
+    const input = item.querySelector('.cart-item__input_add-item') as HTMLDivElement;
     let currentSum = cart.getItemSum(id);
     let amount = cart.getItemAmount(id);
     console.log(currentSum);
     console.log(amount);
     if (amount && currentSum) {
-      input.value = amount.toString();
+      input.textContent = amount.toString();
       sum.textContent = `$ ${currentSum.toString()}`;
     }
   }
+}
+export function renderItemsCount(): void {
+  const cartItems = document.querySelector('.basket__items-in-cart') as HTMLDivElement;
+  const summaryAmount = document.querySelector('.cart__number-of-products') as HTMLDivElement;
+  const summarySum = document.querySelector('.cart__total-sum') as HTMLDivElement;
+
+  let counter = cart.getItemsCount();
+  if (counter > 0) {
+    cartItems.classList.add('active');
+  } else cartItems.classList.remove('active');
+  cartItems.textContent = counter.toString();
+  if (summaryAmount) summaryAmount.textContent = `Products: ${counter.toString()}`;
+  if (summarySum) summarySum.textContent = `Total: $${cart.getTotalSum().toString()}`;
+
+}
+
+export function renderTotalSum(): void {
+  const cartItems = document.querySelector('.header__total') as HTMLDivElement;
+  let counter = cart.getTotalSum();
+  if (counter > 0) {
+    cartItems.classList.add('active');
+  } else cartItems.classList.remove('active');
+  cartItems.textContent = `You have to pay: ${counter.toString()}\$`;
 }
 
 export default goToCartPage;

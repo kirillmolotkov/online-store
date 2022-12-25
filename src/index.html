@@ -137,70 +137,12 @@
                 <div class="cart-item__button cart-item__button_arrow-right">></div>
               </div>
             </div>
-            <ol class="cart__container">
-              <li class="cart-item__container" data-id="2">
-                <img class="cart-item__photo-slider" src="./assets/images/smartphones/1/1.jpg" />
-                <div class="cart-item__info">
-                  <h3 class="cart-item__name">iPhone 12 64GB Purple</h3>
-                  <span class="cart-item__description_brand">Brand: Apple</span>
-                  <span class="cart-item__description_category">Catagory: smartphones</span>
-                  <span class="cart-item__description_discount">Discount: 3 %</span>
-                  <span class="cart-item__description_rating">Rating: 4.6</span>
-                </div>
-                <div class="cart-item__num-block">
-                  <div class="cart-item__in-stock">in stock 10</div>
-                  <div class="cart__add-del-block">
-                    <button class="cart-item__button cart-item__button_add-item" data-id="1">+</button>
-                    <input class="cart-item__input_add-item" type="number" data-id="1" />
-                    <button class="cart-item__button cart-item__button_delete-item" data-id="1">-</button>
-                  </div>
-                  <div class="cart-item__price">$ 599</div>
-                </div>
-              </li>
-              <li class="cart-item__container">
-                <img class="cart-item__photo-slider" src="./assets/images/smartphones/1/1.jpg" />
-                <div class="cart-item__info">
-                  <h3 class="cart-item__name">iPhone 12 64GB Purple</h3>
-                  <span class="cart-item__description_brand">Brand: Apple</span>
-                  <span class="cart-item__description_category">Catagory: smartphones</span>
-                  <span class="cart-item__description_discount">Discount: 3 %</span>
-                  <span class="cart-item__description_rating">Rating: 4.6</span>
-                </div>
-                <div class="cart-item__num-block">
-                  <div class="cart-item__in-stock">in stock 10</div>
-                  <div class="cart__add-del-block">
-                    <button class="cart-item__button cart-item__button_add-item" data-id="1">+</button>
-                    <input class="cart-item__input_add-item" type="number" data-id="1" />
-                    <button class="cart-item__button cart-item__button_delete-item" data-id="1">-</button>
-                  </div>
-                  <div class="cart-item__price">$ 599</div>
-                </div>
-              </li>
-              <li class="cart-item__container">
-                <img class="cart-item__photo-slider" src="./assets/images/smartphones/1/1.jpg" />
-                <div class="cart-item__info">
-                  <h3 class="cart-item__name">iPhone 12 64GB Purple</h3>
-                  <span class="cart-item__description_brand">Brand: Apple</span>
-                  <span class="cart-item__description_category">Catagory: smartphones</span>
-                  <span class="cart-item__description_discount">Discount: 3 %</span>
-                  <span class="cart-item__description_rating">Rating: 4.6</span>
-                </div>
-                <div class="cart-item__num-block">
-                  <div class="cart-item__in-stock">in stock 10</div>
-                  <div class="cart__add-del-block">
-                    <button class="cart-item__button cart-item__button_add-item" data-id="1">+</button>
-                    <input class="cart-item__input_add-item" type="number" data-id="1" />
-                    <button class="cart-item__button cart-item__button_delete-item" data-id="1">-</button>
-                  </div>
-                  <div class="cart-item__price">$ 599</div>
-                </div>
-              </li>
-            </ol>
+            <ol class="cart__container"></ol>
           </div>
           <div class="cart_summary">
             <h2 class="cart__heading">Summary</h2>
-            <div class="cart__number-of-products">Products: 9</div>
-            <div class="cart__total-sum">Total: $9000</div>
+            <div class="cart__number-of-products"></div>
+            <div class="cart__total-sum"></div>
             <input type="text" class="cart__promo" name="promo" id="promo" />
             <div class="cart__total-cheat">Promo for test: 'RS', 'DreamTeam'</div>
             <button class="cart-item__button cart-item__button_buy-now" data-id="1">Buy Now</button>
@@ -213,17 +155,17 @@
       <li class="cart-item__container">
         <img class="cart-item__photo-slider" src="./assets/images/smartphones/1/1.jpg" />
         <div class="cart-item__info">
-          <h3 class="cart-item__name">iPhone 12 64GB Purple</h3>
-          <span class="cart-item__description_brand">Brand: Apple</span>
-          <span class="cart-item__description_category">Catagory: smartphones</span>
-          <span class="cart-item__description_discount">Discount: 3 %</span>
-          <span class="cart-item__description_rating">Rating: 4.6</span>
+          <h3 class="cart-item__name"></h3>
+          <span class="cart-item__description_brand"></span>
+          <span class="cart-item__description_category"></span>
+          <span class="cart-item__description_discount"></span>
+          <span class="cart-item__description_rating"></span>
         </div>
         <div class="cart-item__num-block">
-          <div class="cart-item__in-stock">in stock 10</div>
+          <div class="cart-item__in-stock"></div>
           <div class="cart__add-del-block">
             <button class="cart-item__button cart-item__button_add-item" data-id="1">+</button>
-            <input class="cart-item__input_add-item" value="2" type="number" data-id="1" />
+            <div class="cart-item__input_add-item" data-id="1"> </div>
             <button class="cart-item__button cart-item__button_delete-item" data-id="1">-</button>
           </div>
           <div class="cart-item__price">$ 599</div>
@@ -231,11 +173,10 @@
       </li>
     </template>
 
-
     <template id="emptyCart">
       <li class="empty-cart__container">
-      <h2 class="empty-cart__heading">There is nothing here, yet. Please choose some goods. And pay us money ;)</h2>
-      <img class="empty-cart__image" src="./assets/icons/empty-cart.png" alt="empty cart">
+        <h2 class="empty-cart__heading">There is nothing here, yet. Please choose some goods. And pay us money ;)</h2>
+        <img class="empty-cart__image" src="./assets/icons/empty-cart.png" alt="empty cart" />
       </li>
     </template>
   </body>
