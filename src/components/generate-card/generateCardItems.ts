@@ -1,19 +1,33 @@
-import { Data } from '../../types/interfaces';
+import { Data, IsCheckedFilterCategory } from '../../types/interfaces';
 import { TempalateForCardItem } from '../../types/interfaces';
+import { isCheckedFilterCategory } from '../filters/useFilters';
 
-const urlData: string = '../../data/data.json';
-const sectionGoods = document.querySelector('.goods');
+export const urlData: string = '../../data/data.json';
+export const sectionGoods = document.querySelector('.goods');
 
-function sendRequest(url: string) {
+export function sendRequest(url: string) {
   return fetch(url).then((response) => {
     return response.json();
   });
 }
 
-const generationCardItems = function (data: Array<Data>) {
+export const generationCardItems = function (data: Array<Data>) {
   data.forEach((elem) => {
-    generateHTML(elem);
+    checkForMatchingFilterAndData(isCheckedFilterCategory, elem);
   });
+};
+
+const checkForMatchingFilterAndData = function (filterObject: IsCheckedFilterCategory, dataItem: Data) {
+  for (let keyFilter in filterObject) {
+    if (filterObject[keyFilter as keyof IsCheckedFilterCategory]) {
+      for (let keyItem in dataItem) {
+        if (keyFilter === dataItem[keyItem as keyof Data].toString().toLowerCase()) {
+          generateHTML(dataItem);
+          break;
+        }
+      }
+    }
+  }
 };
 
 const generateHTML = (products: Data) => {

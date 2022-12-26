@@ -56,3 +56,23 @@ export interface QuantityOfGoodsByCategory {
   headphones: number;
   laptops: number;
 }
+
+export interface IsCheckedFilterCategory {
+  smartphones: boolean;
+  smartwatch: boolean;
+  tablets: boolean;
+  headphones: boolean;
+  laptops: boolean;
+}
+
+export interface QuantityOfGoodsByBrand {
+  apple: number;
+  samsung: number;
+  xiaomi: number;
+  honor: number;
+  huawei: number;
+  amazfit: number;
+  jbl: number;
+  asus: number;
+  hp: number;
+}

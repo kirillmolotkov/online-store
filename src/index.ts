@@ -5,6 +5,7 @@ import './components/generate-card/generateCardItems.ts';
 import './components/filters/generateFilters.ts';
 import checkout from './components/checkout/checkout';
 import './components/filters/getDataForFilters.ts';
+import './components/filters/useFilters.ts';
 
 async function getJSON() {
   let response = await fetch('./data/data.json');
