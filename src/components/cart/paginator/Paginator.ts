@@ -1,7 +1,8 @@
+import { IbasketItem, IproductItem } from '../../../types/interfaces';
 class PaginationHelper {
-  items: string[];
+  items: IbasketItem[];
   itemsPerPage: number;
-  constructor(collection: string[], itemsPerPage: number) {
+  constructor(collection: IbasketItem[], itemsPerPage: number) {
     this.items = collection;
     this.itemsPerPage = itemsPerPage;
   }

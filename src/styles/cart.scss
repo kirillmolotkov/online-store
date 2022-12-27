@@ -56,12 +56,10 @@
     position: relative;
     top:40%;
     left: -5%;
-    // transform: translate(-150%, -50%);
     counter-increment: itemCounter;
     content: counter(itemCounter);
     color: $color-dark;
     border: 1px solid $color-dark;
-    // background-color: $color-button;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -85,18 +83,6 @@
   flex-grow: 1;
   height: 100%;
   padding-left: 2%;
-}
-.cart-item__description_brand {
-}
-.cart-item__description_category {
-}
-.cart-item__description_discount {
-}
-.cart-item__description_rating {
-}
-.cart__page {
-}
-.cart_page-number {
 }
 
 .cart-item__input_add-item {
@@ -122,18 +108,20 @@
   }
 }
 
+.disactivated{
+  cursor: default;
+  background-color: gray;
+  &:active {
+    background-color: gray;
+  }
+}
+
 .cart__add-del-block {
   @include flex();
   gap: 5px;
   padding: 5px 0;
 }
 
-.cart-item__description_stock {
-}
-.cart-item__button_add-to-card {
-}
-.cart-item__button_details {
-}
 .cart-item__num-block {
   align-self: center;
 }
@@ -150,18 +138,6 @@
   height: 200px;
   padding-left: 10px;
   border-left: 1px solid $color-dark;
-}
-.cart__heading {
-}
-.cart__number-of-products {
-}
-.cart__total-sum {
-}
-.cart__promo {
-}
-.cart__total-cheat {
-}
-.cart-item__button {
 }
 .cart-item__button_buy-now {
   align-self: flex-end;

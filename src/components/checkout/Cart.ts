@@ -100,7 +100,6 @@ export class Checkout {
     if (price && amount)
       return amount * price;
 }
-
 }
 
 export default Checkout;

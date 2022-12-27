@@ -1,11 +1,12 @@
 import { CATALOGUE, getCatalogue } from '../checkout/Cart';
 import { cart } from '../checkout/checkout';
+import { pagination, updatePagination } from './paginator/pagination';
 
 export function goToCartPage() {
   getCatalogue().then(() => {
     generateCart();
     if (cart.getItemsCount()) {
-      generateCartItems();
+      pagination();
       const cartContainer = document.querySelector('.cart__container') as HTMLDivElement;
 
       cartContainer.addEventListener('click', (e) => {
@@ -23,7 +24,10 @@ export function goToCartPage() {
             cart.decreaseItemAmount(id);
             if (!cart.getItemAmount(id)) {
               cartItem.style.opacity = '0';
-              setTimeout(() => cartItem.remove(), 300);
+              setTimeout(() => {
+                cartItem.remove();
+                updatePagination();
+              }, 300);
               if (!cart.getItemsCount()) {
                 generateEmptyCart();
               }
