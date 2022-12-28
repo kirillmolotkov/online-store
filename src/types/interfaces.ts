@@ -25,7 +25,7 @@ export interface Data {
   price: number;
   discountPercentage: string;
   rating: string;
-  stock: string;
+  stock: number;
   brand: string;
   category: string;
   thumbnail: string;

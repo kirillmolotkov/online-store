@@ -5,6 +5,12 @@ import { Data, QuantityOfGoodsByBrand, QuantityOfGoodsByCategory } from '../../t
 export const asideFilters = document.querySelector('.filters');
 export const filterByCategoryContainer = document.createElement('div');
 export const filterByBrandContainer = document.createElement('div');
+export const filterByPriceContainer = document.createElement('div');
+export const filterByStockContainer = document.createElement('div');
+export const priceMin = document.createElement('span');
+export const priceMax = document.createElement('span');
+export const stockMin = document.createElement('span');
+export const stockMax = document.createElement('span');
 
 const quantityOfGoodsByCategory: QuantityOfGoodsByCategory = {
   smartphones: 0,
@@ -24,6 +30,24 @@ const quantityOfGoodsByBrand: QuantityOfGoodsByBrand = {
   jbl: 0,
   asus: 0,
   hp: 0,
+};
+interface QuantityOfGoodsByPrice {
+  min: number;
+  max: number;
+}
+interface QuantityOfGoodsByStock {
+  min: number;
+  max: number;
+}
+
+const quantityOfGoodsByPrice: QuantityOfGoodsByPrice = {
+  min: 0,
+  max: 0,
+};
+
+const quantityOfGoodsByStock: QuantityOfGoodsByStock = {
+  min: 0,
+  max: 0,
 };
 
 const createFiltersHeader = function () {
@@ -112,7 +136,109 @@ const createFilterByBrand = function (objectBrand: QuantityOfGoodsByBrand) {
   asideFilters?.append(filterByBrandContainer);
 };
 
-function getQuantityOfGoodsByCategory(data: Array<Data>): QuantityOfGoodsByCategory {
+const createFilterByPrice = function (objectPrice: QuantityOfGoodsByPrice) {
+  filterByPriceContainer.className = 'filters__price';
+
+  const filterByPriceTitle = document.createElement('h3');
+  filterByPriceTitle.className = 'filters__price-title';
+  filterByPriceTitle.innerText = 'Price';
+
+  const filterByPriceMinLabel = document.createElement('label');
+  filterByPriceMinLabel.className = 'filters__min';
+  filterByPriceMinLabel.innerText = 'Min: ';
+  filterByPriceMinLabel.setAttribute('for', 'input-min');
+
+  const filterByPriceMinInput = document.createElement('input');
+  filterByPriceMinInput.className = 'filter__price-min';
+  filterByPriceMinInput.id = 'input-min';
+  filterByPriceMinInput.type = 'range';
+  filterByPriceMinInput.min = objectPrice.min.toString();
+  filterByPriceMinInput.max = objectPrice.max.toString();
+  filterByPriceMinInput.value = objectPrice.min.toString();
+
+  priceMin.id = 'price-min-value';
+  priceMin.innerText = objectPrice.min.toString();
+
+  const filterByPriceMaxLabel = document.createElement('label');
+  filterByPriceMaxLabel.className = 'filters__max';
+  filterByPriceMaxLabel.innerText = 'Max: ';
+  filterByPriceMaxLabel.setAttribute('for', 'input-max');
+
+  const filterByPriceMaxInput = document.createElement('input');
+  filterByPriceMaxInput.className = 'filter__price-max';
+  filterByPriceMaxInput.id = 'input-max';
+  filterByPriceMaxInput.type = 'range';
+  filterByPriceMaxInput.min = objectPrice.min.toString();
+  filterByPriceMaxInput.max = objectPrice.max.toString();
+  filterByPriceMaxInput.value = objectPrice.max.toString();
+
+  priceMax.id = 'price-max-value';
+  priceMax.innerText = objectPrice.max.toString();
+
+  filterByPriceContainer.append(
+    filterByPriceTitle,
+    filterByPriceMinLabel,
+    filterByPriceMinInput,
+    filterByPriceMaxLabel,
+    filterByPriceMaxInput,
+    priceMin,
+    priceMax
+  );
+  asideFilters?.append(filterByPriceContainer);
+};
+
+const createFilterByStock = function (objectStock: QuantityOfGoodsByStock) {
+  filterByStockContainer.className = 'filters__stock';
+
+  const filterByStockTitle = document.createElement('h3');
+  filterByStockTitle.className = 'filters__stock-title';
+  filterByStockTitle.innerText = 'Stock';
+
+  const filterByStockMinLabel = document.createElement('label');
+  filterByStockMinLabel.className = 'filters__min';
+  filterByStockMinLabel.innerText = 'Min: ';
+  filterByStockMinLabel.setAttribute('for', 'input-min-stok');
+
+  const filterByStockMinInput = document.createElement('input');
+  filterByStockMinInput.className = 'filter__stock-min';
+  filterByStockMinInput.id = 'input-min-stock';
+  filterByStockMinInput.type = 'range';
+  filterByStockMinInput.min = objectStock.min.toString();
+  filterByStockMinInput.max = objectStock.max.toString();
+  filterByStockMinInput.value = objectStock.min.toString();
+
+  stockMin.id = 'stock-min-value';
+  stockMin.innerText = objectStock.min.toString();
+
+  const filterByStockMaxLabel = document.createElement('label');
+  filterByStockMaxLabel.className = 'filters__max';
+  filterByStockMaxLabel.innerText = 'Max: ';
+  filterByStockMaxLabel.setAttribute('for', 'input-max-stock');
+
+  const filterByStockMaxInput = document.createElement('input');
+  filterByStockMaxInput.className = 'filter__stock-max';
+  filterByStockMaxInput.id = 'input-max-stock';
+  filterByStockMaxInput.type = 'range';
+  filterByStockMaxInput.min = objectStock.min.toString();
+  filterByStockMaxInput.max = objectStock.max.toString();
+  filterByStockMaxInput.value = objectStock.max.toString();
+
+  stockMax.id = 'stock-max-value';
+  stockMax.innerText = objectStock.max.toString();
+
+  filterByStockContainer.append(
+    filterByStockTitle,
+    filterByStockMinLabel,
+    filterByStockMinInput,
+    filterByStockMaxLabel,
+    filterByStockMaxInput,
+    stockMin,
+    stockMax
+  );
+  asideFilters?.append(filterByStockContainer);
+};
+
+function getQuantityOfGoodsByCategory(data: Array<Data>) {
   data.forEach((elem) => {
     if (elem.category === 'smartphones') quantityOfGoodsByCategory.smartphones += 1;
 
@@ -128,7 +254,7 @@ function getQuantityOfGoodsByCategory(data: Array<Data>): QuantityOfGoodsByCateg
   return quantityOfGoodsByCategory;
 }
 
-function getQuantityOfGoodsByBrand(data: Array<Data>): QuantityOfGoodsByBrand {
+function getQuantityOfGoodsByBrand(data: Array<Data>) {
   data.forEach((elem) => {
     if (elem.brand.toLowerCase() === 'amazfit') quantityOfGoodsByBrand.amazfit += 1;
 
@@ -152,9 +278,33 @@ function getQuantityOfGoodsByBrand(data: Array<Data>): QuantityOfGoodsByBrand {
   return quantityOfGoodsByBrand;
 }
 
+const getQuantityOfGoodsByPrice = function (data: Array<Data>) {
+  const arrPrice: Array<number> = [];
+  data.forEach((elem) => {
+    arrPrice.push(elem.price);
+  });
+  const sortArrPrice = arrPrice.sort((a, b) => a - b);
+  quantityOfGoodsByPrice.min = sortArrPrice[0];
+  quantityOfGoodsByPrice.max = sortArrPrice[sortArrPrice.length - 1];
+  return quantityOfGoodsByPrice;
+};
+
+const getQuantityOfGoodsByStock = function (data: Array<Data>) {
+  const arrStock: Array<number> = [];
+  data.forEach((elem) => {
+    arrStock.push(elem.stock);
+  });
+  const sortArrStock = arrStock.sort((a, b) => a - b);
+  quantityOfGoodsByStock.min = sortArrStock[0];
+  quantityOfGoodsByStock.max = sortArrStock[sortArrStock.length - 1];
+  return quantityOfGoodsByStock;
+};
+
 getDataForFilters(urlData)
   .then((data: Array<Data>) => {
     createFilterByCategory(getQuantityOfGoodsByCategory(data));
     createFilterByBrand(getQuantityOfGoodsByBrand(data));
+    createFilterByPrice(getQuantityOfGoodsByPrice(data));
+    createFilterByStock(getQuantityOfGoodsByStock(data));
   })
   .catch((err) => console.log(err));

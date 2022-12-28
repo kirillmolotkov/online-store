@@ -1,5 +1,6 @@
 import { Data, IsCheckedFilterCategory } from '../../types/interfaces';
 import { TempalateForCardItem } from '../../types/interfaces';
+import { priceMax, priceMin, stockMax, stockMin } from '../filters/generateFilters';
 import { isCheckedFilterCategory } from '../filters/useFilters';
 
 export const urlData: string = '../../data/data.json';
@@ -21,11 +22,27 @@ const checkForMatchingFilterAndData = function (filterObject: IsCheckedFilterCat
   for (let keyFilter in filterObject) {
     if (filterObject[keyFilter as keyof IsCheckedFilterCategory]) {
       for (let keyItem in dataItem) {
-        if (keyFilter === dataItem[keyItem as keyof Data].toString().toLowerCase()) {
+        if (
+          keyFilter === dataItem[keyItem as keyof Data].toString().toLowerCase() &&
+          Number(priceMin.textContent) <= dataItem.price &&
+          Number(priceMax.textContent) >= dataItem.price &&
+          Number(stockMin.textContent) <= dataItem.stock &&
+          Number(stockMax.textContent) >= dataItem.stock
+        ) {
           generateHTML(dataItem);
           break;
         }
       }
+    }
+  }
+  if (Object.values(filterObject).every((e) => e === false)) {
+    if (
+      Number(priceMin.textContent) <= dataItem.price &&
+      Number(priceMax.textContent) >= dataItem.price &&
+      Number(stockMin.textContent) <= dataItem.stock &&
+      Number(stockMax.textContent) >= dataItem.stock
+    ) {
+      generateHTML(dataItem);
     }
   }
 };
