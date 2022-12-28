@@ -26,13 +26,14 @@ export function goToCartPage() {
               cartItem.style.opacity = '0';
               setTimeout(() => {
                 cartItem.remove();
-                updatePagination();
-              }, 300);
+                pagination();
+              }, 500);
               if (!cart.getItemsCount()) {
                 generateEmptyCart();
               }
             }
           }
+          
           renderItemAmountSum(e);
           renderItemsCount();
           renderTotalSum();

@@ -1,29 +1,82 @@
 import PaginationHelper from './Paginator';
 import { cart } from '../../checkout/checkout';
 import IbasketItem from '../../../types/interfaces';
-import { CATALOGUE, getCatalogue } from '../../checkout/Cart';
+import { CATALOGUE } from '../../checkout/Cart';
+
+let nextPage: HTMLDivElement;
+let prevPage: HTMLDivElement;
+let items: HTMLInputElement;
+let pageIndex: HTMLDivElement;
+let paginationH: PaginationHelper;
+let itemsOnPage: number;
 
 export function pagination(): void {
-  const cartPage = document.querySelector('.cart_container') as HTMLDivElement;
-  const items = document.querySelector('.cart__pagination') as HTMLInputElement;
-  let pageIndex = document.querySelector('.cart_page-number') as HTMLDivElement;
-
+  nextPage = document.querySelector('.cart-item__button_arrow-right') as HTMLDivElement;
+  prevPage = document.querySelector('.cart-item__button_arrow-left') as HTMLDivElement;
+  pageIndex = document.querySelector('.cart_page-number') as HTMLDivElement;
+  items = document.querySelector('.cart__pagination') as HTMLInputElement;
   let cachedItemsOnPage = localStorage.getItem('itemsOnPage');
   if (cachedItemsOnPage) items.value = cachedItemsOnPage;
+  itemsOnPage = Number(items.value);
+  console.log(items.value)
   let cachedCurrentPage = localStorage.getItem('currentCartPage');
-  if (cachedCurrentPage) pageIndex.textContent = cachedCurrentPage;
+  if (cachedCurrentPage != "0") pageIndex.textContent = cachedCurrentPage;
+  nextPage.addEventListener('click', goNextPage);
+  prevPage.addEventListener('click', goPrevPage);
+  items.addEventListener('input', changeNumberOfItems);
+  paginationH = new PaginationHelper(cart.getBasket(), itemsOnPage);
   updatePagination();
-  console.log('hi');
+  console.log(paginationH.pageCount())
+}
+
+function changeNumberOfItems(): void {
+  itemsOnPage = Number(items.value);
+  items.value = itemsOnPage.toString();
+  localStorage.setItem('itemsOnPage', itemsOnPage.toString());
+    pagination();
+}
+
+function goNextPage(): void {
+  
+  // console.log(Number(pageIndex.textContent));
+  // console.log(paginationH.pageCount());
+  if (Number(pageIndex.textContent) < paginationH.pageCount()) {
+    nextPage.classList.remove('disactivated');
+    pageIndex.textContent = (1 + Number(pageIndex.textContent)).toString();
+    generateCartItems(itemsOnPage, Number(pageIndex.textContent));
+  }
+  if (Number(pageIndex.textContent) === paginationH.pageCount()) {
+    nextPage.classList.add('disactivated');
+  }
+  if (Number(pageIndex.textContent) === 2) {
+    prevPage.classList.remove('disactivated');
+  }
+  if (Number(pageIndex.textContent) > paginationH.pageCount())
+    pageIndex.textContent = paginationH.pageCount().toString();
+  console.log(paginationH.pageCount());
+  localStorage.setItem('currentCartPage', Number(pageIndex.textContent).toString());
+}
+
+function goPrevPage(): void {
+  console.log(Number(pageIndex.textContent));
+  if (Number(pageIndex.textContent) > 1) {
+    pageIndex.textContent = (Number(pageIndex.textContent) - 1).toString();
+    generateCartItems(itemsOnPage, Number(pageIndex.textContent));
+  }
+  if (Number(pageIndex.textContent) === 1) {
+    prevPage.classList.add('disactivated');
+  }
+  if (Number(pageIndex.textContent) < paginationH.pageCount()) {
+    nextPage.classList.remove('disactivated');
+  }
+  localStorage.setItem('currentCartPage', Number(pageIndex.textContent).toString());
 }
 
 export function updatePagination() {
-  const items = document.querySelector('.cart__pagination') as HTMLInputElement;
-  let itemsOnPage: number = Number(items.value);
-  let pageIndex = document.querySelector('.cart_page-number') as HTMLDivElement;
-  let paginationH: PaginationHelper = new PaginationHelper(cart.getBasket(), itemsOnPage);
-  const nextPage = document.querySelector('.cart-item__button_arrow-right') as HTMLDivElement;
-  const prevPage = document.querySelector('.cart-item__button_arrow-left') as HTMLDivElement;
-
+  items = document.querySelector('.cart__pagination') as HTMLInputElement;
+  if (Number(items.value) < 1) items.value = '1';
+  itemsOnPage = Number(items.value);
+  console.log(itemsOnPage);
   if (Number(pageIndex.textContent) > paginationH.pageCount()) {
     console.log(Number(pageIndex.textContent));
     console.log(paginationH.pageCount());
@@ -31,56 +84,6 @@ export function updatePagination() {
     localStorage.setItem('currentCartPage', Number(pageIndex.textContent).toString());
     pagination();
   }
-
-  function goNextPage(): void {
-    console.log(Number(pageIndex.textContent));
-    console.log(paginationH.pageCount());
-    if (Number(pageIndex.textContent) < paginationH.pageCount()) {
-      nextPage.classList.remove('disactivated');
-      pageIndex.textContent = (1 + Number(pageIndex.textContent)).toString();
-      generateCartItems(itemsOnPage, Number(pageIndex.textContent));
-    }
-    if (Number(pageIndex.textContent) === paginationH.pageCount()) {
-      nextPage.classList.add('disactivated');
-    }
-    if (Number(pageIndex.textContent) === 2) {
-      prevPage.classList.remove('disactivated');
-    }
-    if (Number(pageIndex.textContent) > paginationH.pageCount())
-      pageIndex.textContent = paginationH.pageCount().toString();
-    console.log(paginationH.pageCount());
-    localStorage.setItem('currentCartPage', Number(pageIndex.textContent).toString());
-  }
-
-  function goPrevPage(): void {
-    console.log(Number(pageIndex.textContent));
-    if (Number(pageIndex.textContent) > 1) {
-      pageIndex.textContent = (Number(pageIndex.textContent) - 1).toString();
-
-      generateCartItems(itemsOnPage, Number(pageIndex.textContent));
-    }
-    if (Number(pageIndex.textContent) === 1) {
-      prevPage.classList.add('disactivated');
-    }
-    if (Number(pageIndex.textContent) < paginationH.pageCount()) {
-      nextPage.classList.remove('disactivated');
-    }
-    // if (Number(pageIndex.textContent) < paginationH.pageCount()) {
-    //   nextPage.classList.remove('disactivated');
-    //   nextPage.addEventListener('click', goNextPage);
-    // }
-    localStorage.setItem('currentCartPage', Number(pageIndex.textContent).toString());
-  }
-  nextPage.addEventListener('click', goNextPage);
-  prevPage.addEventListener('click', goPrevPage);
-
-  items.addEventListener('input', () => {
-    itemsOnPage = Number(items.value);
-    items.value = itemsOnPage.toString();
-    localStorage.setItem('itemsOnPage', itemsOnPage.toString());
-    paginationH = new PaginationHelper(cart.getBasket(), itemsOnPage);
-    pagination();
-  });
 
   generateCartItems(itemsOnPage, Number(pageIndex.textContent));
 }

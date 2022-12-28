@@ -10,6 +10,8 @@ class PaginationHelper {
     return this.items.length;
   }
   public pageCount() {
+    console.log('length ' +this.items.length)
+    console.log('Items per page  ' +this.itemsPerPage)
     return Math.ceil(this.items.length / this.itemsPerPage);
   }
   public pageItemCount(pageIndex: number): number {
