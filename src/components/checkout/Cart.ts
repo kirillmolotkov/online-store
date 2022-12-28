@@ -18,21 +18,49 @@ getCatalogue().then((data) => {
   CATALOGUE = data;
 });
 
+interface Icodes {
+  code: string;
+  discount: number;
+}
+
 export class Checkout {
   private basket: Map<string, IbasketItem> = new Map();
+  private CODES: Icodes[] = [
+    {
+      code: 'RS',
+      discount: 0.1,
+    },
+    {
+      code: 'DreamTeam',
+      discount: 0.2,
+    },
+  ];
+  private appliedCODES: string[] | [];
+  private discounted: number;
+  public checkCode(promocode: string) {
+    return this.CODES.find((item) => item.code === promocode);
+  }
 
+  applyDiscount(discount: { code: string; discount: number }): number {
+    if (this.checkCode(discount.code))
+      this.discounted =Math.round(10 * ( this.getTotalSum() - this.getTotalSum() * discount.discount))/10;
+   
+      return Math.round(10 * (lastSum - lastSum * discount.discount)) / 10;
+    }
+    return -1;
+  }
   public getBasket(): IbasketItem[] {
     return [...this.basket.values()];
   }
   public loadBasketFromStorage(): void {
-    let cache: string | null = localStorage.getItem('basket')
+    let cache: string | null = localStorage.getItem('basket');
     if (cache) {
       this.basket = new Map(JSON.parse(cache));
-      console.log(this.basket)
+      console.log(this.basket);
     }
   }
-  private updateCache(): void{
-   localStorage.setItem('basket', JSON.stringify([...this.basket]))
+  private updateCache(): void {
+    localStorage.setItem('basket', JSON.stringify([...this.basket]));
   }
 
   public addToCart(id: string): boolean {
@@ -52,7 +80,7 @@ export class Checkout {
         return true;
       }
     }
-    
+
     return false;
   }
 
@@ -80,7 +108,7 @@ export class Checkout {
     return [...this.basket.values()].reduce((sum, value) => sum + value.amount, 0);
   }
 
- public getTotalSum(): number {
+  public getTotalSum(): number {
     let sums: number[] = [];
     this.basket.forEach((value) => {
       let prod = CATALOGUE.get(value.id);
@@ -91,15 +119,14 @@ export class Checkout {
     return sums.reduce((sum, item) => sum + item, 0);
   }
 
- public getItemAmount(id: string): number | undefined {
+  public getItemAmount(id: string): number | undefined {
     return this.basket.get(id)?.amount;
   }
   public getItemSum(id: string): number | undefined {
-    let price = CATALOGUE.get(id)?.price
+    let price = CATALOGUE.get(id)?.price;
     let amount = this.getItemAmount(id);
-    if (price && amount)
-      return amount * price;
-}
+    if (price && amount) return amount * price;
+  }
 }
 
 export default Checkout;

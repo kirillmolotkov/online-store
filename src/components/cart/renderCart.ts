@@ -131,7 +131,7 @@ export function renderItemsCount(): void {
   } else cartItems.classList.remove('active');
   cartItems.textContent = counter.toString();
   if (summaryAmount) summaryAmount.textContent = `Products: ${counter.toString()}`;
-  if (summarySum) summarySum.textContent = `Total: $${cart.getTotalSum().toString()}`;
+  if (summarySum) summarySum.textContent = `${cart.getTotalSum().toString()}`;
 
 }
 
