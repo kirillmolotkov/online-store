@@ -27,7 +27,7 @@ export function goToCartPage() {
               setTimeout(() => {
                 cartItem.remove();
                 pagination();
-              }, 500);
+              }, 300);
               if (!cart.getItemsCount()) {
                 generateEmptyCart();
               }
