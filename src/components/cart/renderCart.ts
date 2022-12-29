@@ -112,8 +112,6 @@ export function goToCartPage() {
     const input = item.querySelector('.cart-item__input_add-item') as HTMLDivElement;
     let currentSum = cart.getItemSum(id);
     let amount = cart.getItemAmount(id);
-    console.log(currentSum);
-    console.log(amount);
     if (amount && currentSum) {
       input.textContent = amount.toString();
       sum.textContent = `$ ${currentSum.toString()}`;

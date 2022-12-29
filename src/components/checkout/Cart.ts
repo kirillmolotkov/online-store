@@ -1,4 +1,4 @@
-import { IbasketItem, IproductItem } from '../../types/interfaces';
+import { IbasketItem, Icodes, IproductItem } from '../../types/interfaces';
 
 export let CATALOGUE: Map<string, IproductItem>;
 
@@ -18,11 +18,6 @@ getCatalogue().then((data) => {
   CATALOGUE = data;
 });
 
-interface Icodes {
-  code: string;
-  discount: number;
-}
-
 export class Checkout {
   private basket: Map<string, IbasketItem> = new Map();
   private CODES: Icodes[] = [
@@ -35,19 +30,57 @@ export class Checkout {
       discount: 0.2,
     },
   ];
-  private appliedCODES: string[] | [];
-  private discounted: number;
+
+  private appliedCODES: string[] = [];
+  private discounted: number = 0;
+
   public checkCode(promocode: string) {
     return this.CODES.find((item) => item.code === promocode);
   }
 
-  applyDiscount(discount: { code: string; discount: number }): number {
-    if (this.checkCode(discount.code))
-      this.discounted =Math.round(10 * ( this.getTotalSum() - this.getTotalSum() * discount.discount))/10;
-   
-      return Math.round(10 * (lastSum - lastSum * discount.discount)) / 10;
+  public applyDiscount(code: string): Icodes {
+    let promo = this.checkCode(code);
+    if (this.discounted === 0) this.discounted = this.getTotalSum();
+      if (promo) {
+      if (this.appliedCODES.includes(code))
+        return {
+          code: code,
+          discount: -2,
+        };
+      this.appliedCODES.push(promo.code);
+      this.discounted = Math.round(10 * (this.discounted - this.discounted * promo.discount)) / 10;
+      return {
+        code: code,
+        discount: this.discounted,
+      };
     }
-    return -1;
+    return {
+      code: code,
+      discount: -1,
+    };
+  }
+
+  public deleteDiscount(code: string): Icodes | number {
+    let promo = this.checkCode(code);
+    if (this.discounted === 0) this.discounted = this.getTotalSum();
+    console.log(this.discounted);
+    if (promo) {
+      if (this.appliedCODES.includes(code))
+        return {
+          code: code,
+          discount: -2,
+        };
+      this.appliedCODES.push(promo.code);
+      this.discounted = Math.round(10 * (this.discounted - this.discounted * promo.discount)) / 10;
+      return {
+        code: code,
+        discount: this.discounted,
+      };
+    }
+    return {
+      code: code,
+      discount: -1,
+    };
   }
   public getBasket(): IbasketItem[] {
     return [...this.basket.values()];
@@ -56,8 +89,7 @@ export class Checkout {
     let cache: string | null = localStorage.getItem('basket');
     if (cache) {
       this.basket = new Map(JSON.parse(cache));
-      console.log(this.basket);
-    }
+       }
   }
   private updateCache(): void {
     localStorage.setItem('basket', JSON.stringify([...this.basket]));

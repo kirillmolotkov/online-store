@@ -47,4 +47,9 @@ export interface IproductItem {
   images: string[];
 }
 
+export interface Icodes {
+  code: string;
+  discount: number;
+}
+
 export default IbasketItem;

@@ -18,28 +18,23 @@ export function pagination(): void {
   let cachedItemsOnPage = localStorage.getItem('itemsOnPage');
   if (cachedItemsOnPage) items.value = cachedItemsOnPage;
   itemsOnPage = Number(items.value);
-  console.log(items.value)
   let cachedCurrentPage = localStorage.getItem('currentCartPage');
-  if (cachedCurrentPage != "0") pageIndex.textContent = cachedCurrentPage;
+  if (cachedCurrentPage != '0') pageIndex.textContent = cachedCurrentPage;
   nextPage.addEventListener('click', goNextPage);
   prevPage.addEventListener('click', goPrevPage);
   items.addEventListener('input', changeNumberOfItems);
   paginationH = new PaginationHelper(cart.getBasket(), itemsOnPage);
   updatePagination();
-  console.log(paginationH.pageCount())
 }
 
 function changeNumberOfItems(): void {
   itemsOnPage = Number(items.value);
   items.value = itemsOnPage.toString();
   localStorage.setItem('itemsOnPage', itemsOnPage.toString());
-    pagination();
+  pagination();
 }
 
 function goNextPage(): void {
-  
-  // console.log(Number(pageIndex.textContent));
-  // console.log(paginationH.pageCount());
   if (Number(pageIndex.textContent) < paginationH.pageCount()) {
     nextPage.classList.remove('disactivated');
     pageIndex.textContent = (1 + Number(pageIndex.textContent)).toString();
@@ -53,12 +48,11 @@ function goNextPage(): void {
   }
   if (Number(pageIndex.textContent) > paginationH.pageCount())
     pageIndex.textContent = paginationH.pageCount().toString();
-  console.log(paginationH.pageCount());
+
   localStorage.setItem('currentCartPage', Number(pageIndex.textContent).toString());
 }
 
 function goPrevPage(): void {
-  console.log(Number(pageIndex.textContent));
   if (Number(pageIndex.textContent) > 1) {
     pageIndex.textContent = (Number(pageIndex.textContent) - 1).toString();
     generateCartItems(itemsOnPage, Number(pageIndex.textContent));
@@ -76,10 +70,8 @@ export function updatePagination() {
   items = document.querySelector('.cart__pagination') as HTMLInputElement;
   if (Number(items.value) < 1) items.value = '1';
   itemsOnPage = Number(items.value);
-  console.log(itemsOnPage);
+
   if (Number(pageIndex.textContent) > paginationH.pageCount()) {
-    console.log(Number(pageIndex.textContent));
-    console.log(paginationH.pageCount());
     pageIndex.textContent = paginationH.pageCount().toString();
     localStorage.setItem('currentCartPage', Number(pageIndex.textContent).toString());
     pagination();

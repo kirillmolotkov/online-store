@@ -142,3 +142,23 @@
 .cart-item__button_buy-now {
   align-self: flex-end;
 }
+
+.cart__delete-btn{
+  // position: relative;
+  top: -15%;
+  left: 10%;
+  display: inline-block;
+  width: 20px;
+  height: 4px;
+  rotate: 45deg;
+  background-color: $color-button;
+  cursor: pointer;
+  &::after{
+    display: block;
+    content: '';
+    width: 20px;
+    height: 4px;
+    rotate: 90deg;
+    background-color: $color-button;
+  }
+}
