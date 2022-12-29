@@ -1,7 +1,12 @@
-import { Data, IsCheckedFilterCategory } from '../../types/interfaces';
+import {
+  Data,
+  IsCheckedFilterBrand,
+  IsCheckedFilterCategory,
+  QuantityOfGoodsByPriceAndStock,
+} from '../../types/interfaces';
 import { TempalateForCardItem } from '../../types/interfaces';
-import { priceMax, priceMin, stockMax, stockMin } from '../filters/generateFilters';
-import { isCheckedFilterCategory } from '../filters/useFilters';
+import { quantityOfGoodsByPriceAndStock } from '../filters/generateFilters';
+import { isCheckedFilterBrand, isCheckedFilterCategory } from '../filters/useFilters';
 
 export const urlData: string = '../../data/data.json';
 export const sectionGoods = document.querySelector('.goods');
@@ -14,35 +19,77 @@ export function sendRequest(url: string) {
 
 export const generationCardItems = function (data: Array<Data>) {
   data.forEach((elem) => {
-    checkForMatchingFilterAndData(isCheckedFilterCategory, elem);
+    checkForMatchingFilterAndData(isCheckedFilterCategory, isCheckedFilterBrand, quantityOfGoodsByPriceAndStock, elem);
   });
 };
 
-const checkForMatchingFilterAndData = function (filterObject: IsCheckedFilterCategory, dataItem: Data) {
-  for (let keyFilter in filterObject) {
-    if (filterObject[keyFilter as keyof IsCheckedFilterCategory]) {
-      for (let keyItem in dataItem) {
-        if (
-          keyFilter === dataItem[keyItem as keyof Data].toString().toLowerCase() &&
-          Number(priceMin.textContent) <= dataItem.price &&
-          Number(priceMax.textContent) >= dataItem.price &&
-          Number(stockMin.textContent) <= dataItem.stock &&
-          Number(stockMax.textContent) >= dataItem.stock
-        ) {
-          generateHTML(dataItem);
-          break;
-        }
+const checkForMatchingFilterAndData = function (
+  filterCategory: IsCheckedFilterCategory,
+  filterBrand: IsCheckedFilterBrand,
+  quantityFilter: QuantityOfGoodsByPriceAndStock,
+  dataItem: Data
+) {
+  if (
+    Object.values(filterCategory).every((elem) => elem === false) &&
+    Object.values(filterBrand).every((elem) => elem === false)
+  ) {
+    if (
+      quantityFilter.priceMin <= dataItem.price &&
+      quantityFilter.priceMax >= dataItem.price &&
+      quantityFilter.stockMin <= dataItem.stock &&
+      quantityFilter.stockMax >= dataItem.stock
+    ) {
+      generateHTML(dataItem);
+    }
+  }
+
+  for (let key in filterCategory) {
+    const keyCategory = key as keyof IsCheckedFilterCategory;
+    if (filterCategory[keyCategory] && Object.values(filterBrand).every((elem) => elem === false)) {
+      if (
+        keyCategory === dataItem.category &&
+        quantityFilter.priceMin <= dataItem.price &&
+        quantityFilter.priceMax >= dataItem.price &&
+        quantityFilter.stockMin <= dataItem.stock &&
+        quantityFilter.stockMax >= dataItem.stock
+      ) {
+        generateHTML(dataItem);
       }
     }
   }
-  if (Object.values(filterObject).every((e) => e === false)) {
-    if (
-      Number(priceMin.textContent) <= dataItem.price &&
-      Number(priceMax.textContent) >= dataItem.price &&
-      Number(stockMin.textContent) <= dataItem.stock &&
-      Number(stockMax.textContent) >= dataItem.stock
-    ) {
-      generateHTML(dataItem);
+  for (let key in filterBrand) {
+    const keyBrand = key as keyof IsCheckedFilterBrand;
+    if (filterBrand[keyBrand] && Object.values(filterCategory).every((elem) => elem === false)) {
+      if (
+        keyBrand === dataItem.brand.toLowerCase() &&
+        quantityFilter.priceMin <= dataItem.price &&
+        quantityFilter.priceMax >= dataItem.price &&
+        quantityFilter.stockMin <= dataItem.stock &&
+        quantityFilter.stockMax >= dataItem.stock
+      ) {
+        generateHTML(dataItem);
+      }
+    }
+  }
+  for (let key in filterCategory) {
+    const keyCategory = key as keyof IsCheckedFilterCategory;
+
+    if (filterCategory[keyCategory]) {
+      for (let key in filterBrand) {
+        const keyBrand = key as keyof IsCheckedFilterBrand;
+        if (filterBrand[keyBrand]) {
+          if (
+            keyCategory === dataItem.category &&
+            keyBrand === dataItem.brand.toLowerCase() &&
+            quantityFilter.priceMin <= dataItem.price &&
+            quantityFilter.priceMax >= dataItem.price &&
+            quantityFilter.stockMin <= dataItem.stock &&
+            quantityFilter.stockMax >= dataItem.stock
+          ) {
+            generateHTML(dataItem);
+          }
+        }
+      }
     }
   }
 };

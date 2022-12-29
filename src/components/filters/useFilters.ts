@@ -1,5 +1,12 @@
-import { asideFilters, priceMax, priceMin, stockMax, stockMin } from './generateFilters';
-import { IsCheckedFilterCategory, Data } from '../../types/interfaces';
+import {
+  asideFilters,
+  priceMax,
+  priceMin,
+  quantityOfGoodsByPriceAndStock,
+  stockMax,
+  stockMin,
+} from './generateFilters';
+import { IsCheckedFilterCategory, Data, IsCheckedFilterBrand } from '../../types/interfaces';
 import { generationCardItems, sectionGoods, sendRequest } from '../generate-card/generateCardItems';
 import { urlData } from './getDataForFilters';
 
@@ -9,6 +16,9 @@ export const isCheckedFilterCategory = {
   tablets: false,
   headphones: false,
   laptops: false,
+};
+
+export const isCheckedFilterBrand = {
   apple: false,
   samsung: false,
   xiaomi: false,
@@ -20,6 +30,15 @@ export const isCheckedFilterCategory = {
   hp: false,
 };
 
+const rereanderingCardItem = function () {
+  while (sectionGoods?.childNodes.length !== 0) {
+    sectionGoods?.firstChild?.remove();
+  }
+  sendRequest(urlData)
+    .then((data: Array<Data>) => generationCardItems(data))
+    .catch((err) => console.log(err));
+};
+
 asideFilters?.addEventListener('click', (event) => {
   let target = event.target as HTMLInputElement;
 
@@ -29,55 +48,35 @@ asideFilters?.addEventListener('click', (event) => {
         isCheckedFilterCategory[key as keyof IsCheckedFilterCategory] = target.checked;
       }
     }
-    while (sectionGoods?.childNodes.length !== 0) {
-      sectionGoods?.firstChild?.remove();
+    for (let key in isCheckedFilterBrand) {
+      if (key === target.getAttribute('id')) {
+        isCheckedFilterBrand[key as keyof IsCheckedFilterBrand] = target.checked;
+      }
     }
-    sendRequest(urlData)
-      .then((data: Array<Data>) => generationCardItems(data))
-      .catch((err) => console.log(err));
+    rereanderingCardItem();
   }
 
   if (target.id === 'input-min') {
-    priceMin.innerText = target.value;
-
-    while (sectionGoods?.childNodes.length !== 0) {
-      sectionGoods?.firstChild?.remove();
-    }
-    sendRequest(urlData)
-      .then((data: Array<Data>) => generationCardItems(data))
-      .catch((err) => console.log(err));
+    quantityOfGoodsByPriceAndStock.priceMin = Number(target.value);
+    priceMin.innerText = quantityOfGoodsByPriceAndStock.priceMin.toString();
+    rereanderingCardItem();
   }
 
   if (target.id === 'input-max') {
-    priceMax.innerText = target.value;
-
-    while (sectionGoods?.childNodes.length !== 0) {
-      sectionGoods?.firstChild?.remove();
-    }
-    sendRequest(urlData)
-      .then((data: Array<Data>) => generationCardItems(data))
-      .catch((err) => console.log(err));
+    quantityOfGoodsByPriceAndStock.priceMax = Number(target.value);
+    priceMax.innerText = quantityOfGoodsByPriceAndStock.priceMax.toString();
+    rereanderingCardItem();
   }
 
   if (target.id === 'input-min-stock') {
-    stockMin.innerText = target.value;
-
-    while (sectionGoods?.childNodes.length !== 0) {
-      sectionGoods?.firstChild?.remove();
-    }
-    sendRequest(urlData)
-      .then((data: Array<Data>) => generationCardItems(data))
-      .catch((err) => console.log(err));
+    quantityOfGoodsByPriceAndStock.stockMin = Number(target.value);
+    stockMin.innerText = quantityOfGoodsByPriceAndStock.stockMin.toString();
+    rereanderingCardItem();
   }
 
   if (target.id === 'input-max-stock') {
-    stockMax.innerText = target.value;
-
-    while (sectionGoods?.childNodes.length !== 0) {
-      sectionGoods?.firstChild?.remove();
-    }
-    sendRequest(urlData)
-      .then((data: Array<Data>) => generationCardItems(data))
-      .catch((err) => console.log(err));
+    quantityOfGoodsByPriceAndStock.stockMax = Number(target.value);
+    stockMax.innerText = quantityOfGoodsByPriceAndStock.stockMax.toString();
+    rereanderingCardItem();
   }
 });

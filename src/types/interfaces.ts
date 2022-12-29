@@ -64,6 +64,17 @@ export interface IsCheckedFilterCategory {
   headphones: boolean;
   laptops: boolean;
 }
+export interface IsCheckedFilterBrand {
+  apple: boolean;
+  samsung: boolean;
+  xiaomi: boolean;
+  honor: boolean;
+  huawei: boolean;
+  amazfit: boolean;
+  jbl: boolean;
+  asus: boolean;
+  hp: boolean;
+}
 
 export interface QuantityOfGoodsByBrand {
   apple: number;
@@ -75,4 +86,10 @@ export interface QuantityOfGoodsByBrand {
   jbl: number;
   asus: number;
   hp: number;
+}
+export interface QuantityOfGoodsByPriceAndStock {
+  priceMin: number;
+  priceMax: number;
+  stockMin: number;
+  stockMax: number;
 }
