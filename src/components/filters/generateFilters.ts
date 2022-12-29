@@ -110,7 +110,7 @@ const createFilterByBrand = function (objectBrand: QuantityOfGoodsByBrand) {
     checkboxContainer.className = 'item__checkbox-container';
 
     const checkbox = document.createElement('input');
-    checkbox.className = 'brnad__item-checkbox';
+    checkbox.className = 'brand__item-checkbox';
     checkbox.type = 'checkbox';
     checkbox.id = key;
 
