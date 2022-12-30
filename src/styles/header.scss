@@ -7,7 +7,6 @@
 
 .header__container {
   @include flex();
-
 }
 
 .logo {
@@ -40,25 +39,28 @@
   background: none;
   border: none;
   cursor: pointer;
-  &::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    // transform: translate(-50%);
-    background-color: $color-light;
-    content: '10';
-    padding-top: 5px;
-    padding-left: 2px;
-    padding-right: 2px;
-    text-align: center;
-    width: 20px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    border: 2px solid $color-button;
-  }
+}
+
+.basket__items-in-cart {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  // transform: translate(-50%);
+  background-color: $color-light;
+  content: '10';
+  padding-top: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+  text-align: center;
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid $color-button;
 }
 
 .header__total {
+  display: none;
   @include basic-font;
   flex: 1;
   text-align: end;
@@ -76,4 +78,8 @@
   &:active {
     color: $color-dark;
   }
+}
+
+.active {
+  display: block;
 }
