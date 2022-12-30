@@ -3,7 +3,7 @@ import { IbasketItem, Icodes, IproductItem } from '../../types/interfaces';
 export let CATALOGUE: Map<string, IproductItem>;
 
 export async function getCatalogue() {
-  let response = await fetch('/dist/data/data.json');
+  let response = await fetch('./data/data.json');
   let CAT: [IproductItem] = await response.json();
 
   const CATALOGUE: Map<string, IproductItem> = new Map();
@@ -41,7 +41,7 @@ export class Checkout {
   public applyDiscount(code: string): Icodes {
     let promo = this.checkCode(code);
     if (this.discounted === 0) this.discounted = this.getTotalSum();
-      if (promo) {
+    if (promo) {
       if (this.appliedCODES.includes(code))
         return {
           code: code,
@@ -89,7 +89,7 @@ export class Checkout {
     let cache: string | null = localStorage.getItem('basket');
     if (cache) {
       this.basket = new Map(JSON.parse(cache));
-       }
+    }
   }
   private updateCache(): void {
     localStorage.setItem('basket', JSON.stringify([...this.basket]));
