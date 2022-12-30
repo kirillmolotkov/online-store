@@ -1,41 +1,22 @@
-import { basketItem, productItem } from '../../types/interfaces';
+import { Checkout, getCatalogue } from './Cart';
+import {renderItemsCount, renderTotalSum} from '../cart/renderCart'
+export const cart: Checkout = new Checkout();
+cart.loadBasketFromStorage();
+const goods = document.querySelector('.goods') as HTMLDivElement;
 
-const checkout = function () {
-  let basket: [basketItem];
-  return {
-    addToCart: function (item: productItem) {
-      for (let product of basket) {
-        if (product.id === item.id) {
-          product.amount += 1;
-          return;
-        } else {
-          let newItem: basketItem = {
-            id: item.id,
-            amount: 1,
-          };
-          basket.push(newItem);
-        }
-      }
-    },
+goods.addEventListener('click', (e) => {
+  let id: string;
+  const addButton = e.target as HTMLElement;
+  if (addButton.classList.contains('sku__button_add-to-card')) {
+    id = (addButton as HTMLDivElement).getAttribute('data-id') as string;
+    cart.addToCart(id);
+    renderItemsCount();
+    renderTotalSum();
+  }
+});
 
-    deleteFromCart: function (item: productItem) {
-      for (let product of basket) {
-        if (product.id === item.id) {
-          basket.slice(basket.indexOf(product), 1);
-          return;
-        }
-      }
-    },
+window.addEventListener('load', (): void => {
+  getCatalogue().then(() => { cart.loadBasketFromStorage, renderItemsCount(), renderTotalSum() })
+});
 
-    decreaseItemAmount: function (item: productItem) {
-      for (let product of basket) {
-        if (product.id === item.id) {
-          product.amount -= 1;
-          return;
-        }
-      }
-    },
-  };
-};
-
-export default checkout;
+export default Checkout;

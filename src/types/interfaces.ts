@@ -1,23 +1,4 @@
-export interface basketItem {
-  id: number;
-  amount: number;
-}
 
-export interface productItem {
-  id: number;
-  title: string;
-  description: string;
-  price: number;
-  discountPercentage: number;
-  rating: number;
-  stock: number;
-  brand: string;
-  category: string;
-  thumbnail: string;
-  images: [string];
-}
-
-export default basketItem;
 export interface Data {
   id: string;
   title: string;
@@ -31,7 +12,6 @@ export interface Data {
   thumbnail: string;
   images: Array<string>;
 }
-
 export interface TempalateForCardItem {
   container: HTMLDivElement;
   title: HTMLHeadElement;
@@ -93,3 +73,30 @@ export interface QuantityOfGoodsByPriceAndStock {
   stockMin: number;
   stockMax: number;
 }
+
+export interface IbasketItem {
+  id: string;
+  amount: number;
+}
+
+export interface IproductItem {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  discountPercentage: number;
+  rating: number;
+  stock: number;
+  brand: string;
+  category: string;
+  thumbnail: string;
+  images: string[];
+}
+
+export interface Icodes {
+  code: string;
+  discount: number;
+}
+
+export default IbasketItem;
+
