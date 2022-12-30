@@ -7,3 +7,5 @@ export const priceMin = document.createElement('span');
 export const priceMax = document.createElement('span');
 export const stockMin = document.createElement('span');
 export const stockMax = document.createElement('span');
+export const buttonResetFilters = document.createElement('button');
+export const buttonCopyLink = document.createElement('button');

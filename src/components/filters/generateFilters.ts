@@ -6,16 +6,20 @@ import {
   QuantityOfGoodsByCategory,
   QuantityOfGoodsByPriceAndStock,
 } from '../../types/interfaces';
-
-export const asideFilters = document.querySelector('.filters');
-export const filterByCategoryContainer = document.createElement('div');
-export const filterByBrandContainer = document.createElement('div');
-export const filterByPriceContainer = document.createElement('div');
-export const filterByStockContainer = document.createElement('div');
-export const priceMin = document.createElement('span');
-export const priceMax = document.createElement('span');
-export const stockMin = document.createElement('span');
-export const stockMax = document.createElement('span');
+import {
+  asideFilters,
+  buttonCopyLink,
+  buttonResetFilters,
+  filterByBrandContainer,
+  filterByCategoryContainer,
+  filterByPriceContainer,
+  filterByStockContainer,
+  priceMax,
+  priceMin,
+  stockMax,
+  stockMin,
+} from '../../const/const';
+import { isCheckedFilterBrand, isCheckedFilterCategory, resetFilter } from './useFilters';
 
 const quantityOfGoodsByCategory: QuantityOfGoodsByCategory = {
   smartphones: 0,
@@ -48,11 +52,9 @@ const createFiltersHeader = function () {
   const filtersHeader = document.createElement('header');
   filtersHeader.className = 'filters__header';
 
-  const buttonResetFilters = document.createElement('button');
   buttonResetFilters.className = 'fiters__button-reset, button-filters';
   buttonResetFilters.innerText = 'Reset filters';
 
-  const buttonCopyLink = document.createElement('button');
   buttonCopyLink.className = 'filters__button-copy-link, button-filters';
   buttonCopyLink.innerText = 'Copy link';
 
@@ -302,3 +304,12 @@ getDataForFilters(urlData)
     createFilterByStock(getQuantityOfGoodsByStock(data));
   })
   .catch((err) => console.log(err));
+
+buttonResetFilters.addEventListener('click', () => {
+  resetFilter(isCheckedFilterBrand, isCheckedFilterCategory, quantityOfGoodsByPriceAndStock);
+  createFiltersHeader();
+  createFilterByCategory(quantityOfGoodsByCategory);
+  createFilterByBrand(quantityOfGoodsByBrand);
+  createFilterByPrice(quantityOfGoodsByPriceAndStock);
+  createFilterByStock(quantityOfGoodsByPriceAndStock);
+});
