@@ -52,4 +52,4 @@ export interface Icodes {
   discount: number;
 }
 
-export default basketItem;
+export default IbasketItem;
