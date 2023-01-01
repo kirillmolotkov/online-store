@@ -44,7 +44,7 @@ export class Checkout {
   public applyDiscount(code: string): Icodes {
     let promo = this.checkCode(code);
     if (this.discounted === 0) this.discounted = this.getTotalSum();
-      if (promo) {
+    if (promo) {
       if (this.appliedCODES.includes(code))
         return {
           code: code,
@@ -66,10 +66,8 @@ export class Checkout {
   public deleteDiscount(code: string): void {
     let promo = this.checkCode(code);
     if (promo) {
-      this.appliedCODES.splice(this.appliedCODES.indexOf(code), 1)
-      console.log(this.appliedCODES)
-      this.discounted = Math.round(this.discounted / (1 - promo.discount) * 10) / 10;
-      console.log(this.discounted);
+      this.appliedCODES.splice(this.appliedCODES.indexOf(code), 1);
+      this.discounted = Math.round((this.discounted / (1 - promo.discount)) * 10) / 10;
     }
   }
 
@@ -80,7 +78,7 @@ export class Checkout {
     let cache: string | null = localStorage.getItem('basket');
     if (cache) {
       this.basket = new Map(JSON.parse(cache));
-       }
+    }
   }
   private updateCache(): void {
     localStorage.setItem('basket', JSON.stringify([...this.basket]));
