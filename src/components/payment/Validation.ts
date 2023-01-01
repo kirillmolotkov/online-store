@@ -18,25 +18,31 @@ checkEmail(email: string): boolean {
     const regex:RegExp = /[0-9]{16}/
     return regex.test(cardNumber);
   }  
+
   checkExpiration(cardNumber: string):boolean {
     const regex: RegExp = /[0-9]{4}/
     if (regex.test(cardNumber)) {
-      if (Number(cardNumber[0] + cardNumber[1]) <= 12 && Number(cardNumber[0] + cardNumber[1]) <= 31)
+      if (Number(cardNumber[0] + cardNumber[1]) <= 12 && Number(cardNumber[2] + cardNumber[3]) <= 31)
         return true;
   }
-    return false
+    return false;
   }
 
-  definePaymenrSystem(cardNumber: string) {
+  checkCVV(cvv:string) {
+    const regex:RegExp = /[0-9]{3}/
+    return regex.test(cvv);
+  }
+
+  definePaymentSystem(cardNumber: string) {
     switch (cardNumber.slice(0, 1)) {
       case '3':
-        return 'American Express';
+        return 'american-express';
       case '4':
-        return 'Visa';
+        return 'visa';
       case '5':
-        return 'MasterCard';
+        return 'mastermard';
       case '6':
-        return 'БЕЛКАРТ';
+        return 'belcard';
    }
   }
 
