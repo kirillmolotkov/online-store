@@ -50,3 +50,11 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin payment-heading-font {
+  padding-top: 2%;
+  padding-left: 10%;
+  color: $color-dark;
+  font-family: type_basic;
+  font-size: 2.2em;
+}

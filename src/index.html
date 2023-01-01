@@ -26,6 +26,38 @@
       <li class="header__nav-item"><button class="header__button">Headphones</button></li>
       <li class="header__nav-item"><button class="header__button">Laptops</button></li>
     </ul>
+    <section class="payment">
+      <h2 class="payment__heading">Checkout</h2>
+      <div class="payment__close"></div>
+      <form action="#" class="payment__form">
+        <ul class="payment__list">
+          <li class="payment__item">
+            <div class="payment__credentials payment__credentials_name">Enter Your Name</div>
+            <input type="text" placeholder="Name" class="payment__credentials" />
+          </li>
+          <li class="payment__item">
+            <div class="payment__credentials payment__credentials_phone">Enter Your Phone number</div>
+            <input type="text" placeholder="Phone number" class="payment__credentials" />
+          </li>
+          <li class="payment__item">
+            <div class="payment__credentials payment__credentials_email">Enter Your E-mail</div>
+            <input type="email" placeholder="email@example.com" class="payment__credentials" />
+          </li>
+        </ul>
+        <div class="card">
+          <div class="card__wrapper">
+            <div class="card__payment-system"></div>
+            <input class="card__number" type="number" placeholder="CARD NUMBER" />
+            <div class="card_info-container">
+              <input class="card__item card__item_holder" type="text" placeholder="CARDHOLDER" />
+              <input class="card__item card__item_expire" type="number" placeholder="00/00" />
+              <input class="card__item card__item_cvv" type="number" placeholder="CVV" />
+            </div>
+          </div>
+        </div>
+      </form>
+      <button type="submit" class="payment__btn">Pay now!</button>
+    </section>
     <main class="main wrapper">
       <aside class="filters">
         <h2 class="filters__heading">Filters</h2>
@@ -142,9 +174,10 @@
           <div class="cart_summary">
             <h2 class="cart__heading">Summary</h2>
             <div class="cart__number-of-products"></div>
-            <div >Total: $<span class="cart__total-sum"></span></div>
+            <div>Total: $<span class="cart__total-sum"></span></div>
             <input type="text" class="cart__promo" name="promo" id="promo" />
             <div class="cart__total-cheat">Promo for test: 'RS', 'DreamTeam'</div>
+            <button class="cart-item__button cart-item__button_apply-promo" data-id="1">Apply promo</button>
             <button class="cart-item__button cart-item__button_buy-now" data-id="1">Buy Now</button>
           </div>
         </section>
@@ -165,7 +198,7 @@
           <div class="cart-item__in-stock"></div>
           <div class="cart__add-del-block">
             <button class="cart-item__button cart-item__button_add-item" data-id="1">+</button>
-            <div class="cart-item__input_add-item" data-id="1"> </div>
+            <div class="cart-item__input_add-item" data-id="1"></div>
             <button class="cart-item__button cart-item__button_delete-item" data-id="1">-</button>
           </div>
           <div class="cart-item__price">$ 599</div>
