@@ -1,7 +1,7 @@
 import { Data } from '../../types/interfaces';
 import { TempalateForCardItem } from '../../types/interfaces';
 
-const urlData: string = '../../data/data.json';
+const urlData: string = '/dist/data/data.json';
 const sectionGoods = document.querySelector('.goods');
 
 function sendRequest(url: string) {

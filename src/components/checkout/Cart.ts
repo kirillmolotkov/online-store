@@ -34,6 +34,9 @@ export class Checkout {
   private appliedCODES: string[] = [];
   private discounted: number = 0;
 
+  public getDiscountedPrice(): number {
+    return this.discounted;
+  }
   public checkCode(promocode: string) {
     return this.CODES.find((item) => item.code === promocode);
   }
@@ -60,28 +63,16 @@ export class Checkout {
     };
   }
 
-  public deleteDiscount(code: string): Icodes | number {
+  public deleteDiscount(code: string): void {
     let promo = this.checkCode(code);
-    if (this.discounted === 0) this.discounted = this.getTotalSum();
-    console.log(this.discounted);
     if (promo) {
-      if (this.appliedCODES.includes(code))
-        return {
-          code: code,
-          discount: -2,
-        };
-      this.appliedCODES.push(promo.code);
-      this.discounted = Math.round(10 * (this.discounted - this.discounted * promo.discount)) / 10;
-      return {
-        code: code,
-        discount: this.discounted,
-      };
+      this.appliedCODES.splice(this.appliedCODES.indexOf(code), 1)
+      console.log(this.appliedCODES)
+      this.discounted = Math.round(this.discounted / (1 - promo.discount) * 10) / 10;
+      console.log(this.discounted);
     }
-    return {
-      code: code,
-      discount: -1,
-    };
   }
+
   public getBasket(): IbasketItem[] {
     return [...this.basket.values()];
   }
@@ -103,12 +94,14 @@ export class Checkout {
         if (prod.stock > itemInBasket.amount) {
           itemInBasket.amount += 1;
           this.updateCache();
+          this.discounted = 0;
           return true;
         } else return false;
       } else {
         itemInBasket = { id: prod.id, amount: 1 };
         this.basket.set(id, itemInBasket);
         this.updateCache();
+        this.discounted = 0;
         return true;
       }
     }
@@ -121,6 +114,7 @@ export class Checkout {
     if (itemInBasket) {
       this.basket.delete(id);
       this.updateCache();
+      this.discounted = 0;
     }
   }
 

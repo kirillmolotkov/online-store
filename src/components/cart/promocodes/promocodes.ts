@@ -56,9 +56,8 @@ summary.addEventListener('click', removeDiscount)
 
   function removeDiscount(e: Event) {
     const el = e.target as HTMLDivElement;
-    if (el.contains(el.querySelector('.cart__delete-btn'))) {
+    if (el.classList.contains('cart__delete-btn')) {
       const promoCode: string | undefined = el.dataset.promo;
-      console.log(promoCode)
       if (promoCode) {
         cart.deleteDiscount(promoCode);
         renderRemoveDiscount(promoCode);
@@ -67,9 +66,13 @@ summary.addEventListener('click', removeDiscount)
   }
 
   function renderRemoveDiscount(promoCode: string): void {
-    const deleteBtn = document.querySelector(`div[data-promo]= ${promoCode}]`) as HTMLDivElement;
+    const deleteBtn = document.querySelector(`div[data-promo= ${promoCode}]`) as HTMLDivElement;
     const node = deleteBtn.parentNode as HTMLDivElement;
     node.remove();
+    const sums: NodeListOf<HTMLDivElement>  = document.querySelectorAll('.cart__total-sum');
+    const actualsum = sums[sums.length - 1] as HTMLDivElement;
+    actualsum.style.textDecoration = 'none';
+    actualsum.textContent = cart.getDiscountedPrice().toString();
   }
 }
 
