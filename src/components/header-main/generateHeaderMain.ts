@@ -1,4 +1,4 @@
-import { foundElement, headerMain, sortOprionsElement } from '../../const/const';
+import { foundElement, headerMain, searchProductsElement, sortOprionsElement } from '../../const/const';
 import { sectionGoods } from '../generate-card/generateCardItems';
 
 export const generaeteHeaderMain = function () {
@@ -6,6 +6,7 @@ export const generaeteHeaderMain = function () {
 
   generaeteSortOptions();
   generateFoundElement();
+  generateSearchProducts();
 
   sectionGoods?.append(headerMain);
 };
@@ -43,4 +44,12 @@ const generateFoundElement = function () {
   foundElement.className = 'found';
   foundElement.innerText = 'Found:';
   headerMain.append(foundElement);
+};
+
+const generateSearchProducts = function () {
+  searchProductsElement.className = 'search-products';
+  searchProductsElement.type = 'search';
+  searchProductsElement.placeholder = 'Search product';
+
+  headerMain.append(searchProductsElement);
 };
