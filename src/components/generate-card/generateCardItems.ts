@@ -7,6 +7,7 @@ import {
 import { TempalateForCardItem } from '../../types/interfaces';
 import { quantityOfGoodsByPriceAndStock } from '../filters/generateFilters';
 import { isCheckedFilterBrand, isCheckedFilterCategory } from '../filters/useFilters';
+import { generaeteHeaderMain } from '../header-main/generateHeaderMain';
 
 const urlData: string = './data/data.json';
 export const sectionGoods = document.querySelector('.goods');
@@ -169,5 +170,8 @@ const generateHTML = (products: Data) => {
 };
 
 sendRequest(urlData)
-  .then((data: Array<Data>) => generationCardItems(data))
+  .then((data: Array<Data>) => {
+    generaeteHeaderMain();
+    generationCardItems(data);
+  })
   .catch((err) => console.log(err));

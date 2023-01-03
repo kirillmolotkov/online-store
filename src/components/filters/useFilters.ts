@@ -19,6 +19,7 @@ import {
   stockMin,
 } from '../../const/const';
 import { quantityOfGoodsByPriceAndStock } from './generateFilters';
+import { generaeteHeaderMain } from '../header-main/generateHeaderMain';
 
 export const isCheckedFilterCategory = {
   smartphones: false,
@@ -45,7 +46,10 @@ const removeCardItem = function () {
     sectionGoods?.firstChild?.remove();
   }
   sendRequest(urlData)
-    .then((data: Array<Data>) => generationCardItems(data))
+    .then((data: Array<Data>) => {
+      generaeteHeaderMain();
+      generationCardItems(data);
+    })
     .catch((err) => console.log(err));
 };
 const removeFilter = function () {
