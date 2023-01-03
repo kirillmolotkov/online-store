@@ -10,3 +10,7 @@ export const stockMax = document.createElement('span');
 export const buttonResetFilters = document.createElement('button');
 export const buttonCopyLink = document.createElement('button');
 export const headerMain = document.createElement('header');
+export const sortOprionsElement = document.createElement('select');
+export const searchProductsElement = document.createElement('input');
+export const foundElement = document.createElement('p');
+export const buttonSizeWeiw = document.createElement('button');

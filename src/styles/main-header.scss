@@ -3,3 +3,15 @@
   height: 50px;
   background-color: gray;
 }
+.sort-options {
+  @include basic-font;
+  border: none;
+  height: 100%;
+  cursor: pointer;
+  color: $color-light;
+  background-color: $color-button;
+  transition: 0.5s all;
+}
+.sort-options:hover {
+  color: $color-dark;
+}
