@@ -1,4 +1,4 @@
-import { foundElement, headerMain, searchProductsElement, sortOprionsElement } from '../../const/const';
+import { buttonSizeWeiv, foundElement, headerMain, searchProductsElement, sortOprionsElement } from '../../const/const';
 import { sectionGoods } from '../generate-card/generateCardItems';
 
 export const generaeteHeaderMain = function () {
@@ -7,6 +7,7 @@ export const generaeteHeaderMain = function () {
   generaeteSortOptions();
   generateFoundElement();
   generateSearchProducts();
+  generateButtonSizeWiev();
 
   sectionGoods?.append(headerMain);
 };
@@ -52,4 +53,11 @@ const generateSearchProducts = function () {
   searchProductsElement.placeholder = 'Search product';
 
   headerMain.append(searchProductsElement);
+};
+
+const generateButtonSizeWiev = function () {
+  buttonSizeWeiv.className = 'button-wiev';
+  buttonSizeWeiv.innerText = 'Size wiev';
+
+  headerMain.append(buttonSizeWeiv);
 };
