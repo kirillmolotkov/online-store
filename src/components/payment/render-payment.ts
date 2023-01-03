@@ -12,19 +12,35 @@ function generatePaymentWindow(): void {
 }
 
 export function payment(): void {
+  const email = document.querySelector('.payment__credentials_email') as HTMLDivElement;
+  const phone = document.querySelector('.payment__credentials_phone') as HTMLDivElement;
+  const recieverName = document.querySelector('.payment__credentials_name') as HTMLInputElement;
   const closeBtn = document.querySelector('.payment__close') as HTMLDivElement;
   const cardNumber = document.querySelector('.card__number') as HTMLInputElement;
   const cardholder = document.querySelector('.card__item_holder') as HTMLInputElement;
   const expireDate = document.querySelector('.card__item_expire') as HTMLInputElement;
   const CVV = document.querySelector('.card__item_cvv') as HTMLInputElement;
 
-  cardNumber.addEventListener('focusout', checkCardNumber);
-  cardNumber.addEventListener('input', definePaymentSystem)
+  email.addEventListener('focusout', checkEmail);
+  phone.addEventListener('input', checkPhoneNumber)
+  recieverName.addEventListener('focusout', checkCardHolder);
   cardholder.addEventListener('focusout', checkCardHolder);
   expireDate.addEventListener('focusout', checkExpireDate);
+  expireDate.addEventListener('input', inputCorrectDate);
+  cardNumber.addEventListener('input', definePaymentSystem);
+  cardNumber.addEventListener('focusout', checkCardNumber);
   CVV.addEventListener('focusout', checkCVV);
   closeBtn.addEventListener('click', togglePaymentWindow);
+}
 
+function inputCorrectDate(this: HTMLInputElement) {
+  if (this.value.length === 2) this.value = this.value + '/';
+  // let regex: RegExp = /[a-z]/;
+  // this.value = this.value.replace(regex, '$`')
+  console.log(this.value)
+  if (this.value.length > 5) {
+     this.value = this.value.slice(0, 5)
+  }
 }
 
 function definePaymentSystem():void{
@@ -37,36 +53,61 @@ function definePaymentSystem():void{
 
 }
 
-function checkCardNumber() {
-  const cardNumber = document.querySelector('.card__number') as HTMLInputElement;
-  let number: string = cardNumber.value;
+function checkCardNumber(this: HTMLInputElement) {
+  let number: string = this.value ;
   console.log(validate.checkCardNumber(number));
   if (validate.checkCardNumber(number)) {
-    cardNumber.classList.remove('invalid');
-    cardNumber.classList.add('valid');
+    this.classList.remove('invalid');
+    this.classList.add('valid');
   } else {
-    cardNumber.classList.remove('valid')
-    cardNumber.classList.add('invalid');
+    this.classList.remove('valid')
+    this.classList.add('invalid');
   }
 }
+function checkEmail() {
+  
+}
 
-function checkCardHolder():void {
-  const name = document.querySelector('.card__item_holder') as HTMLInputElement;
-  let fullName: string = name.value;
+function checkPhoneNumber() {
+  
+}
+
+
+function checkCardHolder(this: HTMLInputElement):void {
+
+  let fullName: string = this.value;
   console.log(validate.checkFullName(fullName));
   if (validate.checkFullName(fullName)) {
-    name.classList.remove('invalid');
-    name.classList.add('valid');
+    this.classList.remove('invalid');
+    this.classList.add('valid');
   } else {
-    name.classList.remove('valid')
-    name.classList.add('invalid');
+    this.classList.remove('valid')
+    this.classList.add('invalid');
   }
 }
 function checkExpireDate() {
-  
+  const date = document.querySelector('.card__item_expire') as HTMLInputElement;
+  console.log(date.value);
+  console.log(validate.checkExpiration(date.value));
+  if (validate.checkExpiration(date.value)) {
+    date.classList.remove('invalid');
+    date.classList.add('valid');
+  } else {
+    date.classList.remove('valid')
+    date.classList.add('invalid');
+  }
 }
 function checkCVV() {
-  
+  const cvv = document.querySelector('.card__item_cvv') as HTMLInputElement;
+  let trimmedString:string = cvv.value.trim();
+  cvv.value = trimmedString;
+  if (validate.checkCVV(trimmedString)) {
+    cvv.classList.remove('invalid');
+    cvv.classList.add('valid');
+  } else {
+    cvv.classList.remove('valid')
+    cvv.classList.add('invalid');
+  }
 }
 
 

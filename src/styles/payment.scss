@@ -52,14 +52,8 @@
 .payment__credentials {
   @include basic-font;
 }
-.payment__name {
-}
-.payment__phone {
-}
-.payment__email {
-}
 .payment_credentials{
-
+border-radius: 10px
 }
 .payment__btn{
   // display: none;

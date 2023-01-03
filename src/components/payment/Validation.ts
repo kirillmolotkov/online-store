@@ -1,6 +1,6 @@
 class Validation {
   checkFullName(fullName: string): boolean {
-    const regex: RegExp = /[0-9,\.\*\\\t\n\r]/gi;
+    const regex: RegExp = /[0-9,\.\*\\\t\n\rа-я]/gi;
     return (
       fullName.split(' ').length === 2 && fullName.split(' ').every((name) => name.length > 3) && !regex.test(fullName)
     );
@@ -16,26 +16,25 @@ class Validation {
     return regex.test(email);
   }
   checkCardNumber(cardNumber: string): boolean {
-    // console.log(cardNumber)
     const regex: RegExp = /[0-9]{16}/;
     return regex.test(cardNumber);
   }
 
   checkExpiration(cardNumber: string): boolean {
-    const regex: RegExp = /[0-9]{4}/;
+    const regex: RegExp = /[0-9]{2}\/[0-9]{2}/;
     if (regex.test(cardNumber)) {
-      if (Number(cardNumber[0] + cardNumber[1]) <= 12 && Number(cardNumber[2] + cardNumber[3]) <= 31) return true;
+      if (Number(cardNumber[0] + cardNumber[1]) <= 12 && Number(cardNumber[3] + cardNumber[4]) <= 31) return true;
     }
     return false;
   }
 
   checkCVV(cvv: string) {
     const regex: RegExp = /[0-9]{3}/;
-    return regex.test(cvv);
+    return cvv.length === 3 && regex.test(cvv);
   }
 
   definePaymentSystem(cardNumber: string) {
-    console.log(cardNumber.slice(0, 1))
+    console.log(cardNumber.slice(0, 1));
     switch (cardNumber.slice(0, 1)) {
       case '3':
         return 'american-express';
