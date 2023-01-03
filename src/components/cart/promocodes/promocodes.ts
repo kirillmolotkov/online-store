@@ -4,25 +4,12 @@ export function promo() {
   const promoBtn = document.querySelector('.cart-item__button_buy-now') as HTMLInputElement;
   const summary = document.querySelector('.cart_summary') as HTMLDivElement;
 
-summary.addEventListener('click', removeDiscount)
+  summary.addEventListener('click', removeDiscount);
   promoBtn.addEventListener('click', promoController);
 
   function getSum(): number {
     return cart.getTotalSum();
   }
-  // function applyDiscount(discount: string): number {
-  //   // const totalSum: number = cart.getTotalSum();
-  //   const totalSums: NodeListOf<HTMLDivElement> = document.querySelectorAll('.cart__total-sum');
-  //   const sum = totalSums[totalSums.length - 1].textContent;
-  //   let lastSum: number;
-  //   if (sum) {
-  //     lastSum = Number(sum);
-  //     console.log(totalSums);
-  //     console.log(lastSum);
-  //     return Math.round(10*(lastSum - lastSum * discount))/10;
-  //   }
-  //   return -1;
-  // }
 
   function drawNewPrice(price: number, code: string): void {
     const summary = document.querySelector('.cart_summary') as HTMLDivElement;
@@ -56,9 +43,8 @@ summary.addEventListener('click', removeDiscount)
 
   function removeDiscount(e: Event) {
     const el = e.target as HTMLDivElement;
-    if (el.contains(el.querySelector('.cart__delete-btn'))) {
+    if (el.classList.contains('cart__delete-btn')) {
       const promoCode: string | undefined = el.dataset.promo;
-      console.log(promoCode)
       if (promoCode) {
         cart.deleteDiscount(promoCode);
         renderRemoveDiscount(promoCode);
@@ -67,9 +53,13 @@ summary.addEventListener('click', removeDiscount)
   }
 
   function renderRemoveDiscount(promoCode: string): void {
-    const deleteBtn = document.querySelector(`div[data-promo]= ${promoCode}]`) as HTMLDivElement;
+    const deleteBtn = document.querySelector(`div[data-promo= ${promoCode}]`) as HTMLDivElement;
     const node = deleteBtn.parentNode as HTMLDivElement;
     node.remove();
+    const sums: NodeListOf<HTMLDivElement> = document.querySelectorAll('.cart__total-sum');
+    const actualsum = sums[sums.length - 1] as HTMLDivElement;
+    actualsum.style.textDecoration = 'none';
+    actualsum.textContent = cart.getDiscountedPrice().toString();
   }
 }
 

@@ -99,4 +99,3 @@ export interface Icodes {
 }
 
 export default IbasketItem;
-
