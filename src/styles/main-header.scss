@@ -1,6 +1,7 @@
 .goods__header {
   width: 100%;
   height: 50px;
+  display: flex;
   background-color: gray;
 }
 .sort-options {
@@ -14,4 +15,11 @@
 }
 .sort-options:hover {
   color: $color-dark;
+}
+
+.found {
+  @include basic-font;
+  align-self: center;
+  color: $color-light;
+  user-select: none;
 }

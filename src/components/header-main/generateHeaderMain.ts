@@ -1,12 +1,12 @@
-import { headerMain, sortOprionsElement } from '../../const/const';
+import { foundElement, headerMain, sortOprionsElement } from '../../const/const';
 import { sectionGoods } from '../generate-card/generateCardItems';
 
 export const generaeteHeaderMain = function () {
   headerMain.className = 'goods__header';
 
   generaeteSortOptions();
+  generateFoundElement();
 
-  headerMain.append(sortOprionsElement);
   sectionGoods?.append(headerMain);
 };
 
@@ -36,4 +36,11 @@ const generaeteSortOptions = function () {
   optionByRatingMax.innerHTML = 'Sort by rating Max';
 
   sortOprionsElement.append(sortOptionsTitle, optionByPriceMin, optionByPriceMax, optionByRatingMin, optionByRatingMax);
+  headerMain.append(sortOprionsElement);
+};
+
+const generateFoundElement = function () {
+  foundElement.className = 'found';
+  foundElement.innerText = 'Found:';
+  headerMain.append(foundElement);
 };
