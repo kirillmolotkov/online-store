@@ -1,9 +1,10 @@
 .main {
   @include flex(row, flex-start, flex-start);
+  min-height: 9git00px;
 }
 
 .goods {
-  padding-top: 3%;
+  padding-top: 2%;
   padding-left: 1%;
   display: flex;
   flex-wrap: wrap;
