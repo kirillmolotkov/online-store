@@ -1,0 +1,11 @@
+export const asideFilters = document.querySelector('.filters');
+export const filterByCategoryContainer = document.createElement('div');
+export const filterByBrandContainer = document.createElement('div');
+export const filterByPriceContainer = document.createElement('div');
+export const filterByStockContainer = document.createElement('div');
+export const priceMin = document.createElement('span');
+export const priceMax = document.createElement('span');
+export const stockMin = document.createElement('span');
+export const stockMax = document.createElement('span');
+export const buttonResetFilters = document.createElement('button');
+export const buttonCopyLink = document.createElement('button');

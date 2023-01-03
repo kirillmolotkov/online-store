@@ -1,19 +1,98 @@
-import { Data } from '../../types/interfaces';
+import {
+  Data,
+  IsCheckedFilterBrand,
+  IsCheckedFilterCategory,
+  QuantityOfGoodsByPriceAndStock,
+} from '../../types/interfaces';
 import { TempalateForCardItem } from '../../types/interfaces';
+import { quantityOfGoodsByPriceAndStock } from '../filters/generateFilters';
+import { isCheckedFilterBrand, isCheckedFilterCategory } from '../filters/useFilters';
 
-const urlData: string = '/dist/data/data.json';
+
+const urlData: string = './dist/data/data.json';
 const sectionGoods = document.querySelector('.goods');
 
-function sendRequest(url: string) {
+export function sendRequest(url: string) {
   return fetch(url).then((response) => {
     return response.json();
   });
 }
 
-const generationCardItems = function (data: Array<Data>) {
+export const generationCardItems = function (data: Array<Data>) {
   data.forEach((elem) => {
-    generateHTML(elem);
+    checkForMatchingFilterAndData(isCheckedFilterCategory, isCheckedFilterBrand, quantityOfGoodsByPriceAndStock, elem);
   });
+};
+
+const checkForMatchingFilterAndData = function (
+  filterCategory: IsCheckedFilterCategory,
+  filterBrand: IsCheckedFilterBrand,
+  quantityFilter: QuantityOfGoodsByPriceAndStock,
+  dataItem: Data
+) {
+  if (
+    Object.values(filterCategory).every((elem) => elem === false) &&
+    Object.values(filterBrand).every((elem) => elem === false)
+  ) {
+    if (
+      quantityFilter.priceMin <= dataItem.price &&
+      quantityFilter.priceMax >= dataItem.price &&
+      quantityFilter.stockMin <= dataItem.stock &&
+      quantityFilter.stockMax >= dataItem.stock
+    ) {
+      generateHTML(dataItem);
+    }
+  }
+
+  for (let key in filterCategory) {
+    const keyCategory = key as keyof IsCheckedFilterCategory;
+    if (filterCategory[keyCategory] && Object.values(filterBrand).every((elem) => elem === false)) {
+      if (
+        keyCategory === dataItem.category &&
+        quantityFilter.priceMin <= dataItem.price &&
+        quantityFilter.priceMax >= dataItem.price &&
+        quantityFilter.stockMin <= dataItem.stock &&
+        quantityFilter.stockMax >= dataItem.stock
+      ) {
+        generateHTML(dataItem);
+      }
+    }
+  }
+  for (let key in filterBrand) {
+    const keyBrand = key as keyof IsCheckedFilterBrand;
+    if (filterBrand[keyBrand] && Object.values(filterCategory).every((elem) => elem === false)) {
+      if (
+        keyBrand === dataItem.brand.toLowerCase() &&
+        quantityFilter.priceMin <= dataItem.price &&
+        quantityFilter.priceMax >= dataItem.price &&
+        quantityFilter.stockMin <= dataItem.stock &&
+        quantityFilter.stockMax >= dataItem.stock
+      ) {
+        generateHTML(dataItem);
+      }
+    }
+  }
+  for (let key in filterCategory) {
+    const keyCategory = key as keyof IsCheckedFilterCategory;
+
+    if (filterCategory[keyCategory]) {
+      for (let key in filterBrand) {
+        const keyBrand = key as keyof IsCheckedFilterBrand;
+        if (filterBrand[keyBrand]) {
+          if (
+            keyCategory === dataItem.category &&
+            keyBrand === dataItem.brand.toLowerCase() &&
+            quantityFilter.priceMin <= dataItem.price &&
+            quantityFilter.priceMax >= dataItem.price &&
+            quantityFilter.stockMin <= dataItem.stock &&
+            quantityFilter.stockMax >= dataItem.stock
+          ) {
+            generateHTML(dataItem);
+          }
+        }
+      }
+    }
+  }
 };
 
 const generateHTML = (products: Data) => {

@@ -3,7 +3,7 @@ import { IbasketItem, Icodes, IproductItem } from '../../types/interfaces';
 export let CATALOGUE: Map<string, IproductItem>;
 
 export async function getCatalogue() {
-  let response = await fetch('/dist/data/data.json');
+  let response = await fetch('./data/data.json');
   let CAT: [IproductItem] = await response.json();
 
   const CATALOGUE: Map<string, IproductItem> = new Map();

@@ -1,3 +1,4 @@
+
 export interface Data {
   id: string;
   title: string;
@@ -5,7 +6,7 @@ export interface Data {
   price: number;
   discountPercentage: string;
   rating: string;
-  stock: string;
+  stock: number;
   brand: string;
   category: string;
   thumbnail: string;
@@ -26,6 +27,51 @@ export interface TempalateForCardItem {
   buttonAddToCart: HTMLButtonElement;
   buttonDetails: HTMLButtonElement;
   price: HTMLSpanElement;
+}
+
+export interface QuantityOfGoodsByCategory {
+  smartphones: number;
+  smartwatch: number;
+  tablets: number;
+  headphones: number;
+  laptops: number;
+}
+
+export interface IsCheckedFilterCategory {
+  smartphones: boolean;
+  smartwatch: boolean;
+  tablets: boolean;
+  headphones: boolean;
+  laptops: boolean;
+}
+export interface IsCheckedFilterBrand {
+  apple: boolean;
+  samsung: boolean;
+  xiaomi: boolean;
+  honor: boolean;
+  huawei: boolean;
+  amazfit: boolean;
+  jbl: boolean;
+  asus: boolean;
+  hp: boolean;
+}
+
+export interface QuantityOfGoodsByBrand {
+  apple: number;
+  samsung: number;
+  xiaomi: number;
+  honor: number;
+  huawei: number;
+  amazfit: number;
+  jbl: number;
+  asus: number;
+  hp: number;
+}
+export interface QuantityOfGoodsByPriceAndStock {
+  priceMin: number;
+  priceMax: number;
+  stockMin: number;
+  stockMax: number;
 }
 
 export interface IbasketItem {
