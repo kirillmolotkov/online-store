@@ -8,9 +8,8 @@ import { TempalateForCardItem } from '../../types/interfaces';
 import { quantityOfGoodsByPriceAndStock } from '../filters/generateFilters';
 import { isCheckedFilterBrand, isCheckedFilterCategory } from '../filters/useFilters';
 
-
-const urlData: string = './dist/data/data.json';
-const sectionGoods = document.querySelector('.goods');
+const urlData: string = './data/data.json';
+export const sectionGoods = document.querySelector('.goods');
 
 export function sendRequest(url: string) {
   return fetch(url).then((response) => {

@@ -1,4 +1,4 @@
-export const asideFilters = document.querySelector('.filters');
+export const asideFilters = document.createElement('aside');
 export const filterByCategoryContainer = document.createElement('div');
 export const filterByBrandContainer = document.createElement('div');
 export const filterByPriceContainer = document.createElement('div');

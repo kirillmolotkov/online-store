@@ -49,6 +49,9 @@ export const quantityOfGoodsByPriceAndStock: QuantityOfGoodsByPriceAndStock = {
 };
 
 const createFiltersHeader = function () {
+  const mainElement = document.querySelector('main');
+  asideFilters.className = 'filters';
+
   const filtersHeader = document.createElement('header');
   filtersHeader.className = 'filters__header';
 
@@ -60,9 +63,8 @@ const createFiltersHeader = function () {
 
   filtersHeader.append(buttonResetFilters, buttonCopyLink);
   asideFilters?.append(filtersHeader);
+  mainElement?.prepend(asideFilters);
 };
-
-createFiltersHeader();
 
 const createFilterByCategory = function (objectCategory: QuantityOfGoodsByCategory) {
   filterByCategoryContainer.className = 'filters__category';
@@ -298,6 +300,7 @@ const getQuantityOfGoodsByStock = function (data: Array<Data>) {
 
 getDataForFilters(urlData)
   .then((data: Array<Data>) => {
+    createFiltersHeader();
     createFilterByCategory(getQuantityOfGoodsByCategory(data));
     createFilterByBrand(getQuantityOfGoodsByBrand(data));
     createFilterByPrice(getQuantityOfGoodsByPrice(data));
