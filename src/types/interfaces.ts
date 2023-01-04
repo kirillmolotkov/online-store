@@ -1,4 +1,3 @@
-
 export interface Data {
   id: string;
   title: string;
@@ -99,3 +98,8 @@ export interface Icodes {
 }
 
 export default IbasketItem;
+
+export interface IStatusValueButton {
+  max: boolean;
+  min: boolean;
+}

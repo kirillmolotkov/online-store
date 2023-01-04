@@ -1,5 +1,7 @@
-import { buttonSizeWeiv, foundElement, headerMain, searchProductsElement, sortOprionsElement } from '../../const/const';
+import { foundElement, headerMain, searchProductsElement, sortOprionsElement, buttonSizeView } from '../../const/const';
+import { IStatusValueButton } from '../../types/interfaces';
 import { counterFoundItems, sectionGoods } from '../generate-card/generateCardItems';
+import { statusValueButton } from './changeSizeItems';
 
 export const generationHeaderMain = function () {
   headerMain.className = 'goods__header';
@@ -7,7 +9,7 @@ export const generationHeaderMain = function () {
   generationSortOptions();
   generationFoundElement(counterFoundItems);
   generationSearchProducts();
-  generationButtonSizeWiev();
+  generationButtonSizeView(statusValueButton);
 
   sectionGoods?.prepend(headerMain);
 };
@@ -55,9 +57,10 @@ const generationSearchProducts = function () {
   headerMain.append(searchProductsElement);
 };
 
-const generationButtonSizeWiev = function () {
-  buttonSizeWeiv.className = 'button-wiev';
-  buttonSizeWeiv.innerText = 'Size wiev';
+const generationButtonSizeView = function (statusButton: IStatusValueButton) {
+  buttonSizeView.className = 'button-view';
+  if (statusButton.min) buttonSizeView.innerText = `Size view min`;
+  if (statusButton.max) buttonSizeView.innerText = `Size view max`;
 
-  headerMain.append(buttonSizeWeiv);
+  headerMain.append(buttonSizeView);
 };

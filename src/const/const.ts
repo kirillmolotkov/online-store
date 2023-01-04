@@ -13,4 +13,4 @@ export const headerMain = document.createElement('header');
 export const sortOprionsElement = document.createElement('select');
 export const searchProductsElement = document.createElement('input');
 export const foundElement = document.createElement('p');
-export const buttonSizeWeiv = document.createElement('button');
+export const buttonSizeView = document.createElement('button');
