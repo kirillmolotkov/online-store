@@ -42,8 +42,8 @@ export const isCheckedFilterBrand = {
 };
 
 const removeCardItem = function () {
-  while (sectionGoods?.childNodes.length !== 0) {
-    sectionGoods?.firstChild?.remove();
+  while (sectionGoods?.childNodes.length !== 1) {
+    sectionGoods?.lastChild?.remove();
   }
   sendRequest(urlData)
     .then((data: Array<Data>) => {
