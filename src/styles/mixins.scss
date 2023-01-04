@@ -1,0 +1,57 @@
+@mixin basic-font {
+  color: $color-dark;
+  font-family: type_basic;
+  font-size: 1.2em;
+}
+@mixin filter-section-heading-font {
+  color: $color-dark;
+  font-family: type_basic;
+  font-size: 1.2em;
+}
+
+@mixin filter-heading-font {
+  color: $color-dark;
+  font-family: type_basic;
+  font-size: 150%;
+}
+
+@mixin cart-heading-font {
+  color: $color-dark;
+  font-family: type_basic;
+  font-size: 150%;
+}
+
+@mixin cart-description-font {
+  color: $color-dark;
+  font-family: type_basic;
+  font-size: 100%;
+}
+
+@mixin filter-item-font {
+  color: $color-dark;
+  font-family: type_basic;
+  font-size: 1em;
+}
+
+@mixin sku-price-font {
+  color: $color-dark;
+  font-family: type_basic;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+@mixin sku-description-font {
+  color: $color-dark;
+  font-family: type_basic;
+  font-size: 0.75em;
+}
+@mixin flex($direction: row, $justify: space-between, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin filter-checkbox-font {
+  color: $color-dark;
+  font-family: type_basic;
+  font-size: 100%;
+}

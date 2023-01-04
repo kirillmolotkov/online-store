@@ -1,0 +1,12 @@
+.main {
+  @include flex(row, flex-start, flex-start);
+}
+
+.goods {
+  padding-top: 3%;
+  padding-left: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 25px;
+}

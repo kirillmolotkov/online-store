@@ -1,0 +1,131 @@
+.filters {
+  padding-top: 30px;
+  padding-left: 1%;
+  @include flex(column, flex-start, flex-start);
+  gap: 25px;
+}
+.filters__header {
+  display: flex;
+  width: 210px;
+  justify-content: space-between;
+}
+
+.button-filters {
+  font-family: type_basic;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #fe778c;
+  color: #ffffff;
+  border: none;
+  transition: all 250ms;
+}
+.button-filters:hover {
+  color: black;
+}
+.filters__category,
+.filters__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item__checkbox-container {
+  display: grid;
+  grid-template-columns: 20px 150px 20px;
+  gap: 10px;
+  width: 210px;
+}
+.category__item-label,
+.category__item-checkbox,
+.brand__item-label,
+.brand__item-checkbox {
+  cursor: pointer;
+}
+
+.category__item-label,
+.category__item-counter,
+.brand__item-label,
+.brand__item-counter {
+  @include filter-checkbox-font;
+  user-select: none;
+}
+.filters__category-title,
+.filters__brand-title,
+.filters__price-title,
+.filters__stock-title {
+  @include filter-checkbox-font;
+}
+
+.filters__price,
+.filters__stock {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  width: 190px;
+  height: 120px;
+  overflow: hidden;
+  position: relative;
+}
+.filters__price-title,
+.filters__stock-title {
+  grid-column: 1/ 5;
+}
+.filters__min {
+  grid-column: 1 /2;
+  grid-row: 2 / 3;
+}
+.filters__max {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.filter__price-max,
+.filter__price-min,
+.filter__stock-max,
+.filter__stock-min {
+  grid-column: 1 / 5;
+  grid-row: 3 / 4;
+  cursor: pointer;
+}
+
+input[type='range'] {
+  background: none;
+  color: #000;
+  font: inherit;
+  margin: 0;
+  pointer-events: none;
+}
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb,
+input[type='range'] {
+  -webkit-appearance: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  background: none;
+  height: 100%;
+  width: 100%;
+}
+input[type='range']::-moz-range-track {
+  background: none;
+  height: 100%;
+  width: 100%;
+}
+input[type='range']::-webkit-slider-thumb {
+  background: currentcolor;
+  border: none;
+  border-radius: 0;
+  pointer-events: auto;
+  width: 1em;
+  height: 1em;
+}
+input[type='range']::-moz-range-thumb {
+  background: currentcolor;
+  border: none;
+  border-radius: 0;
+  pointer-events: auto;
+  width: 1em;
+  height: 1em;
+}
+input[type='range']:focus {
+  color: darkorange;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreamTeam online-store</title>
+  </head>
+  <body class="body">
+    <header class="wrapper header" id="id-header">
+      <div class="header__container">
+        <div class="logo"><a class="logo__text" href="index.html">Dream Team Store</a></div>
+        <div class="header__total">You have to pay: 200$</div>
+        <div class="header__basket">
+          <button class="basket__link">
+            <img class="basket__icon" src="assets/icons/bascket.png" alt="Checkout" />
+            <div class="basket__items-in-cart"></div>
+          </button>
+        </div>
+      </div>
+    </header>
+    <ul class="wrapper header__nav-container">
+      <li class="header__nav-item"><button class="header__button">Samrtphones</button></li>
+      <li class="header__nav-item"><button class="header__button">Smartwatch</button></li>
+      <li class="header__nav-item"><button class="header__button">Tablets</button></li>
+      <li class="header__nav-item"><button class="header__button">Headphones</button></li>
+      <li class="header__nav-item"><button class="header__button">Laptops</button></li>
+    </ul>
+    <main class="main wrapper">
+      <section class="goods"></section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="contacts">
+          <div class="contacts__items">Minsk City</div>
+          <div class="contacts__items">Lybaja 8, str</div>
+          <div class="contacts__items">Tel: +375-99-999-99-99</div>
+          <div class="contacts__items">Belarus</div>
+        </div>
+        <div class="categories">
+          <ul class="footer__nav-container">
+            <li class="footer__nav-item"><button class="footer__button">Samrtphones</button></li>
+            <li class="footer__nav-item"><button class="footer__button">Smartwatch</button></li>
+            <li class="footer__nav-item"><button class="footer__button">Tablets</button></li>
+            <li class="footer__nav-item"><button class="footer__button">Headphones</button></li>
+            <li class="footer__nav-item"><button class="footer__button">Laptops</button></li>
+          </ul>
+        </div>
+        <div class="rsschool">
+          <div class="rsschool__github"><a href="https://github.com/kirillmolotkov">@KirillMolotkov github</a></div>
+          <div class="rsschool__github"><a href="https://github.com/Maxxxer">@Maxxxer github</a></div>
+          <div class="rsschool__link">
+            <a href="https://rs.school/js/"><img src="assets/icons/rs_school_js.svg" alt="rsschool logo" /></a>
+          </div>
+          <div class="rsschool__year">2022</div>
+        </div>
+      </div>
+    </footer>
+
+    <template id="cartLayout">
+      <main class="main wrapper">
+        <section class="cart_container">
+          <div class="cart">
+            <h2 class="cart_heading">Products in cart</h2>
+            <div class="cart__header-container">
+              <div class="cart__total-items">
+                <div class="cart__items-on-page">Items on page</div>
+                <input class="cart__pagination" type="number" value="3" />
+              </div>
+              <div class="cart__page">
+                <div class="cart__page-text">Page:</div>
+                <div class="cart-item__button cart-item__button_arrow-left"><</div>
+                <div class="cart_page-number">1</div>
+                <div class="cart-item__button cart-item__button_arrow-right">></div>
+              </div>
+            </div>
+            <ol class="cart__container"></ol>
+          </div>
+          <div class="cart_summary">
+            <h2 class="cart__heading">Summary</h2>
+            <div class="cart__number-of-products"></div>
+            <div >Total: $<span class="cart__total-sum"></span></div>
+            <input type="text" class="cart__promo" name="promo" id="promo" />
+            <div class="cart__total-cheat">Promo for test: 'RS', 'DreamTeam'</div>
+            <button class="cart-item__button cart-item__button_buy-now" data-id="1">Buy Now</button>
+          </div>
+        </section>
+      </main>
+    </template>
+
+    <template id="itemTemplate">
+      <li class="cart-item__container">
+        <img class="cart-item__photo-slider" src="./assets/images/smartphones/1/1.jpg" />
+        <div class="cart-item__info">
+          <h3 class="cart-item__name"></h3>
+          <span class="cart-item__description_brand"></span>
+          <span class="cart-item__description_category"></span>
+          <span class="cart-item__description_discount"></span>
+          <span class="cart-item__description_rating"></span>
+        </div>
+        <div class="cart-item__num-block">
+          <div class="cart-item__in-stock"></div>
+          <div class="cart__add-del-block">
+            <button class="cart-item__button cart-item__button_add-item" data-id="1">+</button>
+            <div class="cart-item__input_add-item" data-id="1"> </div>
+            <button class="cart-item__button cart-item__button_delete-item" data-id="1">-</button>
+          </div>
+          <div class="cart-item__price">$ 599</div>
+        </div>
+      </li>
+    </template>
+
+    <template id="emptyCart">
+      <li class="empty-cart__container">
+        <h2 class="empty-cart__heading">There is nothing here, yet. Please choose some goods. And pay us money ;)</h2>
+        <img class="empty-cart__image" src="./assets/icons/empty-cart.png" alt="empty cart" />
+      </li>
+    </template>
+  </body>
+</html>
