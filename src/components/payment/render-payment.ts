@@ -1,6 +1,7 @@
-import { togglePaymentWindow } from "../cart/promocodes/promocodes";
-import Validation from '../../components/payment/Validation'
-const validate = new Validation;
+import { togglePaymentWindow } from '../cart/promocodes/promocodes';
+import Validation from '../../components/payment/Validation';
+import { inputCorrectDate, inputCorrectCardNumber, validateForm, inputCorrectCvv } from './payment';
+export const validate = new Validation();
 
 function generatePaymentWindow(): void {
   const body = document.querySelector('.body') as HTMLDivElement;
@@ -20,94 +21,116 @@ export function payment(): void {
   const cardholder = document.querySelector('.card__item_holder') as HTMLInputElement;
   const expireDate = document.querySelector('.card__item_expire') as HTMLInputElement;
   const CVV = document.querySelector('.card__item_cvv') as HTMLInputElement;
+  const adress = document.querySelector('.payment__credentials_adress') as HTMLTextAreaElement;
+  const payBtn = document.querySelector('.payment__btn') as HTMLButtonElement;
 
   email.addEventListener('focusout', checkEmail);
-  phone.addEventListener('input', checkPhoneNumber)
+  adress.addEventListener('focusout', checkAdress);
+  phone.addEventListener('focusout', checkPhoneNumber);
   recieverName.addEventListener('focusout', checkCardHolder);
   cardholder.addEventListener('focusout', checkCardHolder);
   expireDate.addEventListener('focusout', checkExpireDate);
   expireDate.addEventListener('input', inputCorrectDate);
   cardNumber.addEventListener('input', definePaymentSystem);
+  cardNumber.addEventListener('input', inputCorrectCardNumber);
   cardNumber.addEventListener('focusout', checkCardNumber);
   CVV.addEventListener('focusout', checkCVV);
+  CVV.addEventListener('input', inputCorrectCvv);
   closeBtn.addEventListener('click', togglePaymentWindow);
+  payBtn.addEventListener('click', validateForm);
 }
 
-function inputCorrectDate(this: HTMLInputElement) {
-  if (this.value.length === 2) this.value = this.value + '/';
-  // let regex: RegExp = /[a-z]/;
-  // this.value = this.value.replace(regex, '$`')
-  console.log(this.value)
-  if (this.value.length > 5) {
-     this.value = this.value.slice(0, 5)
+function checkAdress(this: HTMLTextAreaElement): void {
+  let adress: string = this.value;
+  if (validate.checkAdress(adress)) {
+    this.classList.remove('invalid');
+    this.classList.add('valid');
+  } else {
+    this.classList.remove('valid');
+    this.classList.add('invalid');
   }
 }
 
-function definePaymentSystem():void{
+function definePaymentSystem(): void {
   const cardNumber = document.querySelector('.card__number') as HTMLInputElement;
   const systemIcon = document.querySelector('.card__payment-system') as HTMLInputElement;
   let number: string = cardNumber.value;
   let system: string | undefined = validate.definePaymentSystem(number);
-  console.log(`/src/assets/icons/${system}.png`)
- systemIcon.style.backgroundImage = `url('/src/assets/icons/${system}.png')`
-
+  if (system == undefined) {
+    systemIcon.style.backgroundImage = `none`;
+  } else systemIcon.style.backgroundImage = `url('/src/assets/icons/${system}.png')`;
 }
 
-function checkCardNumber(this: HTMLInputElement) {
-  let number: string = this.value ;
-  console.log(validate.checkCardNumber(number));
+function checkCardNumber(this: HTMLInputElement): void {
+  let number: string = this.value;
   if (validate.checkCardNumber(number)) {
     this.classList.remove('invalid');
     this.classList.add('valid');
   } else {
-    this.classList.remove('valid')
+    this.classList.remove('valid');
     this.classList.add('invalid');
   }
 }
-function checkEmail() {
-  
+
+function checkEmail(this: HTMLInputElement): void {
+  let email: string = this.value;
+  if (validate.checkEmail(email)) {
+    this.classList.remove('invalid');
+    this.classList.add('valid');
+  } else {
+    this.classList.remove('valid');
+    this.classList.add('invalid');
+  }
 }
 
-function checkPhoneNumber() {
-  
+function checkPhoneNumber(this: HTMLInputElement): void {
+  let phoneNumber: string = this.value;
+  if (validate.checkPhoneNumber(phoneNumber)) {
+    this.classList.remove('invalid');
+    this.classList.add('valid');
+  } else {
+    this.classList.remove('valid');
+    this.classList.add('invalid');
+  }
 }
 
-
-function checkCardHolder(this: HTMLInputElement):void {
-
+function checkCardHolder(this: HTMLInputElement): void {
   let fullName: string = this.value;
-  console.log(validate.checkFullName(fullName));
   if (validate.checkFullName(fullName)) {
     this.classList.remove('invalid');
     this.classList.add('valid');
   } else {
-    this.classList.remove('valid')
+    this.classList.remove('valid');
     this.classList.add('invalid');
   }
 }
-function checkExpireDate() {
+
+function checkExpireDate(): void {
   const date = document.querySelector('.card__item_expire') as HTMLInputElement;
-  console.log(date.value);
-  console.log(validate.checkExpiration(date.value));
   if (validate.checkExpiration(date.value)) {
     date.classList.remove('invalid');
     date.classList.add('valid');
   } else {
-    date.classList.remove('valid')
+    date.classList.remove('valid');
     date.classList.add('invalid');
   }
 }
-function checkCVV() {
+
+function checkCVV(): void {
   const cvv = document.querySelector('.card__item_cvv') as HTMLInputElement;
-  let trimmedString:string = cvv.value.trim();
+  let trimmedString: string = cvv.value.trim();
   cvv.value = trimmedString;
   if (validate.checkCVV(trimmedString)) {
     cvv.classList.remove('invalid');
     cvv.classList.add('valid');
   } else {
-    cvv.classList.remove('valid')
+    cvv.classList.remove('valid');
     cvv.classList.add('invalid');
   }
 }
 
+export function generateSuccess() {
+  console.log("It's fine!");
+}
 
+export default payment;
