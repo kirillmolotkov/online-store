@@ -4,7 +4,7 @@ import {
   IsCheckedFilterBrand,
   QuantityOfGoodsByPriceAndStock,
 } from '../../types/interfaces';
-import { generationCardItems, sectionGoods, sendRequest } from '../generate-card/generateCardItems';
+import { counterFoundItems, generationCardItems, sectionGoods, sendRequest } from '../generate-card/generateCardItems';
 import { urlData } from './getDataForFilters';
 import {
   asideFilters,
@@ -19,7 +19,7 @@ import {
   stockMin,
 } from '../../const/const';
 import { quantityOfGoodsByPriceAndStock } from './generateFilters';
-import { generaeteHeaderMain } from '../header-main/generateHeaderMain';
+import { generationHeaderMain } from '../header-main/generationHeaderMain';
 
 export const isCheckedFilterCategory = {
   smartphones: false,
@@ -47,7 +47,7 @@ const removeCardItem = function () {
   }
   sendRequest(urlData)
     .then((data: Array<Data>) => {
-      generaeteHeaderMain();
+      generationHeaderMain();
       generationCardItems(data);
     })
     .catch((err) => console.log(err));

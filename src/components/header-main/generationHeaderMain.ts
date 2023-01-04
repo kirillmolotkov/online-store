@@ -1,18 +1,18 @@
 import { buttonSizeWeiv, foundElement, headerMain, searchProductsElement, sortOprionsElement } from '../../const/const';
 import { sectionGoods } from '../generate-card/generateCardItems';
 
-export const generaeteHeaderMain = function () {
+export const generationHeaderMain = function () {
   headerMain.className = 'goods__header';
 
-  generaeteSortOptions();
-  generateFoundElement();
-  generateSearchProducts();
-  generateButtonSizeWiev();
+  generationSortOptions();
+  generationFoundElement();
+  generationSearchProducts();
+  generationButtonSizeWiev();
 
   sectionGoods?.append(headerMain);
 };
 
-const generaeteSortOptions = function () {
+const generationSortOptions = function () {
   sortOprionsElement.className = 'sort-options';
 
   const sortOptionsTitle = document.createElement('option');
@@ -41,13 +41,13 @@ const generaeteSortOptions = function () {
   headerMain.append(sortOprionsElement);
 };
 
-const generateFoundElement = function () {
+export const generationFoundElement = function () {
   foundElement.className = 'found';
-  foundElement.innerText = 'Found:';
+  foundElement.innerText = `Found: `;
   headerMain.append(foundElement);
 };
 
-const generateSearchProducts = function () {
+const generationSearchProducts = function () {
   searchProductsElement.className = 'search-products';
   searchProductsElement.type = 'search';
   searchProductsElement.placeholder = 'Search product';
@@ -55,7 +55,7 @@ const generateSearchProducts = function () {
   headerMain.append(searchProductsElement);
 };
 
-const generateButtonSizeWiev = function () {
+const generationButtonSizeWiev = function () {
   buttonSizeWeiv.className = 'button-wiev';
   buttonSizeWeiv.innerText = 'Size wiev';
 

@@ -7,10 +7,11 @@ import {
 import { TempalateForCardItem } from '../../types/interfaces';
 import { quantityOfGoodsByPriceAndStock } from '../filters/generateFilters';
 import { isCheckedFilterBrand, isCheckedFilterCategory } from '../filters/useFilters';
-import { generaeteHeaderMain } from '../header-main/generateHeaderMain';
+import { generationHeaderMain } from '../header-main/generationHeaderMain';
 
 const urlData: string = './data/data.json';
 export const sectionGoods = document.querySelector('.goods');
+export let counterFoundItems = 0;
 
 export function sendRequest(url: string) {
   return fetch(url).then((response) => {
@@ -22,6 +23,8 @@ export const generationCardItems = function (data: Array<Data>) {
   data.forEach((elem) => {
     checkForMatchingFilterAndData(isCheckedFilterCategory, isCheckedFilterBrand, quantityOfGoodsByPriceAndStock, elem);
   });
+  console.log(counterFoundItems);
+  counterFoundItems = 0;
 };
 
 const checkForMatchingFilterAndData = function (
@@ -41,6 +44,7 @@ const checkForMatchingFilterAndData = function (
       quantityFilter.stockMax >= dataItem.stock
     ) {
       generateHTML(dataItem);
+      counterFoundItems++;
     }
   }
 
@@ -55,6 +59,7 @@ const checkForMatchingFilterAndData = function (
         quantityFilter.stockMax >= dataItem.stock
       ) {
         generateHTML(dataItem);
+        counterFoundItems++;
       }
     }
   }
@@ -69,6 +74,7 @@ const checkForMatchingFilterAndData = function (
         quantityFilter.stockMax >= dataItem.stock
       ) {
         generateHTML(dataItem);
+        counterFoundItems++;
       }
     }
   }
@@ -88,6 +94,7 @@ const checkForMatchingFilterAndData = function (
             quantityFilter.stockMax >= dataItem.stock
           ) {
             generateHTML(dataItem);
+            counterFoundItems++;
           }
         }
       }
@@ -171,7 +178,7 @@ const generateHTML = (products: Data) => {
 
 sendRequest(urlData)
   .then((data: Array<Data>) => {
-    generaeteHeaderMain();
+    generationHeaderMain();
     generationCardItems(data);
   })
   .catch((err) => console.log(err));
