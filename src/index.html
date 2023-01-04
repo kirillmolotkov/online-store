@@ -29,99 +29,44 @@
     <section class="payment">
       <h2 class="payment__heading">Checkout</h2>
       <div class="payment__close"></div>
-      <form action="#" class="payment__form">
+      <form action="#" class="payment__form" autocomplete="on">
         <ul class="payment__list">
           <li class="payment__item">
-            <div class="payment__credentials ">Enter Your Name</div>
-            <input type="text" placeholder="Name" class="payment__credentials payment__credentials_name" />
+            <div class="payment__credentials">Enter Your Name</div>
+            <input type="text" data-tooltip="Подсказка" placeholder="Name" class="payment__credentials payment__credentials_name" />
+          </li>
+          <li class="payment__item">
+            <div class="payment__credentials">Enter Your adress</div>
+            <textarea placeholder="adress" class="payment__credentials payment__credentials_adress"></textarea>
           </li>
           <li class="payment__item">
             <div class="payment__credentials">Enter Your Phone number</div>
             <input type="text" placeholder="Phone number" class="payment__credentials payment__credentials_phone" />
           </li>
           <li class="payment__item">
-            <div class="payment__credentials ">Enter Your E-mail</div>
-            <input type="email" placeholder="email@example.com" class="payment__credentials payment__credentials_email" />
+            <div class="payment__credentials">Enter Your E-mail</div>
+            <input
+              type="email"
+              placeholder="email@example.com"
+              class="payment__credentials payment__credentials_email" />
           </li>
         </ul>
         <div class="card">
           <div class="card__wrapper">
             <div class="card__payment-system"></div>
-            <input class="card__number" type="number" placeholder="CARD NUMBER" />
+            <input class="card__number" type="text" placeholder="CARD NUMBER" />
             <div class="card_info-container">
               <input class="card__item card__item_holder" type="text" placeholder="CARDHOLDER" />
               <input class="card__item card__item_expire" type="text" placeholder="00/00" />
-              <input class="card__item card__item_cvv" type="number" placeholder="CVV" />
+              <input class="card__item card__item_cvv" type="text" placeholder="CVV" />
             </div>
           </div>
         </div>
       </form>
       <button type="submit" class="payment__btn">Pay now!</button>
     </section>
+
     <main class="main wrapper">
-      <aside class="filters">
-        <h2 class="filters__heading">Filters</h2>
-        <div class="filters__container">
-          Material
-          <ul class="block__container">
-            <li class="block__item">
-              <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name">Aluminium</label>
-            </li>
-            <li class="block__item">
-              <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name">Aluminium</label>
-            </li>
-            <li class="block__item">
-              <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name">Aluminium</label>
-            </li>
-          </ul>
-        </div>
-        <div class="filters__container">
-          Material
-          <ul class="block__container">
-            <li class="block__item">
-              <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name"
-                >Aluminium
-                <span class="item__count">(2)</span>
-              </label>
-            </li>
-            <li class="block__item">
-              <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name"
-                >Aluminium
-                <span class="item__count">(2)</span>
-              </label>
-            </li>
-            <li class="block__item">
-              <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name"
-                >Aluminium
-                <span class="item__count">(2)</span>
-              </label>
-            </li>
-          </ul>
-        </div>
-        <div class="filters__container">
-          Material
-          <ul class="block__container">
-            <li class="block__item">
-              <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name">Aluminium</label>
-            </li>
-            <li class="block__item">
-              <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name">Aluminium</label>
-            </li>
-            <li class="block__item">
-              <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name">Aluminium</label>
-            </li>
-          </ul>
-        </div>
-      </aside>
       <section class="goods"></section>
     </main>
     <footer class="footer">
@@ -211,6 +156,14 @@
         <h2 class="empty-cart__heading">There is nothing here, yet. Please choose some goods. And pay us money ;)</h2>
         <img class="empty-cart__image" src="./assets/icons/empty-cart.png" alt="empty cart" />
       </li>
+    </template>
+
+    <template id="success">
+      <section class="success">
+        <h2 class="sucsess__heading">Payment Successfull!</h2>
+        <div class="success__greeting">We're glad you've spent you money here!</div>
+        <button class="success__btn" onclick="location.href = 'index.html'">Goto main page</button>
+      </section>
     </template>
   </body>
 </html>

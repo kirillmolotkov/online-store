@@ -52,4 +52,14 @@ export interface Icodes {
   discount: number;
 }
 
+export interface IValidate{
+  fullName: boolean;
+  adress: boolean;
+  phoneNumber: boolean;
+  email: boolean;
+  cvv: boolean;
+  cardNumber: boolean;
+  expiration: boolean;
+}
+
 export default IbasketItem;
