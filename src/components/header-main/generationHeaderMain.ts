@@ -1,15 +1,15 @@
 import { buttonSizeWeiv, foundElement, headerMain, searchProductsElement, sortOprionsElement } from '../../const/const';
-import { sectionGoods } from '../generate-card/generateCardItems';
+import { counterFoundItems, sectionGoods } from '../generate-card/generateCardItems';
 
 export const generationHeaderMain = function () {
   headerMain.className = 'goods__header';
 
   generationSortOptions();
-  generationFoundElement();
+  generationFoundElement(counterFoundItems);
   generationSearchProducts();
   generationButtonSizeWiev();
 
-  sectionGoods?.append(headerMain);
+  sectionGoods?.prepend(headerMain);
 };
 
 const generationSortOptions = function () {
@@ -41,9 +41,9 @@ const generationSortOptions = function () {
   headerMain.append(sortOprionsElement);
 };
 
-export const generationFoundElement = function () {
+export const generationFoundElement = function (foundItems: number) {
   foundElement.className = 'found';
-  foundElement.innerText = `Found: `;
+  foundElement.innerText = `Found: ${foundItems}`;
   headerMain.append(foundElement);
 };
 

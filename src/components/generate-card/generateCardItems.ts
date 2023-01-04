@@ -23,7 +23,8 @@ export const generationCardItems = function (data: Array<Data>) {
   data.forEach((elem) => {
     checkForMatchingFilterAndData(isCheckedFilterCategory, isCheckedFilterBrand, quantityOfGoodsByPriceAndStock, elem);
   });
-  console.log(counterFoundItems);
+
+  generationHeaderMain();
   counterFoundItems = 0;
 };
 
@@ -178,7 +179,6 @@ const generateHTML = (products: Data) => {
 
 sendRequest(urlData)
   .then((data: Array<Data>) => {
-    generationHeaderMain();
     generationCardItems(data);
   })
   .catch((err) => console.log(err));
