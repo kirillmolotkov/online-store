@@ -8,7 +8,6 @@ export function goToCartPage() {
     if (cart.getItemsCount()) {
       pagination();
       const cartContainer = document.querySelector('.cart__container') as HTMLDivElement;
-
       cartContainer.addEventListener('click', (e) => {
         let id: string;
         const addButton = e.target as HTMLElement;
