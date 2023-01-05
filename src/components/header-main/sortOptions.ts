@@ -1,15 +1,8 @@
 import { sortOprionsElement } from '../../const/const';
-import { Data } from '../../types/interfaces';
+import { Data, IIsCheckedSortOptions } from '../../types/interfaces';
 import { urlData } from '../filters/getDataForFilters';
 import { generationCardItems, sectionGoods, sendRequest } from '../generate-card/generateCardItems';
 import { changeSizeItems } from './changeSizeItems';
-
-export interface IIsCheckedSortOptions {
-  pricemin: boolean;
-  pricemax: boolean;
-  ratingmin: boolean;
-  ratingmax: boolean;
-}
 
 export const isCheckedSortOptions: IIsCheckedSortOptions = {
   pricemin: false,

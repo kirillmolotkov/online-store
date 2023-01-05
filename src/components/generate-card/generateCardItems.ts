@@ -10,7 +10,6 @@ import { isCheckedFilterBrand, isCheckedFilterCategory } from '../filters/useFil
 import { generationFoundElement, generationHeaderMain } from '../header-main/generationHeaderMain';
 import { searchProductFilter, searchValue } from '../header-main/searchProducts';
 import {
-  IIsCheckedSortOptions,
   isCheckedSortOptions,
   sortByPriceMax,
   sortByPriceMin,
