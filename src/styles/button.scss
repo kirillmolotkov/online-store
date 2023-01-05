@@ -1,0 +1,49 @@
+// .cart-item__button {
+//   font-size: 120%;
+//   min-width: 25px;
+//   padding: 3% 5%;
+//   border-radius: 0;
+//   border: none;
+//   text-align: center;
+//   background-color: $color-button;
+//   cursor: pointer;
+//   transition: all 300ms;
+//   &:hover {
+//     background-color: gray;
+//   }
+//   &:active {
+//     background-color: $color-button;
+//   }
+// }
+
+// .disactivated{
+//   cursor: default;
+//   background-color: gray;
+//   &:active {
+//     background-color: gray;
+//   }
+// }
+// .cart-item__button_buy-now {
+//   align-self: flex-end;
+// }
+
+.btn {
+  min-width: 150px;
+  padding: 3% 5%;
+  border-radius: 0;
+  border: none;
+  text-align: center;
+  background-color: $color-button;
+  cursor: pointer;
+  transition: all 300ms;
+  &:hover {
+    background-color: gray;
+  }
+  &:active {
+    background-color: $color-button;
+  }
+}
+.btn_details-add {
+}
+.btn_details-buy {
+}

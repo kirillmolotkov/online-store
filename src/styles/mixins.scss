@@ -3,6 +3,18 @@
   font-family: type_basic;
   font-size: 1.2em;
 }
+@mixin details-font {
+  color: $color-dark;
+  font-family: type_basic;
+  font-weight: 200;
+  font-size: 0.6rem;
+}
+@mixin details-heading-font {
+  color: $color-dark;
+  font-family: type_basic;
+  font-size: 0.9rem;
+}
+
 @mixin filter-section-heading-font {
   color: $color-dark;
   font-family: type_basic;
