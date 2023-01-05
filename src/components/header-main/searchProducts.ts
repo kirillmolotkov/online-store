@@ -2,6 +2,7 @@ import { searchProductsElement } from '../../const/const';
 import { Data } from '../../types/interfaces';
 import { urlData } from '../filters/getDataForFilters';
 import { generationCardItems, sectionGoods, sendRequest } from '../generate-card/generateCardItems';
+import { changeSizeItems } from './changeSizeItems';
 
 export let searchValue = '';
 
@@ -14,6 +15,7 @@ searchProductsElement.addEventListener('input', () => {
   sendRequest(urlData)
     .then((data: Array<Data>) => {
       generationCardItems(data);
+      changeSizeItems();
     })
     .catch((err) => console.log(err));
 });

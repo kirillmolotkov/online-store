@@ -9,7 +9,10 @@ export const statusValueButton: IStatusValueButton = {
 buttonSizeView.addEventListener('click', () => {
   changeStatusValueButton();
   addStatusValueInButton(statusValueButton);
+  changeSizeItems();
+});
 
+export const changeSizeItems = function () {
   const cardItems = document.querySelectorAll('.sku__container');
 
   cardItems.forEach((itemCard) => {
@@ -20,7 +23,7 @@ buttonSizeView.addEventListener('click', () => {
       itemCard.classList.add('sku__container-min');
     }
   });
-});
+};
 
 const changeStatusValueButton = function () {
   if (statusValueButton.min) {

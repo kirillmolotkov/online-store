@@ -20,6 +20,7 @@ import {
 } from '../../const/const';
 import { quantityOfGoodsByPriceAndStock } from './generateFilters';
 import { generationHeaderMain } from '../header-main/generationHeaderMain';
+import { changeSizeItems } from '../header-main/changeSizeItems';
 
 export const isCheckedFilterCategory = {
   smartphones: false,
@@ -49,6 +50,7 @@ const removeCardItem = function () {
     .then((data: Array<Data>) => {
       generationHeaderMain();
       generationCardItems(data);
+      changeSizeItems();
     })
     .catch((err) => console.log(err));
 };
