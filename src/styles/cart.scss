@@ -135,7 +135,7 @@
 
 .cart_summary {
   @include flex(column, space-between, flex-start);
-  height: 200px;
+  height: 280px;
   padding-left: 10px;
   border-left: 1px solid $color-dark;
 }

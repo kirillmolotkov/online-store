@@ -1,0 +1,67 @@
+.card {
+  // position: absolute;
+  background-image: url('/src/assets/images/layout/card.png');
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  margin: 0 auto;
+  aspect-ratio: 1.75;
+}
+.card__wrapper {
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+  @include flex(column, space-between, flex-start);
+}
+.card__number,
+.card_info-container {
+  height: 8%;
+}
+.card__payment-system {
+  align-self: flex-end;
+  width: 15%;
+  height: 15%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 3%;
+  aspect-ratio: 1.65;
+}
+.card__number {
+  // margin-left: 3%;
+  border-radius: 5px;
+  width: 60%;
+  @include basic-font;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}
+.card_info-container {
+  width: 100%;
+  @include flex(row, space-between, center);
+  padding-bottom: 10%;
+}
+
+.card__item {
+  border-radius: 5px;
+  width: 15%;
+  height: 100%;
+  @include basic-font;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+.card__item_holder {
+  width: 55%;
+}
+
+.valid{
+  border: 4px solid green;
+}
+
+.invalid{
+  border: 4px solid red;
+  color: red;
+}

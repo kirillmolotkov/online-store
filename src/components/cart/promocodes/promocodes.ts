@@ -1,11 +1,21 @@
 import { cart } from '../../checkout/checkout';
 import { Icodes } from '../../../types/interfaces';
+import { payment } from '../../payment/render-payment';
+
+export function togglePaymentWindow(): void {
+  const paymentWindow = document.querySelector('.payment') as HTMLDivElement;
+  paymentWindow.classList.toggle('payment_open');
+  payment();
+}
+
 export function promo() {
-  const promoBtn = document.querySelector('.cart-item__button_buy-now') as HTMLInputElement;
+  const promoBtn = document.querySelector('.cart-item__button_apply-promo') as HTMLInputElement;
   const summary = document.querySelector('.cart_summary') as HTMLDivElement;
+  const buyNowBtn = document.querySelector('.cart-item__button_buy-now') as HTMLInputElement;
 
   summary.addEventListener('click', removeDiscount);
   promoBtn.addEventListener('click', promoController);
+  buyNowBtn.addEventListener('click', togglePaymentWindow);
 
   function getSum(): number {
     return cart.getTotalSum();
