@@ -19,7 +19,7 @@ import {
   stockMin,
 } from '../../const/const';
 import { quantityOfGoodsByPriceAndStock } from './generateFilters';
-import { generationHeaderMain } from '../header-main/generationHeaderMain';
+import { generationFoundElement, generationHeaderMain } from '../header-main/generationHeaderMain';
 import { changeSizeItems } from '../header-main/changeSizeItems';
 
 export const isCheckedFilterCategory = {
@@ -48,7 +48,7 @@ const removeCardItem = function () {
   }
   sendRequest(urlData)
     .then((data: Array<Data>) => {
-      generationHeaderMain();
+      generationFoundElement(counterFoundItems);
       generationCardItems(data);
       changeSizeItems();
     })
