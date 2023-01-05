@@ -18,25 +18,25 @@ const generationSortOptions = function () {
   sortOprionsElement.className = 'sort-options';
 
   const sortOptionsTitle = document.createElement('option');
-  sortOptionsTitle.value = 'sort-title';
-  sortOptionsTitle.disabled;
-  sortOptionsTitle.selected;
+  sortOptionsTitle.value = 'sorttitle';
+  sortOptionsTitle.disabled = true;
+  sortOptionsTitle.selected = true;
   sortOptionsTitle.innerText = 'Sort options:';
 
   const optionByPriceMin = document.createElement('option');
-  optionByPriceMin.value = 'price-min';
+  optionByPriceMin.value = 'pricemin';
   optionByPriceMin.innerText = 'Sort by price Min';
 
   const optionByPriceMax = document.createElement('option');
-  optionByPriceMax.value = 'price-max';
+  optionByPriceMax.value = 'pricemax';
   optionByPriceMax.innerText = 'Sort by price Max';
 
   const optionByRatingMin = document.createElement('option');
-  optionByRatingMin.value = 'rating-min';
+  optionByRatingMin.value = 'ratingmin';
   optionByRatingMin.innerText = 'Sort by rating Min';
 
   const optionByRatingMax = document.createElement('option');
-  optionByRatingMax.value = 'rating-max';
+  optionByRatingMax.value = 'ratingmax';
   optionByRatingMax.innerHTML = 'Sort by rating Max';
 
   sortOprionsElement.append(sortOptionsTitle, optionByPriceMin, optionByPriceMax, optionByRatingMin, optionByRatingMax);
