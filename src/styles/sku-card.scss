@@ -1,8 +1,10 @@
 .sku__container {
   display: flex;
   flex-direction: column;
-  width: 350px;
-  height: 580px;
+  // width: 350px;
+  width: 23%;
+  // height: 580px;
+  // aspect-ratio: 0.7;
   position: relative;
   justify-content: space-between;
   align-items: center;
@@ -15,8 +17,10 @@
   }
 }
 .sku__photo-slider {
-  width: 278px;
-  max-height: 480px;
+  // width: 278px;
+  // max-height: 480px;
+  width: 80%;
+  object-fit: cover;
   position: relative;
   align-self: center;
   overflow: hidden;
@@ -26,11 +30,11 @@
   padding-top: 3%;
 }
 .sku__name {
-  padding-top: 2%;
+  padding: 2% 0;
   @include basic-font;
 }
 .sku__description {
-  @include sku-description-font;
+  // @include sku-description-font;
   padding-top: 2%;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -44,11 +48,15 @@
   object-fit: contain;
 }
 .sku__info {
-  @include basic-font;
+  @include sku-description-font;
   display: none;
   position: absolute;
-  top: 20%;
-  left: 15%;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3% 4%;
+
   flex-direction: column;
   gap: 15px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -57,11 +65,11 @@
 .sku__button_add-to-card,
 .sku__button_details {
   display: none;
-  @include basic-font;
+  @include sku-button-font;
   cursor: pointer;
   position: absolute;
-  width: 40%;
-  top: 90%;
+  width: 45%;
+  top: 75%;
   left: 10%;
   transform: translate(-10%, -50%);
   padding: 0.5em;

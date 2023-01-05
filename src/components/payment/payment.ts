@@ -1,3 +1,4 @@
+import { cart } from '../checkout/checkout';
 import { generateSuccess, validate } from './render-payment';
 
 export function inputCorrectDate(this: HTMLInputElement): void {
@@ -21,6 +22,7 @@ export function inputCorrectCardNumber(this: HTMLInputElement): void {
 
 export function validateForm(): void {
   if (validate.validateForm()) {
+    cart.clearCart();
     generateSuccess();
     setTimeout(() => {
       window.location.href = 'index.html';
@@ -34,3 +36,4 @@ export function inputCorrectCvv(this: HTMLInputElement): void {
     this.value = this.value.slice(0, 3);
   }
 }
+

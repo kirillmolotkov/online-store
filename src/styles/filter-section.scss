@@ -60,10 +60,11 @@
 .filters__stock {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 18px;
 
   width: 190px;
-  height: 120px;
+  row-gap: 8px;
+  // height: 120px;
   overflow: hidden;
   position: relative;
 }
@@ -83,6 +84,7 @@
 .filter__price-min,
 .filter__stock-max,
 .filter__stock-min {
+  border: 1px solid $color-dark;
   grid-column: 1 / 5;
   grid-row: 3 / 4;
   cursor: pointer;
@@ -102,6 +104,7 @@ input[type='range'] {
 }
 input[type='range']::-webkit-slider-runnable-track {
   background: none;
+  
   height: 100%;
   width: 100%;
 }

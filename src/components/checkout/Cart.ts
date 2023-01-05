@@ -151,6 +151,13 @@ export class Checkout {
     let amount = this.getItemAmount(id);
     if (price && amount) return amount * price;
   }
+  public clearCart() {
+    this.basket = new Map();
+    console.log(this.basket);
+    this.discounted = 0;
+    this.appliedCODES = [];
+    localStorage.setItem('basket', '')
+  }
 }
 
 export default Checkout;
