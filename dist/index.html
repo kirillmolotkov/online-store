@@ -4,20 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>DreamTeam online-store</title>
   <link rel="icon" href="favico.png"><script defer src="indexbundle.js"></script><link href="styles/index.css" rel="stylesheet"></head>
-  <body>
+  <body class="body">
     <header class="wrapper header" id="id-header">
       <div class="header__container">
-        <div class="logo"><a class="logo__text" href="http://">Dream Team Store</a></div>
+        <div class="logo"><a class="logo__text" href="index.html">Dream Team Store</a></div>
         <div class="header__total">You have to pay: 200$</div>
         <div class="header__basket">
           <button class="basket__link">
             <img class="basket__icon" src="assets/images/bascket.png" alt="Checkout" />
+            <div class="basket__items-in-cart"></div>
           </button>
         </div>
       </div>
-  
     </header>
     <ul class="wrapper header__nav-container">
       <li class="header__nav-item"><button class="header__button">Samrtphones</button></li>
@@ -26,148 +26,48 @@
       <li class="header__nav-item"><button class="header__button">Headphones</button></li>
       <li class="header__nav-item"><button class="header__button">Laptops</button></li>
     </ul>
-    <main class="main wrapper">
-      <aside class="filters">
-        <h2 class="filters__heading">Filters</h2>
-        <div class="filters__container">
-          Material
-          <ul class="block__container">
-            <li class="block__item">
-              <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name">Aluminium</label>
-            </li>
-            <li class="block__item">
-              <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name">Aluminium</label>
-            </li>
-            <li class="block__item">
-              <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name">Aluminium</label>
-            </li>
-          </ul>
+    <section class="payment">
+      <h2 class="payment__heading">Checkout</h2>
+      <div class="payment__close"></div>
+      <form action="#" class="payment__form" autocomplete="on">
+        <ul class="payment__list">
+          <li class="payment__item">
+            <div class="payment__credentials">Enter Your Name</div>
+            <input type="text" data-tooltip="Подсказка" placeholder="Name" class="payment__credentials payment__credentials_name" />
+          </li>
+          <li class="payment__item">
+            <div class="payment__credentials">Enter Your adress</div>
+            <textarea placeholder="adress" class="payment__credentials payment__credentials_adress"></textarea>
+          </li>
+          <li class="payment__item">
+            <div class="payment__credentials">Enter Your Phone number</div>
+            <input type="text" placeholder="Phone number" class="payment__credentials payment__credentials_phone" />
+          </li>
+          <li class="payment__item">
+            <div class="payment__credentials">Enter Your E-mail</div>
+            <input
+              type="email"
+              placeholder="email@example.com"
+              class="payment__credentials payment__credentials_email" />
+          </li>
+        </ul>
+        <div class="card">
+          <div class="card__wrapper">
+            <div class="card__payment-system"></div>
+            <input class="card__number" type="text" placeholder="CARD NUMBER" />
+            <div class="card_info-container">
+              <input class="card__item card__item_holder" type="text" placeholder="CARDHOLDER" />
+              <input class="card__item card__item_expire" type="text" placeholder="00/00" />
+              <input class="card__item card__item_cvv" type="text" placeholder="CVV" />
+            </div>
+          </div>
         </div>
-        <div class="filters__container">
-          Material
-          <ul class="block__container">
-            <li class="block__item">
-              <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name"
-                >Aluminium
-                <span class="item__count">(2)</span>
-              </label>
-            </li>
-            <li class="block__item">
-              <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name"
-                >Aluminium
-                <span class="item__count">(2)</span>
-              </label>
-            </li>
-            <li class="block__item">
-              <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name"
-                >Aluminium
-                <span class="item__count">(2)</span>
-              </label>
-            </li>
-          </ul>
-        </div>
-        <div class="filters__container">
-          Material
-          <ul class="block__container">
-            <li class="block__item">
-              <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name">Aluminium</label>
-            </li>
-            <li class="block__item">
-              <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name">Aluminium</label>
-            </li>
-            <li class="block__item">
-              <input class="item__checkbox" type="checkbox" name="" id="" />
-              <label for="" class="item__name">Aluminium</label>
-            </li>
-          </ul>
-        </div>
-      </aside>
-      <section class="goods">
-        <div class="sku__container">
-          <div class="sku__photo-slider">
-            <img class="sku__photo" src="assets/images/1.jpg" alt="iphone" />
-          </div>
-          <div class="sku__price">$28.52</div>
-          <div class="sku__name">Iphone 54</div>
-          <div class="sku__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere iusto veritatis mollitia beatae
-            omnis sequi, soluta, voluptas architecto repellat, neque officia doloremque officiis aliquam. Quam dolorum
-            iusto corporis dolores?
-          </div>
-          <button class="sku__button">Add To Cart</button>
-        </div>
-        <div class="sku__container">
-          <div class="sku__photo-slider">
-            <img class="sku__photo" src="assets/images/1.jpg" alt="iphone" />
-          </div>
-          <div class="sku__price">$28.52</div>
-          <div class="sku__name">Iphone 54</div>
-          <div class="sku__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere iusto veritatis mollitia beatae
-            omnis sequi, soluta, voluptas architecto repellat, neque officia doloremque officiis aliquam. Quam dolorum
-            iusto corporis dolores?
-          </div>
-          <button class="sku__button">Add To Cart</button>
-        </div>     <div class="sku__container">
-          <div class="sku__photo-slider">
-            <img class="sku__photo" src="assets/images/1.jpg" alt="iphone" />
-          </div>
-          <div class="sku__price">$28.52</div>
-          <div class="sku__name">Iphone 54</div>
-          <div class="sku__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere iusto veritatis mollitia beatae
-            omnis sequi, soluta, voluptas architecto repellat, neque officia doloremque officiis aliquam. Quam dolorum
-            iusto corporis dolores?
-          </div>
-          <button class="sku__button">Add To Cart</button>
-        </div>     <div class="sku__container">
-          <div class="sku__photo-slider">
-            <img class="sku__photo" src="assets/images/1.jpg" alt="iphone" />
-          </div>
-          <div class="sku__price">$28.52</div>
-          <div class="sku__name">Iphone 54</div>
-          <div class="sku__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere iusto veritatis mollitia beatae
-            omnis sequi, soluta, voluptas architecto repellat, neque officia doloremque officiis aliquam. Quam dolorum
-            iusto corporis dolores?
-          </div>
-          <button class="sku__button">Add To Cart</button>
-        </div>     <div class="sku__container">
-          <div class="sku__photo-slider">
-            <img class="sku__photo" src="assets/images/1.jpg" alt="iphone" />
-          </div>
-          <div class="sku__price">$28.52</div>
-          <div class="sku__name">Iphone 54</div>
-          <div class="sku__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere iusto veritatis mollitia beatae
-            omnis sequi, soluta, voluptas architecto repellat, neque officia doloremque officiis aliquam. Quam dolorum
-            iusto corporis dolores?
-          </div>
-          <button class="sku__button">Add To Cart</button>
-        </div>     <div class="sku__container">
-          <div class="sku__photo-slider">
-            <img class="sku__photo" src="assets/images/1.jpg" alt="iphone" />
-          </div>
-          <div class="sku__price">$28.52</div>
-          <div class="sku__name">Iphone 54</div>
-          <div class="sku__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere iusto veritatis mollitia beatae
-            omnis sequi, soluta, voluptas architecto repellat, neque officia doloremque officiis aliquam. Quam dolorum
-            iusto corporis dolores?
-          </div>
-          <button class="sku__button">Add To Cart</button>
-        </div>
-  
+      </form>
+      <button type="submit" class="payment__btn">Pay now!</button>
+    </section>
 
-      </section>
+    <main class="main wrapper">
+      <section class="goods"></section>
     </main>
     <footer class="footer">
       <div class="footer__container">
@@ -196,5 +96,74 @@
         </div>
       </div>
     </footer>
+
+    <template id="cartLayout">
+      <main class="main wrapper">
+        <section class="cart_container">
+          <div class="cart">
+            <h2 class="cart_heading">Products in cart</h2>
+            <div class="cart__header-container">
+              <div class="cart__total-items">
+                <div class="cart__items-on-page">Items on page</div>
+                <input class="cart__pagination" type="number" value="3" />
+              </div>
+              <div class="cart__page">
+                <div class="cart__page-text">Page:</div>
+                <div class="cart-item__button cart-item__button_arrow-left"><</div>
+                <div class="cart_page-number">1</div>
+                <div class="cart-item__button cart-item__button_arrow-right">></div>
+              </div>
+            </div>
+            <ol class="cart__container"></ol>
+          </div>
+          <div class="cart_summary">
+            <h2 class="cart__heading">Summary</h2>
+            <div class="cart__number-of-products"></div>
+            <div>Total: $<span class="cart__total-sum"></span></div>
+            <input type="text" class="cart__promo" name="promo" id="promo" />
+            <div class="cart__total-cheat">Promo for test: 'RS', 'DreamTeam'</div>
+            <button class="cart-item__button cart-item__button_apply-promo" data-id="1">Apply promo</button>
+            <button class="cart-item__button cart-item__button_buy-now" data-id="1">Buy Now</button>
+          </div>
+        </section>
+      </main>
+    </template>
+
+    <template id="itemTemplate">
+      <li class="cart-item__container">
+        <img class="cart-item__photo-slider" src="assets/images/1.jpg" />
+        <div class="cart-item__info">
+          <h3 class="cart-item__name"></h3>
+          <span class="cart-item__description_brand"></span>
+          <span class="cart-item__description_category"></span>
+          <span class="cart-item__description_discount"></span>
+          <span class="cart-item__description_rating"></span>
+        </div>
+        <div class="cart-item__num-block">
+          <div class="cart-item__in-stock"></div>
+          <div class="cart__add-del-block">
+            <button class="cart-item__button cart-item__button_add-item" data-id="1">+</button>
+            <div class="cart-item__input_add-item" data-id="1"></div>
+            <button class="cart-item__button cart-item__button_delete-item" data-id="1">-</button>
+          </div>
+          <div class="cart-item__price">$ 599</div>
+        </div>
+      </li>
+    </template>
+
+    <template id="emptyCart">
+      <li class="empty-cart__container">
+        <h2 class="empty-cart__heading">There is nothing here, yet. Please choose some goods. And pay us money ;)</h2>
+        <img class="empty-cart__image" src="assets/images/empty-cart.png" alt="empty cart" />
+      </li>
+    </template>
+
+    <template id="success">
+      <section class="success">
+        <h2 class="sucsess__heading">Payment Successfull!</h2>
+        <div class="success__greeting">We're glad you've spent you money here!</div>
+        <button class="success__btn" onclick="location.href = 'index.html'">Goto main page</button>
+      </section>
+    </template>
   </body>
 </html>
