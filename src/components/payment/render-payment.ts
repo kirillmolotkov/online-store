@@ -130,7 +130,12 @@ function checkCVV(): void {
 }
 
 export function generateSuccess() {
-  console.log("It's fine!");
+  const itemTemplate = document.querySelector('#success') as HTMLTemplateElement;
+  const itemLayout = itemTemplate.content.cloneNode(true) as HTMLDivElement;
+  const fragment: DocumentFragment = document.createDocumentFragment();
+  const body = document.querySelector('.body') as HTMLDivElement;
+  fragment.append(itemLayout);
+  body.append(fragment);
 }
 
 export default payment;

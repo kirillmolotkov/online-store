@@ -13,7 +13,7 @@ export function inputCorrectDate(this: HTMLInputElement): void {
 }
 
 export function inputCorrectCardNumber(this: HTMLInputElement): void {
-  this.value = this.value.replace(/[a-zа-я\,\.\\\/'";:|\{\}\[\]]/, '');
+  this.value = this.value.replace(/\D/, '');
   if (this.value.length > 16) {
     this.value = this.value.slice(0, 16);
   }
@@ -29,7 +29,7 @@ export function validateForm(): void {
 }
 
 export function inputCorrectCvv(this: HTMLInputElement): void {
-  this.value = this.value.replace(/[a-zа-я\,\.\\\/'";:|\{\}\[\]]/, '');
+  this.value = this.value.replace(/\D/, '');
   if (this.value.length > 3) {
     this.value = this.value.slice(0, 3);
   }
