@@ -1,9 +1,10 @@
 .footer {
+  width: 100%;
   margin-top: 60px;
   background-color: #f6f2ee;
 }
 .footer__container {
-  padding-top: 20px;
+  padding: 20px;
   @include flex($justify: space-around, $align: flex-start);
 }
 .contacts {
