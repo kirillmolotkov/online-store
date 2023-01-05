@@ -1,16 +1,24 @@
 .sku__container {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 580px;
   position: relative;
+  justify-content: space-between;
+  align-items: center;
+
   cursor: pointer;
-  &:hover{
+  &:hover {
     background-color: rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 5;
   }
-
 }
 .sku__photo-slider {
-  width: 100%;
-  aspect-ratio: 1;
+  width: 278px;
+  max-height: 480px;
+  position: relative;
+  align-self: center;
   overflow: hidden;
 }
 .sku__price {
@@ -35,29 +43,44 @@
   height: 100%;
   object-fit: contain;
 }
-
-.sku__button{
+.sku__info {
+  @include basic-font;
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  flex-direction: column;
+  gap: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: $color-light;
+}
+.sku__button_add-to-card,
+.sku__button_details {
   display: none;
   @include basic-font;
   cursor: pointer;
   position: absolute;
-  width: 60%;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 40%;
+  top: 90%;
+  left: 10%;
+  transform: translate(-10%, -50%);
   padding: 0.5em;
   background-color: $color-button;
   color: $color-light;
   border: none;
   transition: all 250ms;
-  &:hover{
+  &:hover {
     background-color: $color-light;
     color: $color-dark;
-  }  
-  
+  }
 }
-
-.sku__container:hover>.sku__button{
+.sku__button_details {
+  left: 60%;
+}
+.sku__container:hover > .sku__button_add-to-card,
+.sku__container:hover > .sku__button_details {
   display: block;
 }
-
+.sku__container:hover > .sku__info {
+  display: flex;
+}

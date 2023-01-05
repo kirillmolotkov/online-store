@@ -1,0 +1,9 @@
+.empty-cart__container {
+  @include flex(column, center, center);
+}
+.empty-cart__heading {
+  @include cart-heading-font;
+}
+.empty-cart__image {
+  width: 30%;
+}
