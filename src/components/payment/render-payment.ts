@@ -3,7 +3,7 @@ import Validation from '../../components/payment/Validation';
 import { inputCorrectDate, inputCorrectCardNumber, validateForm, inputCorrectCvv } from './payment';
 export const validate = new Validation();
 
-function generatePaymentWindow(): void {
+export function generatePaymentWindow(): void {
   const body = document.querySelector('.body') as HTMLDivElement;
   const paymentTempate = document.querySelector('#payment') as HTMLTemplateElement;
   const paymentLayout = paymentTempate.content.cloneNode(true) as HTMLDivElement;

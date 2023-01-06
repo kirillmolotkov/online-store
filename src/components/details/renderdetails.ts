@@ -1,7 +1,9 @@
 const goods = document.querySelector('.goods') as HTMLDivElement;
 import { CATALOGUE } from '../checkout/Cart';
-import { renderItemsCount, renderTotalSum } from '../cart/renderCart';
+import goToCartPage, { renderItemsCount, renderTotalSum } from '../cart/renderCart';
 import { cart } from '../checkout/checkout';
+import { payment, generatePaymentWindow } from '../payment/render-payment';
+import { togglePaymentWindow } from '../cart/promocodes/promocodes';
 
 goods.addEventListener('click', openDetailsPage);
 
@@ -12,14 +14,15 @@ function openDetailsPage(e: Event): void {
     id = (addButton as HTMLDivElement).getAttribute('data-id') as string;
     generateDetails(id);
     const addToCartBtn = document.querySelector('.btn_details-add') as HTMLButtonElement;
-    const buyNow = document.querySelector('.btn_details-buy') as HTMLButtonElement;
+    const buyNowBtn = document.querySelector('.btn_details-buy') as HTMLButtonElement;
     handleButtonState(id);
     addToCartBtn.addEventListener('click', () => {
       buttonHandler(id);
     });
+    buyNowBtn.addEventListener('click', () => buyNow(id));
   }
 }
-function handleButtonState(id: string):void {
+function handleButtonState(id: string): void {
   const addToCartBtn = document.querySelector('.btn_details-add') as HTMLButtonElement;
   if (cart.getBasket().find((item) => item.id === id)) {
     addToCartBtn.textContent = 'Delete from cart';
@@ -29,7 +32,7 @@ function handleButtonState(id: string):void {
   }
 }
 
-function buttonHandler(id: string):void {
+function buttonHandler(id: string): void {
   const addToCartBtn = document.querySelector('.btn_details-add') as HTMLButtonElement;
   if (cart.getBasket().find((item) => item.id === id)) {
     deleteFromCart.call(addToCartBtn);
@@ -44,24 +47,29 @@ function buttonHandler(id: string):void {
   }
 }
 
-function buyNow():void {
-  
+function buyNow(id: string): void {
+  if (!cart.getBasket().find((item) => item.id === id)) cart.addToCart(id);
+  renderItemsCount();
+  renderTotalSum();
+  goToCartPage();
+  togglePaymentWindow();
+  payment();
 }
 
-function addToCart(this: HTMLButtonElement):void {
+function addToCart(this: HTMLButtonElement): void {
   let id: string = this.getAttribute('data-id') as string;
   cart.addToCart(id);
   renderItemsCount();
   renderTotalSum();
 }
-function deleteFromCart(this: HTMLButtonElement):void {
+function deleteFromCart(this: HTMLButtonElement): void {
   let id: string = this.getAttribute('data-id') as string;
   cart.decreaseItemAmount(id);
   renderItemsCount();
   renderTotalSum();
 }
 
-function generateBreadCrumbs(id: string):void {
+function generateBreadCrumbs(id: string): void {
   const category = document.querySelector('.breadcrumbs__item_category') as HTMLDivElement;
   const brand = document.querySelector('.breadcrumbs__item_brand') as HTMLDivElement;
   const model = document.querySelector('.breadcrumbs__item_model') as HTMLDivElement;
