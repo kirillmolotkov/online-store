@@ -71,6 +71,7 @@ export function updatePagination() {
   if (Number(items.value) < 1) items.value = '1';
   itemsOnPage = Number(items.value);
 
+  if (Number(pageIndex.textContent) === 0) pageIndex.textContent = '1';
   if (Number(pageIndex.textContent) > paginationH.pageCount()) {
     pageIndex.textContent = paginationH.pageCount().toString();
     localStorage.setItem('currentCartPage', Number(pageIndex.textContent).toString());

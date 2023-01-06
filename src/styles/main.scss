@@ -1,6 +1,7 @@
 .main {
   @include flex(row, flex-start, flex-start);
-  min-height: 9git00px;
+  flex-grow: 1;
+  height: 100%;
 }
 
 .goods {
