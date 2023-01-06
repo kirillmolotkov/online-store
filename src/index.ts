@@ -6,11 +6,14 @@ import './components/filters/getDataForFilters.ts';
 import './components/filters/useFilters.ts';
 import './components/checkout/checkout';
 import './components/cart/renderCart';
+import './components/header-main/changeSizeItems';
+import './components/header-main/searchProducts';
+import './components/header-main/sortOptions';
 import goToCartPage from './components/cart/renderCart';
 import promo from './components/cart/promocodes/promocodes';
 
 const cartIcon = document.querySelector('.header__basket') as HTMLDivElement;
 cartIcon.addEventListener('click', () => {
   goToCartPage();
-  setTimeout(() => promo(), 100)
+  setTimeout(() => promo(), 100);
 });

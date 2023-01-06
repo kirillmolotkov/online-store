@@ -1,0 +1,87 @@
+.goods__header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: gray;
+}
+.sort-options {
+  @include basic-font;
+  border: none;
+  height: 100%;
+  cursor: pointer;
+  color: $color-light;
+  background-color: $color-button;
+  outline: none;
+  transition: 0.5s all;
+}
+.sort-options:hover {
+  color: $color-dark;
+}
+
+.found {
+  @include basic-font;
+  align-self: center;
+  color: $color-light;
+  user-select: none;
+}
+
+.search-products {
+  @include basic-font;
+  border: 1px solid $color-button;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  outline: none;
+  text-align: center;
+}
+
+.button-view {
+  width: 135px;
+  font-family: type_basic;
+  font-size: 1em;
+  text-align: start;
+  cursor: pointer;
+  background-color: $color-button;
+  color: $color-light;
+  border: none;
+  transition: 0.5s all;
+}
+.button-view:hover {
+  color: $color-dark;
+}
+
+.sku__container-min {
+  width: 120px;
+  height: 220px;
+}
+.sku__container-min .sku__name {
+  font-size: 0.8em;
+}
+.sku__container-min .sku__photo-slider {
+  width: 100px;
+  height: 201px;
+}
+.sku__container-min .sku__info {
+  transition: none;
+}
+.sku__container-min:hover > .sku__info {
+  display: none;
+}
+.sku__container-min .sku__info:hover {
+  display: none;
+}
+.sku__container-min .sku__price {
+  font-size: 0.8em;
+}
+.sku__container-min .sku__button_details,
+.sku__container-min .sku__button_add-to-card {
+  width: 46%;
+  height: 40px;
+  font-size: 0.7em;
+  padding: 0;
+  margin: 0;
+  top: 50%;
+  left: 7%;
+}
+.sku__container-min .sku__button_details {
+  left: 55%;
+}

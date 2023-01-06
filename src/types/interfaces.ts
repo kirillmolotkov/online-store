@@ -1,4 +1,3 @@
-
 export interface Data {
   id: string;
   title: string;
@@ -109,3 +108,15 @@ export interface IValidate{
 }
 
 export default IbasketItem;
+
+export interface IStatusValueButton {
+  max: boolean;
+  min: boolean;
+}
+
+export interface IIsCheckedSortOptions {
+  pricemin: boolean;
+  pricemax: boolean;
+  ratingmin: boolean;
+  ratingmax: boolean;
+}

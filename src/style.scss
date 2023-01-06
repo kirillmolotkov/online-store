@@ -1,5 +1,5 @@
-@import "./styles/base.scss";
 @import "./styles/mixins.scss";
+@import "./styles/base.scss";
 @import "./styles/variables.scss";
 @import "./styles/fonts.scss";
 
@@ -10,7 +10,10 @@
 @import "./styles/main.scss";
 @import "./styles/cart.scss";
 @import "./styles/empty-cart.scss";
+@import './styles/main-header.scss';
 @import "./styles/payment.scss";
 @import "./styles/card.scss";
 @import "./styles/card.scss";
 @import "./styles/success.scss";
+@import "./styles/details.scss";
+@import "./styles/button.scss";
