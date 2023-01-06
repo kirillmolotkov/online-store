@@ -13,13 +13,46 @@ function openDetailsPage(e: Event): void {
     generateDetails(id);
     const addToCartBtn = document.querySelector('.btn_details-add') as HTMLButtonElement;
     const buyNow = document.querySelector('.btn_details-buy') as HTMLButtonElement;
-    addToCartBtn.addEventListener('click', addToCart);
+    handleButtonState(id);
+    addToCartBtn.addEventListener('click', () => {
+      buttonHandler(id);
+    });
+  }
+}
+function handleButtonState(id: string) {
+  const addToCartBtn = document.querySelector('.btn_details-add') as HTMLButtonElement;
+  if (cart.getBasket().find((item) => item.id === id)) {
+    addToCartBtn.textContent = 'Delete from cart';
+    console.log('hi');
+  } else {
+    addToCartBtn.textContent = 'Add to cart';
+  }
+}
+
+function buttonHandler(id: string) {
+  const addToCartBtn = document.querySelector('.btn_details-add') as HTMLButtonElement;
+  if (cart.getBasket().find((item) => item.id === id)) {
+    deleteFromCart.call(addToCartBtn);
+    if (cart.getBasket().find((item) => item.id === id)) {
+      addToCartBtn.textContent = 'Delete from cart';
+    } else {
+      addToCartBtn.textContent = 'Add to cart';
+    }
+  } else {
+    addToCart.call(addToCartBtn);
+    addToCartBtn.textContent = 'Delete from cart';
   }
 }
 
 function addToCart(this: HTMLButtonElement) {
   let id: string = this.getAttribute('data-id') as string;
   cart.addToCart(id);
+  renderItemsCount();
+  renderTotalSum();
+}
+function deleteFromCart(this: HTMLButtonElement) {
+  let id: string = this.getAttribute('data-id') as string;
+  cart.decreaseItemAmount(id);
   renderItemsCount();
   renderTotalSum();
 }
@@ -46,7 +79,7 @@ function generateDetails(id: string): void {
     cat.textContent = `${prod.category}`;
     const brand = fragment.querySelector('.breadcrumbs__item_brand') as HTMLDivElement;
     brand.textContent = `${prod.brand}`;
-    const modelDesc  = fragment.querySelector('.details__heading') as HTMLDivElement;
+    const modelDesc = fragment.querySelector('.details__heading') as HTMLDivElement;
     modelDesc.textContent = `${prod.title}`;
     const model = fragment.querySelector('.breadcrumbs__item_model') as HTMLDivElement;
     model.textContent = `${prod.title}`;
@@ -69,6 +102,6 @@ function generateDetails(id: string): void {
     const price = fragment.querySelector('.details__price') as HTMLDivElement;
     price.textContent = `$ ${prod.price}`;
   }
-  console.log(fragment)
+  console.log(fragment);
   body.replaceChild(fragment, main);
 }
