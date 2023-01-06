@@ -80,8 +80,8 @@
 .priceblock {
   @include flex(column, center, center);
   gap: 20px;
-  align-self: center;
-  justify-self: center;
+  align-self: flex-start;
+
 }
 
 .details__price {
