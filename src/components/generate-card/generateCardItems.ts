@@ -7,9 +7,20 @@ import {
 import { TempalateForCardItem } from '../../types/interfaces';
 import { quantityOfGoodsByPriceAndStock } from '../filters/generateFilters';
 import { isCheckedFilterBrand, isCheckedFilterCategory } from '../filters/useFilters';
+import { generationFoundElement, generationHeaderMain } from '../header-main/generationHeaderMain';
+import { searchProductFilter, searchValue } from '../header-main/searchProducts';
+import {
+  isCheckedSortOptions,
+  sortByPriceMax,
+  sortByPriceMin,
+  sortByRatingMax,
+  sortByRatingMin,
+} from '../header-main/sortOptions';
 
 const urlData: string = './data/data.json';
 export const sectionGoods = document.querySelector('.goods');
+export let counterFoundItems = 0;
+export let arrayDataItems: Array<Data> = [];
 
 export function sendRequest(url: string) {
   return fetch(url).then((response) => {
@@ -21,6 +32,19 @@ export const generationCardItems = function (data: Array<Data>) {
   data.forEach((elem) => {
     checkForMatchingFilterAndData(isCheckedFilterCategory, isCheckedFilterBrand, quantityOfGoodsByPriceAndStock, elem);
   });
+
+  if (isCheckedSortOptions.pricemin === true) sortByPriceMin(arrayDataItems);
+  if (isCheckedSortOptions.pricemax === true) sortByPriceMax(arrayDataItems);
+  if (isCheckedSortOptions.ratingmin === true) sortByRatingMin(arrayDataItems);
+  if (isCheckedSortOptions.ratingmax === true) sortByRatingMax(arrayDataItems);
+
+  arrayDataItems.forEach((dataItem) => {
+    generateHTML(dataItem);
+  });
+
+  generationFoundElement(counterFoundItems);
+  counterFoundItems = 0;
+  arrayDataItems = [];
 };
 
 const checkForMatchingFilterAndData = function (
@@ -39,7 +63,10 @@ const checkForMatchingFilterAndData = function (
       quantityFilter.stockMin <= dataItem.stock &&
       quantityFilter.stockMax >= dataItem.stock
     ) {
-      generateHTML(dataItem);
+      if (searchProductFilter(searchValue, dataItem)) {
+        arrayDataItems.push(dataItem);
+        counterFoundItems++;
+      }
     }
   }
 
@@ -53,7 +80,10 @@ const checkForMatchingFilterAndData = function (
         quantityFilter.stockMin <= dataItem.stock &&
         quantityFilter.stockMax >= dataItem.stock
       ) {
-        generateHTML(dataItem);
+        if (searchProductFilter(searchValue, dataItem)) {
+          arrayDataItems.push(dataItem);
+          counterFoundItems++;
+        }
       }
     }
   }
@@ -67,7 +97,10 @@ const checkForMatchingFilterAndData = function (
         quantityFilter.stockMin <= dataItem.stock &&
         quantityFilter.stockMax >= dataItem.stock
       ) {
-        generateHTML(dataItem);
+        if (searchProductFilter(searchValue, dataItem)) {
+          arrayDataItems.push(dataItem);
+          counterFoundItems++;
+        }
       }
     }
   }
@@ -86,7 +119,10 @@ const checkForMatchingFilterAndData = function (
             quantityFilter.stockMin <= dataItem.stock &&
             quantityFilter.stockMax >= dataItem.stock
           ) {
-            generateHTML(dataItem);
+            if (searchProductFilter(searchValue, dataItem)) {
+              arrayDataItems.push(dataItem);
+              counterFoundItems++;
+            }
           }
         }
       }
@@ -169,5 +205,8 @@ const generateHTML = (products: Data) => {
 };
 
 sendRequest(urlData)
-  .then((data: Array<Data>) => generationCardItems(data))
+  .then((data: Array<Data>) => {
+    generationHeaderMain();
+    generationCardItems(data);
+  })
   .catch((err) => console.log(err));
