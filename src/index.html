@@ -26,7 +26,11 @@
         <ul class="payment__list">
           <li class="payment__item">
             <div class="payment__credentials">Enter Your Name</div>
-            <input type="text" data-tooltip="Подсказка" placeholder="Name" class="payment__credentials payment__credentials_name" />
+            <input
+              type="text"
+              data-tooltip="Подсказка"
+              placeholder="Name"
+              class="payment__credentials payment__credentials_name" />
           </li>
           <li class="payment__item">
             <div class="payment__credentials">Enter Your adress</div>
@@ -219,22 +223,9 @@
               </ul>
             </div>
             <div class="slider">
-              <ul class="slider__thumbs">
-                <li class="slider__item">
-                  <img class="slider__thumb" src="./assets/images/smartphones/1/1.jpg" alt="thumnail" />
-                </li>
-                <li class="slider__item">
-                  <img class="slider__thumb" src="./assets/images/smartphones/1/1.jpg" alt="thumnail" />
-                </li>
-                <li class="slider__item">
-                  <img class="slider__thumb" src="./assets/images/smartphones/1/1.jpg" alt="thumnail" />
-                </li>
-                <li class="slider__item">
-                  <img class="slider__thumb" src="./assets/images/smartphones/1/1.jpg" alt="thumnail" />
-                </li>
-              </ul>
+              <ul class="slider__thumbs"></ul>
               <div class="slider__photo">
-                <img class="slider__thumb" src="./assets/images/smartphones/1/1.jpg" alt="thumnail" />
+                <img class="slider__big-photo" src="./assets/images/smartphones/1/1.jpg" alt="thumnail" />
               </div>
             </div>
             <div class="priceblock">
@@ -245,6 +236,11 @@
           </div>
         </section>
       </main>
+    </template>
+    <template id="thumbnail">
+      <li class="slider__item">
+        <img class="slider__thumb" src="./assets/images/smartphones/1/1.jpg" alt="thumnail" />
+      </li>
     </template>
   </body>
 </html>
