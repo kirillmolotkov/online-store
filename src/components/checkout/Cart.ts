@@ -116,7 +116,7 @@ export class Checkout {
     }
   }
 
-  public decreaseItemAmount(id: string) {
+  public decreaseItemAmount(id: string):boolean {
     let itemInBasket: IbasketItem | undefined = this.basket.get(id);
     if (itemInBasket) {
       if (itemInBasket.amount > 1) {
@@ -151,7 +151,7 @@ export class Checkout {
     let amount = this.getItemAmount(id);
     if (price && amount) return amount * price;
   }
-  public clearCart() {
+  public clearCart():void {
     this.basket = new Map();
     console.log(this.basket);
     this.discounted = 0;

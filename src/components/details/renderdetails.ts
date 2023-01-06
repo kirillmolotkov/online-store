@@ -19,7 +19,7 @@ function openDetailsPage(e: Event): void {
     });
   }
 }
-function handleButtonState(id: string) {
+function handleButtonState(id: string):void {
   const addToCartBtn = document.querySelector('.btn_details-add') as HTMLButtonElement;
   if (cart.getBasket().find((item) => item.id === id)) {
     addToCartBtn.textContent = 'Delete from cart';
@@ -29,7 +29,7 @@ function handleButtonState(id: string) {
   }
 }
 
-function buttonHandler(id: string) {
+function buttonHandler(id: string):void {
   const addToCartBtn = document.querySelector('.btn_details-add') as HTMLButtonElement;
   if (cart.getBasket().find((item) => item.id === id)) {
     deleteFromCart.call(addToCartBtn);
@@ -44,20 +44,24 @@ function buttonHandler(id: string) {
   }
 }
 
-function addToCart(this: HTMLButtonElement) {
+function buyNow():void {
+  
+}
+
+function addToCart(this: HTMLButtonElement):void {
   let id: string = this.getAttribute('data-id') as string;
   cart.addToCart(id);
   renderItemsCount();
   renderTotalSum();
 }
-function deleteFromCart(this: HTMLButtonElement) {
+function deleteFromCart(this: HTMLButtonElement):void {
   let id: string = this.getAttribute('data-id') as string;
   cart.decreaseItemAmount(id);
   renderItemsCount();
   renderTotalSum();
 }
 
-function generateBreadCrumbs(id: string) {
+function generateBreadCrumbs(id: string):void {
   const category = document.querySelector('.breadcrumbs__item_category') as HTMLDivElement;
   const brand = document.querySelector('.breadcrumbs__item_brand') as HTMLDivElement;
   const model = document.querySelector('.breadcrumbs__item_model') as HTMLDivElement;
