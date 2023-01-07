@@ -66,7 +66,7 @@ function goPrevPage(): void {
   localStorage.setItem('currentCartPage', Number(pageIndex.textContent).toString());
 }
 
-export function updatePagination() {
+export function updatePagination():void {
   items = document.querySelector('.cart__pagination') as HTMLInputElement;
   if (Number(items.value) < 1) items.value = '1';
   itemsOnPage = Number(items.value);

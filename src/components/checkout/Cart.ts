@@ -2,7 +2,7 @@ import { IbasketItem, Icodes, IproductItem } from '../../types/interfaces';
 
 export let CATALOGUE: Map<string, IproductItem>;
 
-export async function getCatalogue() {
+export async function getCatalogue():Promise<Map<string, IproductItem>> {
   let response = await fetch('./data/data.json');
   let CAT: [IproductItem] = await response.json();
 

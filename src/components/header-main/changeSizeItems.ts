@@ -12,7 +12,7 @@ buttonSizeView.addEventListener('click', () => {
   changeSizeItems();
 });
 
-export const changeSizeItems = function () {
+export const changeSizeItems = function (): void {
   const cardItems = document.querySelectorAll('.sku__container');
 
   cardItems.forEach((itemCard) => {
@@ -25,7 +25,7 @@ export const changeSizeItems = function () {
   });
 };
 
-const changeStatusValueButton = function () {
+const changeStatusValueButton = function (): void {
   if (statusValueButton.min) {
     statusValueButton.min = false;
     statusValueButton.max = true;
@@ -35,7 +35,7 @@ const changeStatusValueButton = function () {
   }
 };
 
-const addStatusValueInButton = function (statusButton: IStatusValueButton) {
+const addStatusValueInButton = function (statusButton: IStatusValueButton): void {
   for (let key in statusButton) {
     const status = key as keyof IStatusValueButton;
     if (statusButton[status]) buttonSizeView.innerText = `Size view ${status}`;

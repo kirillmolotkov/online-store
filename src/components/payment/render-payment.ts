@@ -129,7 +129,7 @@ function checkCVV(): void {
   }
 }
 
-export function generateSuccess() {
+export function generateSuccess(): void {
   const itemTemplate = document.querySelector('#success') as HTMLTemplateElement;
   const itemLayout = itemTemplate.content.cloneNode(true) as HTMLDivElement;
   const fragment: DocumentFragment = document.createDocumentFragment();

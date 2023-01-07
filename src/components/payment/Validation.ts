@@ -78,7 +78,7 @@ class Validation {
       return false;
   }
 
-  checkCVV(cvv: string) {
+  checkCVV(cvv: string): boolean {
     const regex: RegExp = /[0-9]{3}/;
     if (cvv.length === 3 && regex.test(cvv)) {
       this.isValidated.cvv = true;
@@ -88,7 +88,7 @@ class Validation {
     return false;
   }
 
-  definePaymentSystem(cardNumber: string) {
+  definePaymentSystem(cardNumber: string): string | undefined {
     switch (cardNumber.slice(0, 1)) {
       case '3':
         return 'american-express';

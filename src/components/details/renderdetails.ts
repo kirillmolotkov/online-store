@@ -25,7 +25,7 @@ function openDetailsPage(e: Event): void {
     thumbs.addEventListener('click', changePhoto)
   }
 }
-function changePhoto(e: Event) {
+function changePhoto(e: Event): void {
   const mainPhoto = document.querySelector('.slider__big-photo') as HTMLImageElement;
   const target = e.target as HTMLImageElement;
   const thumb = target.closest('.slider__item');
@@ -81,7 +81,7 @@ function deleteFromCart(this: HTMLButtonElement): void {
   renderTotalSum();
 }
 
-function generatePhotoThumbs(id:string) {
+function generatePhotoThumbs(id:string): void {
   const slider = document.querySelector('.slider__thumbs') as HTMLDivElement;
   const resultFragment: DocumentFragment = document.createDocumentFragment();
   let prod = CATALOGUE.get(id);

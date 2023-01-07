@@ -2,7 +2,7 @@ import { CATALOGUE, getCatalogue } from '../checkout/Cart';
 import { cart } from '../checkout/checkout';
 import { pagination, updatePagination } from './paginator/pagination';
 
-export function goToCartPage() {
+export function goToCartPage(): void {
   getCatalogue().then(() => {
     generateCart();
     if (cart.getItemsCount()) {
@@ -102,7 +102,7 @@ export function goToCartPage() {
     itemList.append(fragment);
   }
 
-  function renderItemAmountSum(e: Event) {
+  function renderItemAmountSum(e: Event): void {
     let container = document.querySelector('.cart__container') as HTMLDivElement;
     if (e.target === container) return;
     const item = (e.target as HTMLElement).closest('.cart-item__container') as HTMLDivElement;

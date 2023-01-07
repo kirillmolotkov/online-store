@@ -1,10 +1,10 @@
 import { Checkout, getCatalogue } from './Cart';
-import {renderItemsCount, renderTotalSum} from '../cart/renderCart'
+import { renderItemsCount, renderTotalSum } from '../cart/renderCart';
 export const cart: Checkout = new Checkout();
 cart.loadBasketFromStorage();
 const goods = document.querySelector('.goods') as HTMLDivElement;
 
-goods.addEventListener('click', (e) => {
+goods.addEventListener('click', (e): void => {
   let id: string;
   const addButton = e.target as HTMLElement;
   if (addButton.classList.contains('sku__button_add-to-card')) {
@@ -16,7 +16,9 @@ goods.addEventListener('click', (e) => {
 });
 
 window.addEventListener('load', (): void => {
-  getCatalogue().then(() => { cart.loadBasketFromStorage, renderItemsCount(), renderTotalSum() })
+  getCatalogue().then(() => {
+    cart.loadBasketFromStorage, renderItemsCount(), renderTotalSum();
+  });
 });
 
 export default Checkout;

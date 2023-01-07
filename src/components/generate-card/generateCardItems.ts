@@ -22,7 +22,7 @@ export const sectionGoods = document.querySelector('.goods');
 export let counterFoundItems = 0;
 export let arrayDataItems: Array<Data> = [];
 
-export function sendRequest(url: string) {
+export async function sendRequest(url: string) {
   return fetch(url).then((response) => {
     return response.json();
   });
@@ -52,7 +52,7 @@ const checkForMatchingFilterAndData = function (
   filterBrand: IsCheckedFilterBrand,
   quantityFilter: QuantityOfGoodsByPriceAndStock,
   dataItem: Data
-) {
+): void {
   if (
     Object.values(filterCategory).every((elem) => elem === false) &&
     Object.values(filterBrand).every((elem) => elem === false)
@@ -130,7 +130,7 @@ const checkForMatchingFilterAndData = function (
   }
 };
 
-const generateHTML = (products: Data) => {
+const generateHTML = (products: Data): void => {
   const template: TempalateForCardItem = {
     container: document.createElement('div'),
     title: document.createElement('h3'),

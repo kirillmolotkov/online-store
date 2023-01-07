@@ -20,7 +20,7 @@ searchProductsElement.addEventListener('input', () => {
     .catch((err) => console.log(err));
 });
 
-export const searchProductFilter = function (inputValue: string, data: Data) {
+export const searchProductFilter = function (inputValue: string, data: Data): boolean | undefined{
   let lengthInputValue = inputValue.length;
   const valueForSearch = {
     title: data.title,

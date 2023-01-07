@@ -33,14 +33,14 @@ sortOprionsElement.addEventListener('click', () => {
     .catch((err) => console.log(err));
 });
 
-const resetValueIsCheckedSortOptions = function (checkedOption: IIsCheckedSortOptions) {
+const resetValueIsCheckedSortOptions = function (checkedOption: IIsCheckedSortOptions): void {
   for (let key in isCheckedSortOptions) {
     const value = key as keyof IIsCheckedSortOptions;
     isCheckedSortOptions[value] = false;
   }
 };
 
-export const sortByPriceMin = function (arrayDataItems: Array<Data>) {
+export const sortByPriceMin = function (arrayDataItems: Array<Data>): void {
   arrayDataItems.sort(function (a, b) {
     if (a.price > b.price) return 1;
     if (a.price < b.price) return -1;
@@ -48,7 +48,7 @@ export const sortByPriceMin = function (arrayDataItems: Array<Data>) {
   });
 };
 
-export const sortByPriceMax = function (arrayDataItems: Array<Data>) {
+export const sortByPriceMax = function (arrayDataItems: Array<Data>): void {
   arrayDataItems.sort(function (a, b) {
     if (a.price < b.price) return 1;
     if (a.price > b.price) return -1;
@@ -56,7 +56,7 @@ export const sortByPriceMax = function (arrayDataItems: Array<Data>) {
   });
 };
 
-export const sortByRatingMin = function (arrayDataItems: Array<Data>) {
+export const sortByRatingMin = function (arrayDataItems: Array<Data>): void {
   arrayDataItems.sort(function (a, b) {
     if (a.price > b.price) return 1;
     if (a.price < b.price) return -1;
@@ -64,7 +64,7 @@ export const sortByRatingMin = function (arrayDataItems: Array<Data>) {
   });
 };
 
-export const sortByRatingMax = function (arrayDataItems: Array<Data>) {
+export const sortByRatingMax = function (arrayDataItems: Array<Data>): void {
   arrayDataItems.sort(function (a, b) {
     if (a.price < b.price) return 1;
     if (a.price > b.price) return -1;
