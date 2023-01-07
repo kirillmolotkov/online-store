@@ -17,7 +17,9 @@ goods.addEventListener('click', (e): void => {
 
 window.addEventListener('load', (): void => {
   getCatalogue().then(() => {
-    cart.loadBasketFromStorage, renderItemsCount(), renderTotalSum();
+    cart.loadBasketFromStorage();
+    renderItemsCount();
+    renderTotalSum();
   });
 });
 

@@ -36,7 +36,7 @@ const changeStatusValueButton = function (): void {
 };
 
 const addStatusValueInButton = function (statusButton: IStatusValueButton): void {
-  for (let key in statusButton) {
+  for (const key in statusButton) {
     const status = key as keyof IStatusValueButton;
     if (statusButton[status]) buttonSizeView.innerText = `Size view ${status}`;
   }

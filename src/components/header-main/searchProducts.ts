@@ -21,7 +21,7 @@ searchProductsElement.addEventListener('input', () => {
 });
 
 export const searchProductFilter = function (inputValue: string, data: Data): boolean | undefined{
-  let lengthInputValue = inputValue.length;
+  const lengthInputValue = inputValue.length;
   const valueForSearch = {
     title: data.title,
     price: data.price,
@@ -32,7 +32,7 @@ export const searchProductFilter = function (inputValue: string, data: Data): bo
   };
 
   if (inputValue !== '') {
-    for (let key in valueForSearch) {
+    for (const key in valueForSearch) {
       const value = key as keyof Object;
       if (inputValue === valueForSearch[value].toString().toLowerCase().slice(0, lengthInputValue)) {
         return true;

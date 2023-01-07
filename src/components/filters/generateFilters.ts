@@ -75,7 +75,7 @@ const createFilterByCategory = function (objectCategory: QuantityOfGoodsByCatego
 
   filterByCategoryContainer.append(filterByCategoryTitle);
 
-  for (let key in objectCategory) {
+  for (const key in objectCategory) {
     const checkboxContainer = document.createElement('div');
     checkboxContainer.className = 'item__checkbox-container';
 
@@ -109,7 +109,7 @@ const createFilterByBrand = function (objectBrand: QuantityOfGoodsByBrand) {
 
   filterByBrandContainer.append(filterByBrandTitle);
 
-  for (let key in objectBrand) {
+  for (const key in objectBrand) {
     const checkboxContainer = document.createElement('div');
     checkboxContainer.className = 'item__checkbox-container';
 

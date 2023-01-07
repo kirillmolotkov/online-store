@@ -11,7 +11,7 @@ class Validation {
   };
 
   checkFullName(fullName: string): boolean {
-    const regex: RegExp = /[0-9,\.\*\\\t\n\rа-я]/gi;
+    const regex = /[0-9,.*\\\t\n\rа-я]/gi;
     if (
       fullName.split(' ').length === 2 &&
       fullName.split(' ').every((name) => name.length > 3) &&
@@ -19,14 +19,14 @@ class Validation {
     ) {
       this.isValidated.fullName = true;
       return true;
-    } else {
+    } 
       this.isValidated.fullName = false;
       return false;
-    }
+    
   }
 
   checkAdress(adress: string): boolean {
-    const regex: RegExp = /[0-9,\.\*\\\t\n\rа-я]/gi;
+    const regex = /[0-9,.*\\\t\n\rа-я]/gi;
     if (adress.split(' ').length >= 3 && adress.split(' ').every((name) => name.length >= 5) && !regex.test(adress)) {
       this.isValidated.adress = true;
       return true;
@@ -36,7 +36,7 @@ class Validation {
   }
 
   checkPhoneNumber(phoneNumber: string): boolean {
-    const regex: RegExp = /\+[0-9]{9,}/g;
+    const regex = /\+[0-9]{9,}/g;
     if (regex.test(phoneNumber)) {
       this.isValidated.phoneNumber = true;
       return true;
@@ -46,7 +46,7 @@ class Validation {
   }
 
   checkEmail(email: string): boolean {
-    const regex: RegExp =
+    const regex =
       /^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(?:\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(?:aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$/;
     if (regex.test(email)) {
       this.isValidated.email = true;
@@ -57,7 +57,7 @@ class Validation {
   }
 
   checkCardNumber(cardNumber: string): boolean {
-    const regex: RegExp = /\b[0-9]{16}\b/;
+    const regex = /\b[0-9]{16}\b/;
     if (regex.test(cardNumber)) {
       this.isValidated.cardNumber = true;
       return true;
@@ -67,7 +67,7 @@ class Validation {
   }
 
   checkExpiration(expireDate: string): boolean {
-    const regex: RegExp = /[0-9]{2}\/[0-9]{2}/;
+    const regex = /[0-9]{2}\/[0-9]{2}/;
     if (regex.test(expireDate)) {
       if (Number(expireDate[0] + expireDate[1]) <= 12) {
         this.isValidated.expiration = true;
@@ -79,7 +79,7 @@ class Validation {
   }
 
   checkCVV(cvv: string): boolean {
-    const regex: RegExp = /[0-9]{3}/;
+    const regex = /[0-9]{3}/;
     if (cvv.length === 3 && regex.test(cvv)) {
       this.isValidated.cvv = true;
       return true;
@@ -102,8 +102,9 @@ class Validation {
         return undefined;
     }
   }
+
   validateForm(): boolean {
-    let array: boolean[] = Object.values(this.isValidated);
+    const array: boolean[] = Object.values(this.isValidated);
     if (array.every((item) => item === true)) return true;
     return false;
   }
