@@ -2,6 +2,7 @@ import { sortOprionsElement, urlData } from '../../const/const';
 import { Data, IIsCheckedSortOptions } from '../../types/interfaces';
 
 import { generationCardItems, sectionGoods, sendRequest } from '../generate-card/generateCardItems';
+import { generationStringRouting } from '../routing/routing';
 import { changeSizeItems } from './changeSizeItems';
 
 export const isCheckedSortOptions: IIsCheckedSortOptions = {
@@ -19,6 +20,7 @@ sortOprionsElement.addEventListener('click', () => {
     if (value === selcetOptions && isCheckedSortOptions[value] !== true) {
       resetValueIsCheckedSortOptions(isCheckedSortOptions);
       isCheckedSortOptions[value] = true;
+      window.location.hash = generationStringRouting();
     }
   }
 

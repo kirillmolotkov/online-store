@@ -115,7 +115,7 @@ export interface IStatusValueButton {
 }
 
 export interface IIsCheckedSortOptions {
-  pricemin: boolean;
+  [pricemin: string]: boolean;
   pricemax: boolean;
   ratingmin: boolean;
   ratingmax: boolean;

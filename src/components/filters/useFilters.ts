@@ -25,6 +25,7 @@ import { changeSizeItems } from '../header-main/changeSizeItems';
 import { generationStringRouting } from '../routing/routing';
 import { parsingAdrressBar } from '../routing/parsingAdrressBar';
 import { searchValue } from '../header-main/searchProducts';
+import { isCheckedSortOptions } from '../header-main/sortOptions';
 export const isCheckedFilterCategory = {
   smartphones: false,
   smartwatch: false,
@@ -161,6 +162,7 @@ window.addEventListener('load', () => {
     const filterStockMinSpanElement = document.querySelector('#stock-min-value') as HTMLSpanElement;
     const filterStockMaxSpanElement = document.querySelector('#stock-max-value') as HTMLSpanElement;
     const searchProducts = document.querySelector('.search-products') as HTMLInputElement;
+    const optionsElements = document.querySelectorAll('option');
     const adressBarObject = parsingAdrressBar();
 
     for (let key in adressBarObject) {
@@ -207,6 +209,14 @@ window.addEventListener('load', () => {
       if (keyAdrressBar === 'search') {
         searchValue.searchValue = adressBarObject.search[0];
         searchProducts.value = adressBarObject.search[0];
+      }
+      if (keyAdrressBar === 'sort') {
+        optionsElements.forEach((optionElement) => {
+          if (optionElement.value === adressBarObject.sort[0]) {
+            optionElement.selected = true;
+            isCheckedSortOptions[`${adressBarObject.sort[0]}`] = true;
+          }
+        });
       }
     }
 

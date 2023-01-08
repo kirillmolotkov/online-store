@@ -1,7 +1,14 @@
-import { IsCheckedFilterBrand, IsCheckedFilterCategory, QuantityOfGoodsByPriceAndStock } from '../../types/interfaces';
+import { sortOprionsElement } from '../../const/const';
+import {
+  IIsCheckedSortOptions,
+  IsCheckedFilterBrand,
+  IsCheckedFilterCategory,
+  QuantityOfGoodsByPriceAndStock,
+} from '../../types/interfaces';
 import { quantityOfGoodsByPriceAndStock } from '../filters/generateFilters';
 import { isCheckedFilterBrand, isCheckedFilterCategory } from '../filters/useFilters';
 import { searchValue } from '../header-main/searchProducts';
+import { isCheckedSortOptions } from '../header-main/sortOptions';
 
 window.addEventListener('hashchange', () => {
   // console.log(window.location.hash);
@@ -17,6 +24,7 @@ export const generationStringRouting = function () {
   const routPrice = routingForPriceFilter(quantityOfGoodsByPriceAndStock);
   const routStock = routingForStockFilter(quantityOfGoodsByPriceAndStock);
   const routSearch = routingCearchProducts(searchValue.value);
+  const routSort = routingSortOptions(isCheckedSortOptions);
 
   let result: Array<string> = [];
   if (routCategory.length !== 0) result.push(routCategory);
@@ -24,6 +32,7 @@ export const generationStringRouting = function () {
   if (routPrice.length !== 0) result.push(routPrice);
   if (routStock.length !== 0) result.push(routStock);
   if (routSearch.length !== 0) result.push(routSearch);
+  if (routSort.length !== 0) result.push(routSort);
 
   return result.join('&');
 };
@@ -89,11 +98,23 @@ const routingCearchProducts = function (searchValue: string) {
     return `search=${searchValue}`;
   }
 };
-export const isOnlyOneTrue = function (obj: IsCheckedFilterCategory | IsCheckedFilterBrand) {
+
+const routingSortOptions = function (sortOptions: IIsCheckedSortOptions) {
+  const keysSortOptions = Object.keys(sortOptions);
+  let result = '';
+  keysSortOptions.forEach((key) => {
+    if (sortOptions[key]) {
+      result = `sort=${key}`;
+    }
+  });
+  return result;
+};
+
+export const isOnlyOneTrue = function (obj: IsCheckedFilterCategory | IsCheckedFilterBrand | IIsCheckedSortOptions) {
   const arr = Object.values(obj);
   return arr.filter((elem) => elem === true).length === 1;
 };
 
-export const isEveryFalse = function (obj: IsCheckedFilterCategory | IsCheckedFilterBrand) {
+export const isEveryFalse = function (obj: IsCheckedFilterCategory | IsCheckedFilterBrand | IIsCheckedSortOptions) {
   return Object.values(obj).every((elem) => elem === false);
 };
