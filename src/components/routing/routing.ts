@@ -1,4 +1,5 @@
-import { IsCheckedFilterBrand, IsCheckedFilterCategory } from '../../types/interfaces';
+import { IsCheckedFilterBrand, IsCheckedFilterCategory, QuantityOfGoodsByPriceAndStock } from '../../types/interfaces';
+import { quantityOfGoodsByPriceAndStock } from '../filters/generateFilters';
 import { isCheckedFilterBrand, isCheckedFilterCategory } from '../filters/useFilters';
 
 window.addEventListener('hashchange', () => {
@@ -12,12 +13,16 @@ export const generationStringRouting = function () {
   const routBrand = isOnlyOneTrue(isCheckedFilterBrand)
     ? routingForBrandFilter(isCheckedFilterBrand)
     : routingForBrandFilter(isCheckedFilterBrand).slice(0, -1);
-  let resutl = '';
+  const routPrice = routingForPriceFilter(quantityOfGoodsByPriceAndStock);
+  const routStock = routingForStockFilter(quantityOfGoodsByPriceAndStock);
 
-  if (routCategory.length === 0) resutl = `${routBrand}`;
-  if (routBrand.length === 0) resutl = `${routCategory}`;
-  if (routBrand.length !== 0 && routCategory.length !== 0) resutl = `${routCategory}&${routBrand}`;
-  return resutl;
+  let result: Array<string> = [];
+  if (routCategory.length !== 0) result.push(routCategory);
+  if (routBrand.length !== 0) result.push(routBrand);
+  if (routPrice.length !== 0) result.push(routPrice);
+  if (routStock.length !== 0) result.push(routStock);
+
+  return result.join('&');
 };
 
 export const routingForCategoryFilter = function (filterCategory: IsCheckedFilterCategory) {
@@ -58,7 +63,21 @@ export const routingForBrandFilter = function (filterBrand: IsCheckedFilterBrand
   return stringRouting;
 };
 
-export const routingForPriceFilter = function () {};
+const routingForPriceFilter = function (quantityPrice: QuantityOfGoodsByPriceAndStock) {
+  if (quantityPrice.priceMin === 50 && quantityPrice.priceMax === 1650) {
+    return '';
+  } else {
+    return `price=${quantityPrice.priceMin}-${quantityPrice.priceMax}`;
+  }
+};
+
+const routingForStockFilter = function (quantityStock: QuantityOfGoodsByPriceAndStock) {
+  if (quantityStock.stockMin === 5 && quantityStock.stockMax === 120) {
+    return '';
+  } else {
+    return `stock=${quantityStock.stockMin}-${quantityStock.stockMax}`;
+  }
+};
 
 export const isOnlyOneTrue = function (obj: IsCheckedFilterCategory | IsCheckedFilterBrand) {
   const arr = Object.values(obj);
