@@ -1,6 +1,7 @@
 import { IsCheckedFilterBrand, IsCheckedFilterCategory, QuantityOfGoodsByPriceAndStock } from '../../types/interfaces';
 import { quantityOfGoodsByPriceAndStock } from '../filters/generateFilters';
 import { isCheckedFilterBrand, isCheckedFilterCategory } from '../filters/useFilters';
+import { searchValue } from '../header-main/searchProducts';
 
 window.addEventListener('hashchange', () => {
   // console.log(window.location.hash);
@@ -15,12 +16,14 @@ export const generationStringRouting = function () {
     : routingForBrandFilter(isCheckedFilterBrand).slice(0, -1);
   const routPrice = routingForPriceFilter(quantityOfGoodsByPriceAndStock);
   const routStock = routingForStockFilter(quantityOfGoodsByPriceAndStock);
+  const routSearch = routingCearchProducts(searchValue.value);
 
   let result: Array<string> = [];
   if (routCategory.length !== 0) result.push(routCategory);
   if (routBrand.length !== 0) result.push(routBrand);
   if (routPrice.length !== 0) result.push(routPrice);
   if (routStock.length !== 0) result.push(routStock);
+  if (routSearch.length !== 0) result.push(routSearch);
 
   return result.join('&');
 };
@@ -79,6 +82,13 @@ const routingForStockFilter = function (quantityStock: QuantityOfGoodsByPriceAnd
   }
 };
 
+const routingCearchProducts = function (searchValue: string) {
+  if (searchValue === '') {
+    return '';
+  } else {
+    return `search=${searchValue}`;
+  }
+};
 export const isOnlyOneTrue = function (obj: IsCheckedFilterCategory | IsCheckedFilterBrand) {
   const arr = Object.values(obj);
   return arr.filter((elem) => elem === true).length === 1;

@@ -62,7 +62,7 @@ const checkForMatchingFilterAndData = function (
       quantityFilter.stockMin <= dataItem.stock &&
       quantityFilter.stockMax >= dataItem.stock
     ) {
-      if (searchProductFilter(searchValue, dataItem)) {
+      if (searchProductFilter(searchValue.value, dataItem)) {
         arrayDataItems.push(dataItem);
         counterFoundItems++;
       }
@@ -79,7 +79,7 @@ const checkForMatchingFilterAndData = function (
         quantityFilter.stockMin <= dataItem.stock &&
         quantityFilter.stockMax >= dataItem.stock
       ) {
-        if (searchProductFilter(searchValue, dataItem)) {
+        if (searchProductFilter(searchValue.value, dataItem)) {
           arrayDataItems.push(dataItem);
           counterFoundItems++;
         }
@@ -96,7 +96,7 @@ const checkForMatchingFilterAndData = function (
         quantityFilter.stockMin <= dataItem.stock &&
         quantityFilter.stockMax >= dataItem.stock
       ) {
-        if (searchProductFilter(searchValue, dataItem)) {
+        if (searchProductFilter(searchValue.value, dataItem)) {
           arrayDataItems.push(dataItem);
           counterFoundItems++;
         }
@@ -118,7 +118,7 @@ const checkForMatchingFilterAndData = function (
             quantityFilter.stockMin <= dataItem.stock &&
             quantityFilter.stockMax >= dataItem.stock
           ) {
-            if (searchProductFilter(searchValue, dataItem)) {
+            if (searchProductFilter(searchValue.value, dataItem)) {
               arrayDataItems.push(dataItem);
               counterFoundItems++;
             }

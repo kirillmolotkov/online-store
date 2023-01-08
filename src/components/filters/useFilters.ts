@@ -24,6 +24,7 @@ import { generationFoundElement, generationHeaderMain } from '../header-main/gen
 import { changeSizeItems } from '../header-main/changeSizeItems';
 import { generationStringRouting } from '../routing/routing';
 import { parsingAdrressBar } from '../routing/parsingAdrressBar';
+import { searchValue } from '../header-main/searchProducts';
 export const isCheckedFilterCategory = {
   smartphones: false,
   smartwatch: false,
@@ -159,6 +160,7 @@ window.addEventListener('load', () => {
     const filterStockMax = document.querySelector('.filter__stock-max') as HTMLInputElement;
     const filterStockMinSpanElement = document.querySelector('#stock-min-value') as HTMLSpanElement;
     const filterStockMaxSpanElement = document.querySelector('#stock-max-value') as HTMLSpanElement;
+    const searchProducts = document.querySelector('.search-products') as HTMLInputElement;
     const adressBarObject = parsingAdrressBar();
 
     for (let key in adressBarObject) {
@@ -201,6 +203,10 @@ window.addEventListener('load', () => {
         filterStockMax.value = adressBarObject.stock[1];
         filterStockMaxSpanElement.innerText = adressBarObject.stock[1];
         quantityOfGoodsByPriceAndStock.stockMax = Number(adressBarObject.stock[1]);
+      }
+      if (keyAdrressBar === 'search') {
+        searchValue.searchValue = adressBarObject.search[0];
+        searchProducts.value = adressBarObject.search[0];
       }
     }
 
