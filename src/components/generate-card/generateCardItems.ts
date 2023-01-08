@@ -17,7 +17,6 @@ import {
   sortByRatingMin,
 } from '../header-main/sortOptions';
 
-const urlData = './data/data.json';
 export const sectionGoods = document.querySelector('.goods');
 export let counterFoundItems = 0;
 export let arrayDataItems: Array<Data> = [];
@@ -63,7 +62,7 @@ const checkForMatchingFilterAndData = function (
       quantityFilter.stockMin <= dataItem.stock &&
       quantityFilter.stockMax >= dataItem.stock
     ) {
-      if (searchProductFilter(searchValue, dataItem)) {
+      if (searchProductFilter(searchValue.value, dataItem)) {
         arrayDataItems.push(dataItem);
         counterFoundItems++;
       }
@@ -80,7 +79,7 @@ const checkForMatchingFilterAndData = function (
         quantityFilter.stockMin <= dataItem.stock &&
         quantityFilter.stockMax >= dataItem.stock
       ) {
-        if (searchProductFilter(searchValue, dataItem)) {
+        if (searchProductFilter(searchValue.value, dataItem)) {
           arrayDataItems.push(dataItem);
           counterFoundItems++;
         }
@@ -97,7 +96,7 @@ const checkForMatchingFilterAndData = function (
         quantityFilter.stockMin <= dataItem.stock &&
         quantityFilter.stockMax >= dataItem.stock
       ) {
-        if (searchProductFilter(searchValue, dataItem)) {
+        if (searchProductFilter(searchValue.value, dataItem)) {
           arrayDataItems.push(dataItem);
           counterFoundItems++;
         }
@@ -119,7 +118,7 @@ const checkForMatchingFilterAndData = function (
             quantityFilter.stockMin <= dataItem.stock &&
             quantityFilter.stockMax >= dataItem.stock
           ) {
-            if (searchProductFilter(searchValue, dataItem)) {
+            if (searchProductFilter(searchValue.value, dataItem)) {
               arrayDataItems.push(dataItem);
               counterFoundItems++;
             }
@@ -203,10 +202,3 @@ const generateHTML = (products: Data): void => {
 
   if (sectionGoods) sectionGoods.append(template.container);
 };
-
-sendRequest(urlData)
-  .then((data: Array<Data>) => {
-    generationHeaderMain();
-    generationCardItems(data);
-  })
-  .catch((err) => console.log(err));

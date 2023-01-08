@@ -1,7 +1,6 @@
-import { getDataForFilters } from './getDataForFilters';
-import { urlData } from './getDataForFilters';
 import {
   Data,
+  IsCheckedFilterCategory,
   QuantityOfGoodsByBrand,
   QuantityOfGoodsByCategory,
   QuantityOfGoodsByPriceAndStock,
@@ -298,15 +297,13 @@ const getQuantityOfGoodsByStock = function (data: Array<Data>) {
   return quantityOfGoodsByPriceAndStock;
 };
 
-getDataForFilters(urlData)
-  .then((data: Array<Data>) => {
-    createFiltersHeader();
-    createFilterByCategory(getQuantityOfGoodsByCategory(data));
-    createFilterByBrand(getQuantityOfGoodsByBrand(data));
-    createFilterByPrice(getQuantityOfGoodsByPrice(data));
-    createFilterByStock(getQuantityOfGoodsByStock(data));
-  })
-  .catch((err) => console.log(err));
+export const generationFIlters = function (data: Array<Data>) {
+  createFiltersHeader();
+  createFilterByCategory(getQuantityOfGoodsByCategory(data));
+  createFilterByBrand(getQuantityOfGoodsByBrand(data));
+  createFilterByPrice(getQuantityOfGoodsByPrice(data));
+  createFilterByStock(getQuantityOfGoodsByStock(data));
+};
 
 buttonResetFilters.addEventListener('click', () => {
   resetFilter(isCheckedFilterBrand, isCheckedFilterCategory, quantityOfGoodsByPriceAndStock);
@@ -315,4 +312,5 @@ buttonResetFilters.addEventListener('click', () => {
   createFilterByBrand(quantityOfGoodsByBrand);
   createFilterByPrice(quantityOfGoodsByPriceAndStock);
   createFilterByStock(quantityOfGoodsByPriceAndStock);
+  window.location.hash = '';
 });
