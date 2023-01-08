@@ -1,9 +1,10 @@
-const goods = document.querySelector('.goods') as HTMLDivElement;
 import { CATALOGUE } from '../checkout/Cart';
 import goToCartPage, { renderItemsCount, renderTotalSum } from '../cart/renderCart';
 import { cart } from '../checkout/checkout';
 import { payment } from '../payment/render-payment';
 import { togglePaymentWindow } from '../cart/promocodes/promocodes';
+
+const goods = document.querySelector('.goods') as HTMLDivElement;
 
 function changePhoto(e: Event): void {
   const mainPhoto = document.querySelector('.slider__big-photo') as HTMLImageElement;
@@ -49,7 +50,6 @@ function generateDetails(id: string): void {
   const itemTemplate = document.querySelector('#details') as HTMLTemplateElement;
   const itemLayout = itemTemplate.content.cloneNode(true) as HTMLDivElement;
   const fragment: DocumentFragment = document.createDocumentFragment();
-  // const itemList = document.querySelector('.cart__container') as HTMLOListElement;
   fragment.append(itemLayout);
   const prod = CATALOGUE.get(id);
   if (prod) {
@@ -79,13 +79,12 @@ function generateDetails(id: string): void {
     category.textContent = `${prod.category}`;
     const photo = fragment.querySelector('.slider__big-photo') as HTMLImageElement;
     photo.src = `${prod.images[0]}`;
-    // const thumbs = fragment.querySelectorAll('.slider__thumb) as HTMLImageElement;
-    // thumbs.src = `${prod.description}`;
     const price = fragment.querySelector('.details__price') as HTMLDivElement;
     price.textContent = `$ ${prod.price}`;
   }
   body.replaceChild(fragment, main);
 }
+
 function buyNow(id: string): void {
   if (!cart.getBasket().find((item) => item.id === id)) cart.addToCart(id);
   renderItemsCount();
@@ -101,12 +100,14 @@ function addToCart(this: HTMLButtonElement): void {
   renderItemsCount();
   renderTotalSum();
 }
+
 function deleteFromCart(this: HTMLButtonElement): void {
   const id: string = this.getAttribute('data-id') as string;
   cart.decreaseItemAmount(id);
   renderItemsCount();
   renderTotalSum();
 }
+
 function buttonHandler(id: string): void {
   const addToCartBtn = document.querySelector('.btn_details-add') as HTMLButtonElement;
   if (cart.getBasket().find((item) => item.id === id)) {
