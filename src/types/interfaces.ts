@@ -97,7 +97,7 @@ export interface Icodes {
   discount: number;
 }
 
-export interface IValidate{
+export interface IValidate {
   fullName: boolean;
   adress: boolean;
   phoneNumber: boolean;
@@ -119,4 +119,7 @@ export interface IIsCheckedSortOptions {
   pricemax: boolean;
   ratingmin: boolean;
   ratingmax: boolean;
+}
+export interface IDismantledAdrressBar {
+  [key: string]: Array<string>;
 }

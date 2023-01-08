@@ -17,7 +17,6 @@ import {
   sortByRatingMin,
 } from '../header-main/sortOptions';
 
-const urlData: string = './data/data.json';
 export const sectionGoods = document.querySelector('.goods');
 export let counterFoundItems = 0;
 export let arrayDataItems: Array<Data> = [];
@@ -203,10 +202,3 @@ const generateHTML = (products: Data) => {
 
   if (sectionGoods) sectionGoods.append(template.container);
 };
-
-sendRequest(urlData)
-  .then((data: Array<Data>) => {
-    generationHeaderMain();
-    generationCardItems(data);
-  })
-  .catch((err) => console.log(err));

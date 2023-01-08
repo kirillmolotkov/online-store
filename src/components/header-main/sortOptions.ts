@@ -1,6 +1,6 @@
-import { sortOprionsElement } from '../../const/const';
+import { sortOprionsElement, urlData } from '../../const/const';
 import { Data, IIsCheckedSortOptions } from '../../types/interfaces';
-import { urlData } from '../filters/getDataForFilters';
+
 import { generationCardItems, sectionGoods, sendRequest } from '../generate-card/generateCardItems';
 import { changeSizeItems } from './changeSizeItems';
 

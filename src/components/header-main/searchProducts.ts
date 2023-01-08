@@ -1,6 +1,6 @@
-import { searchProductsElement } from '../../const/const';
+import { searchProductsElement, urlData } from '../../const/const';
 import { Data } from '../../types/interfaces';
-import { urlData } from '../filters/getDataForFilters';
+
 import { generationCardItems, sectionGoods, sendRequest } from '../generate-card/generateCardItems';
 import { changeSizeItems } from './changeSizeItems';
 

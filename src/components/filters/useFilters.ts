@@ -3,12 +3,12 @@ import {
   Data,
   IsCheckedFilterBrand,
   QuantityOfGoodsByPriceAndStock,
+  IDismantledAdrressBar,
 } from '../../types/interfaces';
 import { counterFoundItems, generationCardItems, sectionGoods, sendRequest } from '../generate-card/generateCardItems';
-import { urlData } from './getDataForFilters';
+
 import {
   asideFilters,
-  buttonResetFilters,
   filterByBrandContainer,
   filterByCategoryContainer,
   filterByPriceContainer,
@@ -17,11 +17,13 @@ import {
   priceMin,
   stockMax,
   stockMin,
+  urlData,
 } from '../../const/const';
 import { quantityOfGoodsByPriceAndStock } from './generateFilters';
-import { generationFoundElement, generationHeaderMain } from '../header-main/generationHeaderMain';
+import { generationFoundElement } from '../header-main/generationHeaderMain';
 import { changeSizeItems } from '../header-main/changeSizeItems';
-
+import { generationStringRouting } from '../routing/routing';
+import { parsingAdrressBar } from '../routing/parsingAdrressBar';
 export const isCheckedFilterCategory = {
   smartphones: false,
   smartwatch: false,
@@ -54,6 +56,7 @@ const removeCardItem = function () {
     })
     .catch((err) => console.log(err));
 };
+
 const removeFilter = function () {
   while (filterByCategoryContainer.childNodes.length !== 0) {
     filterByCategoryContainer.firstChild?.remove();
@@ -101,11 +104,13 @@ asideFilters?.addEventListener('click', (event) => {
     for (let key in isCheckedFilterCategory) {
       if (key === target.getAttribute('id')) {
         isCheckedFilterCategory[key as keyof IsCheckedFilterCategory] = target.checked;
+        window.location.hash = generationStringRouting();
       }
     }
     for (let key in isCheckedFilterBrand) {
       if (key === target.getAttribute('id')) {
         isCheckedFilterBrand[key as keyof IsCheckedFilterBrand] = target.checked;
+        window.location.hash = generationStringRouting();
       }
     }
     removeCardItem();
@@ -134,4 +139,54 @@ asideFilters?.addEventListener('click', (event) => {
     stockMax.innerText = quantityOfGoodsByPriceAndStock.stockMax.toString();
     removeCardItem();
   }
+});
+
+window.addEventListener('load', () => {
+  const itemCheckBoxCategory = document.querySelectorAll('.category__item-checkbox');
+  const itemCheckBoxBrand = document.querySelectorAll('.brand__item-checkbox');
+  const adressBarObject = parsingAdrressBar();
+  for (let key in adressBarObject) {
+    const keyAdrressBar = key as keyof IDismantledAdrressBar;
+
+    if (keyAdrressBar === 'category') {
+      for (let key in isCheckedFilterCategory) {
+        const keyCategory = key as keyof IsCheckedFilterCategory;
+        adressBarObject[keyAdrressBar].forEach((elem) => {
+          if (keyCategory === elem) {
+            isCheckedFilterCategory[keyCategory] = true;
+          }
+        });
+      }
+    }
+    if (keyAdrressBar === 'brand') {
+      for (let key in isCheckedFilterBrand) {
+        const keyBrand = key as keyof IsCheckedFilterBrand;
+        adressBarObject[keyAdrressBar].forEach((elem) => {
+          if (keyBrand === elem) {
+            isCheckedFilterBrand[keyBrand] = true;
+          }
+        });
+      }
+    }
+  }
+
+  itemCheckBoxCategory.forEach((checkBoxCategory) => {
+    const inputCheckBox = checkBoxCategory as HTMLInputElement;
+    for (let key in isCheckedFilterCategory) {
+      const keyCategory = key as keyof IsCheckedFilterCategory;
+      if (inputCheckBox.id === keyCategory && isCheckedFilterCategory[keyCategory] === true) {
+        inputCheckBox.checked = true;
+      }
+    }
+  });
+
+  itemCheckBoxBrand.forEach((checkBoxBrand) => {
+    const inputCheckBox = checkBoxBrand as HTMLInputElement;
+    for (let key in isCheckedFilterBrand) {
+      const keyBrand = key as keyof IsCheckedFilterBrand;
+      if (inputCheckBox.id === keyBrand && isCheckedFilterBrand[keyBrand] === true) {
+        inputCheckBox.checked = true;
+      }
+    }
+  });
 });
