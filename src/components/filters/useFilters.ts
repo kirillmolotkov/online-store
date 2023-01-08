@@ -235,22 +235,14 @@ window.addEventListener('load', () => {
 
     itemCheckBoxCategory.forEach((checkBoxCategory) => {
       const inputCheckBox = checkBoxCategory as HTMLInputElement;
-      for (let key in isCheckedFilterCategory) {
-        const keyCategory = key as keyof IsCheckedFilterCategory;
-        if (inputCheckBox.id === keyCategory && isCheckedFilterCategory[keyCategory] === true) {
-          inputCheckBox.checked = true;
-        }
-      }
+      const checkboxId = checkBoxCategory.id as keyof IsCheckedFilterCategory;
+      if (isCheckedFilterCategory[checkboxId]) inputCheckBox.checked = true;
     });
 
     itemCheckBoxBrand.forEach((checkBoxBrand) => {
       const inputCheckBox = checkBoxBrand as HTMLInputElement;
-      for (let key in isCheckedFilterBrand) {
-        const keyBrand = key as keyof IsCheckedFilterBrand;
-        if (inputCheckBox.id === keyBrand && isCheckedFilterBrand[keyBrand] === true) {
-          inputCheckBox.checked = true;
-        }
-      }
+      const checkboxId = checkBoxBrand.id as keyof IsCheckedFilterBrand;
+      if (isCheckedFilterBrand[checkboxId]) inputCheckBox.checked = true;
     });
 
     removeCardItem();

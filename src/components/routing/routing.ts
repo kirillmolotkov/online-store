@@ -1,4 +1,3 @@
-import { sortOprionsElement } from '../../const/const';
 import {
   IIsCheckedSortOptions,
   IsCheckedFilterBrand,
@@ -12,11 +11,96 @@ import { statusValueButton } from '../header-main/changeSizeItems';
 import { searchValue } from '../header-main/searchProducts';
 import { isCheckedSortOptions } from '../header-main/sortOptions';
 
-window.addEventListener('hashchange', () => {
-  // console.log(window.location.hash);
-});
+export const isOnlyOneTrue = (obj: IsCheckedFilterCategory | IsCheckedFilterBrand | IIsCheckedSortOptions) => {
+  const arr = Object.values(obj);
+  return arr.filter((elem) => elem === true).length === 1;
+};
 
-export const generationStringRouting = function () {
+export const isEveryFalse = (obj: IsCheckedFilterCategory | IsCheckedFilterBrand | IIsCheckedSortOptions) => {
+  return Object.values(obj).every((elem) => elem === false);
+};
+
+export const routingForCategoryFilter = (filterCategory: IsCheckedFilterCategory) => {
+  let stringRouting = 'category=';
+  const keysFilterCategory = Object.keys(filterCategory);
+
+  keysFilterCategory.forEach((key) => {
+    const keyFilterCategory = key as keyof IsCheckedFilterCategory;
+
+    if (filterCategory[keyFilterCategory] && isOnlyOneTrue(filterCategory)) {
+      stringRouting += `${key}`;
+    }
+    if (filterCategory[keyFilterCategory] && !isOnlyOneTrue(filterCategory)) {
+      stringRouting += `${key}-`;
+    }
+  });
+
+  if (isEveryFalse(isCheckedFilterCategory)) {
+    stringRouting = '';
+  }
+  return stringRouting;
+};
+
+export const routingForBrandFilter = (filterBrand: IsCheckedFilterBrand) => {
+  let stringRouting = 'brand=';
+  const keysFilterBrand = Object.keys(filterBrand);
+
+  keysFilterBrand.forEach((key) => {
+    const keyFilterBrand = key as keyof IsCheckedFilterBrand;
+
+    if (filterBrand[keyFilterBrand] && isOnlyOneTrue(filterBrand)) {
+      stringRouting += `${key}`;
+    }
+    if (filterBrand[keyFilterBrand] && !isOnlyOneTrue(filterBrand)) {
+      stringRouting += `${key}-`;
+    }
+  });
+
+  if (isEveryFalse(isCheckedFilterBrand)) {
+    stringRouting = '';
+  }
+  return stringRouting;
+};
+
+const routingForPriceFilter = (quantityPrice: QuantityOfGoodsByPriceAndStock) => {
+  if (quantityPrice.priceMin === 50 && quantityPrice.priceMax === 1650) {
+    return '';
+  }
+  return `price=${quantityPrice.priceMin}-${quantityPrice.priceMax}`;
+};
+
+const routingForStockFilter = (quantityStock: QuantityOfGoodsByPriceAndStock) => {
+  if (quantityStock.stockMin === 5 && quantityStock.stockMax === 120) {
+    return '';
+  }
+  return `stock=${quantityStock.stockMin}-${quantityStock.stockMax}`;
+};
+
+const routingCearchProducts = (searchValueString: string) => {
+  if (searchValueString === '') {
+    return '';
+  }
+  return `search=${searchValueString}`;
+};
+
+const routingSortOptions = (sortOptions: IIsCheckedSortOptions) => {
+  const keysSortOptions = Object.keys(sortOptions);
+  let result = '';
+  keysSortOptions.forEach((key) => {
+    if (sortOptions[key]) {
+      result = `sort=${key}`;
+    }
+  });
+  return result;
+};
+
+const routingSizeView = (statusButton: IStatusValueButton) => {
+  if (statusButton.max) return `sizeview=max`;
+  if (statusButton.min) return `sizeview=min`;
+  return '';
+};
+
+export const generationStringRouting = () => {
   const routCategory = isOnlyOneTrue(isCheckedFilterCategory)
     ? routingForCategoryFilter(isCheckedFilterCategory)
     : routingForCategoryFilter(isCheckedFilterCategory).slice(0, -1);
@@ -29,7 +113,7 @@ export const generationStringRouting = function () {
   const routSort = routingSortOptions(isCheckedSortOptions);
   const routSizeView = routingSizeView(statusValueButton);
 
-  let result: Array<string> = [];
+  const result: Array<string> = [];
   if (routCategory.length !== 0) result.push(routCategory);
   if (routBrand.length !== 0) result.push(routBrand);
   if (routPrice.length !== 0) result.push(routPrice);
@@ -39,92 +123,4 @@ export const generationStringRouting = function () {
   if (routSizeView.length !== 0) result.push(routSizeView);
 
   return result.join('&');
-};
-
-export const routingForCategoryFilter = function (filterCategory: IsCheckedFilterCategory) {
-  let stringRouting = 'category=';
-  for (let key in isCheckedFilterCategory) {
-    const value = key as keyof IsCheckedFilterCategory;
-    if (isCheckedFilterCategory[value] && isOnlyOneTrue(filterCategory)) {
-      stringRouting += `${value}`;
-    }
-    if (isCheckedFilterCategory[value] && !isOnlyOneTrue(filterCategory)) {
-      stringRouting += `${value}-`;
-    }
-  }
-  if (isEveryFalse(isCheckedFilterCategory)) {
-    stringRouting = '';
-  } else {
-    stringRouting = stringRouting;
-  }
-  return stringRouting;
-};
-
-export const routingForBrandFilter = function (filterBrand: IsCheckedFilterBrand) {
-  let stringRouting = 'brand=';
-  for (let key in isCheckedFilterBrand) {
-    const value = key as keyof IsCheckedFilterBrand;
-    if (isCheckedFilterBrand[value] && isOnlyOneTrue(filterBrand)) {
-      stringRouting += `${value}`;
-    }
-    if (isCheckedFilterBrand[value] && !isOnlyOneTrue(filterBrand)) {
-      stringRouting += `${value}-`;
-    }
-  }
-  if (isEveryFalse(isCheckedFilterBrand)) {
-    stringRouting = '';
-  } else {
-    stringRouting = stringRouting;
-  }
-  return stringRouting;
-};
-
-const routingForPriceFilter = function (quantityPrice: QuantityOfGoodsByPriceAndStock) {
-  if (quantityPrice.priceMin === 50 && quantityPrice.priceMax === 1650) {
-    return '';
-  } else {
-    return `price=${quantityPrice.priceMin}-${quantityPrice.priceMax}`;
-  }
-};
-
-const routingForStockFilter = function (quantityStock: QuantityOfGoodsByPriceAndStock) {
-  if (quantityStock.stockMin === 5 && quantityStock.stockMax === 120) {
-    return '';
-  } else {
-    return `stock=${quantityStock.stockMin}-${quantityStock.stockMax}`;
-  }
-};
-
-const routingCearchProducts = function (searchValue: string) {
-  if (searchValue === '') {
-    return '';
-  } else {
-    return `search=${searchValue}`;
-  }
-};
-
-const routingSortOptions = function (sortOptions: IIsCheckedSortOptions) {
-  const keysSortOptions = Object.keys(sortOptions);
-  let result = '';
-  keysSortOptions.forEach((key) => {
-    if (sortOptions[key]) {
-      result = `sort=${key}`;
-    }
-  });
-  return result;
-};
-
-const routingSizeView = function (statusButton: IStatusValueButton) {
-  if (statusButton.max) return `sizeview=max`;
-  if (statusButton.min) return `sizeview=min`;
-  return '';
-};
-
-export const isOnlyOneTrue = function (obj: IsCheckedFilterCategory | IsCheckedFilterBrand | IIsCheckedSortOptions) {
-  const arr = Object.values(obj);
-  return arr.filter((elem) => elem === true).length === 1;
-};
-
-export const isEveryFalse = function (obj: IsCheckedFilterCategory | IsCheckedFilterBrand | IIsCheckedSortOptions) {
-  return Object.values(obj).every((elem) => elem === false);
 };
