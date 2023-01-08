@@ -9,6 +9,7 @@ import { counterFoundItems, generationCardItems, sectionGoods, sendRequest } fro
 
 import {
   asideFilters,
+  buttonSizeView,
   filterByBrandContainer,
   filterByCategoryContainer,
   filterByPriceContainer,
@@ -21,7 +22,7 @@ import {
 } from '../../const/const';
 import { generationFIlters, quantityOfGoodsByPriceAndStock } from './generateFilters';
 import { generationFoundElement, generationHeaderMain } from '../header-main/generationHeaderMain';
-import { changeSizeItems } from '../header-main/changeSizeItems';
+import { changeSizeItems, statusValueButton } from '../header-main/changeSizeItems';
 import { generationStringRouting } from '../routing/routing';
 import { parsingAdrressBar } from '../routing/parsingAdrressBar';
 import { searchValue } from '../header-main/searchProducts';
@@ -217,6 +218,18 @@ window.addEventListener('load', () => {
             isCheckedSortOptions[`${adressBarObject.sort[0]}`] = true;
           }
         });
+      }
+      if (keyAdrressBar === 'sizeview') {
+        if (adressBarObject.sizeview[0] === 'max') {
+          buttonSizeView.innerText = 'Size view max';
+          statusValueButton.max = true;
+          statusValueButton.min = false;
+        }
+        if (adressBarObject.sizeview[0] === 'min') {
+          buttonSizeView.innerText = 'Size view min';
+          statusValueButton.min = true;
+          statusValueButton.max = false;
+        }
       }
     }
 

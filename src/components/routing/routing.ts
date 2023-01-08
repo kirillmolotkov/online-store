@@ -3,10 +3,12 @@ import {
   IIsCheckedSortOptions,
   IsCheckedFilterBrand,
   IsCheckedFilterCategory,
+  IStatusValueButton,
   QuantityOfGoodsByPriceAndStock,
 } from '../../types/interfaces';
 import { quantityOfGoodsByPriceAndStock } from '../filters/generateFilters';
 import { isCheckedFilterBrand, isCheckedFilterCategory } from '../filters/useFilters';
+import { statusValueButton } from '../header-main/changeSizeItems';
 import { searchValue } from '../header-main/searchProducts';
 import { isCheckedSortOptions } from '../header-main/sortOptions';
 
@@ -25,6 +27,7 @@ export const generationStringRouting = function () {
   const routStock = routingForStockFilter(quantityOfGoodsByPriceAndStock);
   const routSearch = routingCearchProducts(searchValue.value);
   const routSort = routingSortOptions(isCheckedSortOptions);
+  const routSizeView = routingSizeView(statusValueButton);
 
   let result: Array<string> = [];
   if (routCategory.length !== 0) result.push(routCategory);
@@ -33,6 +36,7 @@ export const generationStringRouting = function () {
   if (routStock.length !== 0) result.push(routStock);
   if (routSearch.length !== 0) result.push(routSearch);
   if (routSort.length !== 0) result.push(routSort);
+  if (routSizeView.length !== 0) result.push(routSizeView);
 
   return result.join('&');
 };
@@ -108,6 +112,12 @@ const routingSortOptions = function (sortOptions: IIsCheckedSortOptions) {
     }
   });
   return result;
+};
+
+const routingSizeView = function (statusButton: IStatusValueButton) {
+  if (statusButton.max) return `sizeview=max`;
+  if (statusButton.min) return `sizeview=min`;
+  return '';
 };
 
 export const isOnlyOneTrue = function (obj: IsCheckedFilterCategory | IsCheckedFilterBrand | IIsCheckedSortOptions) {

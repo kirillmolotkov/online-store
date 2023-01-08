@@ -110,7 +110,7 @@ export interface IValidate {
 export default IbasketItem;
 
 export interface IStatusValueButton {
-  max: boolean;
+  [max: string]: boolean;
   min: boolean;
 }
 

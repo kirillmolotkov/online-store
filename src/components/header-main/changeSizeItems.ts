@@ -1,5 +1,6 @@
 import { buttonSizeView } from '../../const/const';
 import { IsCheckedFilterBrand, IStatusValueButton } from '../../types/interfaces';
+import { generationStringRouting } from '../routing/routing';
 
 export const statusValueButton: IStatusValueButton = {
   max: true,
@@ -14,7 +15,7 @@ buttonSizeView.addEventListener('click', () => {
 
 export const changeSizeItems = function () {
   const cardItems = document.querySelectorAll('.sku__container');
-
+  window.location.hash = generationStringRouting();
   cardItems.forEach((itemCard) => {
     if (statusValueButton.max) {
       itemCard.classList.remove('sku__container-min');
