@@ -14,7 +14,7 @@ export const isCheckedSortOptions: IIsCheckedSortOptions = {
 sortOprionsElement.addEventListener('click', () => {
   const selcetOptions = sortOprionsElement.selectedOptions[0].value;
 
-  for (let key in isCheckedSortOptions) {
+  for (const key in isCheckedSortOptions) {
     const value = key as keyof IIsCheckedSortOptions;
     if (value === selcetOptions && isCheckedSortOptions[value] !== true) {
       resetValueIsCheckedSortOptions(isCheckedSortOptions);
@@ -33,41 +33,41 @@ sortOprionsElement.addEventListener('click', () => {
     .catch((err) => console.log(err));
 });
 
-const resetValueIsCheckedSortOptions = function (checkedOption: IIsCheckedSortOptions) {
-  for (let key in isCheckedSortOptions) {
+const resetValueIsCheckedSortOptions = function (checkedOption: IIsCheckedSortOptions): void {
+  for (const key in isCheckedSortOptions) {
     const value = key as keyof IIsCheckedSortOptions;
     isCheckedSortOptions[value] = false;
   }
 };
 
-export const sortByPriceMin = function (arrayDataItems: Array<Data>) {
+export function sortByPriceMin(arrayDataItems: Array<Data>): void {
   arrayDataItems.sort(function (a, b) {
     if (a.price > b.price) return 1;
     if (a.price < b.price) return -1;
     return 0;
   });
-};
+}
 
-export const sortByPriceMax = function (arrayDataItems: Array<Data>) {
+export function sortByPriceMax(arrayDataItems: Array<Data>): void {
   arrayDataItems.sort(function (a, b) {
     if (a.price < b.price) return 1;
     if (a.price > b.price) return -1;
     return 0;
   });
-};
+}
 
-export const sortByRatingMin = function (arrayDataItems: Array<Data>) {
+export function sortByRatingMin(arrayDataItems: Array<Data>): void {
   arrayDataItems.sort(function (a, b) {
     if (a.price > b.price) return 1;
     if (a.price < b.price) return -1;
     return 0;
   });
-};
+}
 
-export const sortByRatingMax = function (arrayDataItems: Array<Data>) {
+export function sortByRatingMax(arrayDataItems: Array<Data>): void {
   arrayDataItems.sort(function (a, b) {
     if (a.price < b.price) return 1;
     if (a.price > b.price) return -1;
     return 0;
   });
-};
+}

@@ -1,15 +1,11 @@
 .sku__container {
   display: flex;
   flex-direction: column;
-  // width: 350px;
   width: 23%;
-  // height: 580px;
-  // aspect-ratio: 0.7;
   position: relative;
   justify-content: space-between;
   align-items: center;
 
-  cursor: pointer;
   &:hover {
     background-color: rgba(0, 0, 0, 0.5);
     position: relative;
@@ -17,8 +13,6 @@
   }
 }
 .sku__photo-slider {
-  // width: 278px;
-  // max-height: 480px;
   width: 80%;
   object-fit: cover;
   position: relative;
@@ -34,7 +28,6 @@
   @include basic-font;
 }
 .sku__description {
-  // @include sku-description-font;
   padding-top: 2%;
   display: -webkit-box;
   -webkit-line-clamp: 3;

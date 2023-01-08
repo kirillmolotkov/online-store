@@ -17,18 +17,18 @@ import {
   sortByRatingMin,
 } from '../header-main/sortOptions';
 
-const urlData: string = './data/data.json';
+const urlData = './data/data.json';
 export const sectionGoods = document.querySelector('.goods');
 export let counterFoundItems = 0;
 export let arrayDataItems: Array<Data> = [];
 
-export function sendRequest(url: string) {
+export async function sendRequest(url: string) {
   return fetch(url).then((response) => {
     return response.json();
   });
 }
 
-export const generationCardItems = function (data: Array<Data>) {
+export function generationCardItems (data: Array<Data>) {
   data.forEach((elem) => {
     checkForMatchingFilterAndData(isCheckedFilterCategory, isCheckedFilterBrand, quantityOfGoodsByPriceAndStock, elem);
   });
@@ -45,14 +45,14 @@ export const generationCardItems = function (data: Array<Data>) {
   generationFoundElement(counterFoundItems);
   counterFoundItems = 0;
   arrayDataItems = [];
-};
+}
 
 const checkForMatchingFilterAndData = function (
   filterCategory: IsCheckedFilterCategory,
   filterBrand: IsCheckedFilterBrand,
   quantityFilter: QuantityOfGoodsByPriceAndStock,
   dataItem: Data
-) {
+): void {
   if (
     Object.values(filterCategory).every((elem) => elem === false) &&
     Object.values(filterBrand).every((elem) => elem === false)
@@ -70,7 +70,7 @@ const checkForMatchingFilterAndData = function (
     }
   }
 
-  for (let key in filterCategory) {
+  for (const key in filterCategory) {
     const keyCategory = key as keyof IsCheckedFilterCategory;
     if (filterCategory[keyCategory] && Object.values(filterBrand).every((elem) => elem === false)) {
       if (
@@ -87,7 +87,7 @@ const checkForMatchingFilterAndData = function (
       }
     }
   }
-  for (let key in filterBrand) {
+  for (const key in filterBrand) {
     const keyBrand = key as keyof IsCheckedFilterBrand;
     if (filterBrand[keyBrand] && Object.values(filterCategory).every((elem) => elem === false)) {
       if (
@@ -104,11 +104,11 @@ const checkForMatchingFilterAndData = function (
       }
     }
   }
-  for (let key in filterCategory) {
+  for (const key in filterCategory) {
     const keyCategory = key as keyof IsCheckedFilterCategory;
 
     if (filterCategory[keyCategory]) {
-      for (let key in filterBrand) {
+      for (const key in filterBrand) {
         const keyBrand = key as keyof IsCheckedFilterBrand;
         if (filterBrand[keyBrand]) {
           if (
@@ -130,7 +130,7 @@ const checkForMatchingFilterAndData = function (
   }
 };
 
-const generateHTML = (products: Data) => {
+const generateHTML = (products: Data): void => {
   const template: TempalateForCardItem = {
     container: document.createElement('div'),
     title: document.createElement('h3'),

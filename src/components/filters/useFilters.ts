@@ -77,11 +77,11 @@ export const resetFilter = function (
   objectCategory: IsCheckedFilterCategory,
   objectPriceAndStok: QuantityOfGoodsByPriceAndStock
 ) {
-  for (let key in objectBrand) {
+  for (const key in objectBrand) {
     const keyBrand = key as keyof IsCheckedFilterBrand;
     objectBrand[keyBrand] = false;
   }
-  for (let key in objectCategory) {
+  for (const key in objectCategory) {
     const keyCategory = key as keyof IsCheckedFilterCategory;
     objectCategory[keyCategory] = false;
   }
@@ -95,15 +95,15 @@ export const resetFilter = function (
   removeFilter();
 };
 asideFilters?.addEventListener('click', (event) => {
-  let target = event.target as HTMLInputElement;
+  const target = event.target as HTMLInputElement;
 
   if (target.type === 'checkbox') {
-    for (let key in isCheckedFilterCategory) {
+    for (const key in isCheckedFilterCategory) {
       if (key === target.getAttribute('id')) {
         isCheckedFilterCategory[key as keyof IsCheckedFilterCategory] = target.checked;
       }
     }
-    for (let key in isCheckedFilterBrand) {
+    for (const key in isCheckedFilterBrand) {
       if (key === target.getAttribute('id')) {
         isCheckedFilterBrand[key as keyof IsCheckedFilterBrand] = target.checked;
       }

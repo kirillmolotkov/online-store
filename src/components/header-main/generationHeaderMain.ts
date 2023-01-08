@@ -3,7 +3,7 @@ import { IStatusValueButton } from '../../types/interfaces';
 import { counterFoundItems, sectionGoods } from '../generate-card/generateCardItems';
 import { statusValueButton } from './changeSizeItems';
 
-export const generationHeaderMain = function () {
+export const generationHeaderMain = function (): void {
   headerMain.className = 'goods__header';
 
   generationSortOptions();
@@ -14,7 +14,7 @@ export const generationHeaderMain = function () {
   sectionGoods?.prepend(headerMain);
 };
 
-const generationSortOptions = function () {
+const generationSortOptions = function (): void {
   sortOprionsElement.className = 'sort-options';
 
   const sortOptionsTitle = document.createElement('option');
@@ -43,13 +43,13 @@ const generationSortOptions = function () {
   headerMain.append(sortOprionsElement);
 };
 
-export const generationFoundElement = function (foundItems: number) {
+export const generationFoundElement = function (foundItems: number): void {
   foundElement.className = 'found';
   foundElement.innerText = `Found: ${foundItems}`;
   headerMain.append(foundElement);
 };
 
-const generationSearchProducts = function () {
+const generationSearchProducts = function (): void {
   searchProductsElement.className = 'search-products';
   searchProductsElement.type = 'search';
   searchProductsElement.placeholder = 'Search product';
@@ -57,7 +57,7 @@ const generationSearchProducts = function () {
   headerMain.append(searchProductsElement);
 };
 
-const generationButtonSizeView = function (statusButton: IStatusValueButton) {
+const generationButtonSizeView = function (statusButton: IStatusValueButton): void {
   buttonSizeView.className = 'button-view';
   if (statusButton.min) buttonSizeView.innerText = `Size view min`;
   if (statusButton.max) buttonSizeView.innerText = `Size view max`;

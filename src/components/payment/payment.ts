@@ -2,8 +2,8 @@ import { cart } from '../checkout/checkout';
 import { generateSuccess, validate } from './render-payment';
 
 export function inputCorrectDate(this: HTMLInputElement): void {
-  this.value = this.value.replace(/[\Da-zа-я\.]/, '');
-  let res: any = this.value.split('');
+  this.value = this.value.replace(/[\Da-zа-я.]/, '');
+  const res: string[] = this.value.split('');
   res.splice(2, 0, '/');
   if (this.value.length > 2) {
     this.value = res.join('');

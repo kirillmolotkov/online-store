@@ -20,8 +20,8 @@ searchProductsElement.addEventListener('input', () => {
     .catch((err) => console.log(err));
 });
 
-export const searchProductFilter = function (inputValue: string, data: Data) {
-  let lengthInputValue = inputValue.length;
+export const searchProductFilter = function (inputValue: string, data: Data): boolean | undefined{
+  const lengthInputValue = inputValue.length;
   const valueForSearch = {
     title: data.title,
     price: data.price,
@@ -32,7 +32,7 @@ export const searchProductFilter = function (inputValue: string, data: Data) {
   };
 
   if (inputValue !== '') {
-    for (let key in valueForSearch) {
+    for (const key in valueForSearch) {
       const value = key as keyof Object;
       if (inputValue === valueForSearch[value].toString().toLowerCase().slice(0, lengthInputValue)) {
         return true;

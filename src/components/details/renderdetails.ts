@@ -1,31 +1,12 @@
-const goods = document.querySelector('.goods') as HTMLDivElement;
 import { CATALOGUE } from '../checkout/Cart';
 import goToCartPage, { renderItemsCount, renderTotalSum } from '../cart/renderCart';
 import { cart } from '../checkout/checkout';
-import { payment, generatePaymentWindow } from '../payment/render-payment';
+import { payment } from '../payment/render-payment';
 import { togglePaymentWindow } from '../cart/promocodes/promocodes';
 
-goods.addEventListener('click', openDetailsPage);
+const goods = document.querySelector('.goods') as HTMLDivElement;
 
-function openDetailsPage(e: Event): void {
-  let id: string;
-  const addButton = e.target as HTMLElement;
-  if (addButton.classList.contains('sku__button_details')) {
-    id = (addButton as HTMLDivElement).getAttribute('data-id') as string;
-    generateDetails(id);
-    generatePhotoThumbs(id);
-    const thumbs = document.querySelector('.slider__thumbs') as HTMLDivElement;
-    const addToCartBtn = document.querySelector('.btn_details-add') as HTMLButtonElement;
-    const buyNowBtn = document.querySelector('.btn_details-buy') as HTMLButtonElement;
-    handleButtonState(id);
-    addToCartBtn.addEventListener('click', () => {
-      buttonHandler(id);
-    });
-    buyNowBtn.addEventListener('click', () => buyNow(id));
-    thumbs.addEventListener('click', changePhoto)
-  }
-}
-function changePhoto(e: Event) {
+function changePhoto(e: Event): void {
   const mainPhoto = document.querySelector('.slider__big-photo') as HTMLImageElement;
   const target = e.target as HTMLImageElement;
   const thumb = target.closest('.slider__item');
@@ -44,53 +25,16 @@ function handleButtonState(id: string): void {
   }
 }
 
-function buttonHandler(id: string): void {
-  const addToCartBtn = document.querySelector('.btn_details-add') as HTMLButtonElement;
-  if (cart.getBasket().find((item) => item.id === id)) {
-    deleteFromCart.call(addToCartBtn);
-    if (cart.getBasket().find((item) => item.id === id)) {
-      addToCartBtn.textContent = 'Delete from cart';
-    } else {
-      addToCartBtn.textContent = 'Add to cart';
-    }
-  } else {
-    addToCart.call(addToCartBtn);
-    addToCartBtn.textContent = 'Delete from cart';
-  }
-}
-
-function buyNow(id: string): void {
-  if (!cart.getBasket().find((item) => item.id === id)) cart.addToCart(id);
-  renderItemsCount();
-  renderTotalSum();
-  goToCartPage();
-  togglePaymentWindow();
-  payment();
-}
-
-function addToCart(this: HTMLButtonElement): void {
-  let id: string = this.getAttribute('data-id') as string;
-  cart.addToCart(id);
-  renderItemsCount();
-  renderTotalSum();
-}
-function deleteFromCart(this: HTMLButtonElement): void {
-  let id: string = this.getAttribute('data-id') as string;
-  cart.decreaseItemAmount(id);
-  renderItemsCount();
-  renderTotalSum();
-}
-
-function generatePhotoThumbs(id:string) {
+function generatePhotoThumbs(id: string): void {
   const slider = document.querySelector('.slider__thumbs') as HTMLDivElement;
   const resultFragment: DocumentFragment = document.createDocumentFragment();
-  let prod = CATALOGUE.get(id);
+  const prod = CATALOGUE.get(id);
   if (prod) {
-    prod.images.forEach(image => {
+    prod.images.forEach((image) => {
       const itemTemplate = document.querySelector('#thumbnail') as HTMLTemplateElement;
       const itemLayout = itemTemplate.content.cloneNode(true) as HTMLDivElement;
       const fragment: DocumentFragment = document.createDocumentFragment();
-      fragment.append(itemLayout)
+      fragment.append(itemLayout);
       const source = fragment.querySelector('.slider__thumb') as HTMLImageElement;
       source.src = `${image}`;
       resultFragment.append(fragment);
@@ -106,7 +50,6 @@ function generateDetails(id: string): void {
   const itemTemplate = document.querySelector('#details') as HTMLTemplateElement;
   const itemLayout = itemTemplate.content.cloneNode(true) as HTMLDivElement;
   const fragment: DocumentFragment = document.createDocumentFragment();
-  // const itemList = document.querySelector('.cart__container') as HTMLOListElement;
   fragment.append(itemLayout);
   const prod = CATALOGUE.get(id);
   if (prod) {
@@ -136,10 +79,67 @@ function generateDetails(id: string): void {
     category.textContent = `${prod.category}`;
     const photo = fragment.querySelector('.slider__big-photo') as HTMLImageElement;
     photo.src = `${prod.images[0]}`;
-    // const thumbs = fragment.querySelectorAll('.slider__thumb) as HTMLImageElement;
-    // thumbs.src = `${prod.description}`;
     const price = fragment.querySelector('.details__price') as HTMLDivElement;
     price.textContent = `$ ${prod.price}`;
   }
-   body.replaceChild(fragment, main);
+  body.replaceChild(fragment, main);
 }
+
+function buyNow(id: string): void {
+  if (!cart.getBasket().find((item) => item.id === id)) cart.addToCart(id);
+  renderItemsCount();
+  renderTotalSum();
+  goToCartPage();
+  togglePaymentWindow();
+  payment();
+}
+
+function addToCart(this: HTMLButtonElement): void {
+  const id: string = this.getAttribute('data-id') as string;
+  cart.addToCart(id);
+  renderItemsCount();
+  renderTotalSum();
+}
+
+function deleteFromCart(this: HTMLButtonElement): void {
+  const id: string = this.getAttribute('data-id') as string;
+  cart.decreaseItemAmount(id);
+  renderItemsCount();
+  renderTotalSum();
+}
+
+function buttonHandler(id: string): void {
+  const addToCartBtn = document.querySelector('.btn_details-add') as HTMLButtonElement;
+  if (cart.getBasket().find((item) => item.id === id)) {
+    deleteFromCart.call(addToCartBtn);
+    if (cart.getBasket().find((item) => item.id === id)) {
+      addToCartBtn.textContent = 'Delete from cart';
+    } else {
+      addToCartBtn.textContent = 'Add to cart';
+    }
+  } else {
+    addToCart.call(addToCartBtn);
+    addToCartBtn.textContent = 'Delete from cart';
+  }
+}
+
+function openDetailsPage(e: Event): void {
+  let id: string;
+  const addButton = e.target as HTMLElement;
+  if (addButton.classList.contains('sku__button_details')) {
+    id = (addButton as HTMLDivElement).getAttribute('data-id') as string;
+    generateDetails(id);
+    generatePhotoThumbs(id);
+    const thumbs = document.querySelector('.slider__thumbs') as HTMLDivElement;
+    const addToCartBtn = document.querySelector('.btn_details-add') as HTMLButtonElement;
+    const buyNowBtn = document.querySelector('.btn_details-buy') as HTMLButtonElement;
+    handleButtonState(id);
+    addToCartBtn.addEventListener('click', () => {
+      buttonHandler(id);
+    });
+    buyNowBtn.addEventListener('click', () => buyNow(id));
+    thumbs.addEventListener('click', changePhoto);
+  }
+}
+
+goods.addEventListener('click', openDetailsPage);
