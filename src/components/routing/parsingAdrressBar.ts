@@ -1,6 +1,6 @@
 import { IDismantledAdrressBar } from '../../types/interfaces';
 
-export const parsingAdrressBar = function () {
+export const parsingAdrressBar = () => {
   const adrressString = window.location.hash.slice(1);
   const arrayString = adrressString.split('&');
   const newArrayString = arrayString.map((elem) => {
