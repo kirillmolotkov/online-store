@@ -14,10 +14,12 @@ import {
   filterByStockContainer,
   priceMax,
   priceMin,
+  sortOprionsElement,
   stockMax,
   stockMin,
 } from '../../const/const';
 import { resetFilter } from './useFilters';
+import { resetValueIsCheckedSortOptions } from '../header-main/sortOptions';
 
 const quantityOfGoodsByCategory: QuantityOfGoodsByCategory = {
   smartphones: 0,
@@ -314,6 +316,7 @@ export const generationFIlters = (data: Array<Data>) => {
 
 buttonResetFilters.addEventListener('click', () => {
   resetFilter();
+  resetValueIsCheckedSortOptions();
   createFiltersHeader();
   createFilterByCategory(quantityOfGoodsByCategory);
   createFilterByBrand(quantityOfGoodsByBrand);

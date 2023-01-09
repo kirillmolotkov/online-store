@@ -208,7 +208,6 @@ export function generationCardItems(data: Array<Data>) {
 
   generationFoundElement(counterFoundItems);
   messageNotFoundProduct(counterFoundItems);
-  // console.log(arrayDataItems);
   counterFoundItems = 0;
   arrayDataItems = [];
 }

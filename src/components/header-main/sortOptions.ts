@@ -11,7 +11,7 @@ export const isCheckedSortOptions: IIsCheckedSortOptions = {
   ratingmin: false,
   ratingmax: false,
 };
-const resetValueIsCheckedSortOptions = (): void => {
+export const resetValueIsCheckedSortOptions = (): void => {
   const keysSortOptions = Object.keys(isCheckedSortOptions);
 
   keysSortOptions.forEach((key) => {
