@@ -221,12 +221,14 @@ li {
 .filters__header {
   display: flex;
   width: 210px;
+  height: 28px;
   justify-content: space-between;
 }
 
 .button-filters {
   font-family: type_basic;
-  font-size: 1em;
+  font-size: 0.9em;
+  width: 102px;
   cursor: pointer;
   background-color: #fe778c;
   color: #ffffff;
@@ -431,7 +433,7 @@ input[type=range]:focus {
 }
 
 .sku__photo-slider {
-  width: 80%;
+  width: 70%;
   object-fit: cover;
   position: relative;
   align-self: center;
@@ -495,7 +497,7 @@ input[type=range]:focus {
   position: absolute;
   width: 45%;
   top: 75%;
-  left: 10%;
+  left: 6%;
   transform: translate(-10%, -50%);
   padding: 0.5em;
   background-color: #fe778c;
@@ -510,7 +512,7 @@ input[type=range]:focus {
 }
 
 .sku__button_details {
-  left: 60%;
+  left: 58%;
 }
 
 .sku__container:hover > .sku__button_add-to-card,
@@ -538,6 +540,13 @@ input[type=range]:focus {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 25px;
+}
+
+.message-not-found {
+  color: black;
+  font-family: type_basic;
+  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 .cart_container,
@@ -829,8 +838,7 @@ input[type=range]:focus {
 }
 
 .sku__container-min .sku__photo-slider {
-  width: 100px;
-  height: 201px;
+  width: 80px;
 }
 
 .sku__container-min .sku__info {
