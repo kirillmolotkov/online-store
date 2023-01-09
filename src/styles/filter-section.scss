@@ -1,5 +1,5 @@
 .filters {
-  padding-top: 30px;
+  padding-top: 28px;
   padding-left: 1%;
   @include flex(column, flex-start, flex-start);
   gap: 25px;
@@ -7,18 +7,22 @@
 .filters__header {
   display: flex;
   width: 210px;
+  height: 28px;
   justify-content: space-between;
 }
 
 .button-filters {
   font-family: type_basic;
-  font-size: 1em;
+  font-size: 0.9em;
+  width: 102px;
   cursor: pointer;
   background-color: #fe778c;
   color: #ffffff;
   border: none;
   transition: all 250ms;
+  padding: 5px 4px;
 }
+
 .button-filters:hover {
   color: black;
 }
@@ -104,7 +108,7 @@ input[type='range'] {
 }
 input[type='range']::-webkit-slider-runnable-track {
   background: none;
-  
+
   height: 100%;
   width: 100%;
 }

@@ -59,7 +59,7 @@ module.exports = {
     // new HtmlWebpackPlugin()
     new CopyPlugin({
       patterns: [
-        { from: "src/assets/images", to: "assets/images" },
+        { from: "src/assets", to: "assets" },
         { from: "src/data", to: "data" },
       ]
       })

@@ -1,5 +1,3 @@
-import { getDataForFilters } from './getDataForFilters';
-import { urlData } from './getDataForFilters';
 import {
   Data,
   QuantityOfGoodsByBrand,
@@ -19,7 +17,7 @@ import {
   stockMax,
   stockMin,
 } from '../../const/const';
-import { isCheckedFilterBrand, isCheckedFilterCategory, resetFilter } from './useFilters';
+import { resetFilter } from './useFilters';
 
 const quantityOfGoodsByCategory: QuantityOfGoodsByCategory = {
   smartphones: 0,
@@ -48,7 +46,7 @@ export const quantityOfGoodsByPriceAndStock: QuantityOfGoodsByPriceAndStock = {
   stockMax: 0,
 };
 
-const createFiltersHeader = function () {
+const createFiltersHeader = () => {
   const mainElement = document.querySelector('main');
   asideFilters.className = 'filters';
 
@@ -66,7 +64,7 @@ const createFiltersHeader = function () {
   mainElement?.prepend(asideFilters);
 };
 
-const createFilterByCategory = function (objectCategory: QuantityOfGoodsByCategory) {
+const createFilterByCategory = (objectCategory: QuantityOfGoodsByCategory) => {
   filterByCategoryContainer.className = 'filters__category';
 
   const filterByCategoryTitle = document.createElement('h3');
@@ -75,32 +73,36 @@ const createFilterByCategory = function (objectCategory: QuantityOfGoodsByCatego
 
   filterByCategoryContainer.append(filterByCategoryTitle);
 
-  for (let key in objectCategory) {
+  const keysObjectCategory = Object.keys(objectCategory);
+
+  keysObjectCategory.forEach((keyCategory) => {
+    const keyObjectCategory = keyCategory as keyof QuantityOfGoodsByCategory;
+
     const checkboxContainer = document.createElement('div');
     checkboxContainer.className = 'item__checkbox-container';
 
     const checkbox = document.createElement('input');
     checkbox.className = 'category__item-checkbox';
     checkbox.type = 'checkbox';
-    checkbox.id = key;
+    checkbox.id = keyObjectCategory;
 
     const lable = document.createElement('label');
     lable.className = 'category__item-label';
-    lable.setAttribute('for', key);
-    lable.innerText = key;
+    lable.setAttribute('for', keyObjectCategory);
+    lable.innerText = keyObjectCategory;
 
     const numberGoodsOnStock = document.createElement('span');
     numberGoodsOnStock.className = 'category__item-counter';
-    numberGoodsOnStock.innerText = String(objectCategory[key as keyof QuantityOfGoodsByCategory]);
+    numberGoodsOnStock.innerText = String(objectCategory[keyObjectCategory]);
 
     checkboxContainer.append(checkbox, lable, numberGoodsOnStock);
     filterByCategoryContainer.append(checkboxContainer);
-  }
+  });
 
   asideFilters?.append(filterByCategoryContainer);
 };
 
-const createFilterByBrand = function (objectBrand: QuantityOfGoodsByBrand) {
+const createFilterByBrand = (objectBrand: QuantityOfGoodsByBrand) => {
   filterByBrandContainer.className = 'filters__brand';
 
   const filterByBrandTitle = document.createElement('h3');
@@ -109,32 +111,36 @@ const createFilterByBrand = function (objectBrand: QuantityOfGoodsByBrand) {
 
   filterByBrandContainer.append(filterByBrandTitle);
 
-  for (let key in objectBrand) {
+  const keysObjectBrand = Object.keys(objectBrand);
+
+  keysObjectBrand.forEach((keyBrand) => {
+    const keyObjectBrand = keyBrand as keyof QuantityOfGoodsByBrand;
+
     const checkboxContainer = document.createElement('div');
     checkboxContainer.className = 'item__checkbox-container';
 
     const checkbox = document.createElement('input');
     checkbox.className = 'brand__item-checkbox';
     checkbox.type = 'checkbox';
-    checkbox.id = key;
+    checkbox.id = keyObjectBrand;
 
     const lable = document.createElement('label');
     lable.className = 'brand__item-label';
-    lable.setAttribute('for', key);
-    lable.innerText = key;
+    lable.setAttribute('for', keyObjectBrand);
+    lable.innerText = keyObjectBrand;
 
     const numberGoodsOnStock = document.createElement('span');
     numberGoodsOnStock.className = 'brand__item-counter';
-    numberGoodsOnStock.innerText = String(objectBrand[key as keyof QuantityOfGoodsByBrand]);
+    numberGoodsOnStock.innerText = String(objectBrand[keyObjectBrand]);
 
     checkboxContainer.append(checkbox, lable, numberGoodsOnStock);
     filterByBrandContainer.append(checkboxContainer);
-  }
+  });
 
   asideFilters?.append(filterByBrandContainer);
 };
 
-const createFilterByPrice = function (objectPrice: QuantityOfGoodsByPriceAndStock) {
+const createFilterByPrice = (objectPrice: QuantityOfGoodsByPriceAndStock) => {
   filterByPriceContainer.className = 'filters__price';
 
   const filterByPriceTitle = document.createElement('h3');
@@ -185,7 +191,7 @@ const createFilterByPrice = function (objectPrice: QuantityOfGoodsByPriceAndStoc
   asideFilters?.append(filterByPriceContainer);
 };
 
-const createFilterByStock = function (objectStock: QuantityOfGoodsByPriceAndStock) {
+const createFilterByStock = (objectStock: QuantityOfGoodsByPriceAndStock) => {
   filterByStockContainer.className = 'filters__stock';
 
   const filterByStockTitle = document.createElement('h3');
@@ -276,7 +282,7 @@ function getQuantityOfGoodsByBrand(data: Array<Data>) {
   return quantityOfGoodsByBrand;
 }
 
-const getQuantityOfGoodsByPrice = function (data: Array<Data>) {
+const getQuantityOfGoodsByPrice = (data: Array<Data>) => {
   const arrPrice: Array<number> = [];
   data.forEach((elem) => {
     arrPrice.push(elem.price);
@@ -287,7 +293,7 @@ const getQuantityOfGoodsByPrice = function (data: Array<Data>) {
   return quantityOfGoodsByPriceAndStock;
 };
 
-const getQuantityOfGoodsByStock = function (data: Array<Data>) {
+const getQuantityOfGoodsByStock = (data: Array<Data>) => {
   const arrStock: Array<number> = [];
   data.forEach((elem) => {
     arrStock.push(elem.stock);
@@ -298,21 +304,20 @@ const getQuantityOfGoodsByStock = function (data: Array<Data>) {
   return quantityOfGoodsByPriceAndStock;
 };
 
-getDataForFilters(urlData)
-  .then((data: Array<Data>) => {
-    createFiltersHeader();
-    createFilterByCategory(getQuantityOfGoodsByCategory(data));
-    createFilterByBrand(getQuantityOfGoodsByBrand(data));
-    createFilterByPrice(getQuantityOfGoodsByPrice(data));
-    createFilterByStock(getQuantityOfGoodsByStock(data));
-  })
-  .catch((err) => console.log(err));
+export const generationFIlters = (data: Array<Data>) => {
+  createFiltersHeader();
+  createFilterByCategory(getQuantityOfGoodsByCategory(data));
+  createFilterByBrand(getQuantityOfGoodsByBrand(data));
+  createFilterByPrice(getQuantityOfGoodsByPrice(data));
+  createFilterByStock(getQuantityOfGoodsByStock(data));
+};
 
 buttonResetFilters.addEventListener('click', () => {
-  resetFilter(isCheckedFilterBrand, isCheckedFilterCategory, quantityOfGoodsByPriceAndStock);
+  resetFilter();
   createFiltersHeader();
   createFilterByCategory(quantityOfGoodsByCategory);
   createFilterByBrand(quantityOfGoodsByBrand);
   createFilterByPrice(quantityOfGoodsByPriceAndStock);
   createFilterByStock(quantityOfGoodsByPriceAndStock);
+  window.location.hash = '';
 });

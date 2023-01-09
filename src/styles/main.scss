@@ -1,7 +1,6 @@
 .main {
   @include flex(row, flex-start, flex-start);
   flex-grow: 1;
-  height: 100%;
 }
 
 .goods {
@@ -12,4 +11,8 @@
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 25px;
+}
+.message-not-found {
+  @include basic-font;
+  font-size: 1.5em;
 }

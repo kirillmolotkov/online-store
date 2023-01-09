@@ -7,17 +7,11 @@
   padding: 20px;
   @include flex($justify: space-around, $align: flex-start);
 }
-.contacts {
-}
-.categories {
-}
 .footer__nav-container,
 .rsschool,
 .contacts {
   @include flex(column, flex-start, flex-start);
   gap: 10px;
-}
-.footer__nav-item {
 }
 .footer__button {
   @include basic-font;
