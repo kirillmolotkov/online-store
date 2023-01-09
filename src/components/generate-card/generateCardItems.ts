@@ -7,7 +7,7 @@ import {
 import { TempalateForCardItem } from '../../types/interfaces';
 import { quantityOfGoodsByPriceAndStock } from '../filters/generateFilters';
 import { isCheckedFilterBrand, isCheckedFilterCategory } from '../filters/useFilters';
-import { generationFoundElement, generationHeaderMain } from '../header-main/generationHeaderMain';
+import { generationFoundElement } from '../header-main/generationHeaderMain';
 import { searchProductFilter, searchValue } from '../header-main/searchProducts';
 import {
   isCheckedSortOptions,
@@ -26,108 +26,6 @@ export async function sendRequest(url: string) {
     return response.json();
   });
 }
-
-export function generationCardItems (data: Array<Data>) {
-  data.forEach((elem) => {
-    checkForMatchingFilterAndData(isCheckedFilterCategory, isCheckedFilterBrand, quantityOfGoodsByPriceAndStock, elem);
-  });
-
-  if (isCheckedSortOptions.pricemin === true) sortByPriceMin(arrayDataItems);
-  if (isCheckedSortOptions.pricemax === true) sortByPriceMax(arrayDataItems);
-  if (isCheckedSortOptions.ratingmin === true) sortByRatingMin(arrayDataItems);
-  if (isCheckedSortOptions.ratingmax === true) sortByRatingMax(arrayDataItems);
-
-  arrayDataItems.forEach((dataItem) => {
-    generateHTML(dataItem);
-  });
-
-  generationFoundElement(counterFoundItems);
-  counterFoundItems = 0;
-  arrayDataItems = [];
-}
-
-const checkForMatchingFilterAndData = function (
-  filterCategory: IsCheckedFilterCategory,
-  filterBrand: IsCheckedFilterBrand,
-  quantityFilter: QuantityOfGoodsByPriceAndStock,
-  dataItem: Data
-): void {
-  if (
-    Object.values(filterCategory).every((elem) => elem === false) &&
-    Object.values(filterBrand).every((elem) => elem === false)
-  ) {
-    if (
-      quantityFilter.priceMin <= dataItem.price &&
-      quantityFilter.priceMax >= dataItem.price &&
-      quantityFilter.stockMin <= dataItem.stock &&
-      quantityFilter.stockMax >= dataItem.stock
-    ) {
-      if (searchProductFilter(searchValue.value, dataItem)) {
-        arrayDataItems.push(dataItem);
-        counterFoundItems++;
-      }
-    }
-  }
-
-  for (const key in filterCategory) {
-    const keyCategory = key as keyof IsCheckedFilterCategory;
-    if (filterCategory[keyCategory] && Object.values(filterBrand).every((elem) => elem === false)) {
-      if (
-        keyCategory === dataItem.category &&
-        quantityFilter.priceMin <= dataItem.price &&
-        quantityFilter.priceMax >= dataItem.price &&
-        quantityFilter.stockMin <= dataItem.stock &&
-        quantityFilter.stockMax >= dataItem.stock
-      ) {
-        if (searchProductFilter(searchValue.value, dataItem)) {
-          arrayDataItems.push(dataItem);
-          counterFoundItems++;
-        }
-      }
-    }
-  }
-  for (const key in filterBrand) {
-    const keyBrand = key as keyof IsCheckedFilterBrand;
-    if (filterBrand[keyBrand] && Object.values(filterCategory).every((elem) => elem === false)) {
-      if (
-        keyBrand === dataItem.brand.toLowerCase() &&
-        quantityFilter.priceMin <= dataItem.price &&
-        quantityFilter.priceMax >= dataItem.price &&
-        quantityFilter.stockMin <= dataItem.stock &&
-        quantityFilter.stockMax >= dataItem.stock
-      ) {
-        if (searchProductFilter(searchValue.value, dataItem)) {
-          arrayDataItems.push(dataItem);
-          counterFoundItems++;
-        }
-      }
-    }
-  }
-  for (const key in filterCategory) {
-    const keyCategory = key as keyof IsCheckedFilterCategory;
-
-    if (filterCategory[keyCategory]) {
-      for (const key in filterBrand) {
-        const keyBrand = key as keyof IsCheckedFilterBrand;
-        if (filterBrand[keyBrand]) {
-          if (
-            keyCategory === dataItem.category &&
-            keyBrand === dataItem.brand.toLowerCase() &&
-            quantityFilter.priceMin <= dataItem.price &&
-            quantityFilter.priceMax >= dataItem.price &&
-            quantityFilter.stockMin <= dataItem.stock &&
-            quantityFilter.stockMax >= dataItem.stock
-          ) {
-            if (searchProductFilter(searchValue.value, dataItem)) {
-              arrayDataItems.push(dataItem);
-              counterFoundItems++;
-            }
-          }
-        }
-      }
-    }
-  }
-};
 
 const generateHTML = (products: Data): void => {
   const template: TempalateForCardItem = {
@@ -202,3 +100,112 @@ const generateHTML = (products: Data): void => {
 
   if (sectionGoods) sectionGoods.append(template.container);
 };
+
+const checkForMatchingFilterAndData = (
+  filterCategory: IsCheckedFilterCategory,
+  filterBrand: IsCheckedFilterBrand,
+  quantityFilter: QuantityOfGoodsByPriceAndStock,
+  dataItem: Data
+): void => {
+  if (
+    Object.values(filterCategory).every((elem) => elem === false) &&
+    Object.values(filterBrand).every((elem) => elem === false)
+  ) {
+    if (
+      quantityFilter.priceMin <= dataItem.price &&
+      quantityFilter.priceMax >= dataItem.price &&
+      quantityFilter.stockMin <= dataItem.stock &&
+      quantityFilter.stockMax >= dataItem.stock
+    ) {
+      if (searchProductFilter(searchValue.value, dataItem)) {
+        arrayDataItems.push(dataItem);
+        counterFoundItems += 1;
+      }
+    }
+  }
+
+  const keysFiterCategory = Object.keys(filterCategory);
+
+  keysFiterCategory.forEach((key) => {
+    const keyFilterCategory = key as keyof IsCheckedFilterCategory;
+
+    if (filterCategory[keyFilterCategory] && Object.values(filterBrand).every((elem) => elem === false)) {
+      if (
+        keyFilterCategory === dataItem.category &&
+        quantityFilter.priceMin <= dataItem.price &&
+        quantityFilter.priceMax >= dataItem.price &&
+        quantityFilter.stockMin <= dataItem.stock &&
+        quantityFilter.stockMax >= dataItem.stock
+      ) {
+        if (searchProductFilter(searchValue.value, dataItem)) {
+          arrayDataItems.push(dataItem);
+          counterFoundItems += 1;
+        }
+      }
+    }
+  });
+
+  const keysFilterBrand = Object.keys(filterBrand);
+
+  keysFilterBrand.forEach((key) => {
+    const keyFilterBrand = key as keyof IsCheckedFilterBrand;
+
+    if (filterBrand[keyFilterBrand] && Object.values(filterCategory).every((elem) => elem === false)) {
+      if (
+        keyFilterBrand === dataItem.brand.toLowerCase() &&
+        quantityFilter.priceMin <= dataItem.price &&
+        quantityFilter.priceMax >= dataItem.price &&
+        quantityFilter.stockMin <= dataItem.stock &&
+        quantityFilter.stockMax >= dataItem.stock
+      ) {
+        if (searchProductFilter(searchValue.value, dataItem)) {
+          arrayDataItems.push(dataItem);
+          counterFoundItems += 1;
+        }
+      }
+    }
+  });
+
+  keysFiterCategory.forEach((keyCategory) => {
+    const keyFilterCategory = keyCategory as keyof IsCheckedFilterCategory;
+    if (filterCategory[keyFilterCategory]) {
+      keysFilterBrand.forEach((keyBrand) => {
+        const keyFilterBrand = keyBrand as keyof IsCheckedFilterBrand;
+        if (filterBrand[keyFilterBrand]) {
+          if (
+            keyFilterCategory === dataItem.category &&
+            keyFilterBrand === dataItem.brand.toLowerCase() &&
+            quantityFilter.priceMin <= dataItem.price &&
+            quantityFilter.priceMax >= dataItem.price &&
+            quantityFilter.stockMin <= dataItem.stock &&
+            quantityFilter.stockMax >= dataItem.stock
+          ) {
+            if (searchProductFilter(searchValue.value, dataItem)) {
+              arrayDataItems.push(dataItem);
+              counterFoundItems += 1;
+            }
+          }
+        }
+      });
+    }
+  });
+};
+
+export function generationCardItems(data: Array<Data>) {
+  data.forEach((elem) => {
+    checkForMatchingFilterAndData(isCheckedFilterCategory, isCheckedFilterBrand, quantityOfGoodsByPriceAndStock, elem);
+  });
+
+  if (isCheckedSortOptions.pricemin === true) sortByPriceMin(arrayDataItems);
+  if (isCheckedSortOptions.pricemax === true) sortByPriceMax(arrayDataItems);
+  if (isCheckedSortOptions.ratingmin === true) sortByRatingMin(arrayDataItems);
+  if (isCheckedSortOptions.ratingmax === true) sortByRatingMax(arrayDataItems);
+
+  arrayDataItems.forEach((dataItem) => {
+    generateHTML(dataItem);
+  });
+
+  generationFoundElement(counterFoundItems);
+  counterFoundItems = 0;
+  arrayDataItems = [];
+}
