@@ -262,5 +262,5 @@ window.addEventListener('load', () => {
     });
 
     removeCardItem();
-  }, 1000);
+  }, 250);
 });
