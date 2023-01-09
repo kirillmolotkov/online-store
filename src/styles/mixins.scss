@@ -82,3 +82,8 @@
   font-family: type_basic;
   font-size: 100%;
 }
+@mixin validate-wrong-font {
+  color: $color-button;
+  font-family: type_basic;
+  font-size: 70%;
+}

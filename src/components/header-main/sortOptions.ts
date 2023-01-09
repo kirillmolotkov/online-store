@@ -11,7 +11,7 @@ export const isCheckedSortOptions: IIsCheckedSortOptions = {
   ratingmin: false,
   ratingmax: false,
 };
-const resetValueIsCheckedSortOptions = (): void => {
+export const resetValueIsCheckedSortOptions = (): void => {
   const keysSortOptions = Object.keys(isCheckedSortOptions);
 
   keysSortOptions.forEach((key) => {
@@ -64,16 +64,16 @@ export function sortByPriceMax(arrayDataItems: Array<Data>): void {
 
 export function sortByRatingMin(arrayDataItems: Array<Data>): void {
   arrayDataItems.sort((a, b) => {
-    if (a.price > b.price) return 1;
-    if (a.price < b.price) return -1;
+    if (a.rating > b.rating) return 1;
+    if (a.rating < b.rating) return -1;
     return 0;
   });
 }
 
 export function sortByRatingMax(arrayDataItems: Array<Data>): void {
   arrayDataItems.sort((a, b) => {
-    if (a.price < b.price) return 1;
-    if (a.price > b.price) return -1;
+    if (a.rating < b.rating) return 1;
+    if (a.rating > b.rating) return -1;
     return 0;
   });
 }

@@ -13,9 +13,12 @@
   height: 100%;
   @include flex(column, space-between, flex-start);
 }
-.card__number,
+.card__number_container,
 .card_info-container {
   height: 8%;
+}
+.card__number_container{
+  position: relative;
 }
 .card__payment-system {
   align-self: flex-end;
@@ -29,7 +32,7 @@
 .card__number {
   // margin-left: 3%;
   border-radius: 5px;
-  width: 60%;
+  width: 100%;
   @include basic-font;
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
@@ -41,10 +44,17 @@
   @include flex(row, space-between, center);
   padding-bottom: 10%;
 }
+.card__item-container{
+  width: 55%;
+  position: relative;
+}
+.card__item-container_cvv{
+  width: 15%;
+}
 
 .card__item {
   border-radius: 5px;
-  width: 15%;
+  width: 100%;
   height: 100%;
   @include basic-font;
   &::-webkit-outer-spin-button,
@@ -54,7 +64,7 @@
 }
 
 .card__item_holder {
-  width: 55%;
+  width: 100%;
 }
 
 .valid{
@@ -65,3 +75,4 @@
   border: 4px solid red;
   color: red;
 }
+
