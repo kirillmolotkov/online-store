@@ -1,5 +1,5 @@
 import { cart } from '../checkout/checkout';
-import { generateSuccess, validate } from './render-payment';
+import { checkForm, generateSuccess, validate } from './render-payment';
 
 export function inputCorrectDate(this: HTMLInputElement): void {
   this.value = this.value.replace(/[\Da-zа-я.]/, '');
@@ -20,15 +20,29 @@ export function inputCorrectCardNumber(this: HTMLInputElement): void {
   }
 }
 
+function toggleWrongMessage() {
+  const form = document.querySelector('.payment__form') as HTMLDivElement;
+  const wrongItems = form.querySelectorAll('.invalid');
+  console.log(form)
+  wrongItems.forEach(item => {
+    item.nextElementSibling?.classList.add('active')
+  console.log( item.nextElementSibling)});
+  setTimeout(() => {
+    wrongItems.forEach(item => item.nextElementSibling?.classList.remove('active'));
+  }, 3000);
+}
+
 export function validateForm(): void {
+  checkForm();
   if (validate.validateForm()) {
     cart.clearCart();
     generateSuccess();
     setTimeout(() => {
       window.location.href = 'index.html';
-    }, 5000);
-  } else console.log('no ok');
+    }, 3000);
+  } else toggleWrongMessage() ;
 }
+
 
 export function inputCorrectCvv(this: HTMLInputElement): void {
   this.value = this.value.replace(/\D/, '');
