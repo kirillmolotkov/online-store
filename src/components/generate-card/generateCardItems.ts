@@ -16,6 +16,7 @@ import {
   sortByRatingMax,
   sortByRatingMin,
 } from '../header-main/sortOptions';
+import { messageNotFoundProduct } from './messageNotFoundProduct';
 
 export const sectionGoods = document.querySelector('.goods');
 export let counterFoundItems = 0;
@@ -206,6 +207,7 @@ export function generationCardItems(data: Array<Data>) {
   });
 
   generationFoundElement(counterFoundItems);
+  messageNotFoundProduct(counterFoundItems);
   counterFoundItems = 0;
   arrayDataItems = [];
 }
