@@ -1,3 +1,4 @@
+export const urlData = './data/data.json';
 export const asideFilters = document.createElement('aside');
 export const filterByCategoryContainer = document.createElement('div');
 export const filterByBrandContainer = document.createElement('div');

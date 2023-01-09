@@ -3,18 +3,7 @@ import { IStatusValueButton } from '../../types/interfaces';
 import { counterFoundItems, sectionGoods } from '../generate-card/generateCardItems';
 import { statusValueButton } from './changeSizeItems';
 
-export const generationHeaderMain = function (): void {
-  headerMain.className = 'goods__header';
-
-  generationSortOptions();
-  generationFoundElement(counterFoundItems);
-  generationSearchProducts();
-  generationButtonSizeView(statusValueButton);
-
-  sectionGoods?.prepend(headerMain);
-};
-
-const generationSortOptions = function (): void {
+const generationSortOptions = (): void => {
   sortOprionsElement.className = 'sort-options';
 
   const sortOptionsTitle = document.createElement('option');
@@ -43,13 +32,13 @@ const generationSortOptions = function (): void {
   headerMain.append(sortOprionsElement);
 };
 
-export const generationFoundElement = function (foundItems: number): void {
+export const generationFoundElement = (foundItems: number): void => {
   foundElement.className = 'found';
   foundElement.innerText = `Found: ${foundItems}`;
   headerMain.append(foundElement);
 };
 
-const generationSearchProducts = function (): void {
+const generationSearchProducts = (): void => {
   searchProductsElement.className = 'search-products';
   searchProductsElement.type = 'search';
   searchProductsElement.placeholder = 'Search product';
@@ -57,10 +46,21 @@ const generationSearchProducts = function (): void {
   headerMain.append(searchProductsElement);
 };
 
-const generationButtonSizeView = function (statusButton: IStatusValueButton): void {
+const generationButtonSizeView = (statusButton: IStatusValueButton): void => {
   buttonSizeView.className = 'button-view';
   if (statusButton.min) buttonSizeView.innerText = `Size view min`;
   if (statusButton.max) buttonSizeView.innerText = `Size view max`;
 
   headerMain.append(buttonSizeView);
+};
+
+export const generationHeaderMain = (): void => {
+  headerMain.className = 'goods__header';
+
+  generationSortOptions();
+  generationFoundElement(counterFoundItems);
+  generationSearchProducts();
+  generationButtonSizeView(statusValueButton);
+
+  sectionGoods?.prepend(headerMain);
 };

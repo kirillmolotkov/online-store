@@ -1,17 +1,26 @@
-import { searchProductsElement } from '../../const/const';
+import { searchProductsElement, urlData } from '../../const/const';
 import { Data } from '../../types/interfaces';
-import { urlData } from '../filters/getDataForFilters';
+
 import { generationCardItems, sectionGoods, sendRequest } from '../generate-card/generateCardItems';
+import { generationStringRouting } from '../routing/routing';
 import { changeSizeItems } from './changeSizeItems';
 
-export let searchValue = '';
+export const searchValue = {
+  value: '',
+  get searchValue() {
+    return this.value;
+  },
+  set searchValue(value) {
+    this.value = value;
+  },
+};
 
 searchProductsElement.addEventListener('input', () => {
-  searchValue = searchProductsElement.value;
+  searchValue.value = searchProductsElement.value;
   while (sectionGoods?.childNodes.length !== 1) {
     sectionGoods?.lastChild?.remove();
   }
-
+  window.location.hash = generationStringRouting();
   sendRequest(urlData)
     .then((data: Array<Data>) => {
       generationCardItems(data);
@@ -20,7 +29,16 @@ searchProductsElement.addEventListener('input', () => {
     .catch((err) => console.log(err));
 });
 
-export const searchProductFilter = function (inputValue: string, data: Data): boolean | undefined{
+interface IValueForSearch {
+  title: string;
+  price: number;
+  rating: number;
+  stock: number;
+  brand: string;
+  category: string;
+}
+export const searchProductFilter = (inputValue: string, data: Data): boolean => {
+  let result = false;
   const lengthInputValue = inputValue.length;
   const valueForSearch = {
     title: data.title,
@@ -32,13 +50,16 @@ export const searchProductFilter = function (inputValue: string, data: Data): bo
   };
 
   if (inputValue !== '') {
-    for (const key in valueForSearch) {
-      const value = key as keyof Object;
-      if (inputValue === valueForSearch[value].toString().toLowerCase().slice(0, lengthInputValue)) {
-        return true;
+    const keysValueForSearch = Object.keys(valueForSearch);
+
+    keysValueForSearch.forEach((key) => {
+      const keyVlaueForSearch = key as keyof IValueForSearch;
+      if (inputValue === valueForSearch[keyVlaueForSearch].toString().toLowerCase().slice(0, lengthInputValue)) {
+        result = true;
       }
-    }
+    });
   } else {
-    return true;
+    result = true;
   }
+  return result;
 };

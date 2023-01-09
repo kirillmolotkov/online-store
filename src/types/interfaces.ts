@@ -97,7 +97,7 @@ export interface Icodes {
   discount: number;
 }
 
-export interface IValidate{
+export interface IValidate {
   fullName: boolean;
   adress: boolean;
   phoneNumber: boolean;
@@ -110,13 +110,16 @@ export interface IValidate{
 export default IbasketItem;
 
 export interface IStatusValueButton {
-  max: boolean;
+  [max: string]: boolean;
   min: boolean;
 }
 
 export interface IIsCheckedSortOptions {
-  pricemin: boolean;
+  [pricemin: string]: boolean;
   pricemax: boolean;
   ratingmin: boolean;
   ratingmax: boolean;
+}
+export interface IDismantledAdrressBar {
+  [key: string]: Array<string>;
 }
