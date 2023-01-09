@@ -29,6 +29,8 @@ function generateCartItems(_ITEMSONPAGE: number, _PAGEINDEX: number): void {
       id.setAttribute('data-id', prod.id);
       const photo = fragment.querySelector('.cart-item__photo-slider') as HTMLImageElement;
       photo.src = prod.images[0];
+      const name = fragment.querySelector('.cart-item__name') as HTMLDivElement;
+      name.textContent = `${prod.title.toString()}`;
       const brand = fragment.querySelector('.cart-item__description_brand') as HTMLDivElement;
       brand.textContent = `Brand: ${prod.brand.toString()}`;
       const category = fragment.querySelector('.cart-item__description_category') as HTMLDivElement;

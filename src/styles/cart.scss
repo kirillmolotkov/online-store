@@ -5,6 +5,9 @@
 .cart__promo {
   @include cart-description-font;
 }
+.red {
+color: red;
+}
 .cart{
   width: 100%;
   max-width: 1000px

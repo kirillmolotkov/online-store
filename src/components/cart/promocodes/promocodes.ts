@@ -31,6 +31,16 @@ export function promo() {
     newSum.appendChild(deleteBtn);
     summ.insertBefore(newSum, inputCode);
   }
+  
+  function wrongPromo() {
+    const promoInput = document.querySelector('.cart__promo') as HTMLInputElement;
+    promoInput.value = 'WRONG PROMO'
+    promoInput.classList.add('red');
+    setTimeout(() => {
+      promoInput.value = ''
+      promoInput.classList.remove('red');
+    }, 2000)
+  }
 
   function promoController() {
     const inputCode: string | null = (document.querySelector('.cart__promo') as HTMLInputElement).value;
@@ -40,9 +50,9 @@ export function promo() {
       drawNewPrice(discount.discount, discount.code);
       return;
     }
-    alert('Promocode not found');
+    wrongPromo();
   }
-  
+
   function renderRemoveDiscount(promoCode: string): void {
     const deleteBtn = document.querySelector(`div[data-promo= ${promoCode}]`) as HTMLDivElement;
     const node = deleteBtn.parentNode as HTMLDivElement;
