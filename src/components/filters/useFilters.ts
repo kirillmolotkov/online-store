@@ -1,10 +1,4 @@
-import {
-  IsCheckedFilterCategory,
-  Data,
-  IsCheckedFilterBrand,
-  QuantityOfGoodsByPriceAndStock,
-  IDismantledAdrressBar,
-} from '../../types/interfaces';
+import { IsCheckedFilterCategory, Data, IsCheckedFilterBrand, IDismantledAdrressBar } from '../../types/interfaces';
 import { counterFoundItems, generationCardItems, sectionGoods, sendRequest } from '../generate-card/generateCardItems';
 
 import {
@@ -20,13 +14,14 @@ import {
   stockMin,
   urlData,
 } from '../../const/const';
-import { generationFIlters, quantityOfGoodsByPriceAndStock } from './generateFilters';
-import { generationFoundElement, generationHeaderMain } from '../header-main/generationHeaderMain';
+import { quantityOfGoodsByPriceAndStock } from './generateFilters';
+import { generationFoundElement } from '../header-main/generationHeaderMain';
 import { changeSizeItems, statusValueButton } from '../header-main/changeSizeItems';
 import { generationStringRouting } from '../routing/routing';
 import { parsingAdrressBar } from '../routing/parsingAdrressBar';
 import { searchValue } from '../header-main/searchProducts';
 import { isCheckedSortOptions } from '../header-main/sortOptions';
+
 export const isCheckedFilterCategory = {
   smartphones: false,
   smartwatch: false,
@@ -47,7 +42,7 @@ export const isCheckedFilterBrand = {
   hp: false,
 };
 
-const removeCardItem = function () {
+const removeCardItem = () => {
   while (sectionGoods?.childNodes.length !== 1) {
     sectionGoods?.lastChild?.remove();
   }
@@ -60,7 +55,7 @@ const removeCardItem = function () {
     .catch((err) => console.log(err));
 };
 
-const removeFilter = function () {
+const removeFilter = () => {
   while (filterByCategoryContainer.childNodes.length !== 0) {
     filterByCategoryContainer.firstChild?.remove();
   }
@@ -78,24 +73,25 @@ const removeFilter = function () {
   }
 };
 
-export const resetFilter = function (
-  objectBrand: IsCheckedFilterBrand,
-  objectCategory: IsCheckedFilterCategory,
-  objectPriceAndStok: QuantityOfGoodsByPriceAndStock
-) {
-  for (const key in objectBrand) {
-    const keyBrand = key as keyof IsCheckedFilterBrand;
-    objectBrand[keyBrand] = false;
-  }
-  for (const key in objectCategory) {
-    const keyCategory = key as keyof IsCheckedFilterCategory;
-    objectCategory[keyCategory] = false;
-  }
+export const resetFilter = () => {
+  const keysObjectBrand = Object.keys(isCheckedFilterBrand);
 
-  objectPriceAndStok.priceMax = 1650;
-  objectPriceAndStok.priceMin = 50;
-  objectPriceAndStok.stockMax = 120;
-  objectPriceAndStok.stockMin = 5;
+  keysObjectBrand.forEach((key) => {
+    const keyObjectBrand = key as keyof IsCheckedFilterBrand;
+    isCheckedFilterBrand[keyObjectBrand] = false;
+  });
+
+  const keysObjectCategory = Object.keys(isCheckedFilterCategory);
+
+  keysObjectCategory.forEach((key) => {
+    const keyObjectCategory = key as keyof IsCheckedFilterCategory;
+    isCheckedFilterCategory[keyObjectCategory] = false;
+  });
+
+  quantityOfGoodsByPriceAndStock.priceMax = 1650;
+  quantityOfGoodsByPriceAndStock.priceMin = 50;
+  quantityOfGoodsByPriceAndStock.stockMax = 120;
+  quantityOfGoodsByPriceAndStock.stockMin = 5;
 
   removeCardItem();
   removeFilter();
@@ -105,18 +101,25 @@ asideFilters?.addEventListener('click', (event) => {
   const target = event.target as HTMLInputElement;
 
   if (target.type === 'checkbox') {
-    for (const key in isCheckedFilterCategory) {
-      if (key === target.getAttribute('id')) {
-        isCheckedFilterCategory[key as keyof IsCheckedFilterCategory] = target.checked;
+    const keysFilterCategory = Object.keys(isCheckedFilterCategory);
+
+    keysFilterCategory.forEach((key) => {
+      const keyFilterCategory = key as keyof IsCheckedFilterCategory;
+      if (keyFilterCategory === target.getAttribute('id')) {
+        isCheckedFilterCategory[keyFilterCategory] = target.checked;
         window.location.hash = generationStringRouting();
       }
-    }
-    for (const key in isCheckedFilterBrand) {
-      if (key === target.getAttribute('id')) {
-        isCheckedFilterBrand[key as keyof IsCheckedFilterBrand] = target.checked;
+    });
+
+    const keysFilterBrand = Object.keys(isCheckedFilterBrand);
+
+    keysFilterBrand.forEach((key) => {
+      const keyFilterBrand = key as keyof IsCheckedFilterBrand;
+      if (keyFilterBrand === target.getAttribute('id')) {
+        isCheckedFilterBrand[keyFilterBrand] = target.checked;
         window.location.hash = generationStringRouting();
       }
-    }
+    });
     removeCardItem();
   }
 
@@ -166,30 +169,38 @@ window.addEventListener('load', () => {
     const optionsElements = document.querySelectorAll('option');
     const adressBarObject = parsingAdrressBar();
 
-    for (let key in adressBarObject) {
-      const keyAdrressBar = key as keyof IDismantledAdrressBar;
+    const keysAdrressBarObject = Object.keys(adressBarObject);
 
-      if (keyAdrressBar === 'category') {
-        for (let key in isCheckedFilterCategory) {
-          const keyCategory = key as keyof IsCheckedFilterCategory;
-          adressBarObject[keyAdrressBar].forEach((elem) => {
-            if (keyCategory === elem) {
-              isCheckedFilterCategory[keyCategory] = true;
+    keysAdrressBarObject.forEach((key) => {
+      const keyAdrressBarObject = key as keyof IDismantledAdrressBar;
+
+      if (keyAdrressBarObject === 'category') {
+        const keysFilterCategory = Object.keys(isCheckedFilterCategory);
+        keysFilterCategory.forEach((keyCategory) => {
+          const keyFilterCategory = keyCategory as keyof IsCheckedFilterCategory;
+
+          adressBarObject[keyAdrressBarObject].forEach((item) => {
+            if (keyFilterCategory === item) {
+              isCheckedFilterCategory[keyFilterCategory] = true;
             }
           });
-        }
+        });
       }
-      if (keyAdrressBar === 'brand') {
-        for (let key in isCheckedFilterBrand) {
-          const keyBrand = key as keyof IsCheckedFilterBrand;
-          adressBarObject[keyAdrressBar].forEach((elem) => {
-            if (keyBrand === elem) {
-              isCheckedFilterBrand[keyBrand] = true;
+
+      if (keyAdrressBarObject === 'brand') {
+        const keysFilterBrand = Object.keys(isCheckedFilterBrand);
+        keysFilterBrand.forEach((keyBrand) => {
+          const keyFilterBrand = keyBrand as keyof IsCheckedFilterBrand;
+
+          adressBarObject[keyAdrressBarObject].forEach((item) => {
+            if (keyFilterBrand === item) {
+              isCheckedFilterBrand[keyFilterBrand] = true;
             }
           });
-        }
+        });
       }
-      if (keyAdrressBar === 'price') {
+
+      if (keyAdrressBarObject === 'price') {
         filterPriceMin.value = adressBarObject.price[0];
         filterPriceMinSpanElement.innerText = adressBarObject.price[0];
         quantityOfGoodsByPriceAndStock.priceMin = Number(adressBarObject.price[0]);
@@ -198,7 +209,8 @@ window.addEventListener('load', () => {
         filterPriceMaxSpanElement.innerText = adressBarObject.price[1];
         quantityOfGoodsByPriceAndStock.priceMax = Number(adressBarObject.price[1]);
       }
-      if (keyAdrressBar === 'stock') {
+
+      if (keyAdrressBarObject === 'stock') {
         filterStockMin.value = adressBarObject.stock[0];
         filterStockMinSpanElement.innerText = adressBarObject.stock[0];
         quantityOfGoodsByPriceAndStock.stockMin = Number(adressBarObject.stock[0]);
@@ -207,19 +219,23 @@ window.addEventListener('load', () => {
         filterStockMaxSpanElement.innerText = adressBarObject.stock[1];
         quantityOfGoodsByPriceAndStock.stockMax = Number(adressBarObject.stock[1]);
       }
-      if (keyAdrressBar === 'search') {
+
+      if (keyAdrressBarObject === 'search') {
         searchValue.searchValue = adressBarObject.search[0];
         searchProducts.value = adressBarObject.search[0];
       }
-      if (keyAdrressBar === 'sort') {
+
+      if (keyAdrressBarObject === 'sort') {
         optionsElements.forEach((optionElement) => {
-          if (optionElement.value === adressBarObject.sort[0]) {
-            optionElement.selected = true;
+          const option = optionElement as HTMLOptionElement;
+          if (option.value === adressBarObject.sort[0]) {
+            option.selected = true;
             isCheckedSortOptions[`${adressBarObject.sort[0]}`] = true;
           }
         });
       }
-      if (keyAdrressBar === 'sizeview') {
+
+      if (keyAdrressBarObject === 'sizeview') {
         if (adressBarObject.sizeview[0] === 'max') {
           buttonSizeView.innerText = 'Size view max';
           statusValueButton.max = true;
@@ -231,7 +247,7 @@ window.addEventListener('load', () => {
           statusValueButton.max = false;
         }
       }
-    }
+    });
 
     itemCheckBoxCategory.forEach((checkBoxCategory) => {
       const inputCheckBox = checkBoxCategory as HTMLInputElement;

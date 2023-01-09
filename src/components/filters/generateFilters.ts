@@ -306,7 +306,7 @@ export const generationFIlters = function (data: Array<Data>) {
 };
 
 buttonResetFilters.addEventListener('click', () => {
-  resetFilter(isCheckedFilterBrand, isCheckedFilterCategory, quantityOfGoodsByPriceAndStock);
+  resetFilter();
   createFiltersHeader();
   createFilterByCategory(quantityOfGoodsByCategory);
   createFilterByBrand(quantityOfGoodsByBrand);
