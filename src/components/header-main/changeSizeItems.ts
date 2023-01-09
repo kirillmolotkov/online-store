@@ -1,5 +1,5 @@
 import { buttonSizeView } from '../../const/const';
-import { IsCheckedFilterBrand, IStatusValueButton } from '../../types/interfaces';
+import { IStatusValueButton } from '../../types/interfaces';
 import { generationStringRouting } from '../routing/routing';
 
 export const statusValueButton: IStatusValueButton = {
@@ -7,13 +7,7 @@ export const statusValueButton: IStatusValueButton = {
   min: false,
 };
 
-buttonSizeView.addEventListener('click', () => {
-  changeStatusValueButton();
-  addStatusValueInButton(statusValueButton);
-  changeSizeItems();
-});
-
-export const changeSizeItems = function (): void {
+export const changeSizeItems = (): void => {
   const cardItems = document.querySelectorAll('.sku__container');
   window.location.hash = generationStringRouting();
   cardItems.forEach((itemCard) => {
@@ -26,7 +20,7 @@ export const changeSizeItems = function (): void {
   });
 };
 
-const changeStatusValueButton = function (): void {
+const changeStatusValueButton = (): void => {
   if (statusValueButton.min) {
     statusValueButton.min = false;
     statusValueButton.max = true;
@@ -36,9 +30,18 @@ const changeStatusValueButton = function (): void {
   }
 };
 
-const addStatusValueInButton = function (statusButton: IStatusValueButton): void {
-  for (const key in statusButton) {
-    const status = key as keyof IStatusValueButton;
-    if (statusButton[status]) buttonSizeView.innerText = `Size view ${status}`;
-  }
+const addStatusValueInButton = (statusButton: IStatusValueButton): void => {
+  const keysStatusButton = Object.keys(statusButton);
+  keysStatusButton.forEach((key) => {
+    const keyStatusButton = key as keyof IStatusValueButton;
+    if (statusButton[keyStatusButton]) {
+      buttonSizeView.innerText = `Size view ${keyStatusButton}`;
+    }
+  });
 };
+
+buttonSizeView.addEventListener('click', () => {
+  changeStatusValueButton();
+  addStatusValueInButton(statusValueButton);
+  changeSizeItems();
+});
