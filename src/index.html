@@ -31,14 +31,17 @@
               data-tooltip="Подсказка"
               placeholder="Name"
               class="payment__credentials payment__credentials_name" />
+            <div class="payment__credentials_name wrong">Wrong Name. Please, enter correct Name</div>
           </li>
           <li class="payment__item">
             <div class="payment__credentials">Enter Your adress</div>
             <textarea placeholder="adress" class="payment__credentials payment__credentials_adress"></textarea>
+            <div class="payment__credentials_name wrong">Wrong Adress. Please, enter correct Adress</div>
           </li>
           <li class="payment__item">
             <div class="payment__credentials">Enter Your Phone number</div>
             <input type="text" placeholder="Phone number" class="payment__credentials payment__credentials_phone" />
+            <div class="payment__credentials_name wrong">Wrong Phone number. Please, enter correct Phone number</div>
           </li>
           <li class="payment__item">
             <div class="payment__credentials">Enter Your E-mail</div>
@@ -46,16 +49,29 @@
               type="email"
               placeholder="email@example.com"
               class="payment__credentials payment__credentials_email" />
+            <div class="payment__credentials_name wrong">Wrong Email. Please, enter correct Email</div>
           </li>
         </ul>
         <div class="card">
           <div class="card__wrapper">
             <div class="card__payment-system"></div>
-            <input class="card__number" type="text" placeholder="CARD NUMBER" />
+            <div class="card__number_container">
+              <input class="card__number" type="text" placeholder="CARD NUMBER" />
+              <div class="payment__credentials_name wrong payment__credentials_cardnumber">Wrong Cardnumber. Please, enter correct Cardnumber</div>
+            </div>
             <div class="card_info-container">
-              <input class="card__item card__item_holder" type="text" placeholder="CARDHOLDER" />
-              <input class="card__item card__item_expire" type="text" placeholder="00/00" />
-              <input class="card__item card__item_cvv" type="text" placeholder="CVV" />
+              <div class="card__item-container">
+                <input class="card__item card__item_holder" type="text" placeholder="CARDHOLDER" />
+                <div class="payment__credentials_name wrong payment__credentials_card">Wrong Name. Please, enter correct Name</div>
+              </div>
+              <div class="card__item-container card__item-container_cvv">
+                <input class="card__item card__item_expire" type="text" placeholder="00/00" />
+                <div class="payment__credentials_name wrong payment__credentials_card">Wrong Date. Please, enter correct Date</div>
+              </div>
+              <div class="card__item-container card__item-container_cvv">
+                <input class="card__item card__item_cvv" type="text" placeholder="CVV" />
+                <div class="payment__credentials_name wrong payment__credentials_card">Wrong CVV. Please, enter correct CVV</div>
+              </div>
             </div>
           </div>
         </div>

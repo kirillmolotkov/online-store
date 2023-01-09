@@ -109,16 +109,33 @@ export function generateSuccess(): void {
   fragment.append(itemLayout);
   body.append(fragment);
 }
+export function checkForm() {
+  const email = document.querySelector('.payment__credentials_email') as HTMLInputElement;
+  const phone = document.querySelector('.payment__credentials_phone') as HTMLInputElement;
+  const adress = document.querySelector('.payment__credentials_adress') as HTMLTextAreaElement;
+  const recieverName = document.querySelector('.payment__credentials_name') as HTMLInputElement;
+  const cardNumber = document.querySelector('.card__number') as HTMLInputElement;
+  const cardholder = document.querySelector('.card__item_holder') as HTMLInputElement;
+  checkCardHolder.call(cardholder)
+  checkCardHolder.call(recieverName)
+  checkPhoneNumber.call(phone)
+  checkEmail.call(email)
+  checkCardNumber.call(cardNumber)
+  checkAdress.call(adress)
+  checkExpireDate()
+  checkExpireDate()
+  checkCVV();
+}
 export function payment(): void {
   const email = document.querySelector('.payment__credentials_email') as HTMLDivElement;
   const phone = document.querySelector('.payment__credentials_phone') as HTMLDivElement;
+  const adress = document.querySelector('.payment__credentials_adress') as HTMLTextAreaElement;
   const recieverName = document.querySelector('.payment__credentials_name') as HTMLInputElement;
   const closeBtn = document.querySelector('.payment__close') as HTMLDivElement;
   const cardNumber = document.querySelector('.card__number') as HTMLInputElement;
   const cardholder = document.querySelector('.card__item_holder') as HTMLInputElement;
   const expireDate = document.querySelector('.card__item_expire') as HTMLInputElement;
   const CVV = document.querySelector('.card__item_cvv') as HTMLInputElement;
-  const adress = document.querySelector('.payment__credentials_adress') as HTMLTextAreaElement;
   const payBtn = document.querySelector('.payment__btn') as HTMLButtonElement;
 
   email.addEventListener('focusout', checkEmail);
