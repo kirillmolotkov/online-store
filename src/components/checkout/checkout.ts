@@ -1,4 +1,4 @@
-import { Checkout, getCatalogue } from './Cart';
+import { Checkout } from './Cart';
 import { renderItemsCount, renderTotalSum } from '../cart/renderCart';
 export const cart: Checkout = new Checkout();
 cart.loadBasketFromStorage();
@@ -13,14 +13,6 @@ goods.addEventListener('click', (e): void => {
     renderItemsCount();
     renderTotalSum();
   }
-});
-
-window.addEventListener('load', (): void => {
-  getCatalogue().then(() => {
-    cart.loadBasketFromStorage();
-    renderItemsCount();
-    renderTotalSum();
-  });
 });
 
 export default Checkout;
