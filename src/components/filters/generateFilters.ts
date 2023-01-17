@@ -6,15 +6,16 @@ import {
 } from '../../types/interfaces';
 import {
   asideFilters,
+  BRAND,
   buttonCopyLink,
   buttonResetFilters,
+  CATEGORIES,
   filterByBrandContainer,
   filterByCategoryContainer,
   filterByPriceContainer,
   filterByStockContainer,
   priceMax,
   priceMin,
-  sortOprionsElement,
   stockMax,
   stockMin,
 } from '../../const/const';
@@ -66,6 +67,34 @@ const createFiltersHeader = () => {
   mainElement?.prepend(asideFilters);
 };
 
+const createCheckboxElements = (
+  nameCategory: string,
+  categoryContainer: HTMLDivElement,
+  objectCategory: QuantityOfGoodsByCategory
+) => {
+  const keyObjectCategory = nameCategory as keyof QuantityOfGoodsByCategory;
+
+  const checkboxContainer = document.createElement('div');
+  checkboxContainer.className = 'item__checkbox-container';
+
+  const checkbox = document.createElement('input');
+  checkbox.className = 'category__item-checkbox';
+  checkbox.type = 'checkbox';
+  checkbox.id = keyObjectCategory;
+
+  const lable = document.createElement('label');
+  lable.className = 'category__item-label';
+  lable.setAttribute('for', keyObjectCategory);
+  lable.innerText = keyObjectCategory;
+
+  const numberGoodsOnStock = document.createElement('span');
+  numberGoodsOnStock.className = 'category__item-counter';
+  numberGoodsOnStock.innerText = String(objectCategory[keyObjectCategory]);
+
+  checkboxContainer.append(checkbox, lable, numberGoodsOnStock);
+  categoryContainer.append(checkboxContainer);
+};
+
 const createFilterByCategory = (objectCategory: QuantityOfGoodsByCategory) => {
   filterByCategoryContainer.className = 'filters__category';
 
@@ -78,27 +107,7 @@ const createFilterByCategory = (objectCategory: QuantityOfGoodsByCategory) => {
   const keysObjectCategory = Object.keys(objectCategory);
 
   keysObjectCategory.forEach((keyCategory) => {
-    const keyObjectCategory = keyCategory as keyof QuantityOfGoodsByCategory;
-
-    const checkboxContainer = document.createElement('div');
-    checkboxContainer.className = 'item__checkbox-container';
-
-    const checkbox = document.createElement('input');
-    checkbox.className = 'category__item-checkbox';
-    checkbox.type = 'checkbox';
-    checkbox.id = keyObjectCategory;
-
-    const lable = document.createElement('label');
-    lable.className = 'category__item-label';
-    lable.setAttribute('for', keyObjectCategory);
-    lable.innerText = keyObjectCategory;
-
-    const numberGoodsOnStock = document.createElement('span');
-    numberGoodsOnStock.className = 'category__item-counter';
-    numberGoodsOnStock.innerText = String(objectCategory[keyObjectCategory]);
-
-    checkboxContainer.append(checkbox, lable, numberGoodsOnStock);
-    filterByCategoryContainer.append(checkboxContainer);
+    createCheckboxElements(keyCategory, filterByCategoryContainer, objectCategory);
   });
 
   asideFilters?.append(filterByCategoryContainer);
@@ -246,15 +255,15 @@ const createFilterByStock = (objectStock: QuantityOfGoodsByPriceAndStock) => {
 
 function getQuantityOfGoodsByCategory(data: Array<Data>) {
   data.forEach((elem) => {
-    if (elem.category === 'smartphones') quantityOfGoodsByCategory.smartphones += 1;
+    if (elem.category === CATEGORIES[0]) quantityOfGoodsByCategory.smartphones += 1;
 
-    if (elem.category === 'smartwatch') quantityOfGoodsByCategory.smartwatch += 1;
+    if (elem.category === CATEGORIES[1]) quantityOfGoodsByCategory.smartwatch += 1;
 
-    if (elem.category === 'tablets') quantityOfGoodsByCategory.tablets += 1;
+    if (elem.category === CATEGORIES[2]) quantityOfGoodsByCategory.tablets += 1;
 
-    if (elem.category === 'headphones') quantityOfGoodsByCategory.headphones += 1;
+    if (elem.category === CATEGORIES[3]) quantityOfGoodsByCategory.headphones += 1;
 
-    if (elem.category === 'laptops') quantityOfGoodsByCategory.laptops += 1;
+    if (elem.category === CATEGORIES[4]) quantityOfGoodsByCategory.laptops += 1;
   });
 
   return quantityOfGoodsByCategory;
@@ -262,23 +271,23 @@ function getQuantityOfGoodsByCategory(data: Array<Data>) {
 
 function getQuantityOfGoodsByBrand(data: Array<Data>) {
   data.forEach((elem) => {
-    if (elem.brand.toLowerCase() === 'amazfit') quantityOfGoodsByBrand.amazfit += 1;
+    if (elem.brand.toLowerCase() === BRAND[0]) quantityOfGoodsByBrand.amazfit += 1;
 
-    if (elem.brand.toLowerCase() === 'apple') quantityOfGoodsByBrand.apple += 1;
+    if (elem.brand.toLowerCase() === BRAND[1]) quantityOfGoodsByBrand.apple += 1;
 
-    if (elem.brand.toLowerCase() === 'asus') quantityOfGoodsByBrand.asus += 1;
+    if (elem.brand.toLowerCase() === BRAND[2]) quantityOfGoodsByBrand.asus += 1;
 
-    if (elem.brand.toLowerCase() === 'honor') quantityOfGoodsByBrand.honor += 1;
+    if (elem.brand.toLowerCase() === BRAND[3]) quantityOfGoodsByBrand.honor += 1;
 
-    if (elem.brand.toLowerCase() === 'hp') quantityOfGoodsByBrand.hp += 1;
+    if (elem.brand.toLowerCase() === BRAND[4]) quantityOfGoodsByBrand.hp += 1;
 
-    if (elem.brand.toLowerCase() === 'huawei') quantityOfGoodsByBrand.huawei += 1;
+    if (elem.brand.toLowerCase() === BRAND[5]) quantityOfGoodsByBrand.huawei += 1;
 
-    if (elem.brand.toLowerCase() === 'jbl') quantityOfGoodsByBrand.jbl += 1;
+    if (elem.brand.toLowerCase() === BRAND[6]) quantityOfGoodsByBrand.jbl += 1;
 
-    if (elem.brand.toLowerCase() === 'samsung') quantityOfGoodsByBrand.samsung += 1;
+    if (elem.brand.toLowerCase() === BRAND[7]) quantityOfGoodsByBrand.samsung += 1;
 
-    if (elem.brand.toLowerCase() === 'xiaomi') quantityOfGoodsByBrand.xiaomi += 1;
+    if (elem.brand.toLowerCase() === BRAND[8]) quantityOfGoodsByBrand.xiaomi += 1;
   });
 
   return quantityOfGoodsByBrand;

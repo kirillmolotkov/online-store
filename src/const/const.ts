@@ -15,3 +15,5 @@ export const sortOprionsElement = document.createElement('select');
 export const searchProductsElement = document.createElement('input');
 export const foundElement = document.createElement('p');
 export const buttonSizeView = document.createElement('button');
+export const CATEGORIES = ['smartphones', 'smartwatch', 'tablets', 'headphones', 'laptops'];
+export const BRAND = ['amazfit', 'apple', 'asus', 'honor', 'hp', 'huawei', 'jbl', 'samsung', 'xiaomi'];
