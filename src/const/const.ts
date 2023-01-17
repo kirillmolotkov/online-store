@@ -15,3 +15,18 @@ export const sortOprionsElement = document.createElement('select');
 export const searchProductsElement = document.createElement('input');
 export const foundElement = document.createElement('p');
 export const buttonSizeView = document.createElement('button');
+export const CATEGORIES = ['smartphones', 'smartwatch', 'tablets', 'headphones', 'laptops'];
+export const BRAND = ['amazfit', 'apple', 'asus', 'honor', 'hp', 'huawei', 'jbl', 'samsung', 'xiaomi'];
+export enum FILTER_ELEMENT {
+  CATEGORY = 'category',
+  BRAND = 'brand',
+  PRICE = 'price',
+  STOCK = 'stock',
+  SEARCH = 'search',
+  SORT = 'sort',
+  SIZEVIEW = 'sizeview',
+}
+export const MIN_PRICE_VALUE = 50;
+export const MAX_PRICE_VALUE = 1650;
+export const MIN_STOCK_VALUE = 5;
+export const MAX_STOCK_VALUE = 120;

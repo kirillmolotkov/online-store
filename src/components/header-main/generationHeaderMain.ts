@@ -3,30 +3,24 @@ import { IStatusValueButton } from '../../types/interfaces';
 import { counterFoundItems, sectionGoods } from '../generate-card/generateCardItems';
 import { statusValueButton } from './changeSizeItems';
 
+const createOption = (value: string, innerText: string, disabled = false, selected = false) => {
+  const option = document.createElement('option');
+  option.value = value;
+  option.disabled = disabled;
+  option.selected = selected;
+  option.innerText = innerText;
+
+  return option;
+};
+
 const generationSortOptions = (): void => {
   sortOprionsElement.className = 'sort-options';
 
-  const sortOptionsTitle = document.createElement('option');
-  sortOptionsTitle.value = 'sorttitle';
-  sortOptionsTitle.disabled = true;
-  sortOptionsTitle.selected = true;
-  sortOptionsTitle.innerText = 'Sort options:';
-
-  const optionByPriceMin = document.createElement('option');
-  optionByPriceMin.value = 'pricemin';
-  optionByPriceMin.innerText = 'Sort by price Min';
-
-  const optionByPriceMax = document.createElement('option');
-  optionByPriceMax.value = 'pricemax';
-  optionByPriceMax.innerText = 'Sort by price Max';
-
-  const optionByRatingMin = document.createElement('option');
-  optionByRatingMin.value = 'ratingmin';
-  optionByRatingMin.innerText = 'Sort by rating Min';
-
-  const optionByRatingMax = document.createElement('option');
-  optionByRatingMax.value = 'ratingmax';
-  optionByRatingMax.innerHTML = 'Sort by rating Max';
+  const sortOptionsTitle = createOption('sorttitle', 'Sort options:', true, true);
+  const optionByPriceMin = createOption('pricemin', 'Sort by price Min');
+  const optionByPriceMax = createOption('pricemax', 'Sort by price Max');
+  const optionByRatingMin = createOption('ratingmin', 'Sort by rating Min');
+  const optionByRatingMax = createOption('ratingmax', 'Sort by rating Max');
 
   sortOprionsElement.append(sortOptionsTitle, optionByPriceMin, optionByPriceMax, optionByRatingMin, optionByRatingMax);
   headerMain.append(sortOprionsElement);
