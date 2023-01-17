@@ -17,3 +17,12 @@ export const foundElement = document.createElement('p');
 export const buttonSizeView = document.createElement('button');
 export const CATEGORIES = ['smartphones', 'smartwatch', 'tablets', 'headphones', 'laptops'];
 export const BRAND = ['amazfit', 'apple', 'asus', 'honor', 'hp', 'huawei', 'jbl', 'samsung', 'xiaomi'];
+export enum FILTER_ELEMENT {
+  CATEGORY = 'category',
+  BRAND = 'brand',
+  PRICE = 'price',
+  STOCK = 'stock',
+  SEARCH = 'search',
+  SORT = 'sort',
+  SIZEVIEW = 'sizeview',
+}
