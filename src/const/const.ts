@@ -26,3 +26,7 @@ export enum FILTER_ELEMENT {
   SORT = 'sort',
   SIZEVIEW = 'sizeview',
 }
+export const MIN_PRICE_VALUE = 50;
+export const MAX_PRICE_VALUE = 1650;
+export const MIN_STOCK_VALUE = 5;
+export const MAX_STOCK_VALUE = 120;

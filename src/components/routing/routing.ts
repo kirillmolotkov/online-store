@@ -1,3 +1,4 @@
+import { MAX_PRICE_VALUE, MAX_STOCK_VALUE, MIN_PRICE_VALUE, MIN_STOCK_VALUE } from '../../const/const';
 import {
   IIsCheckedSortOptions,
   IsCheckedFilterBrand,
@@ -63,14 +64,14 @@ export const routingForBrandFilter = (filterBrand: IsCheckedFilterBrand) => {
 };
 
 const routingForPriceFilter = (quantityPrice: QuantityOfGoodsByPriceAndStock) => {
-  if (quantityPrice.priceMin === 50 && quantityPrice.priceMax === 1650) {
+  if (quantityPrice.priceMin === MIN_PRICE_VALUE && quantityPrice.priceMax === MAX_PRICE_VALUE) {
     return '';
   }
   return `price=${quantityPrice.priceMin}-${quantityPrice.priceMax}`;
 };
 
 const routingForStockFilter = (quantityStock: QuantityOfGoodsByPriceAndStock) => {
-  if (quantityStock.stockMin === 5 && quantityStock.stockMax === 120) {
+  if (quantityStock.stockMin === MIN_STOCK_VALUE && quantityStock.stockMax === MAX_STOCK_VALUE) {
     return '';
   }
   return `stock=${quantityStock.stockMin}-${quantityStock.stockMax}`;
