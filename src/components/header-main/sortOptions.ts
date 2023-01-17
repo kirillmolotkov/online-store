@@ -46,34 +46,18 @@ sortOprionsElement.addEventListener('click', () => {
     .catch((err) => console.log(err));
 });
 
-export function sortByPriceMin(arrayDataItems: Array<Data>): void {
-  arrayDataItems.sort((a, b) => {
-    if (a.price > b.price) return 1;
-    if (a.price < b.price) return -1;
-    return 0;
-  });
-}
-
-export function sortByPriceMax(arrayDataItems: Array<Data>): void {
-  arrayDataItems.sort((a, b) => {
-    if (a.price < b.price) return 1;
-    if (a.price > b.price) return -1;
-    return 0;
-  });
-}
-
-export function sortByRatingMin(arrayDataItems: Array<Data>): void {
-  arrayDataItems.sort((a, b) => {
-    if (a.rating > b.rating) return 1;
-    if (a.rating < b.rating) return -1;
-    return 0;
-  });
-}
-
-export function sortByRatingMax(arrayDataItems: Array<Data>): void {
-  arrayDataItems.sort((a, b) => {
-    if (a.rating < b.rating) return 1;
-    if (a.rating > b.rating) return -1;
-    return 0;
-  });
+export function sortByRatingOrPrice(arrayDataItems: Array<Data>, key: keyof Data, sort: 'min' | 'max'): void {
+  if (sort === 'min') {
+    arrayDataItems.sort((a, b) => {
+      if (a[key] > b[key]) return 1;
+      if (a[key] < b[key]) return -1;
+      return 0;
+    });
+  } else {
+    arrayDataItems.sort((a, b) => {
+      if (a[key] < b[key]) return 1;
+      if (a[key] > b[key]) return -1;
+      return 0;
+    });
+  }
 }

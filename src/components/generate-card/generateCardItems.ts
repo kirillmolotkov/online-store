@@ -9,13 +9,7 @@ import { quantityOfGoodsByPriceAndStock } from '../filters/generateFilters';
 import { isCheckedFilterBrand, isCheckedFilterCategory } from '../filters/useFilters';
 import { generationFoundElement } from '../header-main/generationHeaderMain';
 import { searchProductFilter, searchValue } from '../header-main/searchProducts';
-import {
-  isCheckedSortOptions,
-  sortByPriceMax,
-  sortByPriceMin,
-  sortByRatingMax,
-  sortByRatingMin,
-} from '../header-main/sortOptions';
+import { isCheckedSortOptions, sortByRatingOrPrice } from '../header-main/sortOptions';
 import { messageNotFoundProduct } from './messageNotFoundProduct';
 
 export const sectionGoods = document.querySelector('.goods');
@@ -197,10 +191,10 @@ export function generationCardItems(data: Array<Data>) {
     checkForMatchingFilterAndData(isCheckedFilterCategory, isCheckedFilterBrand, quantityOfGoodsByPriceAndStock, elem);
   });
 
-  if (isCheckedSortOptions.pricemin === true) sortByPriceMin(arrayDataItems);
-  if (isCheckedSortOptions.pricemax === true) sortByPriceMax(arrayDataItems);
-  if (isCheckedSortOptions.ratingmin === true) sortByRatingMin(arrayDataItems);
-  if (isCheckedSortOptions.ratingmax === true) sortByRatingMax(arrayDataItems);
+  if (isCheckedSortOptions.pricemin === true) sortByRatingOrPrice(arrayDataItems, 'price', 'min');
+  if (isCheckedSortOptions.pricemax === true) sortByRatingOrPrice(arrayDataItems, 'price', 'max');
+  if (isCheckedSortOptions.ratingmin === true) sortByRatingOrPrice(arrayDataItems, 'rating', 'min');
+  if (isCheckedSortOptions.ratingmax === true) sortByRatingOrPrice(arrayDataItems, 'rating', 'max');
 
   arrayDataItems.forEach((dataItem) => {
     generateHTML(dataItem);
