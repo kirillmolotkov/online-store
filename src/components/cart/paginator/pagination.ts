@@ -2,53 +2,51 @@ import PaginationHelper from './Paginator';
 import { cart } from '../../checkout/checkout';
 import IbasketItem from '../../../types/interfaces';
 import { CATALOGUE } from '../../checkout/Cart';
+import htmlGenerator from '../../utils/htmlgenerator';
+
+function generateProductItem(item: IbasketItem) {
+  const itemList = document.querySelector('.cart__container') as HTMLOListElement;
+  const product = CATALOGUE.get(item.id);
+  if (product) {
+    const itemTemplate = `
+    <li class="cart-item__container" data-id="${product.id}">
+    <img class="cart-item__photo-slider" src="${product.images[0]}" />
+    <div class="cart-item__info">
+      <h3 class="cart-item__name">${product.title.toString()}</h3>
+      <span class="cart-item__description_brand">Brand: ${product.brand.toString()}</span>
+      <span class="cart-item__description_category">Category: ${product.category.toString()}</span>
+      <span class="cart-item__description_discount">Discount: ${product.discountPercentage.toString()}</span>
+      <span class="cart-item__description_rating">Rating: ${product.rating.toString()}</span>
+    </div>
+    <div class="cart-item__num-block">
+      <div class="cart-item__in-stock">in stock: ${product.stock.toString()}</div>
+      <div class="cart__add-del-block">
+        <button class="cart-item__button cart-item__button_add-item" data-id="1">+</button>
+        <div class="cart-item__input_add-item" data-id="1">${item.amount.toString()}</div>
+        <button class="cart-item__button cart-item__button_delete-item" data-id="1">-</button>
+      </div>
+      <div class="cart-item__price">$ ${(product.price * item.amount).toString()}</div>
+    </div>
+  </li>
+  `;
+    htmlGenerator(itemTemplate, itemList);
+  }
+}
+
+function generateCartItems(_itemOnPage: number, _PageIndex: number): void {
+  const oldItems = document.querySelectorAll('.cart-item__container');
+  const cartItems = cart.getBasket();
+  const startItem = _PageIndex * _itemOnPage - _itemOnPage;
+  const lastItem = startItem + _itemOnPage;
+  const itemsToGenerate: IbasketItem[] = cartItems.slice(startItem, lastItem);
+  oldItems.forEach((item) => item.remove());
+  itemsToGenerate.forEach((item) => generateProductItem(item));
+}
 
 let nextPage: HTMLDivElement;
 let prevPage: HTMLDivElement;
-let items: HTMLInputElement;
-let pageIndex: HTMLDivElement;
-let paginationH: PaginationHelper;
 let itemsOnPage: number;
-
-function generateCartItems(_ITEMSONPAGE: number, _PAGEINDEX: number): void {
-  const oldItems = document.querySelectorAll('.cart-item__container');
-  const cartItems = cart.getBasket();
-  const startItem = _PAGEINDEX * _ITEMSONPAGE - _ITEMSONPAGE;
-  const lastItem = startItem + _ITEMSONPAGE;
-  const itemsToGenerate: IbasketItem[] = cartItems.slice(startItem, lastItem);
-  oldItems.forEach((item) => item.remove());
-  itemsToGenerate.forEach((item) => {
-    const itemTemplate = document.querySelector('#itemTemplate') as HTMLTemplateElement;
-    const itemLayout = itemTemplate.content.cloneNode(true) as HTMLDivElement;
-    const fragment: DocumentFragment = document.createDocumentFragment();
-    const itemList = document.querySelector('.cart__container') as HTMLOListElement;
-    fragment.append(itemLayout);
-    const prod = CATALOGUE.get(item.id);
-    if (prod) {
-      const id = fragment.querySelector('.cart-item__container') as HTMLDataListElement;
-      id.setAttribute('data-id', prod.id);
-      const photo = fragment.querySelector('.cart-item__photo-slider') as HTMLImageElement;
-      photo.src = prod.images[0];
-      const name = fragment.querySelector('.cart-item__name') as HTMLDivElement;
-      name.textContent = `${prod.title.toString()}`;
-      const brand = fragment.querySelector('.cart-item__description_brand') as HTMLDivElement;
-      brand.textContent = `Brand: ${prod.brand.toString()}`;
-      const category = fragment.querySelector('.cart-item__description_category') as HTMLDivElement;
-      category.textContent = `Category: ${prod.category.toString()}`;
-      const discount = fragment.querySelector('.cart-item__description_discount') as HTMLDivElement;
-      discount.textContent = `Discount: ${prod.discountPercentage.toString()}`;
-      const rating = fragment.querySelector('.cart-item__description_rating') as HTMLDivElement;
-      rating.textContent = `Rating: ${prod.rating.toString()}`;
-      const stock = fragment.querySelector('.cart-item__in-stock') as HTMLDivElement;
-      stock.textContent = `in stock: ${prod.stock.toString()}`;
-      const sum = fragment.querySelector('.cart-item__price') as HTMLDivElement;
-      sum.textContent = `$ ${(prod.price * item.amount).toString()}`;
-      const amount = fragment.querySelector('.cart-item__input_add-item') as HTMLDivElement;
-      amount.textContent = `${item.amount.toString()}`;
-    }
-    itemList.append(fragment);
-  });
-}
+let paginationH: PaginationHelper;
 
 function goPrevPage(): void {
   if (Number(pageIndex.textContent) > 1) {
@@ -63,6 +61,7 @@ function goPrevPage(): void {
   }
   localStorage.setItem('currentCartPage', Number(pageIndex.textContent).toString());
 }
+let pageIndex: HTMLDivElement;
 
 function goNextPage(): void {
   if (Number(pageIndex.textContent) < paginationH.pageCount()) {
@@ -83,12 +82,18 @@ function goNextPage(): void {
   localStorage.setItem('currentCartPage', Number(pageIndex.textContent).toString());
 }
 
+let items: HTMLInputElement;
+
 export function updatePagination(): void {
   items = document.querySelector('.cart__pagination') as HTMLInputElement;
-  if (Number(items.value) < 1) items.value = '1';
+  if (Number(items.value) < 1) {
+    items.value = '1';
+  }
   itemsOnPage = Number(items.value);
 
-  if (Number(pageIndex.textContent) <= 0) pageIndex.textContent = '1';
+  if (Number(pageIndex.textContent) <= 0) {
+    pageIndex.textContent = '1';
+  }
   if (Number(pageIndex.textContent) > paginationH.pageCount()) {
     pageIndex.textContent = paginationH.pageCount().toString();
     localStorage.setItem('currentCartPage', Number(pageIndex.textContent).toString());
@@ -102,10 +107,14 @@ export function pagination(): void {
   pageIndex = document.querySelector('.cart_page-number') as HTMLDivElement;
   items = document.querySelector('.cart__pagination') as HTMLInputElement;
   const cachedItemsOnPage = localStorage.getItem('itemsOnPage');
-  if (cachedItemsOnPage) items.value = cachedItemsOnPage;
+  if (cachedItemsOnPage) {
+    items.value = cachedItemsOnPage;
+  }
   itemsOnPage = Number(items.value);
   const cachedCurrentPage = localStorage.getItem('currentCartPage');
-  if (cachedCurrentPage !== '0') pageIndex.textContent = cachedCurrentPage;
+  if (cachedCurrentPage !== '0') {
+    pageIndex.textContent = cachedCurrentPage;
+  }
   nextPage.addEventListener('click', goNextPage);
   prevPage.addEventListener('click', goPrevPage);
   // items.addEventListener('input', changeNumberOfItems);

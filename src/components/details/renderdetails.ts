@@ -3,6 +3,7 @@ import goToCartPage, { renderItemsCount, renderTotalSum } from '../cart/renderCa
 import { cart } from '../checkout/checkout';
 import { payment } from '../payment/render-payment';
 import { togglePaymentWindow } from '../cart/promocodes/promocodes';
+import htmlGenerator from '../utils/htmlgenerator';
 
 const goods = document.querySelector('.goods') as HTMLDivElement;
 
@@ -28,9 +29,9 @@ function handleButtonState(id: string): void {
 function generatePhotoThumbs(id: string): void {
   const slider = document.querySelector('.slider__thumbs') as HTMLDivElement;
   const resultFragment: DocumentFragment = document.createDocumentFragment();
-  const prod = CATALOGUE.get(id);
-  if (prod) {
-    prod.images.forEach((image) => {
+  const product = CATALOGUE.get(id);
+  if (product) {
+    product.images.forEach((image) => {
       const itemTemplate = document.querySelector('#thumbnail') as HTMLTemplateElement;
       const itemLayout = itemTemplate.content.cloneNode(true) as HTMLDivElement;
       const fragment: DocumentFragment = document.createDocumentFragment();
@@ -46,43 +47,65 @@ function generatePhotoThumbs(id: string): void {
 function generateDetails(id: string): void {
   const body = document.querySelector('.body') as HTMLDivElement;
   const main = document.querySelector('.main') as HTMLDivElement;
-
-  const itemTemplate = document.querySelector('#details') as HTMLTemplateElement;
-  const itemLayout = itemTemplate.content.cloneNode(true) as HTMLDivElement;
-  const fragment: DocumentFragment = document.createDocumentFragment();
-  fragment.append(itemLayout);
-  const prod = CATALOGUE.get(id);
-  if (prod) {
-    const cat = fragment.querySelector('.breadcrumbs__item_category') as HTMLDivElement;
-    cat.textContent = `${prod.category}`;
-    const brandDesc = fragment.querySelector('.breadcrumbs__item_brand') as HTMLDivElement;
-    brandDesc.textContent = `${prod.brand}`;
-    const modelDesc = fragment.querySelector('.details__heading') as HTMLDivElement;
-    modelDesc.textContent = `${prod.title}`;
-    const model = fragment.querySelector('.breadcrumbs__item_model') as HTMLDivElement;
-    model.textContent = `${prod.title}`;
-    const addBtn = fragment.querySelector('.btn_details-add') as HTMLButtonElement;
-    addBtn.setAttribute('data-id', prod.id);
-    const buyBtn = fragment.querySelector('.btn_details-buy') as HTMLButtonElement;
-    buyBtn.setAttribute('data-id', prod.id);
-    const description = fragment.querySelector('.details__item_description') as HTMLDivElement;
-    description.textContent = `${prod.description}`;
-    const discount = fragment.querySelector('.details__item_discount') as HTMLDivElement;
-    discount.textContent = `${prod.discountPercentage}`;
-    const rating = fragment.querySelector('.details__item_rating') as HTMLDivElement;
-    rating.textContent = `${prod.rating}`;
-    const stock = fragment.querySelector('.details__item_stock') as HTMLDivElement;
-    stock.textContent = `${prod.stock}`;
-    const brand = fragment.querySelector('.details__item_brand') as HTMLDivElement;
-    brand.textContent = `${prod.brand}`;
-    const category = fragment.querySelector('.details__item_category') as HTMLDivElement;
-    category.textContent = `${prod.category}`;
-    const photo = fragment.querySelector('.slider__big-photo') as HTMLImageElement;
-    photo.src = `${prod.images[0]}`;
-    const price = fragment.querySelector('.details__price') as HTMLDivElement;
-    price.textContent = `$ ${prod.price}`;
+  const product = CATALOGUE.get(id);
+  if (product) {
+    const itemTemplate = ` <main class="main">
+    <section class="details wrapper">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">Main</li>
+        <li class="breadcrumbs__item breadcrumbs__item_arrows">>></li>
+        <li class="breadcrumbs__item breadcrumbs__item_category">${product.category}</li>
+        <li class="breadcrumbs__item breadcrumbs__item_arrows">>></li>
+        <li class="breadcrumbs__item breadcrumbs__item_brand">${product.brand}</li>
+        <li class="breadcrumbs__item breadcrumbs__item_arrows">>></li>
+        <li class="breadcrumbs__item breadcrumbs__item_model">${product.title}</li>
+      </ul>
+      <h2 class="details__heading">Iphone 14</h2>
+      <div class="details__container">
+        <div class="details__block">
+          <ul class="details_info">
+            <li class="details__list">
+              <h3 class="details__item-heading">Description</h3>
+              <div class="details__item details__item_description">${product.description}</div>
+            </li>
+            <li class="details__list">
+              <h3 class="details__item-heading">Discount Percentage:</h3>
+              <div class="details__item details__item_discount">${product.discountPercentage}</div>
+            </li>
+            <li class="details__list">
+              <h3 class="details__item-heading">Rating:</h3>
+              <div class="details__item details__item_rating">${product.rating}</div>
+            </li>
+            <li class="details__list">
+              <h3 class="details__item-heading">Stock:</h3>
+              <div class="details__item details__item_stock">${product.stock}</div>
+            </li>
+            <li class="details__list">
+              <h3 class="details__item-heading">Brand:</h3>
+              <div class="details__item details__item_brand">${product.brand}</div>
+            </li>
+            <li class="details__list">
+              <h3 class="details__item-heading">Category:</h3>
+              <div class="details__item details__item_category">${product.category}</div>
+            </li>
+          </ul>
+        </div>
+        <div class="slider">
+          <ul class="slider__thumbs"></ul>
+          <div class="slider__photo">
+            <img class="slider__big-photo" src="${product.images[0]}" alt="thumnail" />
+          </div>
+        </div>
+        <div class="priceblock">
+          <button class="btn btn_details-add" data-id="${product.id}">Add to cart</button>
+          <button class="btn btn_details-buy" data-id="${product.id}">Buy now</button>
+          <div class="details__price">$ ${product.price}</div>
+        </div>
+      </div>
+    </section>
+  </main>`;
+    htmlGenerator(itemTemplate, body, main);
   }
-  body.replaceChild(fragment, main);
 }
 
 function buyNow(id: string): void {

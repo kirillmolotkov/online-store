@@ -2,6 +2,7 @@ import { getCatalogue } from '../checkout/Cart';
 import { cart } from '../checkout/checkout';
 import { pagination } from './paginator/pagination';
 import { changeNumberOfItems } from '../cart/paginator/pagination';
+import htmlGenerator from '../utils/htmlgenerator';
 
 export function renderItemsCount(): void {
   const cartItems = document.querySelector('.basket__items-in-cart') as HTMLDivElement;
@@ -29,23 +30,48 @@ export function goToCartPage(): void {
   function generateCart(): void {
     const body = document.querySelector('.body') as HTMLElement;
     const main = document.querySelector('.main') as HTMLElement;
-    const cartTemplate = document.querySelector('#cartLayout') as HTMLTemplateElement;
-    const cartLayout = cartTemplate.content.cloneNode(true) as HTMLDivElement;
-    const fragment: DocumentFragment = document.createDocumentFragment();
-    fragment.append(cartLayout);
-    body.replaceChild(fragment, main);
+    const cartTemplate = ` 
+    <main class="main wrapper">
+      <section class="cart_container">
+        <div class="cart">
+          <h2 class="cart_heading">Products in cart</h2>
+          <div class="cart__header-container">
+            <div class="cart__total-items">
+              <div class="cart__items-on-page">Items on page</div>
+              <input class="cart__pagination" type="number" value="3" min="0" />
+            </div>
+            <div class="cart__page">
+              <div class="cart__page-text">Page:</div>
+              <div class="cart-item__button cart-item__button_arrow-left"><</div>
+              <div class="cart_page-number">1</div>
+              <div class="cart-item__button cart-item__button_arrow-right">></div>
+            </div>
+          </div>
+          <ol class="cart__container"></ol>
+        </div>
+        <div class="cart_summary">
+          <h2 class="cart__heading">Summary</h2>
+          <div class="cart__number-of-products"></div>
+          <div>Total: $<span class="cart__total-sum"></span></div>
+          <input type="text" class="cart__promo" name="promo" id="promo" />
+          <div class="cart__total-cheat">Promo for test: 'RS', 'DreamTeam'</div>
+          <button class="cart-item__button cart-item__button_apply-promo" data-id="1">Apply promo</button>
+          <button class="cart-item__button cart-item__button_buy-now" data-id="1">Buy Now</button>
+        </div>
+      </section>
+    </main>`;
+    htmlGenerator(cartTemplate, body, main);
   }
 
   function generateEmptyCart(): void {
     const oldItems = document.querySelectorAll('.cart-item__container');
-    oldItems.forEach((item) => item.remove());
-
-    const itemTemplate = document.querySelector('#emptyCart') as HTMLTemplateElement;
-    const itemLayout = itemTemplate.content.cloneNode(true) as HTMLDivElement;
-    const fragment: DocumentFragment = document.createDocumentFragment();
     const itemList = document.querySelector('.cart__container') as HTMLOListElement;
-    fragment.append(itemLayout);
-    itemList.append(fragment);
+    oldItems.forEach((item) => item.remove());
+    const itemTemplate = `    <li class="empty-cart__container">
+    <h2 class="empty-cart__heading">There is nothing here, yet. Please choose some goods. And pay us money ;)</h2>
+    <img class="empty-cart__image" src="assets/images/empty-cart.png" alt="empty cart" />
+  </li>`;
+    htmlGenerator(itemTemplate, itemList);
   }
 
   function renderItemAmountSum(e: Event): void {

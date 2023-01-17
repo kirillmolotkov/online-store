@@ -1,16 +1,8 @@
 import { togglePaymentWindow } from '../cart/promocodes/promocodes';
 import Validation from '../../components/payment/Validation';
 import { inputCorrectDate, inputCorrectCardNumber, validateForm, inputCorrectCvv } from './payment';
+import htmlGenerator from '../utils/htmlgenerator';
 export const validate = new Validation();
-
-export function generatePaymentWindow(): void {
-  const body = document.querySelector('.body') as HTMLDivElement;
-  const paymentTempate = document.querySelector('#payment') as HTMLTemplateElement;
-  const paymentLayout = paymentTempate.content.cloneNode(true) as HTMLDivElement;
-  const fragment: DocumentFragment = document.createDocumentFragment();
-  fragment.append(paymentLayout);
-  body.append(fragment);
-}
 
 function checkAdress(this: HTMLTextAreaElement): void {
   const adress: string = this.value;
@@ -102,12 +94,13 @@ function checkCVV(): void {
 }
 
 export function generateSuccess(): void {
-  const itemTemplate = document.querySelector('#success') as HTMLTemplateElement;
-  const itemLayout = itemTemplate.content.cloneNode(true) as HTMLDivElement;
-  const fragment: DocumentFragment = document.createDocumentFragment();
+  const itemTemplate = `      <section class="success">
+        <h2 class="sucsess__heading">Payment Successfull!</h2>
+        <div class="success__greeting">We're glad you've spent you money here!</div>
+        <button class="success__btn" onclick="location.href = 'index.html'">Goto main page</button>
+      </section>`;
   const body = document.querySelector('.body') as HTMLDivElement;
-  fragment.append(itemLayout);
-  body.append(fragment);
+  htmlGenerator(itemTemplate, body);
 }
 export function checkForm() {
   const email = document.querySelector('.payment__credentials_email') as HTMLInputElement;
@@ -116,14 +109,14 @@ export function checkForm() {
   const recieverName = document.querySelector('.payment__credentials_name') as HTMLInputElement;
   const cardNumber = document.querySelector('.card__number') as HTMLInputElement;
   const cardholder = document.querySelector('.card__item_holder') as HTMLInputElement;
-  checkCardHolder.call(cardholder)
-  checkCardHolder.call(recieverName)
-  checkPhoneNumber.call(phone)
-  checkEmail.call(email)
-  checkCardNumber.call(cardNumber)
-  checkAdress.call(adress)
-  checkExpireDate()
-  checkExpireDate()
+  checkCardHolder.call(cardholder);
+  checkCardHolder.call(recieverName);
+  checkPhoneNumber.call(phone);
+  checkEmail.call(email);
+  checkCardNumber.call(cardNumber);
+  checkAdress.call(adress);
+  checkExpireDate();
+  checkExpireDate();
   checkCVV();
 }
 export function payment(): void {
