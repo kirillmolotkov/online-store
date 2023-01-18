@@ -1,4 +1,4 @@
-import { buttonCopyLink } from '../../const/const';
+import { buttonCopyLink, MESSAGE_DELETION_TIME } from '../../const/const';
 
 buttonCopyLink.addEventListener('click', () => {
   navigator.clipboard
@@ -11,5 +11,5 @@ buttonCopyLink.addEventListener('click', () => {
     });
   setTimeout(() => {
     buttonCopyLink.innerText = 'Copy link';
-  }, 3000);
+  }, MESSAGE_DELETION_TIME);
 });
