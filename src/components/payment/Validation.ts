@@ -11,10 +11,12 @@ class Validation {
   };
 
   checkFullName(fullName: string): boolean {
+    const NUMBER_OF_WORDS = 2;
+    const NUMBER_OF_LETTERS = 3;
     const regex = /[0-9,.*\\\t\n\rа-я]/gi;
     if (
-      fullName.split(' ').length === 2 &&
-      fullName.split(' ').every((name) => name.length > 3) &&
+      fullName.split(' ').length === NUMBER_OF_WORDS &&
+      fullName.split(' ').every((name) => name.length > NUMBER_OF_LETTERS) &&
       !regex.test(fullName)
     ) {
       this.isValidated.fullName = true;
@@ -26,8 +28,10 @@ class Validation {
   }
 
   checkAdress(adress: string): boolean {
+    const NUMBER_OF_WORDS = 3;
+    const NUMBER_OF_LETTERS = 5;
     const regex = /[0-9,.*\\\t\n\rа-я]/gi;
-    if (adress.split(' ').length >= 3 && adress.split(' ').every((name) => name.length >= 5) && !regex.test(adress)) {
+    if (adress.split(' ').length >= NUMBER_OF_WORDS && adress.split(' ').every((name) => name.length >= NUMBER_OF_LETTERS) && !regex.test(adress)) {
       this.isValidated.adress = true;
       return true;
     }

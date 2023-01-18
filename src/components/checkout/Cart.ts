@@ -11,9 +11,6 @@ export async function getCatalogue():Promise<Map<string, IproductItem>> {
   return CATALOGUE;
 }
 
-getCatalogue().then((data) => {
-  CATALOGUE = data;
-});
 
 export class Checkout {
   private basket: Map<string, IbasketItem> = new Map();
@@ -42,13 +39,17 @@ export class Checkout {
   }
 
   public applyDiscount(code: string): Icodes {
+    enum wrongCodes {
+      already_used = -2,
+      wrong_promo = -1
+    }
     const promo = this.checkCode(code);
     if (this.discounted === 0) this.discounted = this.getTotalSum();
     if (promo) {
       if (this.appliedCODES.includes(code))
         {return {
           code: code,
-          discount: -2,
+          discount: wrongCodes.already_used,
         };}
       this.appliedCODES.push(promo.code);
       this.discounted = Math.round(10 * (this.discounted - this.discounted * promo.discount)) / 10;
@@ -59,7 +60,7 @@ export class Checkout {
     }
     return {
       code: code,
-      discount: -1,
+      discount: wrongCodes.wrong_promo,
     };
   }
 
