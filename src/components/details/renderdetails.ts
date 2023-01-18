@@ -5,7 +5,6 @@ import { payment } from '../payment/render-payment';
 import { togglePaymentWindow } from '../cart/promocodes/promocodes';
 import htmlGenerator from '../utils/htmlgenerator';
 
-const goods = document.querySelector('.goods') as HTMLDivElement;
 
 function changePhoto(e: Event): void {
   const mainPhoto = document.querySelector('.slider__big-photo') as HTMLImageElement;
@@ -27,86 +26,84 @@ function handleButtonState(id: string): void {
 }
 
 function generatePhotoThumbs(id: string): void {
-  const slider = document.querySelector('.slider__thumbs') as HTMLDivElement;
-  const resultFragment: DocumentFragment = document.createDocumentFragment();
-  const product = CATALOGUE.get(id);
-  if (product) {
-    product.images.forEach((image) => {
-      const itemTemplate = document.querySelector('#thumbnail') as HTMLTemplateElement;
-      const itemLayout = itemTemplate.content.cloneNode(true) as HTMLDivElement;
-      const fragment: DocumentFragment = document.createDocumentFragment();
-      fragment.append(itemLayout);
-      const source = fragment.querySelector('.slider__thumb') as HTMLImageElement;
-      source.src = `${image}`;
-      resultFragment.append(fragment);
-    });
-    slider.append(resultFragment);
+  const SLIDER = document.querySelector('.slider__thumbs') as HTMLDivElement;
+  const PRODUCT = CATALOGUE.get(id);
+  if (PRODUCT) {
+    const ITEM_LAYOUT = PRODUCT.images
+    .map(
+      (image) =>
+      `<li class="slider__item">
+      <img class="slider__thumb" src="${image}" alt="thumnail" />
+    </li>`
+      )
+      .join('');
+      htmlGenerator(ITEM_LAYOUT, SLIDER);
+    }
   }
-}
-
-function generateDetails(id: string): void {
-  const body = document.querySelector('.body') as HTMLDivElement;
-  const main = document.querySelector('.main') as HTMLDivElement;
-  const product = CATALOGUE.get(id);
-  if (product) {
-    const itemTemplate = ` <main class="main">
-    <section class="details wrapper">
+  
+  function generateDetails(id: string): void {
+    const body = document.querySelector('.body') as HTMLDivElement;
+    const main = document.querySelector('.main') as HTMLDivElement;
+    const product = CATALOGUE.get(id);
+    if (product) {
+      const itemTemplate = ` <main class="main">
+      <section class="details wrapper">
       <ul class="breadcrumbs">
-        <li class="breadcrumbs__item">Main</li>
-        <li class="breadcrumbs__item breadcrumbs__item_arrows">>></li>
-        <li class="breadcrumbs__item breadcrumbs__item_category">${product.category}</li>
-        <li class="breadcrumbs__item breadcrumbs__item_arrows">>></li>
-        <li class="breadcrumbs__item breadcrumbs__item_brand">${product.brand}</li>
-        <li class="breadcrumbs__item breadcrumbs__item_arrows">>></li>
-        <li class="breadcrumbs__item breadcrumbs__item_model">${product.title}</li>
+      <li class="breadcrumbs__item">Main</li>
+      <li class="breadcrumbs__item breadcrumbs__item_arrows">>></li>
+      <li class="breadcrumbs__item breadcrumbs__item_category">${product.category}</li>
+      <li class="breadcrumbs__item breadcrumbs__item_arrows">>></li>
+      <li class="breadcrumbs__item breadcrumbs__item_brand">${product.brand}</li>
+      <li class="breadcrumbs__item breadcrumbs__item_arrows">>></li>
+      <li class="breadcrumbs__item breadcrumbs__item_model">${product.title}</li>
       </ul>
       <h2 class="details__heading">Iphone 14</h2>
       <div class="details__container">
-        <div class="details__block">
-          <ul class="details_info">
-            <li class="details__list">
-              <h3 class="details__item-heading">Description</h3>
-              <div class="details__item details__item_description">${product.description}</div>
-            </li>
-            <li class="details__list">
-              <h3 class="details__item-heading">Discount Percentage:</h3>
-              <div class="details__item details__item_discount">${product.discountPercentage}</div>
-            </li>
-            <li class="details__list">
-              <h3 class="details__item-heading">Rating:</h3>
-              <div class="details__item details__item_rating">${product.rating}</div>
-            </li>
-            <li class="details__list">
-              <h3 class="details__item-heading">Stock:</h3>
-              <div class="details__item details__item_stock">${product.stock}</div>
-            </li>
-            <li class="details__list">
-              <h3 class="details__item-heading">Brand:</h3>
-              <div class="details__item details__item_brand">${product.brand}</div>
-            </li>
-            <li class="details__list">
-              <h3 class="details__item-heading">Category:</h3>
-              <div class="details__item details__item_category">${product.category}</div>
-            </li>
-          </ul>
-        </div>
-        <div class="slider">
-          <ul class="slider__thumbs"></ul>
-          <div class="slider__photo">
-            <img class="slider__big-photo" src="${product.images[0]}" alt="thumnail" />
-          </div>
-        </div>
-        <div class="priceblock">
-          <button class="btn btn_details-add" data-id="${product.id}">Add to cart</button>
-          <button class="btn btn_details-buy" data-id="${product.id}">Buy now</button>
-          <div class="details__price">$ ${product.price}</div>
-        </div>
+      <div class="details__block">
+      <ul class="details_info">
+      <li class="details__list">
+      <h3 class="details__item-heading">Description</h3>
+      <div class="details__item details__item_description">${product.description}</div>
+      </li>
+      <li class="details__list">
+      <h3 class="details__item-heading">Discount Percentage:</h3>
+      <div class="details__item details__item_discount">${product.discountPercentage}</div>
+      </li>
+      <li class="details__list">
+      <h3 class="details__item-heading">Rating:</h3>
+      <div class="details__item details__item_rating">${product.rating}</div>
+      </li>
+      <li class="details__list">
+      <h3 class="details__item-heading">Stock:</h3>
+      <div class="details__item details__item_stock">${product.stock}</div>
+      </li>
+      <li class="details__list">
+      <h3 class="details__item-heading">Brand:</h3>
+      <div class="details__item details__item_brand">${product.brand}</div>
+      </li>
+      <li class="details__list">
+      <h3 class="details__item-heading">Category:</h3>
+      <div class="details__item details__item_category">${product.category}</div>
+      </li>
+      </ul>
       </div>
-    </section>
-  </main>`;
-    htmlGenerator(itemTemplate, body, main);
-  }
-}
+      <div class="slider">
+      <ul class="slider__thumbs"></ul>
+      <div class="slider__photo">
+      <img class="slider__big-photo" src="${product.images[0]}" alt="thumnail" />
+      </div>
+      </div>
+      <div class="priceblock">
+      <button class="btn btn_details-add" data-id="${product.id}">Add to cart</button>
+      <button class="btn btn_details-buy" data-id="${product.id}">Buy now</button>
+      <div class="details__price">$ ${product.price}</div>
+        </div>
+        </div>
+        </section>
+        </main>`;
+        htmlGenerator(itemTemplate, body, main);
+      }
+    }
 
 function buyNow(id: string): void {
   if (!cart.getBasket().find((item) => item.id === id)) cart.addToCart(id);
@@ -165,4 +162,5 @@ function openDetailsPage(e: Event): void {
   }
 }
 
+const goods = document.querySelector('.goods') as HTMLDivElement;
 goods.addEventListener('click', openDetailsPage);

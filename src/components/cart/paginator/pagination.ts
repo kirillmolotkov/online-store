@@ -47,6 +47,7 @@ let nextPage: HTMLDivElement;
 let prevPage: HTMLDivElement;
 let itemsOnPage: number;
 let paginationH: PaginationHelper;
+let pageIndex: HTMLDivElement;
 
 function goPrevPage(): void {
   if (Number(pageIndex.textContent) > 1) {
@@ -61,7 +62,6 @@ function goPrevPage(): void {
   }
   localStorage.setItem('currentCartPage', Number(pageIndex.textContent).toString());
 }
-let pageIndex: HTMLDivElement;
 
 function goNextPage(): void {
   if (Number(pageIndex.textContent) < paginationH.pageCount()) {
